@@ -31,6 +31,8 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[licencjacka]{pwr_wmat_praca_dyplomowa}
+
+\usepackage{enumitem}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %              DANE DO PRACY
 %
@@ -194,25 +196,90 @@ Rysunki do pracy dyplomowej należy wstawiać w sposób podobny do wstawiania ta
 \label{rys:przykladowy} 
 
 
+% MOJE ================================================
+Definicje:
+orbita,
+uklad dynamiczny,
+przestrzen metryczna zwarta,
+orbita okresowa
+RODZAJE CHAOSU (Devaneya, Li Yorka)
+niezmienniczosc zbioru ze wzgledu na odwzorowanie
+gęstość
+napisac ze chaotycznosc odwzorowania rozumiem przez chaotycznosc odpowiedniego ukladu dynamicznego
+
+
+
+\chapter{Twierdzenie o rozszerzaniu odwzorowań chaotycznych w sensie Devaney'a}
+\begin{theorem}[O rozszerzaniu]\label{twierdzenie_glowne}
+Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowanych, oraz niech $f \in C(X)$ będzie odwzorowaniem chaotycznym w sensie Devaney'a. Wówczas odwzorowanie $f$ można rozszerzyć do odwzorowania $F \in C_{\triangle}(X \times I)$ (to znaczy tak, że $f$ jest odwzorowaniem bazowym dla $F$) w taki sposób, że:
+\begin{enumerate}[label=(\roman*)]
+\item\label{twierdzenie_glowne_a} $F$ jest również chaotyczne w sensie Devaney'a, 
+\item\label{twierdzenie_glowne_b} $F$ ma taką samą entropię topologiczną jak $f$, 
+\item\label{twierdzenie_glowne_c} zbiory $X \times \{0\}$ i $X \times \{1\}$ są niezmiennicze ze względu na $F$.
+\end{enumerate}
+\end{theorem}
+\cite{balibrea2003topological}
+
+Na potrzeby dowodu wprowadźmy pojęcia odległości między odwzorowaniami. Niech $(M, \sigma)$ będzie zwartą przestrzenią metryczną, rozważmy odwzorowania $h,k \in C(M)$. Odległość między nimi zdefiniujmy jako $\max_{m \in M} \sigma(h(m), k(m))$ i oznaczmy ją jako $d_1(h,k)$.
+Odległość między odwzorowaniami trójkątnymi definiujemy wówczas następująco: Niech $(X, \rho)$ i $(Y, \tau)$ będą zwartymi przestrzeniami metrycznymi a $F(x,y) = (f(x), g_x(y))$ i $\Phi(x,y) = (\phi(x), \psi_x(y))$ trójkątnymi odwzorowaniami należącymi do $C_\triangle(X \times Y)$. Odległość definiujemy wówczas jako 
+\begin{align*}
+d_2(F, \Phi) = \max_{(x,y \in X \times Y} \max\{\rho(f(x),\phi(x)), \tau(g_x(y), \psi_x(y))\} \\ 
+= \max\{d_1(f,\phi), \max_{x \in X}d_1(g_x, \psi_x)\}
+\end{align*}
+
 
 
 
 % TODO ===============================================================
-
-\chapter{Twierdzenie o rozszerzaniu odwzorowań chaotycznych w sensie Devaney'a}
-\begin{theorem}[O rozszerzaniu]
-Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowanych, oraz niech $f \in C(X)$ będzie odwzorowaniem chaotycznym w sensie Devaney'a. Wówczas odwzorowanie $f$ można rozszerzyć do odwzorowania $F \in C_{\triangle}(X \times I)$ (to znaczy tak, że $f$ jest odwzorowaniem bazowym dla $F$) w taki sposób, że $F$ jest również chaotyczne w sensie Devaney'a, $F$ ma taką samą entropię topologiczną jak $f$, oraz zbiory $X \times \{0\}$ i $X \times \{1\}$ są niezmiennicze ze względu na $F$.
-\end{theorem}
-\cite{balibrea2003topological}
+ kontynuowac
 
 % END TODO ===========================================================
 
+\begin{lemma}\label{nigdziegestosc_orbit}
+Niech  $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowanych. Każda okresowa orbita $P_0$ odwzorowania $f \in C(X)$ jest nigdziegęstym domkniętym podzbiorem $X$.
+\end{lemma}
+
+\begin{lemma}\label{rownosc_entropii_gdy_wlokna_monotoniczne}
+% TODO
+\end{lemma}
+
+\begin{lemma}
+\label{warunki_dostateczne_chaotycznosci_devaneya}
+% TODO
+dla przestrzeni nieskonczonej i zwartej czyli referencja 25 z pracy glownej
+\end{lemma}
+
+
+\begin{proof}[Dowód twierdzenia o rozszerzaniu]
+Odwzorowanie $f$ jest chaotyczne w sensie Devaney'a, zatem spełnia warunek $(2)$, czyli ma gęsty zbiór punktów okresowych, w szczególności istnieje orbita okresowa.
+Możemy zatem ustalić okresową orbitę $P_0$ odwzorowania $f$. Z lematu \ref{nigdziegestosc_orbit} mamy, że $P_0$ jest nigdziegęstym, domkniętym podzbiorem $X$.
+
+Rozważmy zbiór $\mathcal{F}$ wszystkich odwzorowań $F = (f, g_x)$ ze zbioru $C_\triangle(X \times I)$ spełniających następujące warunki:
+\begin{enumerate}
+\item\label{dowod_glowny_a} Odwzorowanie bazowe $f$ spełnia założenia twierdzenia \ref{twierdzenie_glowne}.
+\item\label{dowod_glowny_b} $\forall_{x \in X}$ odwzorowanie $g_x$ jest niemalejące i krańce przedziału I pozostawia niezmienione.
+\item\label{dowod_glowny_c} $\forall_{x \in P_0}$ $g_x$ jest identycznością 
+\end{enumerate}
+
+Warunek \ref{dowod_glowny1} implikuje, że dla każdego odwzorowania z $\mathcal{F}$ zbiory $X \times \{0\}$ i $X \times \{1\}$ są niezmiennicze, czyli $\forall_{F \in \mathcal{F}}$ zachodzi warunek \ref{twierdzenie_glowne_c}  twierdzenia \ref{twierdzenie_glowne}.
+Zachodzenie warunku \ref{twierdzenie_glowne_b} twierdzenia \ref{twierdzenie_glowne} dla każdego odwzorowania $F \in \mathcal{F}$ wynika z lematu \ref{rownosc_entropii_gdy_wlokna_monotoniczne}.
+Pozostaje zatem wykazać prawdziwość warunku \ref{twierdzenie_glowne_a}, czyli chaotyczność w sensie Devaney'a jakiegoś odwzorowania $F \in \mathcal{F}$. Takie odwzorowanie będzie bowiem łącznie spełniało wszystkie 3 warunki, czyli tezę twierdzenia.
+
+Z lematu \ref{warunki_dostateczne_chaotycznosci_devaneya} wynika, że aby odwzorowanie $F$ było chaotyczne w sense Devaneya potrzeba i wystarcza, żeby spełniało dwa poniższe warunki:
+\begin{enumerate}
+\item $F$ jest topologicznie tranzytywne
+\item zbiór punktów okresowych odwzorowania $F$ jest gęsty w $(X \times I)$
+\end{enumerate}
+Jest tak gdyż przestrzeń $(X \times I)$ spełnia założenia lematu, tj. jest przestrzenią nieskończoną i zwartą.
+
+Chcemy wykazać, że $\exists_{F \in \mathcal{F}}$ będące jednocześnie topologicznie tranzytywne i posiadające gęsty w $(X \times I)$ zbiór punktów okresowych
+
+\end{proof}
 
 
 
 
-
-
+% END MOJE ====================================================
 
 \chapter{Definicje, lematy, twierdzenia, przykłady i wnioski}
 Definicje, lematy, twierdzenia, przykłady i wnioski piszemy w pracy tak:
