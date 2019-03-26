@@ -4,7 +4,7 @@
 \contentsline {section}{\numberline {1.1}Podrozdzia\IeC {\l } pierwszy}{5}{section.1.1}
 \contentsline {section}{\numberline {1.2}Podrozdzia\IeC {\l } drugi}{6}{section.1.2}
 \contentsline {chapter}{\numberline {2}Twierdzenie o rozszerzaniu odwzorowa\IeC {\'n} chaotycznych w sensie Devaney'a}{7}{chapter.2}
-\contentsline {chapter}{\numberline {3}Definicje, lematy, twierdzenia, przyk\IeC {\l }ady i wnioski}{9}{chapter.3}
-\contentsline {chapter}{Podsumowanie}{11}{chapter*.6}
-\contentsline {chapter}{Dodatek}{13}{chapter*.7}
-\contentsline {chapter}{Bibliografia}{14}{section*.8}
+\contentsline {chapter}{\numberline {3}Definicje, lematy, twierdzenia, przyk\IeC {\l }ady i wnioski}{11}{chapter.3}
+\contentsline {chapter}{Podsumowanie}{13}{chapter*.6}
+\contentsline {chapter}{Dodatek}{15}{chapter*.7}
+\contentsline {chapter}{Bibliografia}{16}{section*.8}

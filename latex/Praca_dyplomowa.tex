@@ -206,6 +206,10 @@ RODZAJE CHAOSU (Devaneya, Li Yorka)
 niezmienniczosc zbioru ze wzgledu na odwzorowanie
 gęstość
 napisac ze chaotycznosc odwzorowania rozumiem przez chaotycznosc odpowiedniego ukladu dynamicznego
+zbiór rezydualny
+topologia
+baza topologii
+kula otwarta
 
 
 
@@ -249,6 +253,28 @@ Niech  $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowa
 dla przestrzeni nieskonczonej i zwartej czyli referencja 25 z pracy glownej
 \end{lemma}
 
+\begin{lemma} \label{F_jest_niepustym_domknietym_podzbiorem_trojkatnych}
+% TODO
+\end{lemma}
+
+\begin{lemma} \label{trojkatne_tworza_przestrzen_metryczna_zupelna}
+% TODO
+\end{lemma}
+
+\begin{lemma} \label{przekroj_rezydualnych_jest_rezydualny}
+% TODO
+\end{lemma}
+
+\begin{theorem} \label{tranzytywne_rezydualne_w_F}
+% TODO
+\cite{alseda1999entropy} - dowod twierdzenia 1.5
+\end{theorem}
+
+\begin{lemma} \label{Fso_sa_otwartymi_podzbiorami_F}
+% TODO
+\end{lemma}
+
+
 
 \begin{proof}[Dowód twierdzenia o rozszerzaniu]
 Odwzorowanie $f$ jest chaotyczne w sensie Devaney'a, zatem spełnia warunek $(2)$, czyli ma gęsty zbiór punktów okresowych, w szczególności istnieje orbita okresowa.
@@ -267,12 +293,30 @@ Pozostaje zatem wykazać prawdziwość warunku \ref{twierdzenie_glowne_a}, czyli
 
 Z lematu \ref{warunki_dostateczne_chaotycznosci_devaneya} wynika, że aby odwzorowanie $F$ było chaotyczne w sense Devaneya potrzeba i wystarcza, żeby spełniało dwa poniższe warunki:
 \begin{enumerate}
-\item $F$ jest topologicznie tranzytywne
-\item zbiór punktów okresowych odwzorowania $F$ jest gęsty w $(X \times I)$
+\item \label{devaney_pierwsza_wlasnosc} $F$ jest topologicznie tranzytywne
+\item \label{devaney_druga_wlasnosc} zbiór punktów okresowych odwzorowania $F$ jest gęsty w $(X \times I)$
 \end{enumerate}
 Jest tak gdyż przestrzeń $(X \times I)$ spełnia założenia lematu, tj. jest przestrzenią nieskończoną i zwartą.
 
-Chcemy wykazać, że $\exists_{F \in \mathcal{F}}$ będące jednocześnie topologicznie tranzytywne i posiadające gęsty w $(X \times I)$ zbiór punktów okresowych
+Chcemy wykazać, że $\exists_{F \in \mathcal{F}}$ będące jednocześnie topologicznie tranzytywne i posiadające gęsty w $(X \times I)$ zbiór punktów okresowych. Z lematu \ref{F_jest_niepustym_domknietym_podzbiorem_trojkatnych}wiemy, że$\mathcal{F}$ jest niepustym, domkniętym podzbiorem ptrzestrzeni $C_{\triangle}(X \times I)$, która jak wynika z lematu \ref{trojkatne_tworza_przestrzen_metryczna_zupelna} jest przestrzenią metryczną zupełną. 
+
+Przekrój dwóch zbiorów rezydualnych jest rezydualny (patrz lemat \ref{przekroj_rezydualnych_jest_rezydualny}) a więc niepusty. Wystarczy zatem pokazać, że oba zbiory:
+\begin{itemize}
+\item zbiór odwzorowań topologicznie tranzytywnych
+\item zbiór odwzorowań, których zbiór punktów okresowych jest gęsty w $(X \times I)$
+\end{itemize}
+są rezydualne w $\mathcal{F}$. Wówczas każde odwzorowanie należące do ich przekroju będzie spełniało wszystkie trzy warunki tezy twierdzenia \ref{twierdzenie_glowne} 
+
+Zbiór odwzorowań tranzytywnych jest rezydualny w $\mathcal{F}$, zostało to udowodnione w twierdzeniu \ref{tranzytywne_rezydualne_w_F}
+
+Pozostało wykazać, że również zbiór odwzorowań posiadających gęsty zbiór punktów okresowych jest rezydualny w $\mathcal{F}$.
+Oznaczmy zbiór takich odwzorowań (jednocześnie należących do $\mathcal{F}$) przez $\mathcal{F}_{DP}$.
+
+Niech $\{U_i^X\}_{i=1}^{\infty}$ będzie bazą topologii $X$ i niech $\{U_i^I\}_{i=1}^{\infty}$ będzie zbiorem wszystkich odcinków otwartych o końcach wymiernych, należących do odcinka otwartego $(0, 1)$. Niech $\{U_i\}_{i=1}^{\infty}$ będzie ponumerowaniem zbioru $\{U_i^X \times U_j^I : i,j \in \mathbb{N}\}$. Wtedy każda kula otwarta w $X \times I$ zawiera jakiś spośród otwartych zbiorów $U_i$.
+
+Dla każdego $i=1,2,...$ niech zbiór $\mathcal{F}_{SO}^i$ ("S" - stabilny, "O" - okresowy) będzie zdefiniowany następująco. Odwzorowanie G należy do $\mathcal{F}_{SO}^i$ wtedy i tylko wtedy, gdy należy do $\mathcal{F}$, posiada punkt okresowy w $U_i$ oraz wszystkie dostatecznie bliskie $G$ odwzorowania z $\mathcal{F}$ również posiadają punkt okresowy w $U_i$ (być może różne od punktuów okresowych odwzorowania $G$). Zbiory $\mathcal{F}_{SO}^i$ są otwartymi podzbiorami $\mathcal{F}$ (patrz lemat \ref{Fso_sa_otwartymi_podzbiorami_F}). Ponieważ $\mathcal{F}_{DP} \supseteq \bigcap_{i=1}^{\infty} \mathcal{F}_{SO}^i$ aby pokazać, że $\mathcal{F}_{DP}$ jest rezydualny w $\mathcal{F}$ wystarczy pokazać, że $\forall_{i \in \mathbb{N}} \mathcal{F}_{SO}^i$ jest gęsty w $\mathcal{F}$. (JEst tak, ponieważ TODO)
+
+
 
 \end{proof}
 
