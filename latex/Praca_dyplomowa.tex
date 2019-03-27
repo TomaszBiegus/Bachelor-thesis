@@ -210,6 +210,9 @@ zbiór rezydualny
 topologia
 baza topologii
 kula otwarta
+separable, second category (czyli 1 i 2 kategoria bairea)
+TODO: separable znaczy chyba osrodkowa??
+g-delta
 
 
 
@@ -274,6 +277,23 @@ dla przestrzeni nieskonczonej i zwartej czyli referencja 25 z pracy glownej
 % TODO
 \end{lemma}
 
+\begin{lemma}
+\label{w_otoczeniu_niezmienniczego_jest_otwarty_zawarty_w_iteracjach}
+% TODO
+\end{lemma}
+
+\begin{lemma}
+\label{istnieje_orbita_okresowa_krojaca_sie_z_rodzina_otwartych}
+% TODO
+W glownej pracy to byl lemat 3
+\end{lemma}
+
+\begin{lemma}
+\label{wszystkie_wloknowe_na_implikuje_punkt_okresowy}
+% TODO
+\end{lemma}
+
+
 
 
 \begin{proof}[Dowód twierdzenia o rozszerzaniu]
@@ -314,7 +334,13 @@ Oznaczmy zbiór takich odwzorowań (jednocześnie należących do $\mathcal{F}$)
 
 Niech $\{U_i^X\}_{i=1}^{\infty}$ będzie bazą topologii $X$ i niech $\{U_i^I\}_{i=1}^{\infty}$ będzie zbiorem wszystkich odcinków otwartych o końcach wymiernych, należących do odcinka otwartego $(0, 1)$. Niech $\{U_i\}_{i=1}^{\infty}$ będzie ponumerowaniem zbioru $\{U_i^X \times U_j^I : i,j \in \mathbb{N}\}$. Wtedy każda kula otwarta w $X \times I$ zawiera jakiś spośród otwartych zbiorów $U_i$.
 
-Dla każdego $i=1,2,...$ niech zbiór $\mathcal{F}_{SO}^i$ ("S" - stabilny, "O" - okresowy) będzie zdefiniowany następująco. Odwzorowanie G należy do $\mathcal{F}_{SO}^i$ wtedy i tylko wtedy, gdy należy do $\mathcal{F}$, posiada punkt okresowy w $U_i$ oraz wszystkie dostatecznie bliskie $G$ odwzorowania z $\mathcal{F}$ również posiadają punkt okresowy w $U_i$ (być może różne od punktuów okresowych odwzorowania $G$). Zbiory $\mathcal{F}_{SO}^i$ są otwartymi podzbiorami $\mathcal{F}$ (patrz lemat \ref{Fso_sa_otwartymi_podzbiorami_F}). Ponieważ $\mathcal{F}_{DP} \supseteq \bigcap_{i=1}^{\infty} \mathcal{F}_{SO}^i$ aby pokazać, że $\mathcal{F}_{DP}$ jest rezydualny w $\mathcal{F}$ wystarczy pokazać, że $\forall_{i \in \mathbb{N}} \mathcal{F}_{SO}^i$ jest gęsty w $\mathcal{F}$. (JEst tak, ponieważ TODO)
+Dla każdego $i=1,2,...$ niech zbiór $\mathcal{F}_{SO}^i$ ("S" - stabilny, "O" - okresowy) będzie zdefiniowany następująco. Odwzorowanie G należy do $\mathcal{F}_{SO}^i$ wtedy i tylko wtedy, gdy należy do $\mathcal{F}$, posiada punkt okresowy w $U_i$ oraz wszystkie dostatecznie bliskie $G$ odwzorowania z $\mathcal{F}$ również posiadają punkt okresowy w $U_i$ (być może różne od punktuów okresowych odwzorowania $G$). Zbiory $\mathcal{F}_{SO}^i$ są otwartymi podzbiorami $\mathcal{F}$ (patrz lemat \ref{Fso_sa_otwartymi_podzbiorami_F}). Ponieważ $\mathcal{F}_{DP} \supseteq \bigcap_{i=1}^{\infty} \mathcal{F}_{SO}^i$ aby pokazać, że $\mathcal{F}_{DP}$ jest rezydualny w $\mathcal{F}$ wystarczy pokazać, że $\forall_{i \in \mathbb{N}} \mathcal{F}_{SO}^i$ jest gęsty w $\mathcal{F}$. (Jest tak, ponieważ TODO).
+
+Aby wykazać że każdy zbiór $\mathcal{F}_{SO}^i$ jest gęsty w $\mathcal{F}$ ustalmy dowolne: $i \in \mathbb{N}$, $F=(f,g_x) \in \mathcal{F}$ i $\epsilon > 0$. Pokażemy, że istnieje odwrorowanie $G \in \mathcal{F}_{SO}^i$, którego odległość od $F$ nie przekracza $\epsilon$. Dla uproszczenia sytuacji załóżmy, że $\rho(x(U_i), P_0) > 0$ (Jeżeli tak nie jest, zawsze możemy wziąć zamiast $U_i$ mniejszy prostokąt $U_i^* \subset U_i$).
+
+Weźmy dodatnią liczbę naturalną $N \geq \frac{4}{\epsilon}$. Następnie rozważmy otwarte sąsiedztwo $V$ orbity $P_0$ w przestrzeni $(X, \rho)$ takie, że $\rho(x(U_i), V) \geq 0$ oraz $d_1(g_x, \textrm{Id}) < \frac{\epsilon}{4}$ dla każdego $x \in V$ (pamiętamy, że $g_x = \textrm{Id}$ dla $x \in P_0$).
+
+$P_0$ jest zbiorem niezmienniczym ze względu na f, na mocy lematu \ref{w_otoczeniu_niezmienniczego_jest_otwarty_zawarty_w_iteracjach} istnieje niepusty zbiór otwarty $W \subseteq V$ taki, że $W \cup f(W) \cup \ldots \cup f^N(W) \subseteq V$. Na mocy lematu \ref{istnieje_orbita_okresowa_krojaca_sie_z_rodzina_otwartych} istnieje punkt okresowy $x_0$ odwzorowania $f$ taki, że $x_0 \in x(U_i)$ oraz orbita $x_0$ kroi się niepusto ze zbiorem $W$. Niech $r > 0$ będzie pierwszą dodatnią liczbą całkowitą dla której $f^r(x_0) \in W$. Wtedy $f^r(x_0), f^{r+1}(x_0), \ldots, f^{r+N-1}(x_0) \in V$. Niech $s \geq 0$ będzie pierwszą nieujemną liczbą całkowitą dla której $f^{r+N+s}(x_0) = x_0$, tj. $r+N+s$ jest okresem punktu $x_0$. Weźmy $y_0$ takie, że $(x_0, y_0) \in U_i$. Ponieważ wszystkie odwzorowania włóknowe ($g_x$) odwzorowania $F$ są "na", to istnieje punkt $y^* \in (0,1)$ taki, że $F^s(f^{r+N}(x_0), y^*) = (x_0, y_0)$ (patrz lemat \ref{wszystkie_wloknowe_na_implikuje_punkt_okresowy}).
 
 
 
