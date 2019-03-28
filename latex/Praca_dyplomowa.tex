@@ -213,6 +213,7 @@ kula otwarta
 separable, second category (czyli 1 i 2 kategoria bairea)
 TODO: separable znaczy chyba osrodkowa??
 g-delta
+punkt okresowy odwzorowania
 
 
 
@@ -293,6 +294,11 @@ W glownej pracy to byl lemat 3
 % TODO
 \end{lemma}
 
+\begin{lemma}
+\label{lemat_4_glownego_artykulu}
+% TODO
+\end{lemma}
+
 
 
 
@@ -341,6 +347,48 @@ Aby wykazać że każdy zbiór $\mathcal{F}_{SO}^i$ jest gęsty w $\mathcal{F}$ 
 Weźmy dodatnią liczbę naturalną $N \geq \frac{4}{\epsilon}$. Następnie rozważmy otwarte sąsiedztwo $V$ orbity $P_0$ w przestrzeni $(X, \rho)$ takie, że $\rho(x(U_i), V) \geq 0$ oraz $d_1(g_x, \textrm{Id}) < \frac{\epsilon}{4}$ dla każdego $x \in V$ (pamiętamy, że $g_x = \textrm{Id}$ dla $x \in P_0$).
 
 $P_0$ jest zbiorem niezmienniczym ze względu na f, na mocy lematu \ref{w_otoczeniu_niezmienniczego_jest_otwarty_zawarty_w_iteracjach} istnieje niepusty zbiór otwarty $W \subseteq V$ taki, że $W \cup f(W) \cup \ldots \cup f^N(W) \subseteq V$. Na mocy lematu \ref{istnieje_orbita_okresowa_krojaca_sie_z_rodzina_otwartych} istnieje punkt okresowy $x_0$ odwzorowania $f$ taki, że $x_0 \in x(U_i)$ oraz orbita $x_0$ kroi się niepusto ze zbiorem $W$. Niech $r > 0$ będzie pierwszą dodatnią liczbą całkowitą dla której $f^r(x_0) \in W$. Wtedy $f^r(x_0), f^{r+1}(x_0), \ldots, f^{r+N-1}(x_0) \in V$. Niech $s \geq 0$ będzie pierwszą nieujemną liczbą całkowitą dla której $f^{r+N+s}(x_0) = x_0$, tj. $r+N+s$ jest okresem punktu $x_0$. Weźmy $y_0$ takie, że $(x_0, y_0) \in U_i$. Ponieważ wszystkie odwzorowania włóknowe ($g_x$) odwzorowania $F$ są "na", to istnieje punkt $y^* \in (0,1)$ taki, że $F^s(f^{r+N}(x_0), y^*) = (x_0, y_0)$ (patrz lemat \ref{wszystkie_wloknowe_na_implikuje_punkt_okresowy}).
+
+Przypadek 1. $z = y(F^r(x_0, y_0)$ jest różne od 0 i 1.
+Oznaczmy przez $g$ odwzorowanie z $C(I)$ posiadające następujące trzy własności:
+\begin{enumerate}
+\item[(g1)] \label{g_jeden} $d_1(g, \mathrm{Id}) < \frac{\epsilon}{4}$,
+\item[(g2)] \label{g_dwa} $g$ jest odwzorowaniem niemalejącym, pozostawiającym końce przedziału $I$ niezmienione,
+\item[(g3)] \label{g_trzy} $g^N(z) = y^*$.
+\end{enumerate}
+
+Następnie, rozważmy odwzorowanie $h \in C(I)$ posiadające trzy następujące własności:
+\begin{enumerate}
+\item[(h1)] \label{h_jeden} $d_1(h, g_{x_0}) < \frac{\epsilon}{4}$,
+\item[(h2)] \label{h_dwa} $h(y_0) = g_{x_0}(y_0)$,
+\item[(h3)] \label{h_trzy} $h$ jest stałe na zwartym odcinku $[a,b] \subseteq y(U_i)$ zawierającym punkt $y_0$ w swoim wnętrzu.
+\end{enumerate}
+
+Weźmy teraz odwzorowanie $G = (f, \widetilde{g}_x) \in \mathcal{F}$ takie, że $d_2(G, F) < \frac{\epsilon}{2}$ oraz
+
+\[
+    \widetilde{g}_x =
+    \begin{cases}
+        h & \text{if $x=x_0$,}\\
+        g & \text{if $x \in \{f^k(x_0) : r \leq k \leq r+N-1\}$,}\\
+        g_x & \text{if $x \in \{f^k(x_0) : 1 \leq k \leq r-1$ or $r+N \leq k \leq r+N+s-1\}$.}
+    \end{cases}
+\]
+
+Odwzorowanie takie istnieje na mocy lematu \ref{lemat_4_glownego_artykulu}, ponieważ
+$$d_1(\widetilde{g}_{x_0}, g_{x_0}) = d_1(h, g_{x_0}) < \frac{\epsilon}{4}$$
+oraz dla $x \in \{f^r(x_0), f^{r+1}(x_0), \ldots, f^{r+N-1}(x_0)\}$,
+$$d_1(\widetilde{g}_x, g_x) = d_1(g, g_x) \leq d_1(g, \mathrm{Id}) + d_1(\mathrm{Id}, g_x) < \frac{\epsilon}{4} + \frac{\epsilon}{4} = \frac{\epsilon}{2}$$.
+
+Punkt $(x_0, y_0) \in U_i$ jest punktem okresowym odwzorowania $G$, ponieważ
+
+\begin{equation}
+\begin{split}
+G^{r+N+s}(x_0, y_0) & = G^{r+N+s-1}(G(x_0, y_0)) \\
+& = G^{r+N+s-1}(F(x_0, y_0)) = G^{N+s}(F^r(x_0, y_0)) \\
+& = G^{N+s}(f^r(x_0), z) = G^s(f^{r+N}(x_0), y^*) \\
+& = F^s(f^{r+N}(x_0), y^*) = (x_0, y_0).
+\end{split}
+\end{equation}
 
 
 
