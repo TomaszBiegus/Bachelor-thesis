@@ -331,6 +331,48 @@ W glownej pracy to byl lemat 3
 % TODO
 \end{lemma}
 
+\begin{lemma}
+\label{przeliczalny_przekroj_gestych_jest_rezydualny} 
+% TODO
+\end{lemma}
+
+\begin{lemma}
+\label{nadzbior_rezydualnego_jest_rezydualny}
+% TODO
+\end{lemma}
+
+\begin{lemma}
+\label{uzasadnienie_rownosci_G_z_potegami}
+% TODO
+\end{lemma}
+
+\begin{lemma}
+\label{obraz_x0_razy_ab_przez_iterate_G_rowna_sie_x0y0}
+% TODO
+\end{lemma}
+
+\begin{lemma}
+\label{obraz_przez_iterate_kazdego_dostatecznie_bliskiego_G_zawiera_sie_w_x0_razy_ab}
+% TODO
+\end{lemma}
+
+\begin{lemma}
+\label{na_mocy_lematu_4_mozemy_dostac_odwzorowanie_H_z_wloknami_scisle_rosnacymi}
+% TODO
+\end{lemma}
+
+\begin{lemma}
+\label{y0_rozne_od_0_i_1_implikuje_pr2Hrx0y0_rozne_od_0_i_1}
+% TODO
+\end{lemma}
+
+\begin{lemma}
+\label{przypadek1_daje_odwzorowanie_G_bliskie_H}
+% TODO
+\end{lemma}
+
+
+
 
 
 \chapter{Twierdzenie o rozszerzaniu odwzorowań chaotycznych w sensie Devaney'a}
@@ -383,7 +425,7 @@ Oznaczmy zbiór takich odwzorowań (jednocześnie należących do $\mathcal{F}$)
 
 Niech $\{U_i^X\}_{i=1}^{\infty}$ będzie bazą topologii $X$ i niech $\{U_i^I\}_{i=1}^{\infty}$ będzie zbiorem wszystkich odcinków otwartych o końcach wymiernych, należących do odcinka otwartego $(0, 1)$. Niech $\{U_i\}_{i=1}^{\infty}$ będzie ponumerowaniem zbioru $\{U_i^X \times U_j^I : i,j \in \mathbb{N}\}$. Wtedy każda kula otwarta w $X \times I$ zawiera jakiś spośród otwartych zbiorów $U_i$.
 
-Dla każdego $i=1,2,...$ niech zbiór $\mathcal{F}_{SO}^i$ ("S" - stabilny, "O" - okresowy) będzie zdefiniowany następująco. Odwzorowanie G należy do $\mathcal{F}_{SO}^i$ wtedy i tylko wtedy, gdy należy do $\mathcal{F}$, posiada punkt okresowy w $U_i$ oraz wszystkie dostatecznie bliskie $G$ odwzorowania z $\mathcal{F}$ również posiadają punkt okresowy w $U_i$ (być może różne od punktuów okresowych odwzorowania $G$). Zbiory $\mathcal{F}_{SO}^i$ są otwartymi podzbiorami $\mathcal{F}$ (patrz lemat \ref{Fso_sa_otwartymi_podzbiorami_F}). Ponieważ $\mathcal{F}_{DP} \supseteq \bigcap_{i=1}^{\infty} \mathcal{F}_{SO}^i$ aby pokazać, że $\mathcal{F}_{DP}$ jest rezydualny w $\mathcal{F}$ wystarczy pokazać, że $\forall_{i \in \mathbb{N}} \mathcal{F}_{SO}^i$ jest gęsty w $\mathcal{F}$. (Jest tak, ponieważ TODO).
+Dla każdego $i=1,2,...$ niech zbiór $\mathcal{F}_{SO}^i$ ("S" - stabilny, "O" - okresowy) będzie zdefiniowany następująco. Odwzorowanie G należy do $\mathcal{F}_{SO}^i$ wtedy i tylko wtedy, gdy należy do $\mathcal{F}$, posiada punkt okresowy w $U_i$ oraz wszystkie dostatecznie bliskie $G$ odwzorowania z $\mathcal{F}$ również posiadają punkt okresowy w $U_i$ (być może różne od punktuów okresowych odwzorowania $G$). Zbiory $\mathcal{F}_{SO}^i$ są otwartymi podzbiorami $\mathcal{F}$ (patrz lemat \ref{Fso_sa_otwartymi_podzbiorami_F}). Ponieważ $\mathcal{F}_{DP} \supseteq \bigcap_{i=1}^{\infty} \mathcal{F}_{SO}^i$ aby pokazać, że $\mathcal{F}_{DP}$ jest rezydualny w $\mathcal{F}$ wystarczy pokazać, że $\forall_{i \in \mathbb{N}} \mathcal{F}_{SO}^i$ jest gęsty w $\mathcal{F}$. (Wynika to z faktów: \ref{przeliczalny_przekroj_gestych_jest_rezydualny}  i \ref{nadzbior_rezydualnego_jest_rezydualny}).
 
 Aby wykazać że każdy zbiór $\mathcal{F}_{SO}^i$ jest gęsty w $\mathcal{F}$ ustalmy dowolne: $i \in \mathbb{N}$, $F=(f,g_x) \in \mathcal{F}$ i $\epsilon > 0$. Pokażemy, że istnieje odwrorowanie $G \in \mathcal{F}_{SO}^i$, którego odległość od $F$ nie przekracza $\epsilon$. Dla uproszczenia sytuacji załóżmy, że $\rho(\textrm{pr}_1(U_i), P_0) > 0$ (Jeżeli tak nie jest, zawsze możemy wziąć zamiast $U_i$ mniejszy prostokąt $U_i^* \subset U_i$).
 
@@ -393,17 +435,17 @@ $P_0$ jest zbiorem niezmienniczym ze względu na f, na mocy lematu \ref{w_otocze
 
 Przypadek 1. $z = \textrm{pr}_2(F^r(x_0, y_0)$ jest różne od 0 i 1.
 Oznaczmy przez $g$ odwzorowanie z $C(I)$ posiadające następujące trzy własności:
-\begin{enumerate}
-\item[(g1)] \label{g_jeden} $d_1(g, \mathrm{Id}) < \frac{\epsilon}{4}$,
-\item[(g2)] \label{g_dwa} $g$ jest odwzorowaniem niemalejącym, pozostawiającym końce przedziału $I$ niezmienione,
-\item[(g3)] \label{g_trzy} $g^N(z) = y^*$.
+\begin{enumerate}[label=(g\arabic*)]
+\item \label{g_jeden} $d_1(g, \mathrm{Id}) < \frac{\epsilon}{4}$,
+\item \label{g_dwa} $g$ jest odwzorowaniem niemalejącym, pozostawiającym końce przedziału $I$ niezmienione,
+\item \label{g_trzy} $g^N(z) = y^*$.
 \end{enumerate}
 
 Następnie, rozważmy odwzorowanie $h \in C(I)$ posiadające trzy następujące własności:
-\begin{enumerate}
-\item[(h1)] \label{h_jeden} $d_1(h, g_{x_0}) < \frac{\epsilon}{4}$,
-\item[(h2)] \label{h_dwa} $h(y_0) = g_{x_0}(y_0)$,
-\item[(h3)] \label{h_trzy} $h$ jest stałe na zwartym odcinku $[a,b] \subseteq \textrm{pr}_2(U_i)$ zawierającym punkt $y_0$ w swoim wnętrzu.
+\begin{enumerate}[label=(h\arabic*)]
+\item \label{h_jeden} $d_1(h, g_{x_0}) < \frac{\epsilon}{4}$,
+\item \label{h_dwa} $h(y_0) = g_{x_0}(y_0)$,
+\item \label{h_trzy} $h$ jest stałe na zwartym odcinku $[a,b] \subseteq \textrm{pr}_2(U_i)$ zawierającym punkt $y_0$ w swoim wnętrzu.
 \end{enumerate}
 
 Weźmy teraz odwzorowanie $G = (f, \widetilde{g}_x) \in \mathcal{F}$ takie, że $d_2(G, F) < \frac{\epsilon}{2}$ oraz
@@ -432,20 +474,20 @@ G^{r+N+s}(x_0, y_0) & = G^{r+N+s-1}(G(x_0, y_0)) \\
 & = F^s(f^{r+N}(x_0), y^*) = (x_0, y_0).
 \end{split}
 \end{equation}
-TODO Uzasadnic
+Szczegółowe uzasadnienie powyższej równości znajduje się w \ref{uzasadnienie_rownosci_G_z_potegami}
 
-Ponadto, ze względu na \ref{h_trzy},
+Ponadto, ze względu na \ref{h_trzy}, na mocy \ref{obraz_x0_razy_ab_przez_iterate_G_rowna_sie_x0y0} zachodzi
 $$G^{r+N+s}(\{x_0\} \times [a, b]) = \{(x_0, y_0)\}.$$
-TODO Uzasadnic
-Z faktu $y_0 \in (a, b)$ wynika, że każde odwzorowanie $\widetilde{G} \in \mathcal{F}$ dostatecznie bliskie $G$ posiada własność
+
+Z faktu $y_0 \in (a, b)$, oraz \ref{obraz_przez_iterate_kazdego_dostatecznie_bliskiego_G_zawiera_sie_w_x0_razy_ab} wynika, że każde odwzorowanie $\widetilde{G} \in \mathcal{F}$ dostatecznie bliskie $G$ posiada własność
 $$\widetilde{G}^{r+N+s}(\{x_0\} \times [a, b]) \subseteq \{x_0\} \times [a, b].$$
-TODO Uzasadnic
+
 
 Zatem $\widetilde{G}$ posiada punkt okresowy w $\{x_0\} \times [a, b] \subseteq U_i$. Zatem $G \in \mathcal{F}_{SO}^i$, co kończy dowód dla przypadku 1.
 
 Przypadek 2. $\textrm{pr}_2(R^r(x_0, y_0))$ jest równy $0$ lub $1$.
 
-W takim przypadku użyjemy lematu \ref{lemat_4_glownego_artykulu} aby dostać odwzorowanie $H = (f, h_x) \in \mathcal{F}$ takie, że $d_2(H, F) < \frac{\epsilon}{2}$ i dla $x \in \{x_0, f(x_0), \ldots, f^{r-1}(x_0)\}$ odwzorowania włóknowe $h_x$ są ściśle rosnące. (TODO uzasadnic, i odpowiedziec dlaczego na mocy lematu 4 mozemy dostac takie odwzorowanie z wloknami scisle rosnacymi) Ponieważ $y_0$ jest różnie od $0$ i $1$ dostajemy, że $\textrm{pr}_2(H^r(x_0, y_0))$ również jest różne od $0$ i $1$. (TODO uzasadnic) Następnie korzystając z przypadku 1 dostajemy odwzorowanie $G \in \mathcal{F}_{SO}^i$, dla którego zachodzi nierówność $d_2(G, H) < \frac{\epsilon}{2}$. (TODO uzasadnic) Wówczas $d_2(G, F) < \epsilon$. (TODO uzasadnic)
+W takim przypadku użyjemy lematu \ref{lemat_4_glownego_artykulu} aby dostać odwzorowanie $H = (f, h_x) \in \mathcal{F}$ takie, że $d_2(H, F) < \frac{\epsilon}{2}$ i dla $x \in \{x_0, f(x_0), \ldots, f^{r-1}(x_0)\}$ odwzorowania włóknowe $h_x$ są ściśle rosnące. (Odwzorowanie takie istnieje na mocy \ref{na_mocy_lematu_4_mozemy_dostac_odwzorowanie_H_z_wloknami_scisle_rosnacymi}) Ponieważ $y_0$ jest różnie od $0$ i $1$ dostajemy, że $\textrm{pr}_2(H^r(x_0, y_0))$ również jest różne od $0$ i $1$ (uzasadnienie w \ref{y0_rozne_od_0_i_1_implikuje_pr2Hrx0y0_rozne_od_0_i_1}). Następnie korzystając z przypadku 1 i z lematu \ref{przypadek1_daje_odwzorowanie_G_bliskie_H} dostajemy odwzorowanie $G \in \mathcal{F}_{SO}^i$, dla którego zachodzi nierówność $d_2(G, H) < \frac{\epsilon}{2}$. Wówczas $d_2(G, F) < \epsilon$. (TODO powolac sie na nierownosc trojkata)
 
 
 \end{proof}
