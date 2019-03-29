@@ -1,12 +1,11 @@
 \select@language {polish}
 \contentsline {chapter}{Wst\IeC {\k e}p}{3}{chapter*.2}
-\contentsline {chapter}{\numberline {1}Rozdzia\IeC {\l } pierwszy}{5}{chapter.1}
-\contentsline {section}{\numberline {1.1}Podrozdzia\IeC {\l } pierwszy}{5}{section.1.1}
-\contentsline {section}{\numberline {1.2}Podrozdzia\IeC {\l } drugi}{6}{section.1.2}
-\contentsline {chapter}{\numberline {2}Definicje, lematy, twierdzenia, przyk\IeC {\l }ady i wnioski}{7}{chapter.2}
-\contentsline {section}{\numberline {2.1}Definicje}{7}{section.2.1}
-\contentsline {section}{\numberline {2.2}Lematy}{7}{section.2.2}
-\contentsline {chapter}{\numberline {3}Twierdzenie o rozszerzaniu odwzorowa\IeC {\'n} chaotycznych w sensie Devaney'a}{9}{chapter.3}
-\contentsline {chapter}{Podsumowanie}{13}{chapter*.6}
-\contentsline {chapter}{Dodatek}{15}{chapter*.7}
-\contentsline {chapter}{Bibliografia}{16}{section*.8}
+\contentsline {chapter}{\numberline {1}Definicje, lematy, twierdzenia, przyk\IeC {\l }ady i wnioski}{5}{chapter.1}
+\contentsline {section}{\numberline {1.1}Definicje}{5}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Definicje og\IeC {\'o}lne}{5}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Definicje utworzone na potrzeby dowodu twierdzenia o rozszerzaniu}{6}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2}Lematy}{6}{section.1.2}
+\contentsline {chapter}{\numberline {2}Twierdzenie o rozszerzaniu odwzorowa\IeC {\'n} chaotycznych w sensie Devaney'a}{9}{chapter.2}
+\contentsline {chapter}{Podsumowanie}{13}{chapter*.3}
+\contentsline {chapter}{Dodatek}{15}{chapter*.4}
+\contentsline {chapter}{Bibliografia}{16}{section*.5}
