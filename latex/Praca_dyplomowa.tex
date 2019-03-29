@@ -33,6 +33,7 @@
 \documentclass[licencjacka]{pwr_wmat_praca_dyplomowa}
 
 \usepackage{enumitem}
+\usepackage{xcolor}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %              DANE DO PRACY
 %
@@ -196,7 +197,19 @@ Rysunki do pracy dyplomowej należy wstawiać w sposób podobny do wstawiania ta
 \label{rys:przykladowy} 
 
 
+
+\chapter{Definicje, lematy, twierdzenia, przykłady i wnioski}
+Definicje, lematy, twierdzenia, przykłady i wnioski piszemy w pracy tak:
+\begin{definition}[Martyngał]
+Tu piszemy treść definicji martyngału.
+\end{definition}
+\begin{lemma}[]% w nawiasie kwadratowym można napisać jego nazwę
+Tu piszemy treść lematu.
+\end{lemma}
 % MOJE ================================================
+
+\section{Definicje}
+
 Definicje:
 orbita,
 uklad dynamiczny,
@@ -214,34 +227,15 @@ separable, second category (czyli 1 i 2 kategoria bairea)
 TODO: separable znaczy chyba osrodkowa??
 g-delta
 punkt okresowy odwzorowania
+definicja pr1() i pr2() 
 
 
 
-\chapter{Twierdzenie o rozszerzaniu odwzorowań chaotycznych w sensie Devaney'a}
-\begin{theorem}[O rozszerzaniu]\label{twierdzenie_glowne}
-Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowanych, oraz niech $f \in C(X)$ będzie odwzorowaniem chaotycznym w sensie Devaney'a. Wówczas odwzorowanie $f$ można rozszerzyć do odwzorowania $F \in C_{\triangle}(X \times I)$ (to znaczy tak, że $f$ jest odwzorowaniem bazowym dla $F$) w taki sposób, że:
-\begin{enumerate}[label=(\roman*)]
-\item\label{twierdzenie_glowne_a} $F$ jest również chaotyczne w sensie Devaney'a, 
-\item\label{twierdzenie_glowne_b} $F$ ma taką samą entropię topologiczną jak $f$, 
-\item\label{twierdzenie_glowne_c} zbiory $X \times \{0\}$ i $X \times \{1\}$ są niezmiennicze ze względu na $F$.
-\end{enumerate}
-\end{theorem}
-\cite{balibrea2003topological}
+\section{Lematy}
 
-Na potrzeby dowodu wprowadźmy pojęcia odległości między odwzorowaniami. Niech $(M, \sigma)$ będzie zwartą przestrzenią metryczną, rozważmy odwzorowania $h,k \in C(M)$. Odległość między nimi zdefiniujmy jako $\max_{m \in M} \sigma(h(m), k(m))$ i oznaczmy ją jako $d_1(h,k)$.
-Odległość między odwzorowaniami trójkątnymi definiujemy wówczas następująco: Niech $(X, \rho)$ i $(Y, \tau)$ będą zwartymi przestrzeniami metrycznymi a $F(x,y) = (f(x), g_x(y))$ i $\Phi(x,y) = (\phi(x), \psi_x(y))$ trójkątnymi odwzorowaniami należącymi do $C_\triangle(X \times Y)$. Odległość definiujemy wówczas jako 
-\begin{align*}
-d_2(F, \Phi) = \max_{(x,y \in X \times Y} \max\{\rho(f(x),\phi(x)), \tau(g_x(y), \psi_x(y))\} \\ 
-= \max\{d_1(f,\phi), \max_{x \in X}d_1(g_x, \psi_x)\}
-\end{align*}
-
-
-
-
-% TODO ===============================================================
- kontynuowac
-
-% END TODO ===========================================================
+\begin{lemma}\label{przestrzenie_ciaglych_i_ciaglych_trojkatnych_sa_zupelne}
+% TODO
+\end{lemma}
 
 \begin{lemma}\label{nigdziegestosc_orbit}
 Niech  $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowanych. Każda okresowa orbita $P_0$ odwzorowania $f \in C(X)$ jest nigdziegęstym domkniętym podzbiorem $X$.
@@ -301,6 +295,31 @@ W glownej pracy to byl lemat 3
 
 
 
+\chapter{Twierdzenie o rozszerzaniu odwzorowań chaotycznych w sensie Devaney'a}
+\begin{theorem}[O rozszerzaniu]\label{twierdzenie_glowne}
+Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowanych, oraz niech $f \in C(X)$ będzie odwzorowaniem chaotycznym w sensie Devaney'a. Wówczas odwzorowanie $f$ można rozszerzyć do odwzorowania $F \in C_{\triangle}(X \times I)$ (to znaczy tak, że $f$ jest odwzorowaniem bazowym dla $F$) w taki sposób, że:
+\begin{enumerate}[label=(\roman*)]
+\item\label{twierdzenie_glowne_a} $F$ jest również chaotyczne w sensie Devaney'a, 
+\item\label{twierdzenie_glowne_b} $F$ ma taką samą entropię topologiczną jak $f$, 
+\item\label{twierdzenie_glowne_c} zbiory $X \times \{0\}$ i $X \times \{1\}$ są niezmiennicze ze względu na $F$.
+\end{enumerate}
+\end{theorem}
+\cite{balibrea2003topological}
+
+Na potrzeby dowodu wprowadźmy pojęcia odległości między odwzorowaniami. Niech $(M, \sigma)$ będzie zwartą przestrzenią metryczną, rozważmy odwzorowania $h,k \in C(M)$. Odległość między nimi zdefiniujmy jako $\max_{m \in M} \sigma(h(m), k(m))$ i oznaczmy ją jako $d_1(h,k)$.
+Odległość między odwzorowaniami trójkątnymi definiujemy wówczas następująco: Niech $(X, \rho)$ i $(Y, \tau)$ będą zwartymi przestrzeniami metrycznymi a $F(x,y) = (f(x), g_x(y))$ i $\Phi(x,y) = (\phi(x), \psi_x(y))$ trójkątnymi odwzorowaniami należącymi do $C_\triangle(X \times Y)$. Odległość definiujemy wówczas jako 
+\begin{align*}
+d_2(F, \Phi) = \max_{(x,y \in X \times Y} \max\{\rho(f(x),\phi(x)), \tau(g_x(y), \psi_x(y))\} \\ 
+= \max\{d_1(f,\phi), \max_{x \in X}d_1(g_x, \psi_x)\}
+\end{align*}
+Zauważmy, że jak wynika z lematu \ref{przestrzenie_ciaglych_i_ciaglych_trojkatnych_sa_zupelne} przestrzenie metryczne $(C(X), d_1)$ oraz $(C_\triangle(X \times Y), d_2)$ są zupełne \textcolor{red}{ i odpowiednie topologie na nich są topologiami jednostajnej zbieżności. (TODO czy to jest właściwe tłumaczenie?) } 
+
+Dla $(x, y) \in X \times Y$ niech $\textrm{pr}_1(x, y) = x$ i $\textrm{pr}_2(x, y) = y$. Odwzorowanie identycznościowe na $Y$ będziemy oznaczać przez $\textrm{Id}_Y$ lub krótko $\textrm{Id}$. W dalszej części pracy przestrzeń $Y$ będzie odcinkiem rzeczywistym $I = [0, 1]$.
+
+
+TODO Moze powyzsze przeniesc do definicji i lematow itp
+
+
 
 \begin{proof}[Dowód twierdzenia o rozszerzaniu]
 Odwzorowanie $f$ jest chaotyczne w sensie Devaney'a, zatem spełnia warunek $(2)$, czyli ma gęsty zbiór punktów okresowych, w szczególności istnieje orbita okresowa.
@@ -342,13 +361,13 @@ Niech $\{U_i^X\}_{i=1}^{\infty}$ będzie bazą topologii $X$ i niech $\{U_i^I\}_
 
 Dla każdego $i=1,2,...$ niech zbiór $\mathcal{F}_{SO}^i$ ("S" - stabilny, "O" - okresowy) będzie zdefiniowany następująco. Odwzorowanie G należy do $\mathcal{F}_{SO}^i$ wtedy i tylko wtedy, gdy należy do $\mathcal{F}$, posiada punkt okresowy w $U_i$ oraz wszystkie dostatecznie bliskie $G$ odwzorowania z $\mathcal{F}$ również posiadają punkt okresowy w $U_i$ (być może różne od punktuów okresowych odwzorowania $G$). Zbiory $\mathcal{F}_{SO}^i$ są otwartymi podzbiorami $\mathcal{F}$ (patrz lemat \ref{Fso_sa_otwartymi_podzbiorami_F}). Ponieważ $\mathcal{F}_{DP} \supseteq \bigcap_{i=1}^{\infty} \mathcal{F}_{SO}^i$ aby pokazać, że $\mathcal{F}_{DP}$ jest rezydualny w $\mathcal{F}$ wystarczy pokazać, że $\forall_{i \in \mathbb{N}} \mathcal{F}_{SO}^i$ jest gęsty w $\mathcal{F}$. (Jest tak, ponieważ TODO).
 
-Aby wykazać że każdy zbiór $\mathcal{F}_{SO}^i$ jest gęsty w $\mathcal{F}$ ustalmy dowolne: $i \in \mathbb{N}$, $F=(f,g_x) \in \mathcal{F}$ i $\epsilon > 0$. Pokażemy, że istnieje odwrorowanie $G \in \mathcal{F}_{SO}^i$, którego odległość od $F$ nie przekracza $\epsilon$. Dla uproszczenia sytuacji załóżmy, że $\rho(x(U_i), P_0) > 0$ (Jeżeli tak nie jest, zawsze możemy wziąć zamiast $U_i$ mniejszy prostokąt $U_i^* \subset U_i$).
+Aby wykazać że każdy zbiór $\mathcal{F}_{SO}^i$ jest gęsty w $\mathcal{F}$ ustalmy dowolne: $i \in \mathbb{N}$, $F=(f,g_x) \in \mathcal{F}$ i $\epsilon > 0$. Pokażemy, że istnieje odwrorowanie $G \in \mathcal{F}_{SO}^i$, którego odległość od $F$ nie przekracza $\epsilon$. Dla uproszczenia sytuacji załóżmy, że $\rho(\textrm{pr}_1(U_i), P_0) > 0$ (Jeżeli tak nie jest, zawsze możemy wziąć zamiast $U_i$ mniejszy prostokąt $U_i^* \subset U_i$).
 
-Weźmy dodatnią liczbę naturalną $N \geq \frac{4}{\epsilon}$. Następnie rozważmy otwarte sąsiedztwo $V$ orbity $P_0$ w przestrzeni $(X, \rho)$ takie, że $\rho(x(U_i), V) \geq 0$ oraz $d_1(g_x, \textrm{Id}) < \frac{\epsilon}{4}$ dla każdego $x \in V$ (pamiętamy, że $g_x = \textrm{Id}$ dla $x \in P_0$).
+Weźmy dodatnią liczbę naturalną $N \geq \frac{4}{\epsilon}$. Następnie rozważmy otwarte sąsiedztwo $V$ orbity $P_0$ w przestrzeni $(X, \rho)$ takie, że $\rho(\textrm{pr}_1(U_i), V) \geq 0$ oraz $d_1(g_x, \textrm{Id}) < \frac{\epsilon}{4}$ dla każdego $x \in V$ (pamiętamy, że $g_x = \textrm{Id}$ dla $x \in P_0$).
 
-$P_0$ jest zbiorem niezmienniczym ze względu na f, na mocy lematu \ref{w_otoczeniu_niezmienniczego_jest_otwarty_zawarty_w_iteracjach} istnieje niepusty zbiór otwarty $W \subseteq V$ taki, że $W \cup f(W) \cup \ldots \cup f^N(W) \subseteq V$. Na mocy lematu \ref{istnieje_orbita_okresowa_krojaca_sie_z_rodzina_otwartych} istnieje punkt okresowy $x_0$ odwzorowania $f$ taki, że $x_0 \in x(U_i)$ oraz orbita $x_0$ kroi się niepusto ze zbiorem $W$. Niech $r > 0$ będzie pierwszą dodatnią liczbą całkowitą dla której $f^r(x_0) \in W$. Wtedy $f^r(x_0), f^{r+1}(x_0), \ldots, f^{r+N-1}(x_0) \in V$. Niech $s \geq 0$ będzie pierwszą nieujemną liczbą całkowitą dla której $f^{r+N+s}(x_0) = x_0$, tj. $r+N+s$ jest okresem punktu $x_0$. Weźmy $y_0$ takie, że $(x_0, y_0) \in U_i$. Ponieważ wszystkie odwzorowania włóknowe ($g_x$) odwzorowania $F$ są "na", to istnieje punkt $y^* \in (0,1)$ taki, że $F^s(f^{r+N}(x_0), y^*) = (x_0, y_0)$ (patrz lemat \ref{wszystkie_wloknowe_na_implikuje_punkt_okresowy}).
+$P_0$ jest zbiorem niezmienniczym ze względu na f, na mocy lematu \ref{w_otoczeniu_niezmienniczego_jest_otwarty_zawarty_w_iteracjach} istnieje niepusty zbiór otwarty $W \subseteq V$ taki, że $W \cup f(W) \cup \ldots \cup f^N(W) \subseteq V$. Na mocy lematu \ref{istnieje_orbita_okresowa_krojaca_sie_z_rodzina_otwartych} istnieje punkt okresowy $x_0$ odwzorowania $f$ taki, że $x_0 \in \textrm{pr}_1(U_i)$ oraz orbita $x_0$ kroi się niepusto ze zbiorem $W$. Niech $r > 0$ będzie pierwszą dodatnią liczbą całkowitą dla której $f^r(x_0) \in W$. Wtedy $f^r(x_0), f^{r+1}(x_0), \ldots, f^{r+N-1}(x_0) \in V$. Niech $s \geq 0$ będzie pierwszą nieujemną liczbą całkowitą dla której $f^{r+N+s}(x_0) = x_0$, tj. $r+N+s$ jest okresem punktu $x_0$. Weźmy $y_0$ takie, że $(x_0, y_0) \in U_i$. Ponieważ wszystkie odwzorowania włóknowe ($g_x$) odwzorowania $F$ są "na", to istnieje punkt $y^* \in (0,1)$ taki, że $F^s(f^{r+N}(x_0), y^*) = (x_0, y_0)$ (patrz lemat \ref{wszystkie_wloknowe_na_implikuje_punkt_okresowy}).
 
-Przypadek 1. $z = y(F^r(x_0, y_0)$ jest różne od 0 i 1.
+Przypadek 1. $z = \textrm{pr}_2(F^r(x_0, y_0)$ jest różne od 0 i 1.
 Oznaczmy przez $g$ odwzorowanie z $C(I)$ posiadające następujące trzy własności:
 \begin{enumerate}
 \item[(g1)] \label{g_jeden} $d_1(g, \mathrm{Id}) < \frac{\epsilon}{4}$,
@@ -360,7 +379,7 @@ Następnie, rozważmy odwzorowanie $h \in C(I)$ posiadające trzy następujące 
 \begin{enumerate}
 \item[(h1)] \label{h_jeden} $d_1(h, g_{x_0}) < \frac{\epsilon}{4}$,
 \item[(h2)] \label{h_dwa} $h(y_0) = g_{x_0}(y_0)$,
-\item[(h3)] \label{h_trzy} $h$ jest stałe na zwartym odcinku $[a,b] \subseteq y(U_i)$ zawierającym punkt $y_0$ w swoim wnętrzu.
+\item[(h3)] \label{h_trzy} $h$ jest stałe na zwartym odcinku $[a,b] \subseteq \textrm{pr}_2(U_i)$ zawierającym punkt $y_0$ w swoim wnętrzu.
 \end{enumerate}
 
 Weźmy teraz odwzorowanie $G = (f, \widetilde{g}_x) \in \mathcal{F}$ takie, że $d_2(G, F) < \frac{\epsilon}{2}$ oraz
@@ -389,7 +408,20 @@ G^{r+N+s}(x_0, y_0) & = G^{r+N+s-1}(G(x_0, y_0)) \\
 & = F^s(f^{r+N}(x_0), y^*) = (x_0, y_0).
 \end{split}
 \end{equation}
+TODO Uzasadnic
 
+Ponadto, ze względu na \ref{h_trzy},
+$$G^{r+N+s}(\{x_0\} \times [a, b]) = \{(x_0, y_0)\}.$$
+TODO Uzasadnic
+Z faktu $y_0 \in (a, b)$ wynika, że każde odwzorowanie $\widetilde{G} \in \mathcal{F}$ dostatecznie bliskie $G$ posiada własność
+$$\widetilde{G}^{r+N+s}(\{x_0\} \times [a, b]) \subseteq \{x_0\} \times [a, b].$$
+TODO Uzasadnic
+
+Zatem $\widetilde{G}$ posiada punkt okresowy w $\{x_0\} \times [a, b] \subseteq U_i$. Zatem $G \in \mathcal{F}_{SO}^i$, co kończy dowód dla przypadku 1.
+
+Przypadek 2. $\textrm{pr}_2(R^r(x_0, y_0))$ jest równy $0$ lub $1$.
+
+W takim przypadku użyjemy lematu \ref{lemat_4_glownego_artykulu} aby dostać odwzorowanie $H = (f, h_x) \in \mathcal{F}$ takie, że $d_2(H, F) < \frac{\epsilon}{2}$ i dla $x \in \{x_0, f(x_0), \ldots, f^{r-1}(x_0)\}$ odwzorowania włóknowe $h_x$ są ściśle rosnące. (TODO uzasadnic, i odpowiedziec dlaczego na mocy lematu 4 mozemy dostac takie odwzorowanie z wloknami scisle rosnacymi) Ponieważ $y_0$ jest różnie od $0$ i $1$ dostajemy, że $\textrm{pr}_2(H^r(x_0, y_0))$ również jest różne od $0$ i $1$. (TODO uzasadnic) Następnie korzystając z przypadku 1 dostajemy odwzorowanie $G \in \mathcal{F}_{SO}^i$, dla którego zachodzi nierówność $d_2(G, H) < \frac{\epsilon}{2}$. (TODO uzasadnic) Wówczas $d_2(G, F) < \epsilon$. (TODO uzasadnic)
 
 
 \end{proof}
@@ -399,14 +431,7 @@ G^{r+N+s}(x_0, y_0) & = G^{r+N+s-1}(G(x_0, y_0)) \\
 
 % END MOJE ====================================================
 
-\chapter{Definicje, lematy, twierdzenia, przykłady i wnioski}
-Definicje, lematy, twierdzenia, przykłady i wnioski piszemy w pracy tak:
-\begin{definition}[Martyngał]
-Tu piszemy treść definicji martyngału.
-\end{definition}
-\begin{lemma}[]% w nawiasie kwadratowym można napisać jego nazwę
-Tu piszemy treść lematu.
-\end{lemma}
+
 
 {\backmatter \chapter{Podsumowanie}}
 Podsumowanie w pracach matematycznych nie jest obligatoryjne. Warto jednak na zakończenie krótko napisać, co udało nam się zrobić w pracy, a czasem także o tym, czego nie udało się zrobić.
