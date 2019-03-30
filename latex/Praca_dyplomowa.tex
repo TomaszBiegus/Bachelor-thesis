@@ -245,7 +245,7 @@ TODO: separable znaczy chyba osrodkowa??
 
 \subsection{Definicje utworzone na potrzeby dowodu twierdzenia o rozszerzaniu}
 
-Na potrzeby dowodu wprowadźmy pojęcia odległości między odwzorowaniami, oraz dwie funkcje: $\textrm{pr}_1(x, y)$ i $\textrm{pr}_2(x, y)$. 
+Na potrzeby dowodu wprowadźmy pojęcia odległości między odwzorowaniami oraz dwie funkcje: $\textrm{pr}_1(x, y)$ i $\textrm{pr}_2(x, y)$. 
 
 \begin{definition}[Metryka na przestrzeni funkcji ciągłych w przestrzeni metrycznej]
 Niech $(M, \sigma)$ będzie zwartą przestrzenią metryczną, rozważmy odwzorowania $h,k \in C(M)$. Odległość między nimi zdefiniujmy jako $\max_{m \in M} \sigma(h(m), k(m))$ i oznaczmy ją jako $d_1(h,k)$.
@@ -328,7 +328,42 @@ W glownej pracy to byl lemat 3
 
 \begin{lemma}
 \label{lemat_4_glownego_artykulu}
-% TODO
+\cite{alseda1999entropy}
+Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną i niech $F = (f, g_x)$ będzie odwzorowaniem należącym do $C_\triangle(X \times I)$ którego wszystkie włókna są niemalejące i pozostawiają krańce $I$ nie zmienione. Niech $\{a_1, a_2, \ldots, a_n\}$ będzie podzbiorem $X$ oraz dla $i = 1, 2, \ldots, n$ niech $U_i$ będą parami rozłącznymi zbiorami otwartymi takimi, że $a_i \in U_i$. Załóżmy, że $h_i$ są niemalejącymi odwzorowaniami z $C(I)$ pozostawiającymi krańce $I$ niezmienione i spełniającymi $d_1(h_i, g_{a_i}) < \epsilon$ dla pewnego dodatniego $\epsilon$ i każdego $i = 1, 2, \ldots, n$. Wówczas istnieje odwzorowanie $\widetilde{F} = (f, \widetilde{g}_x) \in C_\triangle(X \times I)$ spełniające cztery następujące warunki:
+
+\begin{enumerate}
+\item  wszystkie włókna $\widetilde{F}$ są niemalejące i pozostawiające krańce $I$ niezmienione,
+\item $d_2(F, \widetilde{F}) < \epsilon$,
+\item $\widetilde{g}_{a_i} = h_i$ dla $i = 1,2,\ldots,n$,
+\item $\widetilde{g}_x = g_x$ dla $x \in X \setminus \bigcup_{i=1}^n U_i$.
+\end{enumerate}
+
+\begin{proof}
+\cite{alseda1999entropy}
+Dla każdego $i = 1, 2, \ldots, n$ niech $V_i \subset U_i$ będzie otwartym sąsiedztwem $a_i$ takim, że dla pewnego dodatniego $\widetilde{\epsilon} < \epsilon$, $d_1(h_i, g_x) < \widetilde{\epsilon}$ zawsze wtedy gdy $x \in V_i$.
+
+Oznaczmy $U = \bigcup_{i=1}^n U_i$, $V = \bigcup_{i=1}^n V_i$ i weźmy $u : X \longrightarrow [0,1]$, ciągłą funkcję, przyjmującą wartość $1$ na zbiorze $\{a_1, a_2, \ldots, a_n\}$, natomiast $0$ poza zbiorem $V$. Zastąpmy każde odwzorowanie włóknowe $g_x$ przez $\widetilde{g}_x$, gdzie
+
+\begin{equation} \label{lemat4_rownanie_1}
+    \widetilde{g}_x(y) =
+    \begin{cases}
+        g_x(y) & \text{if $x \in X \setminus V$,}\\
+        g_x(y)(1-u(x))+h_i(y)u(x) & \text{if $x \in \{1,2,\ldots,n\}$.}
+    \end{cases}
+\end{equation}
+
+dla każdego $y \in I$. Zauważmy ponadto, że dla $x \in V_i$ oraz $i \in \{1,2,\ldots,n\}$ możemy równoważnie napisać
+
+\begin{equation} \label{lemat4_rownanie_2}
+\widetilde{g}_x(y) = u(x)(h_i(y) - g_x(y)) + g_x(y).
+\end{equation}
+
+Rozważmy odwzorowanie $\widetilde{F} = (f, \widetilde{g}_x)$. Należy ono do $C_\triangle(X \times I)$. Z równości \ref{lemat4_rownanie_1} widzimy, że wszystkie włókna $\widetilde{g}_x$ są niemalejące i pozostawjaiąc krańce przedziału $I$ nie zmienione (TODO sprawdzic czy to dobre tluamczenie, mzoe krance ustalone? krance stale?). Ponadto $\widetilde{g}_{a_i} = h_i$ dla każdego $i$ oraz $\widetilde{g}_x = g_x$ dla $x \in X \setminus V \supset X \setminus U$. Ponieważ dla $x \in V_i$, gdzie $i \in \{1,2,\ldots,n\}$ mamy $d_1(h_i, g_x) < \widetilde{\epsilon}$ oraz $u(x) \in [0,1]$, zatem z równości \ref{lemat4_rownanie_2} otrzymujemy $d_1(g_x, \widetilde{g}_x) < \widetilde{\epsilon}$ dla każdego $x \in V$. Wynika z tego, że $d_2(F, \widetilde(F)) \leq \widetilde{\epsilon} < \epsilon$ (TODO uzasadnic tutaj wewnatrz to ostatnie przejscie od d1 do d2 z definicji d1 i d2), co kończy dowód.
+
+\end{proof}
+
+
+
 \end{lemma}
 
 \begin{lemma}
@@ -377,7 +412,7 @@ W glownej pracy to byl lemat 3
 
 \chapter{Twierdzenie o rozszerzaniu odwzorowań chaotycznych w sensie Devaney'a}
 \begin{theorem}[O rozszerzaniu]\label{twierdzenie_glowne}
-Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowanych, oraz niech $f \in C(X)$ będzie odwzorowaniem chaotycznym w sensie Devaney'a. Wówczas odwzorowanie $f$ można rozszerzyć do odwzorowania $F \in C_{\triangle}(X \times I)$ (to znaczy tak, że $f$ jest odwzorowaniem bazowym dla $F$) w taki sposób, że:
+Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowanych oraz niech $f \in C(X)$ będzie odwzorowaniem chaotycznym w sensie Devaney'a. Wówczas odwzorowanie $f$ można rozszerzyć do odwzorowania $F \in C_{\triangle}(X \times I)$ (to znaczy tak, że $f$ jest odwzorowaniem bazowym dla $F$) w taki sposób, że:
 \begin{enumerate}[label=(\roman*)]
 \item\label{twierdzenie_glowne_a} $F$ jest również chaotyczne w sensie Devaney'a, 
 \item\label{twierdzenie_glowne_b} $F$ ma taką samą entropię topologiczną jak $f$, 
@@ -450,14 +485,14 @@ Następnie, rozważmy odwzorowanie $h \in C(I)$ posiadające trzy następujące 
 
 Weźmy teraz odwzorowanie $G = (f, \widetilde{g}_x) \in \mathcal{F}$ takie, że $d_2(G, F) < \frac{\epsilon}{2}$ oraz
 
-\[
+\begin{equation}
     \widetilde{g}_x =
     \begin{cases}
         h & \text{if $x=x_0$,}\\
         g & \text{if $x \in \{f^k(x_0) : r \leq k \leq r+N-1\}$,}\\
         g_x & \text{if $x \in \{f^k(x_0) : 1 \leq k \leq r-1$ or $r+N \leq k \leq r+N+s-1\}$.}
     \end{cases}
-\]
+\end{equation}
 
 Odwzorowanie takie istnieje na mocy lematu \ref{lemat_4_glownego_artykulu}, ponieważ
 $$d_1(\widetilde{g}_{x_0}, g_{x_0}) = d_1(h, g_{x_0}) < \frac{\epsilon}{4}$$
@@ -479,7 +514,7 @@ Szczegółowe uzasadnienie powyższej równości znajduje się w \ref{uzasadnien
 Ponadto, ze względu na \ref{h_trzy}, na mocy \ref{obraz_x0_razy_ab_przez_iterate_G_rowna_sie_x0y0} zachodzi
 $$G^{r+N+s}(\{x_0\} \times [a, b]) = \{(x_0, y_0)\}.$$
 
-Z faktu $y_0 \in (a, b)$, oraz \ref{obraz_przez_iterate_kazdego_dostatecznie_bliskiego_G_zawiera_sie_w_x0_razy_ab} wynika, że każde odwzorowanie $\widetilde{G} \in \mathcal{F}$ dostatecznie bliskie $G$ posiada własność
+Z faktu $y_0 \in (a, b)$ oraz \ref{obraz_przez_iterate_kazdego_dostatecznie_bliskiego_G_zawiera_sie_w_x0_razy_ab} wynika, że każde odwzorowanie $\widetilde{G} \in \mathcal{F}$ dostatecznie bliskie $G$ posiada własność
 $$\widetilde{G}^{r+N+s}(\{x_0\} \times [a, b]) \subseteq \{x_0\} \times [a, b].$$
 
 
