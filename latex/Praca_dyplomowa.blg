@@ -3,47 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Praca_dyplomowa.aux
 The style file: bibliografia_styl.bst
 Database file #1: bibliografia.bib.bib
-Warning--I didn't find a database entry for "einstein"
-Warning--I didn't find a database entry for "latexcompanion"
-You've used 2 entries,
+You've used 3 entries,
             2253 wiz_defined-function locations,
-            543 strings with 4280 characters,
-and the built_in function-call counts, 748 in all, are:
-= -- 74
-> -- 34
+            547 strings with 4373 characters,
+and the built_in function-call counts, 981 in all, are:
+= -- 97
+> -- 41
 < -- 0
-+ -- 14
-- -- 12
-* -- 70
-:= -- 127
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 12
++ -- 17
+- -- 14
+* -- 81
+:= -- 168
+add.period$ -- 10
+call.type$ -- 3
+change.case$ -- 15
 chr.to.int$ -- 0
-cite$ -- 2
-duplicate$ -- 18
-empty$ -- 57
-format.name$ -- 12
-if$ -- 147
+cite$ -- 3
+duplicate$ -- 31
+empty$ -- 80
+format.name$ -- 14
+if$ -- 198
 int.to.chr$ -- 0
-int.to.str$ -- 2
-missing$ -- 2
-newline$ -- 13
-num.names$ -- 4
-pop$ -- 8
+int.to.str$ -- 3
+missing$ -- 4
+newline$ -- 18
+num.names$ -- 6
+pop$ -- 14
 preamble$ -- 1
-purify$ -- 10
+purify$ -- 13
 quote$ -- 0
-skip$ -- 10
+skip$ -- 16
 stack$ -- 0
-substring$ -- 66
-swap$ -- 4
+substring$ -- 71
+swap$ -- 6
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 8
+type$ -- 10
 warning$ -- 0
-while$ -- 8
-width$ -- 3
-write$ -- 22
-(There were 2 warnings)
+while$ -- 10
+width$ -- 4
+write$ -- 33
