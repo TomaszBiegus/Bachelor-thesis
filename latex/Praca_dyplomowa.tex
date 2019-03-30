@@ -223,7 +223,7 @@ We wstępie zapowiadamy, o czym będzie praca. Próbujemy zachęcić czytelnika 
 \item metryka
 \item przestrzeń metryczna
 \item kula otwarta
-\item gęstość
+\item gęstość w przestrzeni metrycznej
 \item przestrzen metryczna zwarta,
 \item punkt izolowany w przestrzeni metrycznej
 
@@ -275,6 +275,15 @@ Warunek \ref{nierownosc_trojkata} nazywany jest zwykle nierównością trójkąt
 
 \begin{definition}[Przestrzeń metryczna]
 Przestrzenią metryczną nazywamy parę $(X, \rho)$, gdzie $X$ jest zbiorem a $\rho$ zdefiniowaną na nim metryką.
+\end{definition}
+
+\begin{definition}[Kula otwarta]
+Kulą otwartą w przestrzeni metrycznej $(X, \rho)$ nazywamy zbiór: $K(s, r) = \{x \in X: \rho(s, x) < r\}$.
+Punkt $s$ nazywamy wówczas środkiem kuli $K$, a $r \in \mathbb{R}_+ \cup \{0\}$ jej promieniem.
+\end{definition}
+
+\begin{definition}[Zbiór gęsty]
+Dla danej przestrzeni metrycznej $(X, \rho)$. Zbiór $A \subset X$ nazwiemy gęstym, gdy $\forall_{x \in X} \, \forall_{\epsilon>0} \, \exists_{a \in A} : \rho(x, a) < \epsilon$.
 \end{definition}
 
 
