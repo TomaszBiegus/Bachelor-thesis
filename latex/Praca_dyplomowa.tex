@@ -220,10 +220,11 @@ We wstępie zapowiadamy, o czym będzie praca. Próbujemy zachęcić czytelnika 
 \item topologia
 \item baza topologii
 \item przestrzeń topologiczna
-\item metryka
-\item przestrzeń metryczna
-\item kula otwarta
-\item gęstość w przestrzeni metrycznej
+%\item metryka
+%\item przestrzeń metryczna
+%\item kula otwarta
+%\item gęstość w przestrzeni metrycznej
+\item pokrycie zbiorami otwartymi
 \item przestrzen metryczna zwarta,
 \item punkt izolowany w przestrzeni metrycznej
 
@@ -286,6 +287,17 @@ Punkt $s$ nazywamy wówczas środkiem kuli $K$, a $r \in \mathbb{R}_+ \cup \{0\}
 Dla danej przestrzeni metrycznej $(X, \rho)$. Zbiór $A \subset X$ nazwiemy gęstym, gdy $\forall_{x \in X} \, \forall_{\epsilon>0} \, \exists_{a \in A} : \rho(x, a) < \epsilon$.
 \end{definition}
 
+\begin{definition}[Pokrycie otwarte]
+\cite[s.~195]{ruette2017chaos}
+Pokryciem otwartym przestrzeni metrycznej $X$ nazywamy rodzinę zbiorów otwartych $(U_i)_{i \in I}$ taką, że $X=\bigcup_{i \in I}U_i$.
+\end{definition}
+
+\begin{definition}[Przestrzeń metryczna zwarta]
+\cite[s.~196]{ruette2017chaos}
+Przestrzeń metryczną $X$ nazywamy zwartą jeżeli każde pokrycie otwarte $(U_i)_{i \in I}$ tej przestrzeni zawiera podpokrycie skończone, to znaczy istnieje skończony zbiór indeksów $J \subset I$ taki, że $X = \bigcup_{i \in J}U_i$.
+Podzbiór $Y \subset X$ jest zwarty jeżeli $Y$ jest zwarty względem topologii indukowanej. 
+\end{definition}
+
 
 
 \subsection{Definicje utworzone na potrzeby dowodu twierdzenia o rozszerzaniu}
@@ -299,7 +311,7 @@ Niech $(M, \sigma)$ będzie zwartą przestrzenią metryczną, rozważmy odwzorow
 \begin{definition}[Metryka na przestrzeni odwzorowań trójkątnych]
 Odległość między odwzorowaniami trójkątnymi definiujemy wówczas następująco: Niech $(X, \rho)$ i $(Y, \tau)$ będą zwartymi przestrzeniami metrycznymi a $F(x,y) = (f(x), g_x(y))$ i $\Phi(x,y) = (\phi(x), \psi_x(y))$ trójkątnymi odwzorowaniami należącymi do $C_\triangle(X \times Y)$. Odległość definiujemy wówczas jako 
 \begin{align*}
-d_2(F, \Phi) = \max_{(x,y \in X \times Y} \max\{\rho(f(x),\phi(x)), \tau(g_x(y), \psi_x(y))\} \\ 
+d_2(F, \Phi) = \max_{(x,y) \in X \times Y} \max\{\rho(f(x),\phi(x)), \tau(g_x(y), \psi_x(y))\} \\ 
 = \max\{d_1(f,\phi), \max_{x \in X}d_1(g_x, \psi_x)\}
 \end{align*}
 Zauważmy, że jak wynika z lematu \ref{przestrzenie_ciaglych_i_ciaglych_trojkatnych_sa_zupelne} przestrzenie metryczne $(C(X), d_1)$ oraz $(C_\triangle(X \times Y), d_2)$ są zupełne \textcolor{red}{ i odpowiednie topologie na nich są topologiami jednostajnej zbieżności. (TODO czy to jest właściwe tłumaczenie?) } 
