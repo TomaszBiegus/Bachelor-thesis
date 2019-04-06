@@ -218,7 +218,8 @@ We wstępie zapowiadamy, o czym będzie praca. Próbujemy zachęcić czytelnika 
 \begin{enumerate}
 \item ciąg
 \item podciąg
-\item ciąg Cauchy'ego (pojawia się w definicji zupełności)
+TODO: Dopisać do sekcji definicji definicję punktu skupienia ciągu.
+\item ciąg Cauchy'ego (pojawia się w definicji zupełności, TODO ma byc tutaj czy w faktach ogolnych dotyczacych zwartych przestrzeni metrycznych?)
 
 \item wnetrze zbioru
 \item topologia
@@ -361,10 +362,24 @@ Zatem $\forall_{n > N}: \rho(x_n, g) \leq \rho(x_n, x_M) + \rho(x_M, g) < \frac{
 
 
 \begin{theorem}[Równoważność definicji pokryciowej i ciągowej zwartości przestrzeni metrycznych] \label{rownowaznosc_definicji_pokryciowej_i_ciagowej}
-% TODO
+TODO: Sformulowac lepiej:
+Definicja pokryciowa $\iff$ definicja ciągowa
 \end{theorem}
 
 \begin{proof}
+$(\Rightarrow)$
+Załóżmy, że z dowolnego pokrycia $X$ zbiorami otwartymi możemy wybrac podpokrycie skończone. Weźmy dwolony ciąg $(x_n) \in X$. Pokażę, że ten ciąg ma punkt skupienia w $X$. Załóżmy, że ciąg $(x_n)$ nie ma punktu skupienia w $X$, to znaczy $\forall_{x \in X}$ $x$ nie jest punktem skupienia $x_n$, czyli $\forall_{x \in X} \, \exists_{\epsilon > 0}  K(x, \epsilon) \setminus \{x\} \cap \{x_n\}_{n=1}^{\infty} = \emptyset$. Utwórzmy pokrycie $X$ w następujący sposób: $$\mathcal{A} = \bigcup_{x \in X} K(x, \epsilon_x),$$ gdzie $\epsilon_x > 0$ jest liczbą spełniającą warunek $K(x, \epsilon_x) \setminus \{x\} \cap \{x_n\}_{n=1}^{\infty} = \emptyset$. Oczywiście rodzina $\mathcal{A}$ jest pokryciem otwartym przestrzeni $X$. Zgodnie z założeniem, z pokrycia $\mathcal{A}$ możemy wybrać podpokrycie skończone. Każdy zbiór $A \in \mathcal{A}$ zawiera najwyżej jeden element ciągu $(x_n)$. Skończenie wiele zbiorów zawierających po co najwyżej jednym elemencie ciągu prowadzi do wniosku, że przestrzeń $X$ zawiera skończenie wiele elementów nieskończonego ciągu co stanowi sprzeczność.
+
+Oznaczmy przez $g$ punkt skupienia ciągu $(x_n)$. Oznaczmy przez $y_1$ pierwszy element ciągu $(x_n)$ różny od $g$. przez $y_2$ pierwszy element ciągu $(x_n)$ różny od $g$ i taki, że $y_2 \in K(g, \frac{d}{2})$, gdzie $d = \rho(y_1, g)$.
+Następnie niech $y_n$ będzie pierwszym elementem ciągu $(x_n)$ różnym od $g$ i spełniającym warunek $y_n \in K(g, \frac{d_{n-1}}{2})$, gdzie $d_{n-1} = \rho(y_{n-1}, g)$. Powstały w ten sposób podciąg $(y_n) \subset (x_n)$ jest zbieżny do $g \in X$. W przypadku gdyby na którymś etapie powyższej konstrukcji nie można było wskazać kolejnego elementu różnego od $g$, znaczyłoby to, że od pewnego miejsca ciąg $(x_n)$ jest stale równy $g$, a więc zbieżny.
+
+$(\Leftarrow)$
+Złóżmy, że $X$ spełnia definicję pokryciową.
+Dowód przez kontrapozycję (TODO: Opisać na czym polega kontrapozycja w logice czy to zbyt elementarne na poziom pracy licencjackiej?). Pokażemy, że jeżeli istnieje pokrycie $X$, z którego nie można wybrć podpokrycia skończonego to istnieje ciąg z którego nie można wybrać podciagu zbieżnego.
+
+Załóżmy zatem, że nieskończona, przeliczalna rodzina zbiorów otwartych $\{U_i\}_{i=1}^{\infty}$ stanowi pokrycie X. Skonstruujmy następujący ciąg: 
+$$x_1 \notin U_1$$
+$$x_n \notin \bigcup_{k=1}^{n-1} U_k$$ Zawsze znajdziemy taki $x_n \in X$, gdyż gdyby taki nie istniał znaczyłoby to, że $\bigcup_{i=1}^{n-1}{U_{k_i}} = X$, czyli istniałoby podpokrycie skończone. Załóżmy teraz, że ciąg $(x_n)$ ma podciąg zbieżny. Wtedy istniałaby jego granica, tj. element $g \in X$ taki że dla każdego $\epsilon > 0$ nieskończenie wiele elementów ciągu leży wewnątrz kuli $B(g, \epsilon)$, z kolei z otwartości zbiorów $U_n$ możemy wybrać taki $\epsilon$, że $B(g, \epsilon) \subset U_k$, gdzie $U_k$ jest dowolnym zbiorem z pokrycia X, zawierającym g. Z konstrukcji naszego ciągu wynika jednak, że $\forall_{n \in N} \forall_{m>n} \, x_m \notin U_n$, czyli do każdego $U_n$ należy jedynie skończenie wiele elementów. Zatem otrzymujemy sprzeczność. Czyli ciąg $(x_n)$ nie zawiera podciągu zbieżnego.
 \end{proof}
 
 
