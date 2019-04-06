@@ -213,13 +213,19 @@ We wstępie zapowiadamy, o czym będzie praca. Próbujemy zachęcić czytelnika 
 
 \section{Definicje}
 
-\subsection{Definicje ogólne}
+\subsection{Definicje i fakty ogólne}
 
 \begin{enumerate}
+\item ciąg
+\item podciąg
+\item ciąg Cauchy'ego (pojawia się w definicji zupełności)
+
 \item wnetrze zbioru
 \item topologia
+\item topologia indukowana? - pojawia sie w definicji przestrzeni zwartej
 \item baza topologii
 \item przestrzeń topologiczna
+\item topologia zbieżności jednostajnej (pojawia się w definicji metryki na przestrzeni odwzorowan trojkatnych)
 %\item metryka
 %\item przestrzeń metryczna
 %\item kula otwarta
@@ -292,12 +298,74 @@ Dla danej przestrzeni metrycznej $(X, \rho)$. Zbiór $A \subset X$ nazwiemy gęs
 Pokryciem otwartym przestrzeni metrycznej $X$ nazywamy rodzinę zbiorów otwartych $(U_i)_{i \in I}$ taką, że $X=\bigcup_{i \in I}U_i$.
 \end{definition}
 
-\begin{definition}[Przestrzeń metryczna zwarta]
+\begin{definition}[Przestrzeń metryczna zwarta, definicja pokryciowa]
 \cite[s.~196]{ruette2017chaos}
 Przestrzeń metryczną $X$ nazywamy zwartą jeżeli każde pokrycie otwarte $(U_i)_{i \in I}$ tej przestrzeni zawiera podpokrycie skończone, to znaczy istnieje skończony zbiór indeksów $J \subset I$ taki, że $X = \bigcup_{i \in J}U_i$.
 Podzbiór $Y \subset X$ jest zwarty jeżeli $Y$ jest zwarty względem topologii indukowanej. 
 \end{definition}
 
+\begin{definition}[Przestrzeń metryczna zwarta, definicja ciągowa]
+\label{ciagowa_definicja_zwartosci}
+Przestrzeń metryczna $(X, \rho)$ jest zwarta $\iff$ z każdego ciągu $(x_n) \subset X$ można wybrać podciąg zbieżny.
+\end{definition}
+
+
+\subsection{Fakty ogólne, dotyczące zwartych przestrzeni metrycznych}
+
+
+\begin{definition}[Ośrodkowość]
+\end{definition}
+
+
+\begin{definition}[Zupełność]
+Przestrzeń metryczna jest zupełna jeśli każdy ciąg Cauchy'ego jest zbieżny.
+\end{definition}
+
+
+\begin{theorem}[Ośrodkowość zwartych przestrzeni metrycznych] \label{zwarta_jest_osrodkowa}
+Jeżeli przestrzeń metryczna jest zwarta to jest również ośrodkowa.
+\end{theorem}
+
+\begin{proof}
+Niech $(X, \rho)$ będzie przestrzenią metryczną zwartą. Oznacza to, że z każdego pokrycia $X$ zbiorami otwartymi, można wybrać podpokrycie skończone.
+
+Niech $\mathcal{A}_{i} = \{ K(x, \frac{1}{i}) : x \in X \}$, $\mathcal{A}_{i}$ jest oczywiście pokryciem $X$ zbiorami otwartymi, ponieważ $\forall_{x \in X, i \in \mathbb{N}} :  K(x, \frac{1}{i})$ jest otwarty, oraz $\forall_{i \in \mathbb{N}} \forall_{x \in X} \exists_{A \in \mathcal{A}_{i}} : x \in A$, w szczególności $\forall_{i \in \mathbb{N}} \forall_{x \in X} : x \in K(x, \frac{1}{i}) \in \mathcal{A}_{i}$.
+Zatem z każdej rodziny $\mathcal{A}_{i}$ możemy wybrać podpokrycie skończone, oznaczmy je przez $\mathcal{B}_{i}$. Rozważmy teraz następującą rodzinę: 
+$$B = \bigcup\limits_{i=1}^{\infty} \mathcal{B}_{i}$$
+Składa się ona ze zbiorów postaci $K(x, \frac{1}{i})$ dla pewnych $i \in \mathbb{N}$ i $x \in X$ i jako przeliczalna suma rodzin skończonych jest przeliczalną rodziną zbiorów.
+Niech teraz 
+$$C = \{ s : \exists_{i \in \mathbb{N}} \, K(s, \frac{1}{i}) \in B \}$$
+Zbiór $C$ jest równoliczny ze zbiorem $B$, a więc przeliczalny.
+Ponadto $C$ jest gęsty w $X$.
+Niech $\epsilon > 0$. Weźmy dowolny $x \in X$. Oczywiście $\exists_{i_0 \in \mathbb{N}} : \frac{1}{i_0} < \epsilon$. Wiemy, że $\mathcal{B}_{i_0}$ stanowi pokrycie $X$ i składa się ze zbiorów postaci $K(s, \frac{1}{i_0})$, gdzie $s \in X$. Skoro $\mathcal{B}_{i_0}$ jest pokryciem $X$ to $\exists_{K(s, \frac{1}{i_0}) \in \mathcal{B}_{i_0}} : x \in K(s, \frac{1}{i_0})$, czyli $\rho(x, s) < \frac{1}{i_0} < \epsilon$, natomiast $s \in C$ z definicji zbioru $C$
+
+Czyli X zawiera podzbiór przeliczalny i gęsty, zatem przestrzeń $(X, \rho)$ jest ośrodkowa.
+\end{proof}
+
+
+\begin{theorem}[Zupełność zwartych przestrzeni metrycznych] \label{zwarta_jest_zupelna}
+Każda zwarta przestrzeń metryczna jest zupełna.
+\end{theorem}
+
+\begin{proof}
+Niech $(X, \rho)$  będzie przestrzenią zwartą.
+Weźmy ciąg Cauchy'ego $(x_n)$ elementów $X$. Ze zwartości (definicja \ref{ciagowa_definicja_zwartosci}) wynika, że istnieje podciąg $(y_n) \subset (x_n)$ zbieżny do jakiegoś $g \in X$. Zatem $\forall_{\epsilon > 0} \, \exists_{n_0 \in \mathbb{N}} \, \forall_{n > n_0} \, \rho(y_n, g) < \epsilon$.
+Pokażemy, że $(x_n)$ zbiega do $g$.
+
+Ustalmy $\epsilon > 0$. Z faktu, że $(x_n)$ jest ciągiem Cauchy'ego wynika, że $$\exists_{N \in \mathbb{N}} \, \forall_{n, m > N} \, \rho(x_m, x_n) < \frac{\epsilon}{2}$$ Ponadto $$\exists_{n_0 \in \mathbb{N}} \, \forall_{n > n_0} \, \rho(y_n, g) < \frac{\epsilon}{2}$$ Weźmy teraz element $y_{k}$ podciągu $(y_n)$, taki że $y_{k} = x_M$, gdzie $M > N \land M > n_0$. Wówczas 
+$$M > N \implies \forall_{n > N} \, \rho(x_M, x_n) < \frac{\epsilon}{2}$$
+$$M > n_0 \implies \rho(x_M, g) < \frac{\epsilon}{2}$$
+
+Zatem $\forall_{n > N}: \rho(x_n, g) \leq \rho(x_n, x_M) + \rho(x_M, g) < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon$, czyli $g \in X$ jest granicą ciągu $(x_n)$, a więc $(x_n)$ jest zbieżny w $(X, \rho)$.
+\end{proof}
+
+
+\begin{theorem}[Równoważność definicji pokryciowej i ciągowej zwartości przestrzeni metrycznych] \label{rownowaznosc_definicji_pokryciowej_i_ciagowej}
+% TODO
+\end{theorem}
+
+\begin{proof}
+\end{proof}
 
 
 \subsection{Definicje utworzone na potrzeby dowodu twierdzenia o rozszerzaniu}
@@ -314,7 +382,7 @@ Odległość między odwzorowaniami trójkątnymi definiujemy wówczas następuj
 d_2(F, \Phi) = \max_{(x,y) \in X \times Y} \max\{\rho(f(x),\phi(x)), \tau(g_x(y), \psi_x(y))\} \\ 
 = \max\{d_1(f,\phi), \max_{x \in X}d_1(g_x, \psi_x)\}
 \end{align*}
-Zauważmy, że jak wynika z lematu \ref{przestrzenie_ciaglych_i_ciaglych_trojkatnych_sa_zupelne} przestrzenie metryczne $(C(X), d_1)$ oraz $(C_\triangle(X \times Y), d_2)$ są zupełne \textcolor{red}{ i odpowiednie topologie na nich są topologiami jednostajnej zbieżności. (TODO czy to jest właściwe tłumaczenie?) } 
+Zauważmy, że jak wynika z lematu \ref{przestrzenie_ciaglych_i_ciaglych_trojkatnych_sa_zupelne} przestrzenie metryczne $(C(X), d_1)$ oraz $(C_\triangle(X \times Y), d_2)$ są zupełne i odpowiednie topologie na nich są topologiami zbieżności jednostajnej.
 \end{definition}
 
 \begin{definition}[$\textrm{pr}_1(x, y)$, $\textrm{pr}_2(x, y)$]
@@ -469,6 +537,7 @@ Rozważmy odwzorowanie $\widetilde{F} = (f, \widetilde{g}_x)$. Należy ono do $C
 
 \chapter{Twierdzenie o rozszerzaniu odwzorowań chaotycznych w sensie Devaney'a}
 \begin{theorem}[O rozszerzaniu]\label{twierdzenie_glowne}
+Twierdzenie wraz z dowodem przytaczamy za pracą \cite{balibrea2003topological}
 Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowanych oraz niech $f \in C(X)$ będzie odwzorowaniem chaotycznym w sensie Devaney'a. Wówczas odwzorowanie $f$ można rozszerzyć do odwzorowania $F \in C_{\triangle}(X \times I)$ (to znaczy tak, że $f$ jest odwzorowaniem bazowym dla $F$) w taki sposób, że:
 \begin{enumerate}[label=(\roman*)]
 \item\label{twierdzenie_glowne_a} $F$ jest również chaotyczne w sensie Devaney'a, 
@@ -476,7 +545,6 @@ Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowan
 \item\label{twierdzenie_glowne_c} zbiory $X \times \{0\}$ i $X \times \{1\}$ są niezmiennicze ze względu na $F$.
 \end{enumerate}
 \end{theorem}
-\cite{balibrea2003topological}
 
 
 \begin{proof}[Dowód twierdzenia o rozszerzaniu]
