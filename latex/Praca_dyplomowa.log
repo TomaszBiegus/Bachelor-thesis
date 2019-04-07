@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.14)  7 APR 2019 15:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.14)  7 APR 2019 22:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1447,16 +1447,13 @@ Package rerunfilecheck Info: File `Praca_dyplomowa.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 766.
  ) 
 Here is how much of TeX's memory you used:
- 22944 strings out of 493029
- 409382 string characters out of 6136233
+ 22943 strings out of 493029
+ 409372 string characters out of 6136233
  833157 words of memory out of 5000000
- 25740 multiletter control sequences out of 15000+600000
+ 25739 multiletter control sequences out of 15000+600000
  79431 words of font info for 132 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  71i,15n,62p,1247b,2387s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1474,7 +1471,7 @@ m/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/tex
 mf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lms
 y6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Praca_dyplomowa.pdf (25 pages, 345789 bytes).
+Output written on Praca_dyplomowa.pdf (25 pages, 345511 bytes).
 PDF statistics:
  470 PDF objects out of 1000 (max. 8388607)
  422 compressed objects within 5 object streams
