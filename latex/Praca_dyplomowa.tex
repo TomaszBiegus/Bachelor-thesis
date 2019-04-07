@@ -136,8 +136,7 @@
 %\listoffigures
 %\listoftables
 
-{\backmatter \chapter{Wstęp}}
-We wstępie zapowiadamy, o czym będzie praca. Próbujemy zachęcić czytelnika do dalszej lektury, np. krótko informując, dlaczego wybraliśmy właśnie ten temat i co nas w nim zainteresowało.
+
 
 %\chapter{Rozdział pierwszy}
 %Tabela \ref{tab:przykladowa} przedstawia przykładową tabelę. Do tworzenia tabeli służą m.in. środowiska \texttt{tabular} oraz \texttt{table}. Istnieje możliwość numeracji dwustopniowej, gdzie pierwsza cyfra oznacza numer rozdziału, a druga – kolejny numer tabeli w tym rozdziale. Tytuł powinien znajdować się centralnie nad tabelą, $12$ pkt odstępu od tekstu zasadniczego nad i pod tabelą wraz z tytułem. Jeśli tabela jest cytowana – należy podać centralnie pod tabelą źródło jej pochodzenia, np. opracowanie własne, opracowano na podstawie danych z GUS.
@@ -209,6 +208,22 @@ We wstępie zapowiadamy, o czym będzie praca. Próbujemy zachęcić czytelnika 
 
 
 % MOJE ================================================
+{\backmatter \chapter{Wstęp}}
+\section{Motywacje}
+Studia matematycznę podjąłem w dość późnym wieku, już po ukończeniu innych kierunków. Od zawsze jednak matematyka pociągała mnie jako klucz do zrozumienia pozostałych dziedzin, jako narzędzie pozwalające dostrzec lepiej i głębiej urodę przyrody. Wykorzystując matematykę, możemy uchwycić reguły, wzorce i schematy które opisują niewyobrażalną złożoność świata w którym żyjemy. Matematykę postrzegam jako klamrę spinające wszystkie dziedziny intelektualnej działalności człowieka, począwszy od fizyki, poprzez chemię, biologię, aż po psychologię czy nauki społeczne. Decyzję o rozpoczęciu studiów matematycznych podjąłem w lecie siedząc nad rzeką i przyglądając się hipnotyzującym zawirowaniom na powierzchni wody płynącej w rzece Odrze przepływającej przez Wrocław, oraz leniwemu ruchowi fraktalnych kształtów chmur na błękitnym niebie. Byłem wówczas absolwentem wyższej uczelni, w którym wciąż żyło pragnienie poznawania głębiej wszystkich tych pięknych zjawisk, które nas otaczają. Byłem również świeżo po lekturze inspirującej popularnonaukowej książki Jamesa Gleicka zatytuowanej ''Chaos'' \cite{gleick1987chaos}...
+\section{Historia badań nad układami dynamicznymi}
+\subsection{Od starożytności do Newtona}
+\subsection{Problem stabilności układu słonecznego}
+\subsection{Lorenz i jego atraktor}
+\subsection{Mandelbrodt i fraktale}
+\subsection{Chaos}
+Li-Yorke, Von Neumann, Birkhoff, Smale, Szarkowski, Devaney
+
+
+
+
+
+
 \chapter{Definicje, lematy, twierdzenia, przykłady i wnioski}
 
 \section{Definicje}
@@ -227,22 +242,30 @@ TODO: Dopisać do sekcji definicji definicję punktu skupienia ciągu.
 \item baza topologii
 \item przestrzeń topologiczna
 \item topologia zbieżności jednostajnej (pojawia się w definicji metryki na przestrzeni odwzorowan trojkatnych)
-%\item metryka
-%\item przestrzeń metryczna
-%\item kula otwarta
-%\item gęstość w przestrzeni metrycznej
-\item pokrycie zbiorami otwartymi
-\item przestrzen metryczna zwarta,
+%\item metryka jest
+%\item przestrzeń metryczna jest
+%\item kula otwarta jest
+\item otoczenie punktu
+\item sąsiedztwo punktu
+\item zbiór otwarty w przestrzeni metrycznej
+\item zbiór domknięty w przestrzeni metrycznej
+%\item gęstość w przestrzeni metrycznej jest
+%\item pokrycie zbiorami otwartymi jest
+%\item przestrzen metryczna zwarta, jest
+\item ośrodkowość
+%\item zupelnosc, jest
 \item punkt izolowany w przestrzeni metrycznej
 
 
 \item Ciaglosc funkcji na przestrzeni metrycznej (zbior $C(X)$)
 
 
-\item uklad dynamiczny,
-\item orbita,
+%\item uklad dynamiczny, jest
+%\item orbita, jest
+%\item iterata odwzorowania, jest
+%\item punkt stały, jest
+%\item punkt okresowy odwzorowania, jest
 \item orbita okresowa
-\item punkt okresowy odwzorowania
 \item niezmienniczosc zbioru ze wzgledu na odwzorowanie
 
 \item topologiczna tranzytywnosc
@@ -269,6 +292,9 @@ TODO: separable znaczy chyba osrodkowa??
 %TODO
 %\cite[s.~103]{kuratowski1977wstep}
 %\end{definition}
+
+\subsection{Definicje dotyczące zwartych przestrzeni metrycznych}
+
 
 \begin{definition}[Metryka]
 Metryką na zbiorze $X$ nazywamy funkcję $\rho : X \times X \longrightarrow \mathbb{R}_+ \cup \{0\}$ spełniającą następujące warunki:
@@ -383,6 +409,43 @@ $$x_n \notin \bigcup_{k=1}^{n-1} U_k$$ Zawsze znajdziemy taki $x_n \in X$, gdyż
 \end{proof}
 
 
+\subsection{Definicje dotyczące układów dynamicznych}
+
+\begin{definition}[Układ dynamiczny]
+Układem dynamicznym nazywamy parę $(X, T)$, gdzie $X$ jest zbiorem a $T:X \rightarrow X$ przekształceniem (odwzorowaniem).
+\end{definition}
+
+\begin{definition}[Orbita]
+Orbita punktu $x$ to ciąg $x, Tx, T^2x, T^3x,\ldots$, czyli 
+$$O_T(x) = \{T^nx: n=0,1,2,\ldots\}.$$
+
+Jeśli $T$ jest odwracalne (czyli różnowartościowe i "na"), to możemy rozważać orbitę obustronną:
+$$\{T^nx: n \in \mathbb{Z}\}.$$
+\end{definition}
+
+\begin{definition}[Iterata przekształcenia]
+Iterata przekształcenia $T$ to potęga przekształcenia $T^n$, $n \in \mathbb{N}$.
+\end{definition}
+
+\begin{definition}[Punkt stały]
+Punkt $x$ jest stały, gdy $Tx = x$.
+\end{definition}
+
+\begin{definition}[Punkt okresowy odwzorowania]
+Punkt $x$ jest okresowy, gdy jest stały dla jakiejś iteraty, tzn. gdy $\exists_{n \in \mathbb{N}} \, T^nx = x$.
+\end{definition}
+
+\begin{definition}[Orbita okresowa]
+\end{definition}
+
+\begin{definition}[Niezmienniczość zbioru ze względu na odwzorowanie]
+\end{definition}
+
+
+\subsection{Definicje chaosu}
+
+
+
 \subsection{Definicje utworzone na potrzeby dowodu twierdzenia o rozszerzaniu}
 
 Na potrzeby dowodu wprowadźmy pojęcia odległości między odwzorowaniami oraz dwie funkcje: $\textrm{pr}_1(x, y)$ i $\textrm{pr}_2(x, y)$. 
@@ -420,7 +483,7 @@ Niech  $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowa
 \end{lemma}
 
 \begin{lemma}\label{rownosc_entropii_gdy_wlokna_monotoniczne}
-% TODO
+% TODO gwiazdka w wydrukowanej pracy glownej
 \end{lemma}
 
 \begin{lemma}
