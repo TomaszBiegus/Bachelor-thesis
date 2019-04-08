@@ -210,7 +210,7 @@
 % MOJE ================================================
 {\backmatter \chapter{Wstęp}}
 \section{Motywacje}
-Studia matematycznę podjąłem w dość późnym wieku, już po ukończeniu innych kierunków. Od zawsze jednak matematyka pociągała mnie jako klucz do zrozumienia pozostałych dziedzin, jako narzędzie pozwalające dostrzec lepiej i głębiej urodę przyrody. Wykorzystując matematykę, możemy uchwycić reguły, wzorce i schematy które opisują niewyobrażalną złożoność świata w którym żyjemy. Matematykę postrzegam jako klamrę spinające wszystkie dziedziny intelektualnej działalności człowieka, począwszy od fizyki, poprzez chemię, biologię, aż po psychologię czy nauki społeczne. Decyzję o rozpoczęciu studiów matematycznych podjąłem w lecie siedząc nad rzeką i przyglądając się hipnotyzującym zawirowaniom na powierzchni wody płynącej w rzece Odrze przepływającej przez Wrocław, oraz leniwemu ruchowi fraktalnych kształtów chmur na błękitnym niebie. Byłem wówczas absolwentem wyższej uczelni, w którym wciąż żyło pragnienie poznawania głębiej wszystkich tych pięknych zjawisk, które nas otaczają. Byłem również świeżo po lekturze inspirującej popularnonaukowej książki Jamesa Gleicka zatytuowanej ''Chaos'' \cite{gleick1987chaos}...
+Studia matematycznę podjąłem w dość późnym wieku, już po ukończeniu innych kierunków. Od zawsze jednak matematyka pociągała mnie jako klucz do zrozumienia pozostałych dziedzin, jako narzędzie pozwalające dostrzec lepiej i głębiej urodę przyrody. Wykorzystując matematykę, możemy uchwycić reguły, wzorce i schematy które opisują niewyobrażalną złożoność świata w którym żyjemy. Matematykę postrzegam jako klamrę spinające wszystkie dziedziny intelektualnej działalności człowieka, począwszy od fizyki, poprzez chemię, biologię, aż po psychologię czy nauki społeczne. Decyzję o rozpoczęciu studiów matematycznych podjąłem w lecie siedząc nad rzeką i przyglądając się hipnotyzującym zawirowaniom na powierzchni wody płynącej w rzece Odrze przepływającej przez Wrocław, oraz leniwemu ruchowi fraktalnych kształtów chmur na błękitnym niebie. Byłem wówczas absolwentem wyższej uczelni, w którym wciąż żyło pragnienie poznawania głębiej wszystkich tych pięknych zjawisk, które nas otaczają. Byłem również świeżo po lekturze inspirującej popularnonaukowej książki Jamesa Gleicka zatytuowanej ,,Chaos'' \cite{gleick1987chaos}...
 \section{Historia badań nad układami dynamicznymi}
 \subsection{Od starożytności do Newtona}
 \subsection{Problem stabilności układu słonecznego}
@@ -224,7 +224,7 @@ Li-Yorke, Von Neumann, Birkhoff, Smale, Szarkowski, Devaney
 
 
 
-\chapter{Definicje, lematy, twierdzenia, przykłady i wnioski}
+\chapter{Wprowadzenie}
 
 \section{Definicje}
 
@@ -237,27 +237,29 @@ TODO: Dopisać do sekcji definicji definicję punktu skupienia ciągu.
 \item ciąg Cauchy'ego (pojawia się w definicji zupełności, TODO ma byc tutaj czy w faktach ogolnych dotyczacych zwartych przestrzeni metrycznych?)
 
 \item wnetrze zbioru
-\item topologia
-\item topologia indukowana? - pojawia sie w definicji przestrzeni zwartej
-\item baza topologii
-\item przestrzeń topologiczna
 \item topologia zbieżności jednostajnej (pojawia się w definicji metryki na przestrzeni odwzorowan trojkatnych)
 %\item metryka jest
 %\item przestrzeń metryczna jest
 %\item kula otwarta jest
-\item otoczenie punktu
-\item sąsiedztwo punktu
-\item zbiór otwarty w przestrzeni metrycznej
+\item zbiór otwarty (korzystamy z pojecia kuli otwartej)
+\item pokazac ze kula otwarta jest zbiorem otwartym
 \item zbiór domknięty w przestrzeni metrycznej
+\item domknięcie
+\item otoczenie punktu
+\item otwarte sąsiedztwo punktu
+
+
 %\item gęstość w przestrzeni metrycznej jest
 %\item pokrycie zbiorami otwartymi jest
 %\item przestrzen metryczna zwarta, jest
 \item ośrodkowość
+\item \textcolor{red}{baza topologii w przestrzeni zwartej (kule o srodkach w osrodku i promieniach wymiernych - potrzebne w dowodzie ogolnym patrz TODO na czerwono)}
 %\item zupelnosc, jest
 \item punkt izolowany w przestrzeni metrycznej
 
 
-\item Ciaglosc funkcji na przestrzeni metrycznej (zbior $C(X)$)
+\item Ciaglosc funkcji na przestrzeni metrycznej 
+\item (zbior $C(X)$)
 
 
 %\item uklad dynamiczny, jest
@@ -269,7 +271,9 @@ TODO: Dopisać do sekcji definicji definicję punktu skupienia ciągu.
 \item niezmienniczosc zbioru ze wzgledu na odwzorowanie
 
 \item topologiczna tranzytywnosc
-\item entropia topologiczna
+\item entropia topologiczna Adler
+\item entropia topologiczna Bowen
+\item entropia topologiczna - dowod rownowaznosci (ksiazka misiurewicz combinatorial dynamics and entropy in dimension one oraz ksiazka ruette rozdzial 4)
 \item RODZAJE CHAOSU (Devaneya, Li Yorka)
 
 
@@ -277,7 +281,7 @@ TODO: Dopisać do sekcji definicji definicję punktu skupienia ciągu.
 
 \item zbiór rezydualny
 \item separable, second category (czyli 1 i 2 kategoria bairea)
-TODO: separable znaczy chyba osrodkowa??
+\item twierdzenie baire'a dla przestrzeni metrycznych zupełnych napisac
 \item g-delta
 
 
@@ -316,6 +320,18 @@ Kulą otwartą w przestrzeni metrycznej $(X, \rho)$ nazywamy zbiór: $K(s, r) = 
 Punkt $s$ nazywamy wówczas środkiem kuli $K$, a $r \in \mathbb{R}_+ \cup \{0\}$ jej promieniem.
 \end{definition}
 
+\begin{definition}[Zbiór otwarty]
+\end{definition}
+
+\begin{lemma}\label{kula_otwarta_jest_zbiorem_otwartym}
+% TODO moze nazwac ten lemat zeby nie mial numerka?
+Kula otwarta w przestrzeni metrycznej jest zbiorem otwartym.
+\end{lemma}
+
+\begin{proof}
+% TODO
+\end{proof}
+
 \begin{definition}[Zbiór gęsty]
 Dla danej przestrzeni metrycznej $(X, \rho)$. Zbiór $A \subset X$ nazwiemy gęstym, gdy $\forall_{x \in X} \, \forall_{\epsilon>0} \, \exists_{a \in A} : \rho(x, a) < \epsilon$.
 \end{definition}
@@ -327,14 +343,32 @@ Pokryciem otwartym przestrzeni metrycznej $X$ nazywamy rodzinę zbiorów otwarty
 
 \begin{definition}[Przestrzeń metryczna zwarta, definicja pokryciowa]
 \cite[s.~196]{ruette2017chaos}
-Przestrzeń metryczną $X$ nazywamy zwartą jeżeli każde pokrycie otwarte $(U_i)_{i \in I}$ tej przestrzeni zawiera podpokrycie skończone, to znaczy istnieje skończony zbiór indeksów $J \subset I$ taki, że $X = \bigcup_{i \in J}U_i$.
-Podzbiór $Y \subset X$ jest zwarty jeżeli $Y$ jest zwarty względem topologii indukowanej. 
+\textcolor{red}{TODO: Nieznacznie zmienilismy definicje wzgledem tej ktora pojawa sie u Ruette (tam byla mowa o topologii indukowanej na Y, a my zastapilismy to po prostu przez podprzestrzen $(Y, \rho)$) czy w takim razie usunac cytowanie?}
+Przestrzeń metryczną $(X, \rho)$ nazywamy zwartą jeżeli każde pokrycie otwarte $(U_i)_{i \in I}$ tej przestrzeni zawiera podpokrycie skończone, to znaczy istnieje skończony zbiór indeksów $J \subset I$ taki, że $X = \bigcup_{i \in J}U_i$.
+Podzbiór $Y \subset X$ jest zwarty jeżeli $(Y, \rho)$ jest przestrzenią zwartą.
 \end{definition}
 
-\begin{definition}[Przestrzeń metryczna zwarta, definicja ciągowa]
-\label{ciagowa_definicja_zwartosci}
-Przestrzeń metryczna $(X, \rho)$ jest zwarta $\iff$ z każdego ciągu $(x_n) \subset X$ można wybrać podciąg zbieżny.
-\end{definition}
+\begin{theorem}[Ciągowa charakteryzacja zwartości przestrzeni metrycznej]
+\label{rownowaznosc_definicji_pokryciowej_i_ciagowej}
+Przestrzeń metryczna $(X, \rho)$ jest zwarta wtedy i tylko wtedy, gdy z każdego ciągu $(x_n) \subset X$ można wybrać podciąg zbieżny.
+\end{theorem}
+
+\begin{proof}
+\textcolor{red}{TODO: przyjzec sie temu dowodowi czy pasuje teraz do sformulowania twierdzenia oraz sprobowac poprawic dowod  implikacji w lewa strone (problem z tym ze rodzina tylko przeliczalna a nie uwzgledniamy nieprzeliczalnych)}
+$(\Rightarrow)$
+Załóżmy, że z dowolnego pokrycia $X$ zbiorami otwartymi możemy wybrac podpokrycie skończone. Weźmy dowolony ciąg $(x_n) \in X$. Pokażę, że ten ciąg ma punkt skupienia w $X$. Załóżmy, że ciąg $(x_n)$ nie ma punktu skupienia w $X$, to znaczy $\forall_{x \in X}$ $x$ nie jest punktem skupienia $x_n$, czyli $\forall_{x \in X} \, \exists_{\epsilon > 0}  K(x, \epsilon) \setminus \{x\} \cap \{x_n\}_{n=1}^{\infty} = \emptyset$. Utwórzmy pokrycie $X$ w następujący sposób: $$\mathcal{A} = \bigcup_{x \in X} K(x, \epsilon_x),$$ gdzie $\epsilon_x > 0$ jest liczbą spełniającą warunek $K(x, \epsilon_x) \setminus \{x\} \cap \{x_n\}_{n=1}^{\infty} = \emptyset$. Oczywiście rodzina $\mathcal{A}$ jest pokryciem otwartym przestrzeni $X$. Zgodnie z założeniem, z pokrycia $\mathcal{A}$ możemy wybrać podpokrycie skończone. Każdy zbiór $A \in \mathcal{A}$ zawiera najwyżej jeden element ciągu $(x_n)$. Skończenie wiele zbiorów zawierających po co najwyżej jednym elemencie ciągu prowadzi do wniosku, że przestrzeń $X$ zawiera skończenie wiele elementów nieskończonego ciągu co stanowi sprzeczność.
+
+Oznaczmy przez $g$ punkt skupienia ciągu $(x_n)$. Oznaczmy przez $y_1$ pierwszy element ciągu $(x_n)$ różny od $g$. przez $y_2$ pierwszy element ciągu $(x_n)$ różny od $g$ i taki, że $y_2 \in K(g, \frac{d}{2})$, gdzie $d = \rho(y_1, g)$.
+Następnie niech $y_n$ będzie pierwszym elementem ciągu $(x_n)$ różnym od $g$ i spełniającym warunek $y_n \in K(g, \frac{d_{n-1}}{2})$, gdzie $d_{n-1} = \rho(y_{n-1}, g)$. Powstały w ten sposób podciąg $(y_n) \subset (x_n)$ jest zbieżny do $g \in X$. W przypadku gdyby na którymś etapie powyższej konstrukcji nie można było wskazać kolejnego elementu różnego od $g$, znaczyłoby to, że od pewnego miejsca ciąg $(x_n)$ jest stale równy $g$, a więc zbieżny.
+
+$(\Leftarrow)$
+Złóżmy, że $X$ spełnia definicję pokryciową.
+Dowód przez kontrapozycję (TODO: Opisać na czym polega kontrapozycja w logice czy to zbyt elementarne na poziom pracy licencjackiej?). Pokażemy, że jeżeli istnieje pokrycie $X$, z którego nie można wybrć podpokrycia skończonego to istnieje ciąg z którego nie można wybrać podciagu zbieżnego.
+
+Załóżmy zatem, że nieskończona, przeliczalna rodzina zbiorów otwartych $\{U_i\}_{i=1}^{\infty}$ stanowi pokrycie X. Skonstruujmy następujący ciąg: 
+$$x_1 \notin U_1$$
+$$x_n \notin \bigcup_{k=1}^{n-1} U_k$$ Zawsze znajdziemy taki $x_n \in X$, gdyż gdyby taki nie istniał znaczyłoby to, że $\bigcup_{i=1}^{n-1}{U_{k_i}} = X$, czyli istniałoby podpokrycie skończone. Załóżmy teraz, że ciąg $(x_n)$ ma podciąg zbieżny. Wtedy istniałaby jego granica, tj. element $g \in X$ taki że dla każdego $\epsilon > 0$ nieskończenie wiele elementów ciągu leży wewnątrz kuli $B(g, \epsilon)$, z kolei z otwartości zbiorów $U_n$ możemy wybrać taki $\epsilon$, że $B(g, \epsilon) \subset U_k$, gdzie $U_k$ jest dowolnym zbiorem z pokrycia X, zawierającym g. Z konstrukcji naszego ciągu wynika jednak, że $\forall_{n \in N} \forall_{m>n} \, x_m \notin U_n$, czyli do każdego $U_n$ należy jedynie skończenie wiele elementów. Zatem otrzymujemy sprzeczność. Czyli ciąg $(x_n)$ nie zawiera podciągu zbieżnego.
+\end{proof}
 
 
 \subsection{Fakty ogólne, dotyczące zwartych przestrzeni metrycznych}
@@ -356,15 +390,14 @@ Jeżeli przestrzeń metryczna jest zwarta to jest również ośrodkowa.
 \begin{proof}
 Niech $(X, \rho)$ będzie przestrzenią metryczną zwartą. Oznacza to, że z każdego pokrycia $X$ zbiorami otwartymi, można wybrać podpokrycie skończone.
 
-Niech $\mathcal{A}_{i} = \{ K(x, \frac{1}{i}) : x \in X \}$, $\mathcal{A}_{i}$ jest oczywiście pokryciem $X$ zbiorami otwartymi, ponieważ $\forall_{x \in X, i \in \mathbb{N}} :  K(x, \frac{1}{i})$ jest otwarty, oraz $\forall_{i \in \mathbb{N}} \forall_{x \in X} \exists_{A \in \mathcal{A}_{i}} : x \in A$, w szczególności $\forall_{i \in \mathbb{N}} \forall_{x \in X} : x \in K(x, \frac{1}{i}) \in \mathcal{A}_{i}$.
-Zatem z każdej rodziny $\mathcal{A}_{i}$ możemy wybrać podpokrycie skończone, oznaczmy je przez $\mathcal{B}_{i}$. Rozważmy teraz następującą rodzinę: 
-$$B = \bigcup\limits_{i=1}^{\infty} \mathcal{B}_{i}$$
+Dla $i \in \mathbb{N}$, niech $\mathcal{A}_{i} = \{ K(x, \frac{1}{i}) : x \in X \}$, $\mathcal{A}_{i}$ jest oczywiście pokryciem $X$ zbiorami otwartymi, zatem z każdej rodziny $\mathcal{A}_{i}$ możemy wybrać podpokrycie skończone, oznaczmy je przez $\mathcal{B}_{i}$. Rozważmy teraz następującą rodzinę: 
+$$B = \bigcup\limits_{i=1}^{\infty} \mathcal{B}_{i}.$$
 Składa się ona ze zbiorów postaci $K(x, \frac{1}{i})$ dla pewnych $i \in \mathbb{N}$ i $x \in X$ i jako przeliczalna suma rodzin skończonych jest przeliczalną rodziną zbiorów.
 Niech teraz 
-$$C = \{ s : \exists_{i \in \mathbb{N}} \, K(s, \frac{1}{i}) \in B \}$$
+$$C = \{ s : \exists_{i \in \mathbb{N}} \, K(s, \frac{1}{i}) \in B \}.$$
 Zbiór $C$ jest równoliczny ze zbiorem $B$, a więc przeliczalny.
-Ponadto $C$ jest gęsty w $X$.
-Niech $\epsilon > 0$. Weźmy dowolny $x \in X$. Oczywiście $\exists_{i_0 \in \mathbb{N}} : \frac{1}{i_0} < \epsilon$. Wiemy, że $\mathcal{B}_{i_0}$ stanowi pokrycie $X$ i składa się ze zbiorów postaci $K(s, \frac{1}{i_0})$, gdzie $s \in X$. Skoro $\mathcal{B}_{i_0}$ jest pokryciem $X$ to $\exists_{K(s, \frac{1}{i_0}) \in \mathcal{B}_{i_0}} : x \in K(s, \frac{1}{i_0})$, czyli $\rho(x, s) < \frac{1}{i_0} < \epsilon$, natomiast $s \in C$ z definicji zbioru $C$
+Ponadto $C$ jest gęsty w $X$:
+Niech $\epsilon > 0$. Weźmy dowolny $x \in X$. Oczywiście istnieje $i_0 \in \mathbb{N}$ takie, że $\frac{1}{i_0} < \epsilon$. Wiemy, że $\mathcal{B}_{i_0}$ stanowi pokrycie $X$ i składa się ze zbiorów postaci $K(s, \frac{1}{i_0})$, gdzie $s \in X$. Skoro $\mathcal{B}_{i_0}$ jest pokryciem $X$ to $\exists_{K(s, \frac{1}{i_0}) \in \mathcal{B}_{i_0}} : x \in K(s, \frac{1}{i_0})$, czyli $\rho(x, s) < \frac{1}{i_0} < \epsilon$, natomiast $s \in C$ z definicji zbioru $C$
 
 Czyli X zawiera podzbiór przeliczalny i gęsty, zatem przestrzeń $(X, \rho)$ jest ośrodkowa.
 \end{proof}
@@ -376,7 +409,7 @@ Każda zwarta przestrzeń metryczna jest zupełna.
 
 \begin{proof}
 Niech $(X, \rho)$  będzie przestrzenią zwartą.
-Weźmy ciąg Cauchy'ego $(x_n)$ elementów $X$. Ze zwartości (definicja \ref{ciagowa_definicja_zwartosci}) wynika, że istnieje podciąg $(y_n) \subset (x_n)$ zbieżny do jakiegoś $g \in X$. Zatem $\forall_{\epsilon > 0} \, \exists_{n_0 \in \mathbb{N}} \, \forall_{n > n_0} \, \rho(y_n, g) < \epsilon$.
+Weźmy ciąg Cauchy'ego $(x_n)$ elementów $X$. Ze zwartości (twierdzenie \ref{rownowaznosc_definicji_pokryciowej_i_ciagowej}) wynika, że istnieje podciąg $(y_{n_k})$ ciągu $(x_n)$ zbieżny do jakiegoś $g \in X$. Zatem $\forall_{\epsilon > 0} \, \exists_{n_0 \in \mathbb{N}} \, \forall_{n > n_0} \, \rho(y_n, g) < \epsilon$.
 Pokażemy, że $(x_n)$ zbiega do $g$.
 
 Ustalmy $\epsilon > 0$. Z faktu, że $(x_n)$ jest ciągiem Cauchy'ego wynika, że $$\exists_{N \in \mathbb{N}} \, \forall_{n, m > N} \, \rho(x_m, x_n) < \frac{\epsilon}{2}$$ Ponadto $$\exists_{n_0 \in \mathbb{N}} \, \forall_{n > n_0} \, \rho(y_n, g) < \frac{\epsilon}{2}$$ Weźmy teraz element $y_{k}$ podciągu $(y_n)$, taki że $y_{k} = x_M$, gdzie $M > N \land M > n_0$. Wówczas 
@@ -387,26 +420,6 @@ Zatem $\forall_{n > N}: \rho(x_n, g) \leq \rho(x_n, x_M) + \rho(x_M, g) < \frac{
 \end{proof}
 
 
-\begin{theorem}[Równoważność definicji pokryciowej i ciągowej zwartości przestrzeni metrycznych] \label{rownowaznosc_definicji_pokryciowej_i_ciagowej}
-TODO: Sformulowac lepiej:
-Definicja pokryciowa $\iff$ definicja ciągowa
-\end{theorem}
-
-\begin{proof}
-$(\Rightarrow)$
-Załóżmy, że z dowolnego pokrycia $X$ zbiorami otwartymi możemy wybrac podpokrycie skończone. Weźmy dwolony ciąg $(x_n) \in X$. Pokażę, że ten ciąg ma punkt skupienia w $X$. Załóżmy, że ciąg $(x_n)$ nie ma punktu skupienia w $X$, to znaczy $\forall_{x \in X}$ $x$ nie jest punktem skupienia $x_n$, czyli $\forall_{x \in X} \, \exists_{\epsilon > 0}  K(x, \epsilon) \setminus \{x\} \cap \{x_n\}_{n=1}^{\infty} = \emptyset$. Utwórzmy pokrycie $X$ w następujący sposób: $$\mathcal{A} = \bigcup_{x \in X} K(x, \epsilon_x),$$ gdzie $\epsilon_x > 0$ jest liczbą spełniającą warunek $K(x, \epsilon_x) \setminus \{x\} \cap \{x_n\}_{n=1}^{\infty} = \emptyset$. Oczywiście rodzina $\mathcal{A}$ jest pokryciem otwartym przestrzeni $X$. Zgodnie z założeniem, z pokrycia $\mathcal{A}$ możemy wybrać podpokrycie skończone. Każdy zbiór $A \in \mathcal{A}$ zawiera najwyżej jeden element ciągu $(x_n)$. Skończenie wiele zbiorów zawierających po co najwyżej jednym elemencie ciągu prowadzi do wniosku, że przestrzeń $X$ zawiera skończenie wiele elementów nieskończonego ciągu co stanowi sprzeczność.
-
-Oznaczmy przez $g$ punkt skupienia ciągu $(x_n)$. Oznaczmy przez $y_1$ pierwszy element ciągu $(x_n)$ różny od $g$. przez $y_2$ pierwszy element ciągu $(x_n)$ różny od $g$ i taki, że $y_2 \in K(g, \frac{d}{2})$, gdzie $d = \rho(y_1, g)$.
-Następnie niech $y_n$ będzie pierwszym elementem ciągu $(x_n)$ różnym od $g$ i spełniającym warunek $y_n \in K(g, \frac{d_{n-1}}{2})$, gdzie $d_{n-1} = \rho(y_{n-1}, g)$. Powstały w ten sposób podciąg $(y_n) \subset (x_n)$ jest zbieżny do $g \in X$. W przypadku gdyby na którymś etapie powyższej konstrukcji nie można było wskazać kolejnego elementu różnego od $g$, znaczyłoby to, że od pewnego miejsca ciąg $(x_n)$ jest stale równy $g$, a więc zbieżny.
-
-$(\Leftarrow)$
-Złóżmy, że $X$ spełnia definicję pokryciową.
-Dowód przez kontrapozycję (TODO: Opisać na czym polega kontrapozycja w logice czy to zbyt elementarne na poziom pracy licencjackiej?). Pokażemy, że jeżeli istnieje pokrycie $X$, z którego nie można wybrć podpokrycia skończonego to istnieje ciąg z którego nie można wybrać podciagu zbieżnego.
-
-Załóżmy zatem, że nieskończona, przeliczalna rodzina zbiorów otwartych $\{U_i\}_{i=1}^{\infty}$ stanowi pokrycie X. Skonstruujmy następujący ciąg: 
-$$x_1 \notin U_1$$
-$$x_n \notin \bigcup_{k=1}^{n-1} U_k$$ Zawsze znajdziemy taki $x_n \in X$, gdyż gdyby taki nie istniał znaczyłoby to, że $\bigcup_{i=1}^{n-1}{U_{k_i}} = X$, czyli istniałoby podpokrycie skończone. Załóżmy teraz, że ciąg $(x_n)$ ma podciąg zbieżny. Wtedy istniałaby jego granica, tj. element $g \in X$ taki że dla każdego $\epsilon > 0$ nieskończenie wiele elementów ciągu leży wewnątrz kuli $B(g, \epsilon)$, z kolei z otwartości zbiorów $U_n$ możemy wybrać taki $\epsilon$, że $B(g, \epsilon) \subset U_k$, gdzie $U_k$ jest dowolnym zbiorem z pokrycia X, zawierającym g. Z konstrukcji naszego ciągu wynika jednak, że $\forall_{n \in N} \forall_{m>n} \, x_m \notin U_n$, czyli do każdego $U_n$ należy jedynie skończenie wiele elementów. Zatem otrzymujemy sprzeczność. Czyli ciąg $(x_n)$ nie zawiera podciągu zbieżnego.
-\end{proof}
 
 
 \subsection{Definicje dotyczące układów dynamicznych}
@@ -447,11 +460,16 @@ Punkt $x$ jest okresowy, gdy jest stały dla jakiejś iteraty, tzn. gdy $\exists
 
 
 \subsection{Definicje utworzone na potrzeby dowodu twierdzenia o rozszerzaniu}
+Definicje i własności odwzorowań trójkątnych podajemy na podstawie pracy \cite{balibrea2003topological}.
 
 Na potrzeby dowodu wprowadźmy pojęcia odległości między odwzorowaniami oraz dwie funkcje: $\textrm{pr}_1(x, y)$ i $\textrm{pr}_2(x, y)$. 
 
 \begin{definition}[Metryka na przestrzeni funkcji ciągłych w przestrzeni metrycznej]
 Niech $(M, \sigma)$ będzie zwartą przestrzenią metryczną, rozważmy odwzorowania $h,k \in C(M)$. Odległość między nimi zdefiniujmy jako $\max_{m \in M} \sigma(h(m), k(m))$ i oznaczmy ją jako $d_1(h,k)$.
+\end{definition}
+
+\begin{definition}[Odwzorowanie trójkątne]
+\textcolor{red}{TODO}
 \end{definition}
 
 \begin{definition}[Metryka na przestrzeni odwzorowań trójkątnych]
@@ -532,10 +550,10 @@ W glownej pracy to byl lemat 3
 \begin{lemma}
 \label{lemat_4_glownego_artykulu}
 \cite{alseda1999entropy}
-Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną i niech $F = (f, g_x)$ będzie odwzorowaniem należącym do $C_\triangle(X \times I)$ którego wszystkie włókna są niemalejące i pozostawiają krańce $I$ nie zmienione. Niech $\{a_1, a_2, \ldots, a_n\}$ będzie podzbiorem $X$ oraz dla $i = 1, 2, \ldots, n$ niech $U_i$ będą parami rozłącznymi zbiorami otwartymi takimi, że $a_i \in U_i$. Załóżmy, że $h_i$ są niemalejącymi odwzorowaniami z $C(I)$ pozostawiającymi krańce $I$ niezmienione i spełniającymi $d_1(h_i, g_{a_i}) < \epsilon$ dla pewnego dodatniego $\epsilon$ i każdego $i = 1, 2, \ldots, n$. Wówczas istnieje odwzorowanie $\widetilde{F} = (f, \widetilde{g}_x) \in C_\triangle(X \times I)$ spełniające cztery następujące warunki:
+Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną i niech $F = (f, g_x)$ będzie odwzorowaniem należącym do $C_\triangle(X \times I)$ którego wszystkie odwzorowania włóknowe są niemalejące i pozostawiają krańce $I$ niezmienione. Niech $\{a_1, a_2, \ldots, a_n\}$ będzie podzbiorem $X$ oraz dla $i = 1, 2, \ldots, n$ niech $U_i$ będą parami rozłącznymi zbiorami otwartymi takimi, że $a_i \in U_i$. Załóżmy, że $h_i$ są niemalejącymi odwzorowaniami z $C(I)$ pozostawiającymi krańce $I$ niezmienione i spełniającymi $d_1(h_i, g_{a_i}) < \epsilon$ dla pewnego dodatniego $\epsilon$ i każdego $i = 1, 2, \ldots, n$. Wówczas istnieje odwzorowanie $\widetilde{F} = (f, \widetilde{g}_x) \in C_\triangle(X \times I)$ spełniające cztery następujące warunki:
 
 \begin{enumerate}
-\item  wszystkie włókna $\widetilde{F}$ są niemalejące i pozostawiające krańce $I$ niezmienione,
+\item  wszystkie odwzorowania włóknowe $\widetilde{F}$ są niemalejące i pozostawiające krańce $I$ niezmienione,
 \item $d_2(F, \widetilde{F}) < \epsilon$,
 \item $\widetilde{g}_{a_i} = h_i$ dla $i = 1,2,\ldots,n$,
 \item $\widetilde{g}_x = g_x$ dla $x \in X \setminus \bigcup_{i=1}^n U_i$.
@@ -545,15 +563,17 @@ Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną i niech $F = (f, g_x)
 \cite{alseda1999entropy}
 Dla każdego $i = 1, 2, \ldots, n$ niech $V_i \subset U_i$ będzie otwartym sąsiedztwem $a_i$ takim, że dla pewnego dodatniego $\widetilde{\epsilon} < \epsilon$, $d_1(h_i, g_x) < \widetilde{\epsilon}$ zawsze wtedy gdy $x \in V_i$.
 
-Oznaczmy $U = \bigcup_{i=1}^n U_i$, $V = \bigcup_{i=1}^n V_i$ i weźmy $u : X \longrightarrow [0,1]$, ciągłą funkcję, przyjmującą wartość $1$ na zbiorze $\{a_1, a_2, \ldots, a_n\}$, natomiast $0$ poza zbiorem $V$. Zastąpmy każde odwzorowanie włóknowe $g_x$ przez $\widetilde{g}_x$, gdzie
+Oznaczmy $U = \bigcup_{i=1}^n U_i$, $V = \bigcup_{i=1}^n V_i$. Niech $u : X \longrightarrow [0,1]$ \textcolor{red}{TODO: cwiczenie - dlaczego funkcja u istnieje?} będzie ciągłą funkcją, przyjmującą wartość $1$ na zbiorze $\{a_1, a_2, \ldots, a_n\}$, natomiast $0$ poza zbiorem $V$. Zastąpmy każde odwzorowanie włóknowe $g_x$ przez $\widetilde{g}_x$, gdzie
 
 \begin{equation} \label{lemat4_rownanie_1}
     \widetilde{g}_x(y) =
     \begin{cases}
-        g_x(y) & \text{if $x \in X \setminus V$,}\\
-        g_x(y)(1-u(x))+h_i(y)u(x) & \text{if $x \in \{1,2,\ldots,n\}$.}
+        g_x(y) & \text{dla $x \in X \setminus V$,}\\
+        g_x(y)(1-u(x))+h_i(y)u(x) & \text{dla $x \in V_i : i \in \{1,2,\ldots,n\}$.}
     \end{cases}
 \end{equation}
+
+\textcolor{red}{TODO: Przemyslec, w kontekscie powyzszego zdanie: kombinacja wypukla odwzorowan niemalejacych jest niemalejaca - do czego to tutaj jest porzebne}
 
 dla każdego $y \in I$. Zauważmy ponadto, że dla $x \in V_i$ oraz $i \in \{1,2,\ldots,n\}$ możemy równoważnie napisać
 
@@ -561,7 +581,7 @@ dla każdego $y \in I$. Zauważmy ponadto, że dla $x \in V_i$ oraz $i \in \{1,2
 \widetilde{g}_x(y) = u(x)(h_i(y) - g_x(y)) + g_x(y).
 \end{equation}
 
-Rozważmy odwzorowanie $\widetilde{F} = (f, \widetilde{g}_x)$. Należy ono do $C_\triangle(X \times I)$. Z równości \ref{lemat4_rownanie_1} widzimy, że wszystkie włókna $\widetilde{g}_x$ są niemalejące i pozostawjaiąc krańce przedziału $I$ nie zmienione (TODO sprawdzic czy to dobre tluamczenie, mzoe krance ustalone? krance stale?). Ponadto $\widetilde{g}_{a_i} = h_i$ dla każdego $i$ oraz $\widetilde{g}_x = g_x$ dla $x \in X \setminus V \supset X \setminus U$. Ponieważ dla $x \in V_i$, gdzie $i \in \{1,2,\ldots,n\}$ mamy $d_1(h_i, g_x) < \widetilde{\epsilon}$ oraz $u(x) \in [0,1]$, zatem z równości \ref{lemat4_rownanie_2} otrzymujemy $d_1(g_x, \widetilde{g}_x) < \widetilde{\epsilon}$ dla każdego $x \in V$. Wynika z tego, że $d_2(F, \widetilde(F)) \leq \widetilde{\epsilon} < \epsilon$ (TODO uzasadnic tutaj wewnatrz to ostatnie przejscie od d1 do d2 z definicji d1 i d2), co kończy dowód.
+Rozważmy odwzorowanie $\widetilde{F} = (f, \widetilde{g}_x)$. Należy ono do $C_\triangle(X \times I)$. Z równości \ref{lemat4_rownanie_1} widzimy, że wszystkie odwzorowania włóknowe $\widetilde{g}_x$ są niemalejące i krańce przedziału $I$ są ich punktami stałymi. Ponadto $\widetilde{g}_{a_i} = h_i$ dla każdego $i$ oraz $\widetilde{g}_x = g_x$ dla $x \in X \setminus V \supset X \setminus U$. Ponieważ dla $x \in V_i$, gdzie $i \in \{1,2,\ldots,n\}$ mamy $d_1(h_i, g_x) < \widetilde{\epsilon}$ oraz $u(x) \in [0,1]$, zatem z równości \ref{lemat4_rownanie_2} otrzymujemy $d_1(g_x, \widetilde{g}_x) < \widetilde{\epsilon}$ dla każdego $x \in V$. Wynika z tego, że $d_2(F, \widetilde(F)) \leq \widetilde{\epsilon} < \epsilon$ (TODO uzasadnic tutaj wewnatrz to ostatnie przejscie od d1 do d2 z definicji d1 i d2), co kończy dowód.
 
 \end{proof}
 
@@ -576,11 +596,6 @@ Rozważmy odwzorowanie $\widetilde{F} = (f, \widetilde{g}_x)$. Należy ono do $C
 
 \begin{lemma}
 \label{nadzbior_rezydualnego_jest_rezydualny}
-% TODO
-\end{lemma}
-
-\begin{lemma}
-\label{uzasadnienie_rownosci_G_z_potegami}
 % TODO
 \end{lemma}
 
@@ -613,12 +628,12 @@ Rozważmy odwzorowanie $\widetilde{F} = (f, \widetilde{g}_x)$. Należy ono do $C
 
 
 
-\chapter{Twierdzenie o rozszerzaniu odwzorowań chaotycznych w sensie Devaney'a}
+\chapter{Twierdzenie o rozszerzaniu odwzorowań chaotycznych w sensie Devaneya}
 \begin{theorem}[O rozszerzaniu]\label{twierdzenie_glowne}
 Twierdzenie wraz z dowodem przytaczamy za pracą \cite{balibrea2003topological}
-Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowanych oraz niech $f \in C(X)$ będzie odwzorowaniem chaotycznym w sensie Devaney'a. Wówczas odwzorowanie $f$ można rozszerzyć do odwzorowania $F \in C_{\triangle}(X \times I)$ (to znaczy tak, że $f$ jest odwzorowaniem bazowym dla $F$) w taki sposób, że:
+Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowanych oraz niech $f \in C(X)$ będzie odwzorowaniem chaotycznym w sensie Devaneya. Wówczas odwzorowanie $f$ można rozszerzyć do odwzorowania $F \in C_{\triangle}(X \times I)$ (to znaczy tak, że $f$ jest odwzorowaniem bazowym dla $F$) w taki sposób, że:
 \begin{enumerate}[label=(\roman*)]
-\item\label{twierdzenie_glowne_a} $F$ jest również chaotyczne w sensie Devaney'a, 
+\item\label{twierdzenie_glowne_a} $F$ jest również chaotyczne w sensie Devaneya, 
 \item\label{twierdzenie_glowne_b} $F$ ma taką samą entropię topologiczną jak $f$, 
 \item\label{twierdzenie_glowne_c} zbiory $X \times \{0\}$ i $X \times \{1\}$ są niezmiennicze ze względu na $F$.
 \end{enumerate}
@@ -626,8 +641,8 @@ Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowan
 
 
 \begin{proof}[Dowód twierdzenia o rozszerzaniu]
-Odwzorowanie $f$ jest chaotyczne w sensie Devaney'a, zatem spełnia warunek $(2)$, czyli ma gęsty zbiór punktów okresowych, w szczególności istnieje orbita okresowa.
-Możemy zatem ustalić okresową orbitę $P_0$ odwzorowania $f$. Z lematu \ref{nigdziegestosc_orbit} mamy, że $P_0$ jest nigdziegęstym, domkniętym podzbiorem $X$.
+Odwzorowanie $f$ jest chaotyczne w sensie Devaneya, zatem spełnia warunek $(2)$, czyli ma gęsty zbiór punktów okresowych, w szczególności istnieje orbita okresowa.
+Możemy zatem ustalić okresową orbitę $P_0$ odwzorowania $f$. \textcolor{red}{TODO: to ponizej nie ma byc w lemacie bo za proste (to jest niby prosty fakt wynikajacy ze skonczonosci zbioru P0): uzasadnic to tutaj tak: Poniewaz P0 jest zbiorem skonczonym a X nie ma punktow izolowanych to P0 jest nigdziegestym domknietym podzbiorem X} Z~lematu \ref{nigdziegestosc_orbit} mamy, że $P_0$ jest nigdziegęstym, domkniętym podzbiorem $X$.
 
 Rozważmy zbiór $\mathcal{F}$ wszystkich odwzorowań $F = (f, g_x)$ ze zbioru $C_\triangle(X \times I)$ spełniających następujące warunki:
 \begin{enumerate}
@@ -638,7 +653,7 @@ Rozważmy zbiór $\mathcal{F}$ wszystkich odwzorowań $F = (f, g_x)$ ze zbioru $
 
 Warunek \ref{dowod_glowny1} implikuje, że dla każdego odwzorowania z $\mathcal{F}$ zbiory $X \times \{0\}$ i $X \times \{1\}$ są niezmiennicze, czyli $\forall_{F \in \mathcal{F}}$ zachodzi warunek \ref{twierdzenie_glowne_c}  twierdzenia \ref{twierdzenie_glowne}.
 Zachodzenie warunku \ref{twierdzenie_glowne_b} twierdzenia \ref{twierdzenie_glowne} dla każdego odwzorowania $F \in \mathcal{F}$ wynika z lematu \ref{rownosc_entropii_gdy_wlokna_monotoniczne}.
-Pozostaje zatem wykazać prawdziwość warunku \ref{twierdzenie_glowne_a}, czyli chaotyczność w sensie Devaney'a jakiegoś odwzorowania $F \in \mathcal{F}$. Takie odwzorowanie będzie bowiem łącznie spełniało wszystkie 3 warunki, czyli tezę twierdzenia.
+Pozostaje zatem wykazać prawdziwość warunku \ref{twierdzenie_glowne_a}, czyli chaotyczność w sensie Devaneya jakiegoś odwzorowania $F \in \mathcal{F}$. Takie odwzorowanie będzie bowiem łącznie spełniało wszystkie 3 warunki, czyli tezę twierdzenia.
 
 Z lematu \ref{warunki_dostateczne_chaotycznosci_devaneya} wynika, że aby odwzorowanie $F$ było chaotyczne w sense Devaneya potrzeba i wystarcza, żeby spełniało dwa poniższe warunki:
 \begin{enumerate}
@@ -647,7 +662,7 @@ Z lematu \ref{warunki_dostateczne_chaotycznosci_devaneya} wynika, że aby odwzor
 \end{enumerate}
 Jest tak gdyż przestrzeń $(X \times I)$ spełnia założenia lematu, tj. jest przestrzenią nieskończoną i zwartą.
 
-Chcemy wykazać, że $\exists_{F \in \mathcal{F}}$ będące jednocześnie topologicznie tranzytywne i posiadające gęsty w $(X \times I)$ zbiór punktów okresowych. Z lematu \ref{F_jest_niepustym_domknietym_podzbiorem_trojkatnych}wiemy, że$\mathcal{F}$ jest niepustym, domkniętym podzbiorem ptrzestrzeni $C_{\triangle}(X \times I)$, która jak wynika z lematu \ref{trojkatne_tworza_przestrzen_metryczna_zupelna} jest przestrzenią metryczną zupełną. 
+Chcemy wykazać, że istnieje $F \in \mathcal{F}$ będące jednocześnie topologicznie tranzytywne i posiadające gęsty w $(X \times I)$ zbiór punktów okresowych. Z lematu \ref{F_jest_niepustym_domknietym_podzbiorem_trojkatnych}wiemy, że$\mathcal{F}$ jest niepustym, domkniętym podzbiorem ptrzestrzeni $C_{\triangle}(X \times I)$, która jak wynika z lematu \ref{trojkatne_tworza_przestrzen_metryczna_zupelna} jest przestrzenią metryczną zupełną. 
 
 Przekrój dwóch zbiorów rezydualnych jest rezydualny (patrz lemat \ref{przekroj_rezydualnych_jest_rezydualny}) a więc niepusty. Wystarczy zatem pokazać, że oba zbiory:
 \begin{itemize}
@@ -661,15 +676,15 @@ Zbiór odwzorowań tranzytywnych jest rezydualny w $\mathcal{F}$, zostało to ud
 Pozostało wykazać, że również zbiór odwzorowań posiadających gęsty zbiór punktów okresowych jest rezydualny w $\mathcal{F}$.
 Oznaczmy zbiór takich odwzorowań (jednocześnie należących do $\mathcal{F}$) przez $\mathcal{F}_{DP}$.
 
-Niech $\{U_i^X\}_{i=1}^{\infty}$ będzie bazą topologii $X$ i niech $\{U_i^I\}_{i=1}^{\infty}$ będzie zbiorem wszystkich odcinków otwartych o końcach wymiernych, należących do odcinka otwartego $(0, 1)$. Niech $\{U_i\}_{i=1}^{\infty}$ będzie ponumerowaniem zbioru $\{U_i^X \times U_j^I : i,j \in \mathbb{N}\}$. Wtedy każda kula otwarta w $X \times I$ zawiera jakiś spośród otwartych zbiorów $U_i$.
+Niech $\{U_i^X\}_{i=1}^{\infty}$ będzie \textcolor{red}{TODO: bazą topologii komentarz: moze nie pisac ogolnie o bazie topologii tylko o konkretnej bazie dla przypadku przestrzeni zwartej tzn baza - rodzina kul o srodkach w osrodku i promieniach wymiernych} $X$ i niech $\{U_i^I\}_{i=1}^{\infty}$ będzie zbiorem wszystkich odcinków otwartych o końcach wymiernych, należących do odcinka otwartego $(0, 1)$. Niech $\{U_i\}_{i=1}^{\infty}$ będzie ponumerowaniem zbioru $\{U_i^X \times U_j^I : i,j \in \mathbb{N}\}$. Wtedy każda kula otwarta w $X \times I$ zawiera jakiś spośród otwartych zbiorów $U_i$.
 
-Dla każdego $i=1,2,...$ niech zbiór $\mathcal{F}_{SO}^i$ ("S" - stabilny, "O" - okresowy) będzie zdefiniowany następująco. Odwzorowanie G należy do $\mathcal{F}_{SO}^i$ wtedy i tylko wtedy, gdy należy do $\mathcal{F}$, posiada punkt okresowy w $U_i$ oraz wszystkie dostatecznie bliskie $G$ odwzorowania z $\mathcal{F}$ również posiadają punkt okresowy w $U_i$ (być może różne od punktuów okresowych odwzorowania $G$). Zbiory $\mathcal{F}_{SO}^i$ są otwartymi podzbiorami $\mathcal{F}$ (patrz lemat \ref{Fso_sa_otwartymi_podzbiorami_F}). Ponieważ $\mathcal{F}_{DP} \supseteq \bigcap_{i=1}^{\infty} \mathcal{F}_{SO}^i$ aby pokazać, że $\mathcal{F}_{DP}$ jest rezydualny w $\mathcal{F}$ wystarczy pokazać, że $\forall_{i \in \mathbb{N}} \mathcal{F}_{SO}^i$ jest gęsty w $\mathcal{F}$. (Wynika to z faktów: \ref{przeliczalny_przekroj_gestych_jest_rezydualny}  i \ref{nadzbior_rezydualnego_jest_rezydualny}).
+Dla każdego $i=1,2,...$ niech zbiór $\mathcal{F}_{SO}^i$ (,,S'' - stabilny, ,,O'' - okresowy) będzie zdefiniowany następująco. Odwzorowanie G należy do $\mathcal{F}_{SO}^i$ wtedy i tylko wtedy, gdy należy do $\mathcal{F}$, posiada punkt okresowy w $U_i$ oraz wszystkie dostatecznie bliskie $G$ odwzorowania z $\mathcal{F}$ również posiadają punkt okresowy w $U_i$ (być może różne od punktuów okresowych odwzorowania $G$). Zbiory $\mathcal{F}_{SO}^i$ są otwartymi podzbiorami $\mathcal{F}$ (patrz lemat \ref{Fso_sa_otwartymi_podzbiorami_F}). Ponieważ $\mathcal{F}_{DP} \supseteq \bigcap_{i=1}^{\infty} \mathcal{F}_{SO}^i$ aby pokazać, że $\mathcal{F}_{DP}$ jest rezydualny w $\mathcal{F}$ wystarczy pokazać, że $\forall_{i \in \mathbb{N}} \mathcal{F}_{SO}^i$ jest gęsty w $\mathcal{F}$. (Wynika to z faktów: \ref{przeliczalny_przekroj_gestych_jest_rezydualny}  i \ref{nadzbior_rezydualnego_jest_rezydualny}).
 
 Aby wykazać że każdy zbiór $\mathcal{F}_{SO}^i$ jest gęsty w $\mathcal{F}$ ustalmy dowolne: $i \in \mathbb{N}$, $F=(f,g_x) \in \mathcal{F}$ i $\epsilon > 0$. Pokażemy, że istnieje odwrorowanie $G \in \mathcal{F}_{SO}^i$, którego odległość od $F$ nie przekracza $\epsilon$. Dla uproszczenia sytuacji załóżmy, że $\rho(\textrm{pr}_1(U_i), P_0) > 0$ (Jeżeli tak nie jest, zawsze możemy wziąć zamiast $U_i$ mniejszy prostokąt $U_i^* \subset U_i$).
 
 Weźmy dodatnią liczbę naturalną $N \geq \frac{4}{\epsilon}$. Następnie rozważmy otwarte sąsiedztwo $V$ orbity $P_0$ w przestrzeni $(X, \rho)$ takie, że $\rho(\textrm{pr}_1(U_i), V) \geq 0$ oraz $d_1(g_x, \textrm{Id}) < \frac{\epsilon}{4}$ dla każdego $x \in V$ (pamiętamy, że $g_x = \textrm{Id}$ dla $x \in P_0$).
 
-$P_0$ jest zbiorem niezmienniczym ze względu na f, na mocy lematu \ref{w_otoczeniu_niezmienniczego_jest_otwarty_zawarty_w_iteracjach} istnieje niepusty zbiór otwarty $W \subseteq V$ taki, że $W \cup f(W) \cup \ldots \cup f^N(W) \subseteq V$. Na mocy lematu \ref{lemat_3_glownego_artykulu_istnieje_orbita_okresowa_krojaca_sie_z_rodzina_otwartych} istnieje punkt okresowy $x_0$ odwzorowania $f$ taki, że $x_0 \in \textrm{pr}_1(U_i)$ oraz orbita $x_0$ kroi się niepusto ze zbiorem $W$. Niech $r > 0$ będzie pierwszą dodatnią liczbą całkowitą dla której $f^r(x_0) \in W$. Wtedy $f^r(x_0), f^{r+1}(x_0), \ldots, f^{r+N-1}(x_0) \in V$. Niech $s \geq 0$ będzie pierwszą nieujemną liczbą całkowitą dla której $f^{r+N+s}(x_0) = x_0$, tj. $r+N+s$ jest okresem punktu $x_0$. Weźmy $y_0$ takie, że $(x_0, y_0) \in U_i$. Ponieważ wszystkie odwzorowania włóknowe ($g_x$) odwzorowania $F$ są ''na'', to istnieje punkt $y^* \in (0,1)$ taki, że $F^s(f^{r+N}(x_0), y^*) = (x_0, y_0)$ (patrz lemat \ref{wszystkie_wloknowe_na_implikuje_punkt_okresowy}).
+$P_0$ jest zbiorem niezmienniczym ze względu na f, na mocy lematu \ref{w_otoczeniu_niezmienniczego_jest_otwarty_zawarty_w_iteracjach} istnieje niepusty zbiór otwarty $W \subseteq V$ taki, że $W \cup f(W) \cup \ldots \cup f^N(W) \subseteq V$. Na mocy lematu \ref{lemat_3_glownego_artykulu_istnieje_orbita_okresowa_krojaca_sie_z_rodzina_otwartych} istnieje punkt okresowy $x_0$ odwzorowania $f$ taki, że $x_0 \in \textrm{pr}_1(U_i)$ oraz orbita $x_0$ kroi się niepusto ze zbiorem $W$. Niech $r > 0$ będzie pierwszą dodatnią liczbą całkowitą dla której $f^r(x_0) \in W$. Wtedy $f^r(x_0), f^{r+1}(x_0), \ldots, f^{r+N-1}(x_0) \in V$. Niech $s \geq 0$ będzie pierwszą nieujemną liczbą całkowitą dla której $f^{r+N+s}(x_0) = x_0$, tj. $r+N+s$ jest okresem punktu $x_0$. Weźmy $y_0$ takie, że $(x_0, y_0) \in U_i$. Ponieważ wszystkie odwzorowania włóknowe ($g_x$) odwzorowania $F$ są ,,na'', to istnieje punkt $y^* \in (0,1)$ taki, że $F^s(f^{r+N}(x_0), y^*) = (x_0, y_0)$ (patrz lemat \ref{wszystkie_wloknowe_na_implikuje_punkt_okresowy}).
 
 Przypadek 1. $z = \textrm{pr}_2(F^r(x_0, y_0))$ jest różne od 0 i 1.
 Oznaczmy przez $g$ odwzorowanie z $C(I)$ posiadające następujące trzy własności:
@@ -712,7 +727,7 @@ G^{r+N+s}(x_0, y_0) & = G^{r+N+s-1}(G(x_0, y_0)) \\
 & = F^s(f^{r+N}(x_0), y^*) = (x_0, y_0).
 \end{split}
 \end{equation}
-Szczegółowe uzasadnienie powyższej równości znajduje się w \ref{uzasadnienie_rownosci_G_z_potegami}
+\textcolor{red}{TODO: Szczegółowe uzasadnienie powyższej równości:}
 
 Ponadto, ze względu na \ref{h_trzy}, na mocy \ref{obraz_x0_razy_ab_przez_iterate_G_rowna_sie_x0y0} zachodzi
 $$G^{r+N+s}(\{x_0\} \times [a, b]) = \{(x_0, y_0)\}.$$
