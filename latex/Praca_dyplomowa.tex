@@ -274,6 +274,7 @@ TODO: Dopisać do sekcji definicji definicję punktu skupienia ciągu.
 \item entropia topologiczna Adler
 \item entropia topologiczna Bowen
 \item entropia topologiczna - dowod rownowaznosci (ksiazka misiurewicz combinatorial dynamics and entropy in dimension one oraz ksiazka ruette rozdzial 4)
+\item wrazliwosc na warunki poczatkowe
 \item RODZAJE CHAOSU (Devaneya, Li Yorka)
 
 
@@ -448,6 +449,7 @@ Punkt $x$ jest stały, gdy $Tx = x$.
 Punkt $x$ jest okresowy, gdy jest stały dla jakiejś iteraty, tzn. gdy $\exists_{n \in \mathbb{N}} \, T^nx = x$.
 \end{definition}
 
+
 \begin{definition}[Orbita okresowa]
 \end{definition}
 
@@ -455,7 +457,33 @@ Punkt $x$ jest okresowy, gdy jest stały dla jakiejś iteraty, tzn. gdy $\exists
 \end{definition}
 
 
+\begin{definition}[Topologiczna tranzytywność]
+\end{definition}
+
+\begin{definition}[Entropia topologiczna Adler]
+\end{definition}
+
+\begin{definition}[Entropia topologiczna Bowen]
+TODO: entropia topologiczna - dowod rownowaznosci (ksiazka misiurewicz combinatorial dynamics and entropy in dimension one oraz ksiazka ruette rozdzial 4)
+\end{definition}
+
+\begin{definition}[Wrażliwość na warunki początkowe]
+\cite{balibrea2003topological}
+Niech $(X, \rho)$ będzie przestrzenią metryczną, a $f: X \rightarrow X$ odwzorowaniem ciągłym.
+Mówimy, że $f$ jest wrażliwe na warunki początkowe jeżeli  istnieje $\epsilon > 0$ taki, że dla każdego $x \in X$ i dla każdego sąsiedztwa $U$ punktu $x$, istnieją $y \in U$ i $n \geq 0$ dla których zachodzi $\rho(f^n(x), f^n(y)) > \epsilon$.
+\end{definition}
+
+
+
+
 \subsection{Definicje chaosu}
+
+\begin{definition}[Chaos w sensie Devaneya]
+\ref{TODO: 23 z artykulu glownego}
+\end{definition}
+
+\begin{definition}[Chaos w sensie Li-Yorke'a]
+\end{definition}
 
 
 
@@ -506,9 +534,13 @@ Niech  $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowa
 
 \begin{lemma}
 \label{warunki_dostateczne_chaotycznosci_devaneya}
-% TODO
-dla przestrzeni nieskonczonej i zwartej czyli referencja 25 z pracy glownej
+Niech $(X, \rho)$ będzie nieskończoną i zwartą przestrzenią metryczną, a $f: X \rightarrow X$ odwzorowaniem ciągłym. Wówczas jeżeli $f$ jest topologicznie tranzytywne i zbiór punktów okresowych odwzorowania $f$ jest gęsty w $X$, to $f$ jest wrażliwe na warunki początkowe.
 \end{lemma}
+
+\begin{proof}
+\cite{TODO}
+\end{proof}
+
 
 \begin{lemma} \label{F_jest_niepustym_domknietym_podzbiorem_trojkatnych}
 % TODO
