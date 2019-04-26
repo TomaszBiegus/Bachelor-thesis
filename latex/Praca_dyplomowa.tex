@@ -532,13 +532,23 @@ Niech  $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowa
 % TODO gwiazdka w wydrukowanej pracy glownej
 \end{lemma}
 
-\begin{lemma}
+\begin{lemma}[Warunki dostateczne chaotyczności w sensie Devaneya]
 \label{warunki_dostateczne_chaotycznosci_devaneya}
-Niech $(X, \rho)$ będzie nieskończoną i zwartą przestrzenią metryczną, a $f: X \rightarrow X$ odwzorowaniem ciągłym. Wówczas jeżeli $f$ jest topologicznie tranzytywne i zbiór punktów okresowych odwzorowania $f$ jest gęsty w $X$, to $f$ jest wrażliwe na warunki początkowe.
+Niech $(X, \rho)$ będzie nieskończoną i zwartą przestrzenią metryczną, a $f: X \rightarrow X$ odwzorowaniem ciągłym. Wówczas jeżeli $f$ jest topologicznie tranzytywne i zbiór punktów okresowych odwzorowania $f$ jest gęsty w $X$, to $f$ jest wrażliwe na warunki początkowe. Oznacza to, że dla przestrzeni metrycznych nieskończonych i zwartych dwa pierwsze warunki z definicji chaotyczności w sensie Devaneya implikują trzeci, a więc ich spełnienie pociąga za sobą chaotyczność odwzorowania.
 \end{lemma}
 
 \begin{proof}
-\cite{TODO}
+Dowód przytaczamy na podstawie \cite{glasner1993sensitive}.
+Załóżmy, że $(X, \rho)$ jest nieskończona i zwarta, a ciągłe odwzorowanie $f: X \rightarrow X$ jest topologicznie tranzytywne i ma gęsty zbiór punktów okresowych, ale nie jest wrażliwe na warunki początkowe.
+
+TODO: zaprzeczyc sobie warzliwosci na warunki poczatkowe
+
+Niech $x_0$ będzie punktem okresowym, $U$ otoczeniem punktu $x_0$ takim, że dla każdych $y \in U$, $n \in \mathbb{N}$ zachodzi $\rho(f^n(x_0), f^n(y)) \leq \epsilon$. Z gęstości zbioru punktów okresowych istnieje $z \in U$ taki, że $f^k(z) = z$ dla pewnego $k$. 
+
+Wówczas
+$$\forall_{n,m} \, \rho(f^{n+mk}(x_0), f^n(x_0)) < \rho(f^{n+mk}(x_0), f^{n+mk}(z)) + \rho(f^n(z), f^n(x_0)) < 2\epsilon.$$
+
+Zatem $\rho(f^{mk}(w), w) < 2\epsilon$ dla każdego $w \in X$ i każdego $m$. (TODO: ponizsze jest tlumaczneiem na zywca zrozumiec i dowiedziec sie co to znaczy equicontinuity) (To implikuje equicontinuity; tranzytywność implikuje minimalność a skoro punkty okresowe są gęste $X$ musi być skończony). Co prowadzi do sprzeczności z założeniem o nieskończoności $X$.
 \end{proof}
 
 
