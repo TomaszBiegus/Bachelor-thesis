@@ -228,7 +228,7 @@ Li-Yorke, Von Neumann, Birkhoff, Smale, Szarkowski, Devaney
 
 \section{Definicje}
 
-\subsection{Definicje i fakty ogólne}
+
 
 \begin{enumerate}
 \item ciąg
@@ -298,8 +298,32 @@ TODO: Dopisać do sekcji definicji definicję punktu skupienia ciągu.
 %\cite[s.~103]{kuratowski1977wstep}
 %\end{definition}
 
-\subsection{Definicje dotyczące zwartych przestrzeni metrycznych}
 
+\subsection{Definicje i fakty ogólne}
+
+\begin{definition}[Ciąg]
+Ciąg $(x_n)_{n=1}^\infty$ jest to funkcja określona na zbiorze liczb naturalnych. Wartości tej funkcji dla kolejnych liczb naturalnych nazywamy wyrazami ciągu i oznaczamy: $x_1, x_2, \ldots$. Niekiedy ciąg oznaczamy skrótowo przez $(x_n)$. W pracy rozważać będziemy ciągi w przestrzeniach metrycznych, czyli funkcje postaci $x: \mathbb{N} \rightarrow X,$ gdzie $X$ jest rozważaną przestrzenią metryczną
+
+\end{definition}
+
+\begin{definition}[Podciąg]
+\end{definition}
+
+\begin{definition}[Granica ciągu]
+\end{definition}
+
+\begin{definition}[Punkt skupienia ciągu]
+\end{definition}
+
+\begin{definition}[Ciąg Cauchy'ego]
+Ciągiem Cauchyego w przestrzeni metrycznej $(X, \rho)$ nazywamy ciąg $(x_n)$ spełniający warunek:
+$$\forall_{\epsilon>0} \, \exists_{N \in \mathbb{N}} \, \forall_{n,m > N} \, \rho(x_n, x_m) < \epsilon.$$
+\end{definition}
+
+
+
+
+\subsection{Definicje dotyczące zwartych przestrzeni metrycznych}
 
 \begin{definition}[Metryka]
 Metryką na zbiorze $X$ nazywamy funkcję $\rho : X \times X \longrightarrow \mathbb{R}_+ \cup \{0\}$ spełniającą następujące warunki:
@@ -478,7 +502,7 @@ $$\mathcal{A}^n = \bigvee_{i=0}^{n-1}f^{-i}(\mathcal{A}).$$
 Ponadto niech $\mathcal{N}(\mathcal{A})$ będzie najmniejszą możliwą mocą podpokrycia wybranego z $\mathcal{A}$ (tzn. licznością podzrodziny rodziny $\mathcal{A}$, która również jest pokryciem $X$). Moc tej rodziny możemy utożsamiać z licznością ponieważ zawsze istnieje podpokrycie skończone, gdyż $X$ jest zwarta.
 
 Wtedy entropią topologiczną odwzorowania $f$ przy pokryciu $\mathcal{A}$ nazywamy wartość:
-$$h(f, \mathcal{A}) = \lim_{n \rightarrow \infty}{\frac{1}{n}\log\mathcal{N({\mathcal{A}}^{n})}}$$
+$$h(f, \mathcal{A}) = \lim_{n \rightarrow \infty}{\frac{1}{n}\log\mathcal{N}(\mathcal{A}^n)}$$
 \end{definition}
 
 \begin{definition}[Entropia topologiczna Adler, Konheim, McAndrew]
