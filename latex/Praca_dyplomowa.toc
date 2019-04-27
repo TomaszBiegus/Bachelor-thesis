@@ -14,7 +14,8 @@
 \contentsline {subsection}{\numberline {1.1.3}Fakty og\IeC {\'o}lne, dotycz\IeC {\k a}ce zwartych przestrzeni metrycznych}{8}{subsection.1.1.3}
 \contentsline {subsection}{\numberline {1.1.4}Definicje dotycz\IeC {\k a}ce uk\IeC {\l }ad\IeC {\'o}w dynamicznych}{9}{subsection.1.1.4}
 \contentsline {subsection}{\numberline {1.1.5}Definicje chaosu}{10}{subsection.1.1.5}
-\contentsline {subsection}{\numberline {1.1.6}Definicje utworzone na potrzeby dowodu twierdzenia o rozszerzaniu}{11}{subsection.1.1.6}
+\contentsline {subsection}{\numberline {1.1.6}Odwzorowania tr\IeC {\'o}jk\IeC {\k a}tne}{11}{subsection.1.1.6}
+\contentsline {subsection}{\numberline {1.1.7}Definicje utworzone na potrzeby dowodu twierdzenia o rozszerzaniu}{11}{subsection.1.1.7}
 \contentsline {section}{\numberline {1.2}Lematy}{11}{section.1.2}
 \contentsline {chapter}{\numberline {2}Twierdzenie o rozszerzaniu odwzorowa\IeC {\'n} chaotycznych w sensie Devaneya}{15}{chapter.2}
 \contentsline {chapter}{Podsumowanie}{19}{chapter*.3}

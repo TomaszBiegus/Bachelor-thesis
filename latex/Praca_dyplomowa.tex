@@ -535,6 +535,32 @@ Mówimy, że $f$ jest wrażliwe na warunki początkowe jeżeli  istnieje $\epsil
 
 
 
+\subsection{Odwzorowania trójkątne}
+
+
+\begin{definition}[Odwzorowanie trójkątne]
+Rozważmy ,,prostokąt'' $X \times Y$, gdzie $X, Y$ są przestrzeniami metrycznymi. 
+Odwzorowaniem trójkątnym nazywamy funkcję $F: X \times Y \rightarrow X \times Y$ postaci:
+$$F(x,y) = (f(x), g(x,y)).$$
+\end{definition}
+
+
+\begin{definition}[Ciągłość odwzorowań trójkątnych]
+W pracy rozważać będziemy wyłącznie odwzorowania ciągłe, tj. takie trójkątne $F$ dla których $f \in C(X)$ i $g$ jest ciągłą funkcją z $X \times Y$ w $Y$. 
+Zbiór takich odwzorowań oznaczać będziemy $C_\triangle(X \times Y)$
+Zamiast $g(x, y)$ będziemy pisać $g_x(y)$, gdzie $g_x: Y \rightarrow Y$ jest rodziną ciągłych przekształceń zależną w sposób ciągły od $x \in X$.
+\end{definition}
+
+\begin{definition}[Odwzorowanie bazowe]
+Odwzorowanie $f$ nazywamy odwzorowaniem bazowym (ang. \textit{basis map}) odwzorowania $F = (f, g_x)$
+\end{definition}
+
+\begin{definition}[Odwzorowania włóknowe]
+Odwzorowania $g_x$ dla $x \in X$ nazywamy odwzorowaniami włóknowymi (ang. \textit{fibre maps}) odwzorowania $F = (f, g_x)$.
+\end{definition}
+
+
+
 \subsection{Definicje utworzone na potrzeby dowodu twierdzenia o rozszerzaniu}
 Definicje i własności odwzorowań trójkątnych podajemy na podstawie pracy \cite{balibrea2003topological}.
 
@@ -544,9 +570,7 @@ Na potrzeby dowodu wprowadźmy pojęcia odległości między odwzorowaniami oraz
 Niech $(M, \sigma)$ będzie zwartą przestrzenią metryczną, rozważmy odwzorowania $h,k \in C(M)$. Odległość między nimi zdefiniujmy jako $\max_{m \in M} \sigma(h(m), k(m))$ i oznaczmy ją jako $d_1(h,k)$.
 \end{definition}
 
-\begin{definition}[Odwzorowanie trójkątne]
-\textcolor{red}{TODO}
-\end{definition}
+
 
 \begin{definition}[Metryka na przestrzeni odwzorowań trójkątnych]
 Odległość między odwzorowaniami trójkątnymi definiujemy wówczas następująco: Niech $(X, \rho)$ i $(Y, \tau)$ będą zwartymi przestrzeniami metrycznymi a $F(x,y) = (f(x), g_x(y))$ i $\Phi(x,y) = (\phi(x), \psi_x(y))$ trójkątnymi odwzorowaniami należącymi do $C_\triangle(X \times Y)$. Odległość definiujemy wówczas jako 
