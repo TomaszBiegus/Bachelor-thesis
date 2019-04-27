@@ -460,7 +460,31 @@ Punkt $x$ jest okresowy, gdy jest stały dla jakiejś iteraty, tzn. gdy $\exists
 \begin{definition}[Topologiczna tranzytywność]
 \end{definition}
 
-\begin{definition}[Entropia topologiczna Adler]
+
+
+
+\begin{definition}[Entropia topologiczna pokrycia]
+Na podstawie \cite{misiurewicz1993}.
+Rozważamy układ dynamiczny $(X, f)$, gdzie $X$ jest zwartą przestrzenią metryczną. Niech $\mathcal{A}$ będzie otwartym pokryciem $X$.
+Wprowadzamy oznaczenia:
+
+$$\bigvee_{i=1}^n \mathcal{A}_i = \{A_1 \cap A_2 \cap \ldots \cap A_n : A_1 \in \mathcal{A}_1, A_2 \in \mathcal{A}_2, \ldots, A_n \in \mathcal{A}_n, A_1 \cap A_2 \cap \ldots \cap A_n \neq \emptyset \},$$ 
+gdzie $\mathcal{A}_1, \mathcal{A}_2, \ldots, \mathcal{A}_n$ są otwartymi pokryciami $X$.
+
+$$f^{-n}(\mathcal{A}) = \{f^{-n}(A):A\in \mathcal{A}\},$$
+
+$$\mathcal{A}^n = \bigvee_{i=0}^{n-1}f^{-i}(\mathcal{A}).$$
+
+Ponadto niech $\mathcal{N}(\mathcal{A})$ będzie najmniejszą możliwą mocą podpokrycia wybranego z $\mathcal{A}$ (tzn. licznością podzrodziny rodziny $\mathcal{A}$, która również jest pokryciem $X$). Moc tej rodziny możemy utożsamiać z licznością ponieważ zawsze istnieje podpokrycie skończone, gdyż $X$ jest zwarta.
+
+Wtedy entropią topologiczną odwzorowania $f$ przy pokryciu $\mathcal{A}$ nazywamy wartość:
+$$h(f, \mathcal{A}) = \lim_{n \rightarrow \infty}{\frac{1}{n}\log\mathcal{N({\mathcal{A}}^{n})}}$$
+\end{definition}
+
+\begin{definition}[Entropia topologiczna Adler, Konheim, McAndrew]
+Na podstawie \cite{misiurewicz1993}.
+Adler, Konheim i McAndrew entropię topologiczną odwzorowania $f$ definiują następująco: 
+$$h(f) = \sup h(f, \mathcal{A}),$$ gdzie supremum jest brane po wszystkich otwartych pokryciach $\mathcal{A}$ przestrzeni $X$.
 \end{definition}
 
 \begin{definition}[Entropia topologiczna Bowen]
