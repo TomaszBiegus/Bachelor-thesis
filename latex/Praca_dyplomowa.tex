@@ -585,8 +585,8 @@ Pomimo dużej popularności chaotycznych ukłądów dynamicznych, przez długi c
 
 \begin{definition}[Tranzytywność]
 \cite{onDeveneyDefinitionOfChaos}
+Mówimy, że $f$ jest tranzytywne w przestrzeni metrycznej $X$, gdy dla każdych niepustych, otwartych podzbiorów $U, V$ przestrzeni $X$ istnieje liczba naturalna $k$ taka, że przekrój $f^k(U) \cap V$ jest niepusty.
 \end{definition}
-
 
 \begin{definition}[Wrażliwość na warunki początkowe]
 \cite{balibrea2003topological}
@@ -647,25 +647,6 @@ $$\rho(f^{nj}(p), f^{nj}(y) > 4\delta - \delta - \delta = 2\delta.$$
 Ostatecznie, korzystając z nierówności trójkąta dostajemy, że albo $\rho(f^{nj}(x), f^{nj}(y)) > \delta$, albo $\rho(f^{nj}(x), f^{nj}(p)) > \delta.$ W obu przypadkach znaleźliśmy punkt, którego $nj$-ta iterata jest w odległości większej od $\delta$ od $f^{nj}(x).$
 \end{proof}
 
-
-\begin{lemma}[Warunki dostateczne chaotyczności w sensie Devaneya alternatywa]
-\label{warunki_dostateczne_chaotycznosci_devaneya_alternatywa}
-Niech $(X, \rho)$ będzie nieskończoną i zwartą przestrzenią metryczną, a $f: X \rightarrow X$ odwzorowaniem ciągłym. Wówczas jeżeli $f$ jest topologicznie tranzytywne i zbiór punktów okresowych odwzorowania $f$ jest gęsty w $X$, to $f$ jest wrażliwe na warunki początkowe. Oznacza to, że dla przestrzeni metrycznych nieskończonych i zwartych dwa pierwsze warunki z definicji chaotyczności w sensie Devaneya implikują trzeci, a więc ich spełnienie pociąga za sobą chaotyczność odwzorowania.
-\end{lemma}
-
-\begin{proof}
-Dowód przytaczamy na podstawie \cite{glasner1993sensitive}.
-Załóżmy, że $(X, \rho)$ jest nieskończona i zwarta, a ciągłe odwzorowanie $f: X \rightarrow X$ jest topologicznie tranzytywne i ma gęsty zbiór punktów okresowych, ale nie jest wrażliwe na warunki początkowe.
-
-TODO: zaprzeczyc sobie warzliwosci na warunki poczatkowe
-
-Niech $x_0$ będzie punktem okresowym, $U$ otoczeniem punktu $x_0$ takim, że dla każdych $y \in U$, $n \in \mathbb{N}$ zachodzi $\rho(f^n(x_0), f^n(y)) \leq \epsilon$. Z gęstości zbioru punktów okresowych istnieje $z \in U$ taki, że $f^k(z) = z$ dla pewnego $k$. 
-
-Wówczas
-$$\forall_{n,m} \, \rho(f^{n+mk}(x_0), f^n(x_0)) < \rho(f^{n+mk}(x_0), f^{n+mk}(z)) + \rho(f^n(z), f^n(x_0)) < 2\epsilon.$$
-
-Zatem $\rho(f^{mk}(w), w) < 2\epsilon$ dla każdego $w \in X$ i każdego $m$. (TODO: ponizsze jest tlumaczneiem na zywca zrozumiec i dowiedziec sie co to znaczy equicontinuity) (To implikuje equicontinuity; tranzytywność implikuje minimalność a skoro punkty okresowe są gęste $X$ musi być skończony). Co prowadzi do sprzeczności z założeniem o nieskończoności $X$.
-\end{proof}
 
 
 \begin{definition}[Chaos w sensie Li-Yorke'a]
