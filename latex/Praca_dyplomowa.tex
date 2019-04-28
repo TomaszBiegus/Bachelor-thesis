@@ -236,20 +236,25 @@ Li-Yorke, Von Neumann, Birkhoff, Smale, Szarkowski, Devaney
 TODO: Dopisać do sekcji definicji definicję punktu skupienia ciągu.
 \item ciąg Cauchy'ego (pojawia się w definicji zupełności, TODO ma byc tutaj czy w faktach ogolnych dotyczacych zwartych przestrzeni metrycznych?)
 
-\item wnetrze zbioru
+
 \item topologia zbieżności jednostajnej (pojawia się w definicji metryki na przestrzeni odwzorowan trojkatnych)
 %\item metryka jest
 %\item przestrzeń metryczna jest
 %\item kula otwarta jest
-\item zbiór otwarty (korzystamy z pojecia kuli otwartej)
-\item pokazac ze kula otwarta jest zbiorem otwartym
+%\item zbiór otwarty (korzystamy z pojecia kuli otwartej) jest
+%\item pokazac ze kula otwarta jest zbiorem otwartym jest
+%\item otoczenie punktu jest
+%\item sąsiedztwo punktu jest
+%\item wnętrze zbioru jest 
 \item zbiór domknięty w przestrzeni metrycznej
 \item domknięcie
-\item otoczenie punktu
-\item otwarte sąsiedztwo punktu
+
+
+
 
 
 %\item gęstość w przestrzeni metrycznej jest
+\item zbiór nigdziegęsty
 %\item pokrycie zbiorami otwartymi jest
 %\item przestrzen metryczna zwarta, jest
 \item ośrodkowość
@@ -337,7 +342,7 @@ Warunek \ref{nierownosc_trojkata} nazywany jest zwykle nierównością trójkąt
 \end{definition}
 
 \begin{definition}[Przestrzeń metryczna]
-Przestrzenią metryczną nazywamy parę $(X, \rho)$, gdzie $X$ jest zbiorem a $\rho$ zdefiniowaną na nim metryką.
+Przestrzenią metryczną nazywamy parę $(X, \rho)$, gdzie $X$ jest zbiorem a $\rho$ zdefiniowaną na nim metryką. Czasami, tam gdzie nie będzie prowadziło to do nieporozumień, przestrzeń metryczną $(X, \rho)$ będziemy oznaczać przez samo $X$.
 \end{definition}
 
 \begin{definition}[Kula otwarta]
@@ -346,19 +351,59 @@ Punkt $s$ nazywamy wówczas środkiem kuli $K$, a $r \in \mathbb{R}_+ \cup \{0\}
 \end{definition}
 
 \begin{definition}[Zbiór otwarty]
+Zbiór $A$ w przestrzeni metrycznej $(X, \rho)$ nazywamy otwartym wtedy i tylko wtedy gdy, dla każdego $a \in A$ istnieje kula otwarta o środku w $a$, zawierająca się w $A$.
 \end{definition}
 
-\begin{lemma}\label{kula_otwarta_jest_zbiorem_otwartym}
-% TODO moze nazwac ten lemat zeby nie mial numerka?
-Kula otwarta w przestrzeni metrycznej jest zbiorem otwartym.
+\begin{lemma}[Kula otwarta w przestrzeni metrycznej jest zbiorem otwartym]\label{kula_otwarta_jest_zbiorem_otwartym}
+W przestrzeni metrycznej $(X, \rho)$, każda kula otwarta jest zbiorem otwartym.
 \end{lemma}
 
 \begin{proof}
-% TODO
+Niech $(X, \rho)$ będzie przestrzenią metryczną. Weźmy dowolnyą kulę otwartą $K = K(s, r) \subseteq X$. Weźmy teraz dowolny punkt $k \in K$. Wiemy, że $\rho(s, k) < r$, czyli $r - \rho(s, k) = \epsilon > 0$. Zatem, jeżeli weźmiemy $r_k = \frac{\epsilon}{2}$ to $K_2 = K(k, r_k) \subset K$, ponieważ 
+
+\begin{equation}
+\begin{aligned}
+\forall_{a \in K_2} \\
+& \rho(s, a) \leq \rho(s, k) + \rho(k, a) \leq \rho(s, k) + r_k \\
+& = \rho(s, k) + \frac{\epsilon}{2} = \rho(s, k) + \frac{r}{2} - \frac{\rho(s, k)}{2} \\
+& = \frac{\rho(s, k)}{2} + \frac{r}{2} < r,
+\end{aligned}
+\end{equation}
+czyli $\forall_{a \in K_2} \, a \in K.$ Z dowolności $k$ otrzymujemy, że kula $K$ jest otwarta a z dowolności wyborku kuli $K$ otrzymujemy tezę.
 \end{proof}
+
+
+\begin{definition}[Otoczenie punktu]
+W przestrzeni metrycznej $X$ zbiór $V \subseteq X$ nazywamy otoczeniem punktu $x$, jeżeli istnieje zbiór otwarty $U \subseteq X$ taki, że $x \in U \subseteq V$.
+\end{definition}
+
+
+\begin{definition}[Sąsiedztwo punktu]
+Sąsiedztwem punktu $x \in X$ nazywamy każdy zbiór $V_x = V \setminus \{x\}$, gdzie $V$ jest pewnym otoczeniem punktu $x$.
+\end{definition}
+
+
+\begin{definition}[Wnętrze zbioru]
+W przestrzeni metrycznej, wnętrzem zbioru $A$ nazywamy zbiór wszystkich punktów, które należą do $A$ wraz z pewnym swoim otoczeniem.
+\end{definition}
+
+
+\begin{definition}[Zbiór domknięty]
+
+\end{definition}
+
+
+\begin{definition}[Domknięcie zbioru]
+
+\end{definition}
+
 
 \begin{definition}[Zbiór gęsty]
 Dla danej przestrzeni metrycznej $(X, \rho)$. Zbiór $A \subset X$ nazwiemy gęstym, gdy $\forall_{x \in X} \, \forall_{\epsilon>0} \, \exists_{a \in A} : \rho(x, a) < \epsilon$.
+\end{definition}
+
+\begin{definition}[Zbiór nigdziegęsty]
+Dla danej przestrzeni metrycznej $(X, \rho)$. Zbiór $A \subset X$ nazwiemy nigdziegęstym, gdy wnętrze domknięcia tego zbioru jest puste.
 \end{definition}
 
 \begin{definition}[Pokrycie otwarte]
@@ -485,7 +530,7 @@ Punkt $x$ jest okresowy, gdy jest stały dla jakiejś iteraty, tzn. gdy $\exists
 \end{definition}
 
 
-
+\subsection{Entropia topologiczna}
 
 \begin{definition}[Entropia topologiczna pokrycia]
 Na podstawie \cite{misiurewicz1993}.
@@ -515,16 +560,27 @@ $$h(f) = \sup h(f, \mathcal{A}),$$ gdzie supremum jest brane po wszystkich otwar
 TODO: entropia topologiczna - dowod rownowaznosci (ksiazka misiurewicz combinatorial dynamics and entropy in dimension one oraz ksiazka ruette rozdzial 4)
 \end{definition}
 
+
+
+\begin{theorem}[Dolne ograniczenie na entropię na odcinku] \label{dolne_ograniczenie_entropii_na_odcinku}
+\cite{ruette2017chaos}
+Jeżeli $f$ jest topologicznie tranzytywne, to entropia topologiczna $h(f) \geq \frac{1}{2} \log(2)$.
+TODO
+\end{theorem}
+
+\begin{proof}
+TODO
+\end{proof}
+
+
+
+\subsection{Definicje chaosu}
+
 \begin{definition}[Wrażliwość na warunki początkowe]
 \cite{balibrea2003topological}
 Niech $(X, \rho)$ będzie przestrzenią metryczną, a $f: X \rightarrow X$ odwzorowaniem ciągłym.
 Mówimy, że $f$ jest wrażliwe na warunki początkowe jeżeli  istnieje $\epsilon > 0$ taki, że dla każdego $x \in X$ i dla każdego sąsiedztwa $U$ punktu $x$, istnieją $y \in U$ i $n \geq 0$ dla których zachodzi $\rho(f^n(x), f^n(y)) > \epsilon$.
 \end{definition}
-
-
-
-
-\subsection{Definicje chaosu}
 
 \begin{definition}[Chaos w sensie Devaneya]
 \ref{TODO: 23 z artykulu glownego}
@@ -596,9 +652,6 @@ Dla $(x, y) \in X \times Y$ niech $\textrm{pr}_1(x, y) = x$ i $\textrm{pr}_2(x, 
 % TODO
 \end{lemma}
 
-\begin{lemma}\label{nigdziegestosc_orbit}
-Niech  $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowanych. Każda okresowa orbita $P_0$ odwzorowania $f \in C(X)$ jest nigdziegęstym domkniętym podzbiorem $X$.
-\end{lemma}
 
 \begin{lemma}\label{rownosc_entropii_gdy_wlokna_monotoniczne}
 % TODO gwiazdka w wydrukowanej pracy glownej
@@ -756,7 +809,7 @@ Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowan
 
 \begin{proof}[Dowód twierdzenia o rozszerzaniu]
 Odwzorowanie $f$ jest chaotyczne w sensie Devaneya, zatem spełnia warunek $(2)$, czyli ma gęsty zbiór punktów okresowych, w szczególności istnieje orbita okresowa.
-Możemy zatem ustalić okresową orbitę $P_0$ odwzorowania $f$. \textcolor{red}{TODO: to ponizej nie ma byc w lemacie bo za proste (to jest niby prosty fakt wynikajacy ze skonczonosci zbioru P0): uzasadnic to tutaj tak: Poniewaz P0 jest zbiorem skonczonym a X nie ma punktow izolowanych to P0 jest nigdziegestym domknietym podzbiorem X} Z~lematu \ref{nigdziegestosc_orbit} mamy, że $P_0$ jest nigdziegęstym, domkniętym podzbiorem $X$.
+Możemy zatem ustalić okresową orbitę $P_0$ odwzorowania $f$. Ponieważ $P_0$ jest zbiorem skończonym a $X$ nie ma punktów izolowanych, to $P_0$ jest nigdziegęstym domkniętym podzbiorem $X$.
 
 Rozważmy zbiór $\mathcal{F}$ wszystkich odwzorowań $F = (f, g_x)$ ze zbioru $C_\triangle(X \times I)$ spełniających następujące warunki:
 \begin{enumerate}
