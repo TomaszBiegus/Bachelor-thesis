@@ -246,8 +246,9 @@ TODO: Dopisać do sekcji definicji definicję punktu skupienia ciągu.
 %\item otoczenie punktu jest
 %\item sąsiedztwo punktu jest
 %\item wnętrze zbioru jest 
+%\item domknięcie jest
 \item zbiór domknięty w przestrzeni metrycznej
-\item domknięcie
+
 
 
 
@@ -270,6 +271,7 @@ TODO: Dopisać do sekcji definicji definicję punktu skupienia ciągu.
 %\item uklad dynamiczny, jest
 %\item orbita, jest
 %\item iterata odwzorowania, jest
+\item iteracja odwzorowania
 %\item punkt stały, jest
 %\item punkt okresowy odwzorowania, jest
 \item orbita okresowa
@@ -387,15 +389,16 @@ Sąsiedztwem punktu $x \in X$ nazywamy każdy zbiór $V_x = V \setminus \{x\}$, 
 W przestrzeni metrycznej, wnętrzem zbioru $A$ nazywamy zbiór wszystkich punktów, które należą do $A$ wraz z pewnym swoim otoczeniem.
 \end{definition}
 
+\begin{definition}[Domknięcie zbioru]
+Domknięciem zbioru $A \subset X$ nazywamy zbiór $\{x \in X: \forall_{r>0} \, K(x, r) \cap A \neq \emptyset\}$. Domknięcie zbioru $A$ oznaczamy przez $\bar{A}$ lub $\textrm{Cl}(A)$.
+\end{definition}
 
 \begin{definition}[Zbiór domknięty]
-
+Zbiór $A$ jest domknięty gdy $A = \textrm{Cl}(A)$.
 \end{definition}
 
 
-\begin{definition}[Domknięcie zbioru]
 
-\end{definition}
 
 
 \begin{definition}[Zbiór gęsty]
@@ -574,17 +577,96 @@ TODO
 
 
 
-\subsection{Definicje chaosu}
+\subsection{Chaos}
+
+\cite{onDeveneyDefinitionOfChaos}
+
+Pomimo dużej popularności chaotycznych ukłądów dynamicznych, przez długi czas nie było jednej powszechnia akceptowanej definicji chaosu.
+
+\begin{definition}[Tranzytywność]
+\cite{onDeveneyDefinitionOfChaos}
+\end{definition}
+
 
 \begin{definition}[Wrażliwość na warunki początkowe]
 \cite{balibrea2003topological}
 Niech $(X, \rho)$ będzie przestrzenią metryczną, a $f: X \rightarrow X$ odwzorowaniem ciągłym.
-Mówimy, że $f$ jest wrażliwe na warunki początkowe jeżeli  istnieje $\epsilon > 0$ taki, że dla każdego $x \in X$ i dla każdego sąsiedztwa $U$ punktu $x$, istnieją $y \in U$ i $n \geq 0$ dla których zachodzi $\rho(f^n(x), f^n(y)) > \epsilon$.
+Mówimy, że $f$ jest wrażliwe na warunki początkowe jeżeli  istnieje $\delta > 0$ taki, że dla każdego $x \in X$ i dla każdego sąsiedztwa $U$ punktu $x$, istnieją $y \in U$ i $n \geq 0$ dla których zachodzi $\rho(f^n(x), f^n(y)) > \delta$.
 \end{definition}
 
 \begin{definition}[Chaos w sensie Devaneya]
-\ref{TODO: 23 z artykulu glownego}
+\cite{onDeveneyDefinitionOfChaos}
+Niech $X$ będzie przestrzenią metryczną. Ciągłe odwzorowanie $f: X \rightarrow X$ nazywamy chaotycznym na $X$ jeżeli:
+\begin{enumerate}
+\item $f$ jest tranzytywne,
+\item zbiór punktów okresowych $f$ jest gęsty w $X$,
+\item $f$ jest wrażliwe na warunki początkowe.
+\end{enumerate}
 \end{definition}
+
+
+\begin{theorem}
+[Warunki dostateczne chaotyczności w sensie Devaneya]
+\label{warunki_dostateczne_chaotycznosci_devaneya}
+\cite{onDeveneyDefinitionOfChaos}
+Niech $(X, \rho)$ będzie przestrzenią metryczną oraz niech $X$ nie będzie zbiorem skończonym.
+Jeżeli $f: X \rightarrow X$ jest tranzytywne i posiada gęsty zbiór punktów okresowych to $f$ jest wrażliwe na warunki początkowe.
+\end{theorem}
+
+\begin{proof}
+\cite{onDeveneyDefinitionOfChaos}
+Załóżmy, że $f: X \rightarrow X$ jest tranzytywne i posiada gęsty zbiór punktów okresowych.
+
+W pierwszej kolejności zauważmy, że istnieje liczba $\delta_0 > 0$ taka, że dla każdego $x \in X$ istnieje punkt okresowy $q \in X$, którego orbita $O(q)$ jest w odległości co najmniej $\frac{\delta_0}{2}$ od $x$: 
+
+Wybierzmy dwa dowolne punkty okresowe $q_1$ i $q_2$ o rozłącznych \textcolor{red}{(TODO: Trzeba uzasadnic dlaczego moge wybrac w punkty o rozlacznych orbitach?)} orbitach $O(q_1), O(q_2)$. Oznaczmy przez $\delta_0$ odległość między $O(q_1)$ a $O(q_2)$. Wówczas z nierówności trójkąta, każdy punkt $x \in X$ jest w odległości co najmniej $\frac{\delta_0}{2}$ od  jednej z dwóch wybranych orbit.
+Pokażemy, że $f$ jest wrażliwe na warunki początkowe ze stałą (ang. \textit{sensitivity constant}) $\delta = \frac{\delta_0}{8}.$
+
+Weźmy dowolny punkt $x \in X$ i niech $N$ będzie pewnym otoczeniem punktu $x$. Ponieważ zbiór punktów okresowych odwzorowania $f$ jest gęsty, to istnieje punkt okresowy $p$ należący do przekroju $U = N \cap K(x, \delta)$. Niech $n$ oznacza okres punktu $p$. Z wcześniejszych rozważań wiemy, że istnieje punkt okresowy $q \in X$, którego orbita $O(q)$ jest w odległości co najmniej $4\delta$ od $x$. Oznaczmy
+
+$$V = \bigcap_{i=0}^n f^{-i}(K(f^i(q), \delta)).$$
+
+Zbiór $V$ jest otwarty i niepusty, gdyż $q \in V.$ W związku z tym, ponieważ $f$ jest tranzytywne, to istnieją $y \in U$ i $k \in \mathbb{N}$ takie, że $f^k(y) \in V$.
+
+Niech teraz $j$ będzie częścią całkowitą z $\frac{k}{n} + 1$. Wtedy $1 \leq nj - k \leq n$. Z konstrukcji mamy
+
+$$f^{nj}(y) = f^{nj-k}(f^k(y)) \in f^{nj-k}(V) \subseteq K(f^{nj-k}(q), \delta).$$
+
+Liczba $n$ jest okresem $p$, więc $f^{nj}(p) = p$, a z nierówności trójkąta otrzymujemy:
+
+\begin{equation}
+\begin{aligned}
+\rho(f^{nj}(p), f^{nj}(y)) & = \rho(p, f^{nj}(y)) \\
+& \geq \rho(x, f^{nj-k}(q)) - \rho(f^{nj-k}(q), f^{nj}(y)) - \rho(p, x),
+\end{aligned}
+\end{equation}
+Następnie, ponieważ $p \in K(x, \delta)$ oraz $f^{nj}(y) \in K(f^{nj-k}(q), \delta)$ otrzymujemy
+
+$$\rho(f^{nj}(p), f^{nj}(y) > 4\delta - \delta - \delta = 2\delta.$$
+
+Ostatecznie, korzystając z nierówności trójkąta dostajemy, że albo $\rho(f^{nj}(x), f^{nj}(y)) > \delta$, albo $\rho(f^{nj}(x), f^{nj}(p)) > \delta.$ W obu przypadkach znaleźliśmy punkt, którego $nj$-ta iterata jest w odległości większej od $\delta$ od $f^{nj}(x).$
+\end{proof}
+
+
+\begin{lemma}[Warunki dostateczne chaotyczności w sensie Devaneya alternatywa]
+\label{warunki_dostateczne_chaotycznosci_devaneya_alternatywa}
+Niech $(X, \rho)$ będzie nieskończoną i zwartą przestrzenią metryczną, a $f: X \rightarrow X$ odwzorowaniem ciągłym. Wówczas jeżeli $f$ jest topologicznie tranzytywne i zbiór punktów okresowych odwzorowania $f$ jest gęsty w $X$, to $f$ jest wrażliwe na warunki początkowe. Oznacza to, że dla przestrzeni metrycznych nieskończonych i zwartych dwa pierwsze warunki z definicji chaotyczności w sensie Devaneya implikują trzeci, a więc ich spełnienie pociąga za sobą chaotyczność odwzorowania.
+\end{lemma}
+
+\begin{proof}
+Dowód przytaczamy na podstawie \cite{glasner1993sensitive}.
+Załóżmy, że $(X, \rho)$ jest nieskończona i zwarta, a ciągłe odwzorowanie $f: X \rightarrow X$ jest topologicznie tranzytywne i ma gęsty zbiór punktów okresowych, ale nie jest wrażliwe na warunki początkowe.
+
+TODO: zaprzeczyc sobie warzliwosci na warunki poczatkowe
+
+Niech $x_0$ będzie punktem okresowym, $U$ otoczeniem punktu $x_0$ takim, że dla każdych $y \in U$, $n \in \mathbb{N}$ zachodzi $\rho(f^n(x_0), f^n(y)) \leq \epsilon$. Z gęstości zbioru punktów okresowych istnieje $z \in U$ taki, że $f^k(z) = z$ dla pewnego $k$. 
+
+Wówczas
+$$\forall_{n,m} \, \rho(f^{n+mk}(x_0), f^n(x_0)) < \rho(f^{n+mk}(x_0), f^{n+mk}(z)) + \rho(f^n(z), f^n(x_0)) < 2\epsilon.$$
+
+Zatem $\rho(f^{mk}(w), w) < 2\epsilon$ dla każdego $w \in X$ i każdego $m$. (TODO: ponizsze jest tlumaczneiem na zywca zrozumiec i dowiedziec sie co to znaczy equicontinuity) (To implikuje equicontinuity; tranzytywność implikuje minimalność a skoro punkty okresowe są gęste $X$ musi być skończony). Co prowadzi do sprzeczności z założeniem o nieskończoności $X$.
+\end{proof}
+
 
 \begin{definition}[Chaos w sensie Li-Yorke'a]
 \end{definition}
@@ -657,24 +739,7 @@ Dla $(x, y) \in X \times Y$ niech $\textrm{pr}_1(x, y) = x$ i $\textrm{pr}_2(x, 
 % TODO gwiazdka w wydrukowanej pracy glownej
 \end{lemma}
 
-\begin{lemma}[Warunki dostateczne chaotyczności w sensie Devaneya]
-\label{warunki_dostateczne_chaotycznosci_devaneya}
-Niech $(X, \rho)$ będzie nieskończoną i zwartą przestrzenią metryczną, a $f: X \rightarrow X$ odwzorowaniem ciągłym. Wówczas jeżeli $f$ jest topologicznie tranzytywne i zbiór punktów okresowych odwzorowania $f$ jest gęsty w $X$, to $f$ jest wrażliwe na warunki początkowe. Oznacza to, że dla przestrzeni metrycznych nieskończonych i zwartych dwa pierwsze warunki z definicji chaotyczności w sensie Devaneya implikują trzeci, a więc ich spełnienie pociąga za sobą chaotyczność odwzorowania.
-\end{lemma}
 
-\begin{proof}
-Dowód przytaczamy na podstawie \cite{glasner1993sensitive}.
-Załóżmy, że $(X, \rho)$ jest nieskończona i zwarta, a ciągłe odwzorowanie $f: X \rightarrow X$ jest topologicznie tranzytywne i ma gęsty zbiór punktów okresowych, ale nie jest wrażliwe na warunki początkowe.
-
-TODO: zaprzeczyc sobie warzliwosci na warunki poczatkowe
-
-Niech $x_0$ będzie punktem okresowym, $U$ otoczeniem punktu $x_0$ takim, że dla każdych $y \in U$, $n \in \mathbb{N}$ zachodzi $\rho(f^n(x_0), f^n(y)) \leq \epsilon$. Z gęstości zbioru punktów okresowych istnieje $z \in U$ taki, że $f^k(z) = z$ dla pewnego $k$. 
-
-Wówczas
-$$\forall_{n,m} \, \rho(f^{n+mk}(x_0), f^n(x_0)) < \rho(f^{n+mk}(x_0), f^{n+mk}(z)) + \rho(f^n(z), f^n(x_0)) < 2\epsilon.$$
-
-Zatem $\rho(f^{mk}(w), w) < 2\epsilon$ dla każdego $w \in X$ i każdego $m$. (TODO: ponizsze jest tlumaczneiem na zywca zrozumiec i dowiedziec sie co to znaczy equicontinuity) (To implikuje equicontinuity; tranzytywność implikuje minimalność a skoro punkty okresowe są gęste $X$ musi być skończony). Co prowadzi do sprzeczności z założeniem o nieskończoności $X$.
-\end{proof}
 
 
 \begin{lemma} \label{F_jest_niepustym_domknietym_podzbiorem_trojkatnych}

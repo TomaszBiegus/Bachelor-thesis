@@ -16,6 +16,11 @@
 \newblock Topological entropy of devaney chaotic maps.
 \newblock {\em Topology and its Applications 133}, 3 (2003), 225--239.
 
+\bibitem{onDeveneyDefinitionOfChaos}
+{\sc Banks, J., Brooks, J., Cairns, G., Davis, G., Stacey, P.}
+\newblock On devaney's definition of chaos.
+\newblock {\em The American Mathematical Monthly 99}, 4 (1992), 332--334.
+
 \bibitem{gleick1987chaos}
 {\sc Gleick, J.}
 \newblock {\em Chaos: Making a New Science}.
@@ -25,10 +30,5 @@
 {\sc Ruette, S.}
 \newblock {\em Chaos on the Interval}.
 \newblock 2018.
-
-\bibitem{glasner1993sensitive}
-{\sc Weiss, B.}
-\newblock Sensitive dependence on initial conditions.
-\newblock {\em Nonlinearity 6}, 6 (1993), 1067--1075.
 
 \end{thebibliography}
