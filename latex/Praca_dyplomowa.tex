@@ -529,9 +529,6 @@ Punkt $x$ jest okresowy, gdy jest stały dla jakiejś iteraty, tzn. gdy $\exists
 \end{definition}
 
 
-\begin{definition}[Topologiczna tranzytywność]
-\end{definition}
-
 
 \subsection{Entropia topologiczna}
 
@@ -581,7 +578,7 @@ TODO
 
 \cite{onDeveneyDefinitionOfChaos}
 
-Pomimo dużej popularności chaotycznych ukłądów dynamicznych, przez długi czas nie było jednej powszechnia akceptowanej definicji chaosu.
+Pomimo dużej popularności chaotycznych układów dynamicznych, przez długi czas nie było jednej powszechnia akceptowanej definicji chaosu.
 
 \begin{definition}[Tranzytywność]
 \cite{onDeveneyDefinitionOfChaos}
@@ -595,7 +592,7 @@ Mówimy, że $f$ jest wrażliwe na warunki początkowe jeżeli  istnieje $\delta
 \end{definition}
 
 \begin{definition}[Chaos w sensie Devaneya]
-\cite{onDeveneyDefinitionOfChaos}
+Twierdzenie i dowód na podstawie \cite{onDeveneyDefinitionOfChaos}.
 Niech $X$ będzie przestrzenią metryczną. Ciągłe odwzorowanie $f: X \rightarrow X$ nazywamy chaotycznym na $X$ jeżeli:
 \begin{enumerate}
 \item $f$ jest tranzytywne,
@@ -619,7 +616,7 @@ Załóżmy, że $f: X \rightarrow X$ jest tranzytywne i posiada gęsty zbiór pu
 
 W pierwszej kolejności zauważmy, że istnieje liczba $\delta_0 > 0$ taka, że dla każdego $x \in X$ istnieje punkt okresowy $q \in X$, którego orbita $O(q)$ jest w odległości co najmniej $\frac{\delta_0}{2}$ od $x$: 
 
-Wybierzmy dwa dowolne punkty okresowe $q_1$ i $q_2$ o rozłącznych \textcolor{red}{(TODO: Trzeba uzasadnic dlaczego moge wybrac w punkty o rozlacznych orbitach?)} orbitach $O(q_1), O(q_2)$. Oznaczmy przez $\delta_0$ odległość między $O(q_1)$ a $O(q_2)$. Wówczas z nierówności trójkąta, każdy punkt $x \in X$ jest w odległości co najmniej $\frac{\delta_0}{2}$ od  jednej z dwóch wybranych orbit.
+Wybierzmy dwa dowolne punkty okresowe $q_1$ i $q_2$ o rozłącznych \textcolor{red}{(TODO: Trzeba uzasadnic dlaczego moge wybrac w punkty o rozlacznych orbitach?, moze napisac tez dlaczego potrzebne jest zalozenie o nieskonczonosci X - pokazac jakis degenerate case)} orbitach $O(q_1), O(q_2)$. Oznaczmy przez $\delta_0$ odległość między $O(q_1)$ a $O(q_2)$. Wówczas z nierówności trójkąta, każdy punkt $x \in X$ jest w odległości co najmniej $\frac{\delta_0}{2}$ od  jednej z dwóch wybranych orbit.
 Pokażemy, że $f$ jest wrażliwe na warunki początkowe ze stałą (ang. \textit{sensitivity constant}) $\delta = \frac{\delta_0}{8}.$
 
 Weźmy dowolny punkt $x \in X$ i niech $N$ będzie pewnym otoczeniem punktu $x$. Ponieważ zbiór punktów okresowych odwzorowania $f$ jest gęsty, to istnieje punkt okresowy $p$ należący do przekroju $U = N \cap K(x, \delta)$. Niech $n$ oznacza okres punktu $p$. Z wcześniejszych rozważań wiemy, że istnieje punkt okresowy $q \in X$, którego orbita $O(q)$ jest w odległości co najmniej $4\delta$ od $x$. Oznaczmy
@@ -632,7 +629,11 @@ Niech teraz $j$ będzie częścią całkowitą z $\frac{k}{n} + 1$. Wtedy $1 \le
 
 $$f^{nj}(y) = f^{nj-k}(f^k(y)) \in f^{nj-k}(V) \subseteq K(f^{nj-k}(q), \delta).$$
 
-Liczba $n$ jest okresem $p$, więc $f^{nj}(p) = p$, a z nierówności trójkąta otrzymujemy:
+Liczba $n$ jest okresem $p$, więc $f^{nj}(p) = p$, a z nierówności trójkąta:
+
+$$\rho(x, f^{nj-k}(q)) \leq \rho(x, p) + \rho(p, f^{nj}(y)) + \rho(f^{nj}(y), f^{nj-k}(q)),$$
+
+po przekształceniach dostajemy:
 
 \begin{equation}
 \begin{aligned}
