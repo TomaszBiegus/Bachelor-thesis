@@ -34,6 +34,7 @@
 
 \usepackage{enumitem}
 \usepackage{xcolor}
+\usepackage{mathtools}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %              DANE DO PRACY
 %
@@ -532,6 +533,8 @@ Punkt $x$ jest okresowy, gdy jest stały dla jakiejś iteraty, tzn. gdy $\exists
 
 \subsection{Entropia topologiczna}
 
+\subsubsection{Definicja Adlera, Konheima i McAndrew}
+
 \begin{definition}[Entropia topologiczna pokrycia]
 Na podstawie \cite{misiurewicz1993}.
 Rozważamy układ dynamiczny $(X, f)$, gdzie $X$ jest zwartą przestrzenią metryczną. Niech $\mathcal{A}$ będzie otwartym pokryciem $X$.
@@ -556,12 +559,53 @@ Adler, Konheim i McAndrew entropię topologiczną odwzorowania $f$ definiują na
 $$h(f) = \sup h(f, \mathcal{A}),$$ gdzie supremum jest brane po wszystkich otwartych pokryciach $\mathcal{A}$ przestrzeni $X$.
 \end{definition}
 
-\begin{definition}[Entropia topologiczna Bowen]
-TODO: entropia topologiczna - dowod rownowaznosci (ksiazka misiurewicz combinatorial dynamics and entropy in dimension one oraz ksiazka ruette rozdzial 4)
+
+\subsubsection{Definicja Bowena}
+
+Niech $(X, \rho)$ będzie przestrzenią metryczną, a $f: X \rightarrow X$ ciągłym odwzorowaniem.
+
+\begin{definition}[Kula Bowena]
+Niech  $\epsilon > 0$ oraz $n \geq 1$. Kulę Bowena rzędu $n$ o środku w punkcie $x \in X$ i promieniu $\epsilon$ definiujemy następująco
+
+\begin{equation}
+\begin{aligned}
+B_n(x,\epsilon) & \coloneqq \{y \in X : \rho(f^k(x), f^k(y)) \leq \epsilon, k \in \{0, 1, \ldots, n-1\}\} \\
+& = \bigcap_{i=0}^{n-1}f^{-i}(\overline{K}(f^i(x), \epsilon)).
+\end{aligned}
+\end{equation}
+
+\end{definition} 
+
+
+\begin{definition}[Zbiór $(n,\epsilon)$-rozdzielony]
+Mówimy, że zbiór $E \subset X$ jest $(n, \epsilon)$-rozdzielony jeżeli dla każdych $x, y \in E$ takich, że $x \neq y$ istnieje $k \in \{0, 1, \ldots, n-1\}$ takie, że$\rho(f^k(x), f^k(y)) > \epsilon.$
+
+Maksymalną moc $(n, \epsilon)$-rozdzielonego zbioru oznaczamy przez $s_n(f, \epsilon).$
+\end{definition}
+
+
+\begin{definition}[Zbiór $(n, \epsilon)$-rozpinający]
+Zbiór $E$ nazywamy $(n,\epsilon)$-rozpinającym jeżeli $X \subset \bigcup_{x \in E}B_n(x, \epsilon)$.
+
+Minimalną moc zbioru $(n, \epsilon)$-rozpinającego oznaczamy przez $r_n(f, \epsilon).$
+
+\end{definition}
+
+
+\begin{definition}[Entropia topologiczna Bowena]
+Niech $(X, f)$ będzie układem dynamicznym.
+Wtedy
+
+$$h(f) = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log s_n(f, \epsilon) = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log r_n(f, \epsilon).$$
+
 \end{definition}
 
 
 
+TODO: entropia topologiczna - dowod rownowaznosci
+ (ksiazka misiurewicz combinatorial dynamics and entropy in dimension one oraz ksiazka ruette rozdzial 4)
+ 
+ 
 \begin{theorem}[Dolne ograniczenie na entropię na odcinku] \label{dolne_ograniczenie_entropii_na_odcinku}
 \cite{ruette2017chaos}
 Jeżeli $f$ jest topologicznie tranzytywne, to entropia topologiczna $h(f) \geq \frac{1}{2} \log(2)$.
