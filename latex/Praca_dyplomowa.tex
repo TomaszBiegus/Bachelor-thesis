@@ -249,6 +249,7 @@ TODO: Dopisać do sekcji definicji definicję punktu skupienia ciągu.
 %\item wnętrze zbioru jest 
 %\item domknięcie jest
 \item zbiór domknięty w przestrzeni metrycznej
+\item kula domknięta
 
 
 
@@ -561,6 +562,7 @@ $$h(f) = \sup h(f, \mathcal{A}),$$ gdzie supremum jest brane po wszystkich otwar
 
 
 \subsubsection{Definicja Bowena}
+\cite{ruette2017chaos}
 
 Niech $(X, \rho)$ będzie przestrzenią metryczną, a $f: X \rightarrow X$ ciągłym odwzorowaniem.
 
@@ -578,9 +580,9 @@ B_n(x,\epsilon) & \coloneqq \{y \in X : \rho(f^k(x), f^k(y)) \leq \epsilon, k \i
 
 
 \begin{definition}[Zbiór $(n,\epsilon)$-rozdzielony]
-Mówimy, że zbiór $E \subset X$ jest $(n, \epsilon)$-rozdzielony jeżeli dla każdych $x, y \in E$ takich, że $x \neq y$ istnieje $k \in \{0, 1, \ldots, n-1\}$ takie, że$\rho(f^k(x), f^k(y)) > \epsilon.$
+Mówimy, że zbiór $E \subset X$ jest $(n, \epsilon)$-rozdzielony jeżeli dla każdych $x, y \in E$ takich, że $x \neq y$ istnieje $k \in \{0, 1, \ldots, n-1\}$ takie, że $\rho(f^k(x), f^k(y)) > \epsilon.$
 
-Maksymalną moc $(n, \epsilon)$-rozdzielonego zbioru oznaczamy przez $s_n(f, \epsilon).$
+Maksymalną moc zbioru $(n, \epsilon)$-rozdzielonego oznaczamy przez $s_n(f, \epsilon).$
 \end{definition}
 
 
@@ -596,7 +598,7 @@ Minimalną moc zbioru $(n, \epsilon)$-rozpinającego oznaczamy przez $r_n(f, \ep
 Niech $(X, f)$ będzie układem dynamicznym.
 Wtedy
 
-$$h(f) = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log s_n(f, \epsilon) = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log r_n(f, \epsilon).$$
+$$h_{\textrm{top}}(f) = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log s_n(f, \epsilon) = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log r_n(f, \epsilon).$$
 
 \end{definition}
 
@@ -604,6 +606,57 @@ $$h(f) = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{
 
 TODO: entropia topologiczna - dowod rownowaznosci
  (ksiazka misiurewicz combinatorial dynamics and entropy in dimension one oraz ksiazka ruette rozdzial 4)
+ 
+ 
+ 
+\begin{theorem}[Entropia topologiczna odwzorowań monotonicznych]
+\label{entropia_topologiczna_odwzorowan_monotonicznych}
+Niech $I = [0, 1]$ i niech $f: I \rightarrow I$ będzie funkcją monotoniczną oraz taką, że $f(0) = 0$ i $f(1) = 1.$
+Wówczas entropia topologiczna $f$ jest równa zero.
+\end{theorem}
+
+\begin{proof}
+Skorzystamy z definicji entropii topologicznej Bowena. Pokażemy, że 
+$$\lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log s_n(f, \epsilon) = 0.$$
+
+% Pokażemy, że $\forall_{n \in \mathbb{N}, \epsilon>0} \, s_n(f, \epsilon) \leq \frac{n}{\epsilon}.$
+
+Ustalmy dowolne $n \in \mathbb{N}$ i $\epsilon > 0.$ Podzielmy odcinek $[0, 1]$ na $m = \lfloor 1/\epsilon \rfloor + 1 \leq \frac{1}{\epsilon} + 1$ odcinków o (niekoniecznie jednakowych) długościach równych $d_{i,\epsilon} < \epsilon$ w taki sposób aby otrzymać rodzinę odcinków: $\{ [0, d_{1,\epsilon}), [d_{1,\epsilon}, d_{1,\epsilon} + d_{2, \epsilon}), \ldots, [\sum_{i=1}^{m-1} d_{i, \epsilon}, 1] \}.$ Oznaczmy krańce tych odcinków przez $a_0=0, a_1 = d_{1,\epsilon}, a_2 = d_{\epsilon}, \ldots, a_m = 1.$ 
+
+Zdefiniujmy $A_i \coloneqq \{f^{-i}(a_0), f^{-i}(a_1), \ldots, f^{-i}(a_m)\}$, dla $i \in \{0, 1, \ldots, n-1\}$
+
+Niech $B = \bigcup_{i=0}^{n-1} A_i.$ Każdy ze zbiorów $A_i$ zawiera $m+1$ elementów, zatem $|B| \leq n \cdot (m+1)$ Uporządkujmy elementy zbioru $B$ w niemalejący ciąg $(b_j)_{j=0}^{|B|-1}.$ Podzielmy $I$ na odcinki postaci $B_j = [b_{j-1}, b_{j}]$ dla $j \in \{1, 2, \ldots, |B|-1\}.$  
+
+Pokażę, że dowolne dwa punkty $x, y$ należące do tego samego odcinka $B_j$ nie mogą jednocześnie należeć do tego samego zbioru $(n, \epsilon)$-rozdzielonego.
+
+Weźmy dowolny odcinek $B_j = [b_{j-1}, b_{j}] \, j \in \{1, 2, \ldots, |B|-1\}.$ Wybierzmy z niego dwa dowolne punkty $x, y$, $x \neq y$. Bez straty ogólności, niech $x > y.$ Oczywiście nie istnieje punkt $b_k \in B$ dla którego $y \leq b_k \leq x.$ Z konstrukcji $B$ widzimy natychmiast, że $\forall_{i \in \{0, 1, \ldots, n-1\}} \, \exists_{j \in \{1,2,\ldots,m\}} \, f^{-i}(a_{j-1}) \leq y < x \leq f^{-i}(a_j)$. Z monotoniczności funkcji $f$ otrzymujemy 
+$$f^i(f^{-i}(a_{j-1})) =  a_{j-1} \leq f^i(y) < f^i(x) \leq a_j = f^i(f^{-i}(a_j)).$$
+Ponieważ $\rho(a_{j-1}, a_j) = d_{j,\epsilon} < \epsilon$ to  $\rho(f^i(x), f^i(y)) < \epsilon.$ A więc $x$ i $y$ nie należą do jednego zbioru $(n, \epsilon)$-rozdzielonego.
+
+
+
+Przypomnijmy, że $s_n(f, \epsilon)$ oznacza maksymalną moc zbioru $(n, \epsilon)$-rozdzielonego. 
+
+% Aby dwa punkty należały do zbioru $(n, \epsilon)$-rozdzielonego, nie mogą one należeć do jednej kuli Bowena o promieniu mniejszym bądź równym $\frac{\epsilon}{2}.$ 
+
+Z wcześniejszych rozważań wynika, że do dowolnego zbioru $(n, \epsilon)$-rozdzielonego może należeć co najwyżej jeden punkt z każdego z odcinków $B_j$, odcinków tych jest $|B|-1.$ Zatem $s_n(f, \epsilon) \leq |B|-1 \leq n \cdot (m+1) - 1 \leq n \cdot (\frac{1}{\epsilon}+1+1) - 1 = \frac{n}{\epsilon} + \frac{n}{2} - 1.$
+
+
+
+Ostatecznie otrzymujemy:
+\begin{equation}
+\begin{aligned}
+h_{\textrm{top}}(f) & = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log s_n(f, \epsilon) \leq \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log ( n \cdot (m+1) - 1 ) \\
+& \leq \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log ( \frac{n}{\epsilon} + \frac{n}{2} - 1 ) <TODO:!!!??? \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log ( \frac{2 \cdot n + \epsilon \cdot n}{2 \cdot \epsilon}) \\
+& = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} (\frac{1}{n} \log (n \cdot (2 + \epsilon)) - \frac{1}{n} \log ( 2 \cdot \epsilon )) = \lim_{\epsilon \rightarrow 0} 0 = 0
+\end{aligned}
+\end{equation}
+TODO: moze warto zaznaczyc ze entropia jest nieujemna moze jakies twierdzenia czy lemat definicja
+
+
+\end{proof}
+ 
+ 
  
  
 \begin{theorem}[Dolne ograniczenie na entropię na odcinku] \label{dolne_ograniczenie_entropii_na_odcinku}

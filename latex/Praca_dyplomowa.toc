@@ -16,9 +16,9 @@
 \contentsline {subsection}{\numberline {1.1.5}Entropia topologiczna}{10}{subsection.1.1.5}
 \contentsline {subsubsection}{Definicja Adlera, Konheima i McAndrew}{10}{section*.3}
 \contentsline {subsubsection}{Definicja Bowena}{11}{section*.4}
-\contentsline {subsection}{\numberline {1.1.6}Chaos}{11}{subsection.1.1.6}
-\contentsline {subsection}{\numberline {1.1.7}Odwzorowania tr\IeC {\'o}jk\IeC {\k a}tne}{13}{subsection.1.1.7}
-\contentsline {subsection}{\numberline {1.1.8}Definicje utworzone na potrzeby dowodu twierdzenia o rozszerzaniu}{13}{subsection.1.1.8}
+\contentsline {subsection}{\numberline {1.1.6}Chaos}{12}{subsection.1.1.6}
+\contentsline {subsection}{\numberline {1.1.7}Odwzorowania tr\IeC {\'o}jk\IeC {\k a}tne}{14}{subsection.1.1.7}
+\contentsline {subsection}{\numberline {1.1.8}Definicje utworzone na potrzeby dowodu twierdzenia o rozszerzaniu}{14}{subsection.1.1.8}
 \contentsline {section}{\numberline {1.2}Lematy}{14}{section.1.2}
 \contentsline {chapter}{\numberline {2}Twierdzenie o rozszerzaniu odwzorowa\IeC {\'n} chaotycznych w sensie Devaneya}{17}{chapter.2}
 \contentsline {chapter}{Podsumowanie}{21}{chapter*.5}
