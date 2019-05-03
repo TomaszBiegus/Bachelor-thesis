@@ -564,7 +564,7 @@ $$h(f) = \sup h(f, \mathcal{A}),$$ gdzie supremum jest brane po wszystkich otwar
 \subsubsection{Definicja Bowena}
 \cite{ruette2017chaos}
 
-Niech $(X, \rho)$ będzie przestrzenią metryczną, a $f: X \rightarrow X$ ciągłym odwzorowaniem.
+Niech $(X, \rho)$ będzie \textcolor{red}{ dopisane: zwartą} przestrzenią metryczną, a $f: X \rightarrow X$ ciągłym odwzorowaniem (TODO: ma byc uniformly continous - tak jest u Bowena, jest tak ze zwartości $X$, napisać to tutaj?).
 
 \begin{definition}[Kula Bowena]
 Niech  $\epsilon > 0$ oraz $n \geq 1$. Kulę Bowena rzędu $n$ o środku w punkcie $x \in X$ i promieniu $\epsilon$ definiujemy następująco
@@ -608,10 +608,20 @@ TODO: entropia topologiczna - dowod rownowaznosci
  (ksiazka misiurewicz combinatorial dynamics and entropy in dimension one oraz ksiazka ruette rozdzial 4)
  
  
+\begin{lemma}[Iteraty funkcji niemalejącej są niemalejące]
+\label{iteraty_niemalejacych_sa_niemalejace}
+Niech $f: [0, 1] \rightarrow [0, 1]$ będzie funkcją niemalejącą, wówczas funkcje $f^{i}$ też są niemalejące dla każdego $i \in \mathbb{N}.$ 
+\end{lemma}
+
+\begin{proof}
+Dowód przez indukcję po $i$. Dla $i=1$ mamy $f^i = f^1 = f$, która jest niemalejąca z definicji.
+Załóżmy, że $f^i$ jest niemalejąca dla pewnego $i \in \mathbb{N}$. Pokażemy, że wówczas $f^{i+1}$ też jest niemalejąca. Istotnie, weźmy dowolne $x, y \in [0,1]$, niech $y < x$. Wówczas z założenia indukcyjnego $f^i(y) \leq f^i(x)$, a z faktu, że $f$ jest niemalejąca otrzymujemy $f^{i+1}(y)= f(f^i(y)) \leq f(f^i(x)) = f^{i+1}(x).$
+\end{proof}
  
-\begin{theorem}[Entropia topologiczna odwzorowań monotonicznych]
-\label{entropia_topologiczna_odwzorowan_monotonicznych}
-Niech $I = [0, 1]$ i niech $f: I \rightarrow I$ będzie funkcją monotoniczną oraz taką, że $f(0) = 0$ i $f(1) = 1.$
+ 
+\begin{theorem}[Entropia topologiczna odwzorowań niemalejących]
+\label{entropia_topologiczna_odwzorowan_niemalejących}
+Niech $I = [0, 1]$ i niech $f: I \rightarrow I$ będzie funkcją niemalejącą.
 Wówczas entropia topologiczna $f$ jest równa zero.
 \end{theorem}
 
@@ -629,8 +639,8 @@ Niech $B = \bigcup_{i=0}^{n-1} A_i.$ Każdy ze zbiorów $A_i$ zawiera $m+1$ elem
 
 Pokażę, że dowolne dwa punkty $x, y$ należące do tego samego odcinka $B_j$ nie mogą jednocześnie należeć do tego samego zbioru $(n, \epsilon)$-rozdzielonego.
 
-Weźmy dowolny odcinek $B_j = [b_{j-1}, b_{j}] \, j \in \{1, 2, \ldots, |B|-1\}.$ Wybierzmy z niego dwa dowolne punkty $x, y$, $x \neq y$. Bez straty ogólności, niech $x > y.$ Oczywiście nie istnieje punkt $b_k \in B$ dla którego $y \leq b_k \leq x.$ Z konstrukcji $B$ widzimy natychmiast, że $\forall_{i \in \{0, 1, \ldots, n-1\}} \, \exists_{j \in \{1,2,\ldots,m\}} \, f^{-i}(a_{j-1}) \leq y < x \leq f^{-i}(a_j)$. Z monotoniczności funkcji $f$ otrzymujemy 
-$$f^i(f^{-i}(a_{j-1})) =  a_{j-1} \leq f^i(y) < f^i(x) \leq a_j = f^i(f^{-i}(a_j)).$$
+Weźmy dowolny odcinek $B_j = [b_{j-1}, b_{j}] \, j \in \{1, 2, \ldots, |B|-1\}.$ Wybierzmy z niego dwa dowolne punkty $x, y$, $x \neq y$. Bez straty ogólności, niech $x > y.$ Oczywiście nie istnieje punkt $b_k \in B$ dla którego $y \leq b_k \leq x.$ Z konstrukcji $B$ widzimy natychmiast, że $\forall_{i \in \{0, 1, \ldots, n-1\}} \, \exists_{j \in \{1,2,\ldots,m\}} \, f^{-i}(a_{j-1}) \leq y < x \leq f^{-i}(a_j)$. Z monotoniczności funkcji $f$ i lematu \ref{iteraty_niemalejacych_sa_niemalejace} otrzymujemy 
+$$f^i(f^{-i}(a_{j-1})) =  a_{j-1} \leq f^i(y) \leq f^i(x) \leq a_j = f^i(f^{-i}(a_j)).$$
 Ponieważ $\rho(a_{j-1}, a_j) = d_{j,\epsilon} < \epsilon$ to  $\rho(f^i(x), f^i(y)) < \epsilon.$ A więc $x$ i $y$ nie należą do jednego zbioru $(n, \epsilon)$-rozdzielonego.
 
 
@@ -652,7 +662,7 @@ h_{\textrm{top}}(f) & = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\i
 \end{aligned}
 \end{equation}
 TODO: moze warto zaznaczyc ze entropia jest nieujemna moze jakies twierdzenia czy lemat definicja
-
+TODO: sprawdzic jeszcze czy nei ma problemu dla x=y albo na krancach tych moich przedzialow
 
 \end{proof}
  
@@ -814,11 +824,44 @@ Dla $(x, y) \in X \times Y$ niech $\textrm{pr}_1(x, y) = x$ i $\textrm{pr}_2(x, 
 \end{lemma}
 
 
-\begin{lemma}\label{rownosc_entropii_gdy_wlokna_monotoniczne}
-% TODO gwiazdka w wydrukowanej pracy glownej
-\end{lemma}
+\begin{theorem}[O równości entropii odwzorowania trójkątnego i jego odwzorowania bazowego]
+\label{rownosc_entropii_gdy_wlokna_monotoniczne}
+Niech $X$ będzie zwartą przestrzenią metryczną, $I = [0, 1]$, $F = (f, g_x) \in C_\triangle(X \times I).$ Wtedy, jeżeli $\forall_{x \in X}$ funkcje włóknowe $g_x$ są (niekoniecznie ściśle) monotoniczne to entropia topologiczna odwzorowania $F$ jest równa entropii topologicznej jego odwzorowania bazowego $f$, czyli:
+
+$$h(F) = h(f)$$
+\end{theorem}
+
+\begin{proof}
+%\cite{do_dowodu_rownosci_topologicznej_entropii_2_twierdzenieD}
+
+Rozważamy $X \times I$, oraz $X.$ Są to zwarte przestrzenie metryczne (TODO: pokazać zwartość? Jaką metrykę mamy na $X \times I$? max($\rho_x, \rho_y$)?).
+Zdefiniujmy odwzorowanie $\pi: X \times I \rightarrow X$, $\pi(x,a) = x$. Oczywiście $\pi$ jest ciągłe i ,,na''.
+Wówczas $F: X \times I \rightarrow X \times Y$, $f: X \rightarrow X$ oraz $\pi: X \times I \rightarrow X$ (,,na'') są ciągłymi odwzorowaniami. 
+
+Weźmy dowolny punkt $(x, a) \in X \times I$:
+$$(\pi \circ F)(x, a) = \pi(F(x,a)) = \pi(f(x), g_x(a)) = f(x),$$
+$$(f \circ \pi)(x, a) = f(\pi(x,a)) = f(x),$$
+a więc $\pi \circ F = f \circ \pi.$
 
 
+Na podstawie twierdzenia 17 z pracy  \cite[s.~103]{bowen1971entropy__do_dowodu_rownosci_topologicznej_entropii_2_twierdzenie17} otrzymujemy, że 
+
+$$h(F) \leq h(f) + \sup_{x \in X} h(F, \pi^{-1}(x))$$
+
+\textcolor{red}{Ustalmy $x \in X$, $h(F, \pi^{-1}(x)) = h(F, \{x\} \times I) =???= h(g_x)$ TODO: nie do konca rozumiem zapis $h(F, A)$, gdzie $A$ jest zbiorem, w pracy Bowena zbiór zwarty $K$ występuje przy definicji 2 na stronie 402 i nie jest powiedziane wprost, że ograniczamy się do tego zbioru, tylko, że przy zbiorach $(\epsilon, n)$-rozdzielonych ograniczamy się do największej mocy zbioru $(\epsilon, n)$-rozdzielonego zawartego w K. Chyba powinienem wykazać, że to sprowadza się do entropii na zbiorze K (w naszym przypadku do włókna z odwzorowaniem $g_x$)}
+
+Z twierdzenia \ref{entropia_topologiczna_odwzorowan_niemalejących} i faktu, że wszystkie odwzorowania włóknowe $g_x$ są niemalejące mamy :
+$$\forall_{x \in X} \, h(F, \pi^{-1}(x)) = h(g_x) = 0,$$
+czyli również:
+$$\sup_{x \in X} h(F, \pi^{-1}(x)) = 0.$$
+
+Ostatecznie dostajemy:
+
+$$h(F) \leq h(f)$$
+
+TODO: pokazac ze $h(F) \geq h(f)$
+
+\end{proof}
 
 
 \begin{lemma} \label{F_jest_niepustym_domknietym_podzbiorem_trojkatnych}
@@ -962,8 +1005,8 @@ Rozważmy zbiór $\mathcal{F}$ wszystkich odwzorowań $F = (f, g_x)$ ze zbioru $
 \item\label{dowod_glowny_c} $\forall_{x \in P_0}$ $g_x$ jest identycznością 
 \end{enumerate}
 
-Warunek \ref{dowod_glowny1} implikuje, że dla każdego odwzorowania z $\mathcal{F}$ zbiory $X \times \{0\}$ i $X \times \{1\}$ są niezmiennicze, czyli $\forall_{F \in \mathcal{F}}$ zachodzi warunek \ref{twierdzenie_glowne_c}  twierdzenia \ref{twierdzenie_glowne}.
-Zachodzenie warunku \ref{twierdzenie_glowne_b} twierdzenia \ref{twierdzenie_glowne} dla każdego odwzorowania $F \in \mathcal{F}$ wynika z lematu \ref{rownosc_entropii_gdy_wlokna_monotoniczne}.
+Warunek \ref{dowod_glowny_b} implikuje, że dla każdego odwzorowania z $\mathcal{F}$ zbiory $X \times \{0\}$ i $X \times \{1\}$ są niezmiennicze, czyli $\forall_{F \in \mathcal{F}}$ zachodzi warunek \ref{twierdzenie_glowne_c}  twierdzenia \ref{twierdzenie_glowne}.
+\textcolor{red}{Zachodzenie warunku \ref{twierdzenie_glowne_b} twierdzenia \ref{twierdzenie_glowne} dla każdego odwzorowania $F \in \mathcal{F}$ wynika z faktu, że każde odwzorowanie z $C_\triangle(X \times I)$, gzdzie $X$ jest zwartą przestrzenią metryczną (a więc w szczególności każde odwzorowanie z $\mathcal{F}$), którego wszystkie odwzorowania włóknowe są niemalejące, ma taką samą entropię topologiczną jak jego odwzorowanie bazowe (twierdzenie \ref{rownosc_entropii_gdy_wlokna_monotoniczne}).}
 Pozostaje zatem wykazać prawdziwość warunku \ref{twierdzenie_glowne_a}, czyli chaotyczność w sensie Devaneya jakiegoś odwzorowania $F \in \mathcal{F}$. Takie odwzorowanie będzie bowiem łącznie spełniało wszystkie 3 warunki, czyli tezę twierdzenia.
 
 Z lematu \ref{warunki_dostateczne_chaotycznosci_devaneya} wynika, że aby odwzorowanie $F$ było chaotyczne w sense Devaneya potrzeba i wystarcza, żeby spełniało dwa poniższe warunki:
