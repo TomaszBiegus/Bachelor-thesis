@@ -619,17 +619,17 @@ Załóżmy, że $f^i$ jest niemalejąca dla pewnego $i \in \mathbb{N}$. Pokażem
 \end{proof}
  
  
-\begin{theorem}[Entropia topologiczna odwzorowań niemalejących]
-\label{entropia_topologiczna_odwzorowan_niemalejących}
+\begin{theorem}[Entropia topologiczna odwzorowań monotonicznych]
+\label{entropia_topologiczna_odwzorowan_monotonicznych}
 
-\textcolor{red}{TODO: wzmocnic dla monotonicznych zeby zgadzalo sie z twierdzeniem \ref{rownosc_entropii_gdy_wlokna_monotoniczne?}}
-
-
-Niech $I = [0, 1]$ i niech $f: I \rightarrow I$ będzie funkcją niemalejącą.
+Niech $I = [0, 1]$ i niech $f: I \rightarrow I$ będzie funkcją monotoniczną (niekoniecznie ściśle).
 Wówczas entropia topologiczna $f$ jest równa zero.
 \end{theorem}
 
 \begin{proof}
+Rozważmy dwa przypadki: osobno dla $f: I \rightarrow I$ niemalejącej i nierosnącej.
+\item[Przypadek 1: $f: I \rightarrow I$ niemalejąca.]
+
 Skorzystamy z definicji entropii topologicznej Bowena. Pokażemy, że 
 $$\lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log s_n(f, \epsilon) = 0.$$
 
@@ -665,6 +665,11 @@ h_{\textrm{top}}(f) & = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\i
 & = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} (\frac{1}{n} \log (n \cdot (2 + \epsilon)) - \frac{1}{n} \log ( 2 \cdot \epsilon )) = \lim_{\epsilon \rightarrow 0} 0 = 0
 \end{aligned}
 \end{equation}
+
+\item[Przypadek 2: $f: I \rightarrow I$ nierosnąca.]
+
+W przypadku gdy $f: I \rightarrow I$ jest nierosnąca, dowód przebiega analogicznie.
+
 TODO: moze warto zaznaczyc ze entropia jest nieujemna moze jakies twierdzenia czy lemat definicja
 TODO: sprawdzic jeszcze czy nei ma problemu dla x=y albo na krancach tych moich przedzialow
 
@@ -830,7 +835,7 @@ Dla $(x, y) \in X \times Y$ niech $\textrm{pr}_1(x, y) = x$ i $\textrm{pr}_2(x, 
 
 \begin{theorem}[O równości entropii odwzorowania trójkątnego i jego odwzorowania bazowego]
 \label{rownosc_entropii_gdy_wlokna_monotoniczne}
-Niech $X$ będzie zwartą przestrzenią metryczną, $I = [0, 1]$, $F = (f, g_x) \in C_\triangle(X \times I).$ Wtedy, jeżeli $\forall_{x \in X}$ funkcje włóknowe $g_x$ są \textcolor{red}{TODO: zmienic na tylko niemalejace zeby zgadzalo sie z twierdzeniem: \ref{entropia_topologiczna_odwzorowan_niemalejących}?} (niekoniecznie ściśle) monotoniczne to entropia topologiczna odwzorowania $F$ jest równa entropii topologicznej jego odwzorowania bazowego $f$, czyli:
+Niech $X$ będzie zwartą przestrzenią metryczną, $I = [0, 1]$, $F = (f, g_x) \in C_\triangle(X \times I).$ Wtedy, jeżeli $\forall_{x \in X}$ funkcje włóknowe $g_x$ są (niekoniecznie ściśle) monotoniczne, to entropia topologiczna odwzorowania $F$ jest równa entropii topologicznej jego odwzorowania bazowego $f$, czyli:
 
 $$h(F) = h(f)$$
 \end{theorem}
@@ -854,7 +859,7 @@ $$h(F) \leq h(f) + \sup_{x \in X} h(F, \pi^{-1}(x))$$
 
 \textcolor{red}{Ustalmy $x \in X$, $h(F, \pi^{-1}(x)) = h(F, \{x\} \times I) =???= h(g_x)$ TODO: nie do konca rozumiem zapis $h(F, A)$, gdzie $A$ jest zbiorem, w pracy Bowena zbiór zwarty $K$ występuje przy definicji 2 na stronie 402 i nie jest powiedziane wprost, że ograniczamy się do tego zbioru, tylko, że przy zbiorach $(\epsilon, n)$-rozdzielonych ograniczamy się do największej mocy zbioru $(\epsilon, n)$-rozdzielonego zawartego w K. Chyba powinienem wykazać, że to sprowadza się do entropii na zbiorze K (w naszym przypadku do włókna z odwzorowaniem $g_x$)}
 
-Z twierdzenia \ref{entropia_topologiczna_odwzorowan_niemalejących} i faktu, że wszystkie odwzorowania włóknowe $g_x$ są niemalejące mamy :
+Z twierdzenia \ref{entropia_topologiczna_odwzorowan_monotonicznych} i faktu, że wszystkie odwzorowania włóknowe $g_x$ są monotoniczne mamy :
 $$\forall_{x \in X} \, h(F, \pi^{-1}(x)) = h(g_x) = 0,$$
 czyli również:
 $$\sup_{x \in X} h(F, \pi^{-1}(x)) = 0.$$
