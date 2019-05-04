@@ -316,12 +316,17 @@ Ciąg $(x_n)_{n=1}^\infty$ jest to funkcja określona na zbiorze liczb naturalny
 \end{definition}
 
 \begin{definition}[Podciąg]
+TODO
 \end{definition}
 
 \begin{definition}[Granica ciągu]
+TODO
 \end{definition}
 
+TODO: granica gorna granica dolna - wystepuje przy entropii Bowena
+
 \begin{definition}[Punkt skupienia ciągu]
+TODO
 \end{definition}
 
 \begin{definition}[Ciąg Cauchy'ego]
@@ -450,11 +455,12 @@ $$x_n \notin \bigcup_{k=1}^{n-1} U_k$$ Zawsze znajdziemy taki $x_n \in X$, gdyż
 
 
 \begin{definition}[Ośrodkowość]
+Przestrzeń metryczna $(X, \rho)$ jest ośrodkowa, gdy zawiera podzbiór przeliczalny i gęsty.
 \end{definition}
 
 
 \begin{definition}[Zupełność]
-Przestrzeń metryczna jest zupełna jeśli każdy ciąg Cauchy'ego jest zbieżny.
+Przestrzeń metryczna jest zupełna jeśli każdy ciąg Cauchy'ego elementów tej przestrzeni jest zbieżny do elementu tej przestrzeni.
 \end{definition}
 
 
@@ -496,6 +502,13 @@ Zatem $\forall_{n > N}: \rho(x_n, g) \leq \rho(x_n, x_M) + \rho(x_M, g) < \frac{
 
 
 
+\subsection{Twierdzenie Baire'a}
+
+\begin{definition}[Zbiór rezydualny]
+TODO
+\end{definition}
+
+
 
 \subsection{Definicje dotyczące układów dynamicznych}
 
@@ -525,9 +538,11 @@ Punkt $x$ jest okresowy, gdy jest stały dla jakiejś iteraty, tzn. gdy $\exists
 
 
 \begin{definition}[Orbita okresowa]
+TODO
 \end{definition}
 
 \begin{definition}[Niezmienniczość zbioru ze względu na odwzorowanie]
+TODO
 \end{definition}
 
 
@@ -787,6 +802,7 @@ Zbiór takich odwzorowań oznaczać będziemy $C_\triangle(X \times Y)$
 Zamiast $g(x, y)$ będziemy pisać $g_x(y)$, gdzie $g_x: Y \rightarrow Y$ jest rodziną ciągłych przekształceń zależną w sposób ciągły od $x \in X$.
 \end{definition}
 
+
 \begin{definition}[Odwzorowanie bazowe]
 Odwzorowanie $f$ nazywamy odwzorowaniem bazowym (ang. \textit{basis map}) odwzorowania $F = (f, g_x)$
 \end{definition}
@@ -794,43 +810,6 @@ Odwzorowanie $f$ nazywamy odwzorowaniem bazowym (ang. \textit{basis map}) odwzor
 \begin{definition}[Odwzorowania włóknowe]
 Odwzorowania $g_x$ dla $x \in X$ nazywamy odwzorowaniami włóknowymi (ang. \textit{fibre maps}) odwzorowania $F = (f, g_x)$.
 \end{definition}
-
-
-
-\subsection{Definicje utworzone na potrzeby dowodu twierdzenia o rozszerzaniu}
-Definicje i własności odwzorowań trójkątnych podajemy na podstawie pracy \cite{balibrea2003topological}.
-
-Na potrzeby dowodu wprowadźmy pojęcia odległości między odwzorowaniami oraz dwie funkcje: $\textrm{pr}_1(x, y)$ i $\textrm{pr}_2(x, y)$. 
-
-\begin{definition}[Metryka na przestrzeni funkcji ciągłych w przestrzeni metrycznej]
-Niech $(M, \sigma)$ będzie zwartą przestrzenią metryczną, rozważmy odwzorowania $h,k \in C(M)$. Odległość między nimi zdefiniujmy jako $\max_{m \in M} \sigma(h(m), k(m))$ i oznaczmy ją jako $d_1(h,k)$.
-\end{definition}
-
-
-
-\begin{definition}[Metryka na przestrzeni odwzorowań trójkątnych]
-Odległość między odwzorowaniami trójkątnymi definiujemy wówczas następująco: Niech $(X, \rho)$ i $(Y, \tau)$ będą zwartymi przestrzeniami metrycznymi a $F(x,y) = (f(x), g_x(y))$ i $\Phi(x,y) = (\phi(x), \psi_x(y))$ trójkątnymi odwzorowaniami należącymi do $C_\triangle(X \times Y)$. Odległość definiujemy wówczas jako 
-\begin{align*}
-d_2(F, \Phi) = \max_{(x,y) \in X \times Y} \max\{\rho(f(x),\phi(x)), \tau(g_x(y), \psi_x(y))\} \\ 
-= \max\{d_1(f,\phi), \max_{x \in X}d_1(g_x, \psi_x)\}
-\end{align*}
-Zauważmy, że jak wynika z lematu \ref{przestrzenie_ciaglych_i_ciaglych_trojkatnych_sa_zupelne} przestrzenie metryczne $(C(X), d_1)$ oraz $(C_\triangle(X \times Y), d_2)$ są zupełne i odpowiednie topologie na nich są topologiami zbieżności jednostajnej.
-\end{definition}
-
-\begin{definition}[$\textrm{pr}_1(x, y)$, $\textrm{pr}_2(x, y)$]
-Dla $(x, y) \in X \times Y$ niech $\textrm{pr}_1(x, y) = x$ i $\textrm{pr}_2(x, y) = y$. Odwzorowanie identycznościowe na $Y$ będziemy oznaczać przez $\textrm{Id}_Y$ lub krótko $\textrm{Id}$. W dalszej części pracy przestrzeń $Y$ będzie odcinkiem rzeczywistym $I = [0, 1]$.
-\end{definition}
-
-
-
-
-
-\section{Lematy}
-
-
-\begin{lemma}\label{przestrzenie_ciaglych_i_ciaglych_trojkatnych_sa_zupelne}
-% TODO
-\end{lemma}
 
 
 \begin{theorem}[O równości entropii odwzorowania trójkątnego i jego odwzorowania bazowego]
@@ -873,13 +852,65 @@ TODO: pokazac ze $h(F) \geq h(f)$
 \end{proof}
 
 
+
+\subsection{Definicje utworzone na potrzeby dowodu twierdzenia o rozszerzaniu}
+Definicje i własności odwzorowań trójkątnych podajemy na podstawie pracy \cite{balibrea2003topological}.
+
+Na potrzeby dowodu wprowadźmy pojęcia odległości między odwzorowaniami oraz dwie funkcje: $\textrm{pr}_1(x, y)$ i $\textrm{pr}_2(x, y)$. 
+
+\begin{definition}[Metryka na przestrzeni ciągłych przekształceń zwartej przestrzeni metrycznej]
+Niech $(M, \sigma)$ będzie zwartą przestrzenią metryczną, rozważmy odwzorowania $h,k \in C(M)$. Odległość między nimi zdefiniujmy jako $\max_{m \in M} \sigma(h(m), k(m))$ i oznaczmy ją jako $d_1(h,k)$.
+\end{definition}
+
+
+\begin{definition}[Metryka na przestrzeni odwzorowań trójkątnych]
+Odległość między odwzorowaniami trójkątnymi definiujemy wówczas następująco: Niech $(X, \rho)$ i $(Y, \tau)$ będą zwartymi przestrzeniami metrycznymi a $F(x,y) = (f(x), g_x(y))$ i $\Phi(x,y) = (\phi(x), \psi_x(y))$ trójkątnymi odwzorowaniami należącymi do $C_\triangle(X \times Y)$. Odległość definiujemy wówczas jako 
+\begin{align*}
+d_2(F, \Phi) = \max_{(x,y) \in X \times Y} \max\{\rho(f(x),\phi(x)), \tau(g_x(y), \psi_x(y))\} \\ 
+= \max\{d_1(f,\phi), \max_{x \in X}d_1(g_x, \psi_x)\}
+\end{align*}
+Zauważmy, że jak wynika z lematów \ref{przestrzen_ciaglych_jest_zupelna} i \ref{ciagle_trojkatne_tworza_przestrzen_metryczna_zupelna} przestrzenie metryczne $(C(X), d_1)$ oraz $(C_\triangle(X \times Y), d_2)$ są zupełne i odpowiednie topologie na nich są topologiami zbieżności jednostajnej.
+\end{definition}
+
+
+\begin{lemma}\label{przestrzen_ciaglych_jest_zupelna}
+Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną. Przestrzeń metryczna $(C(X), d_1)$ jest zupełna i topologia na niej jest topologią zbieżności jednostajnej.
+\end{lemma}
+
+\begin{proof}
+Skorzystamy z ,,ciągowej'' definicji zwartości przestrzeni metrycznej. 
+Ustalmy dowolny ciąg odwzorowań $(f_n)_{n=0}^{\infty} \subset C(X).$ Z zupełności przestrzeni $X$ istnieje zbiór $B \subset X$, przeliczalny i gęsty w $X.$ Uszeregujmy elementy zbioru $B$ w ciąg. Weźmy element $b_1 \in B.$ Ze zwartości przestrzeni $(X, \rho)$ istnieje taki podciąg $(f_{k_i}(b_1))_{i=0}^{\infty}$ ciągu $(f_n(b_1))_{n=0}^{\infty} \subset X,$ który jest zbieżny do jakiegoś $g_1 \in X.$ Następnie rozważmy podciąg $(f_{k_i})_{i=0}^{\infty} \subset C(X),$ 
+TODO: dokonczyc
+\end{proof}
+
+\begin{lemma}[Ciągłe odwzorowania trójkątne tworzą przestrzeń metryczną zupełną]
+\label{ciagle_trojkatne_tworza_przestrzen_metryczna_zupelna}
+Przestrzeń metryczna $(C_\triangle(X \times Y), d_2)$ jest zupełna i topologia na niej jest topologią zbieżności jednostajnej.
+\end{lemma}
+
+\begin{proof}
+TODO
+\end{proof}
+
+
+\begin{definition}[$\textrm{pr}_1(x, y)$, $\textrm{pr}_2(x, y)$]
+Dla $(x, y) \in X \times Y$ niech $\textrm{pr}_1(x, y) = x$ i $\textrm{pr}_2(x, y) = y$. Odwzorowanie identycznościowe na $Y$ będziemy oznaczać przez $\textrm{Id}_Y$ lub krótko $\textrm{Id}$. W dalszej części pracy przestrzeń $Y$ będzie odcinkiem rzeczywistym $I = [0, 1]$.
+\end{definition}
+
+
+
+
+
+\section{Lematy}
+
+
+
+
 \begin{lemma} \label{F_jest_niepustym_domknietym_podzbiorem_trojkatnych}
 % TODO
 \end{lemma}
 
-\begin{lemma} \label{trojkatne_tworza_przestrzen_metryczna_zupelna}
-% TODO
-\end{lemma}
+
 
 \begin{lemma} \label{przekroj_rezydualnych_jest_rezydualny}
 % TODO
@@ -1025,7 +1056,7 @@ Z lematu \ref{warunki_dostateczne_chaotycznosci_devaneya} wynika, że aby odwzor
 \end{enumerate}
 Jest tak gdyż przestrzeń $(X \times I)$ spełnia założenia lematu, tj. jest przestrzenią nieskończoną i zwartą.
 
-Chcemy wykazać, że istnieje $F \in \mathcal{F}$ będące jednocześnie topologicznie tranzytywne i posiadające gęsty w $(X \times I)$ zbiór punktów okresowych. Z lematu \ref{F_jest_niepustym_domknietym_podzbiorem_trojkatnych}wiemy, że$\mathcal{F}$ jest niepustym, domkniętym podzbiorem ptrzestrzeni $C_{\triangle}(X \times I)$, która jak wynika z lematu \ref{trojkatne_tworza_przestrzen_metryczna_zupelna} jest przestrzenią metryczną zupełną. 
+Chcemy wykazać, że istnieje $F \in \mathcal{F}$ będące jednocześnie topologicznie tranzytywne i posiadające gęsty w $(X \times I)$ zbiór punktów okresowych. Z lematu \ref{F_jest_niepustym_domknietym_podzbiorem_trojkatnych}wiemy, że$\mathcal{F}$ jest niepustym, domkniętym podzbiorem ptrzestrzeni $C_{\triangle}(X \times I)$, która jak wynika z lematu \ref{ciagle_trojkatne_tworza_przestrzen_metryczna_zupelna} jest przestrzenią metryczną zupełną. 
 
 Przekrój dwóch zbiorów rezydualnych jest rezydualny (patrz lemat \ref{przekroj_rezydualnych_jest_rezydualny}) a więc niepusty. Wystarczy zatem pokazać, że oba zbiory:
 \begin{itemize}
