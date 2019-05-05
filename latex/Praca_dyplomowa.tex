@@ -509,6 +509,15 @@ TODO
 \end{definition}
 
 
+\begin{lemma}[Przekrój zbiorów rezydualnych jest rezydualny] \label{przekroj_rezydualnych_jest_rezydualny}
+Przekrój dwóch \textcolor{red}{(TODO: przeliczalnej mnogości? W twierdzeniu głównym wykorzystują tylko dla dwóch, pokazać dla skończenie wielu, dwóch, przeliczalnej mnogości?)} zbiorów rezydualnych jest rezydualny. (A więc w szczególności niepusty).
+\end{lemma}
+
+\begin{proof}
+\textcolor{red}{TODO}
+\end{proof}
+
+
 
 \subsection{Definicje dotyczące układów dynamicznych}
 
@@ -619,8 +628,8 @@ $$h_{\textrm{top}}(f) = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\i
 
 
 
-TODO: entropia topologiczna - dowod rownowaznosci
- (ksiazka misiurewicz combinatorial dynamics and entropy in dimension one oraz ksiazka ruette rozdzial 4)
+\textcolor{red}{TODO: entropia topologiczna - dowod rownowaznosci
+ (ksiazka misiurewicz combinatorial dynamics and entropy in dimension one oraz ksiazka ruette rozdzial 4)}
  
  
 \begin{lemma}[Iteraty funkcji niemalejącej są niemalejące]
@@ -847,7 +856,7 @@ Ostatecznie dostajemy:
 
 $$h(F) \leq h(f)$$
 
-TODO: pokazac ze $h(F) \geq h(f)$
+\textcolor{red}{TODO: pokazac ze $h(F) \geq h(f)$}
 
 \end{proof}
 
@@ -873,11 +882,12 @@ Zauważmy, że jak wynika z lematów \ref{przestrzen_ciaglych_jest_zupelna} i \r
 \end{definition}
 
 
-\begin{lemma}\label{przestrzen_ciaglych_jest_zupelna}
+\begin{lemma}[Przestrzeń $(C(X), d_1)$ jest zupełna]\label{przestrzen_ciaglych_jest_zupelna}
 Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną. Przestrzeń metryczna $(C(X), d_1)$ jest zupełna i topologia na niej jest topologią zbieżności jednostajnej.
 \end{lemma}
 
 \begin{proof}
+\textcolor{red}{To poniżej to raczej nieudolna próba, konstrukcja miała by postępować tak, że wybieram kolejne podciągi dla kolejnych punktów ze zbioru B, więc otrzymam w granicy tego procesu taki podciąg, który zbiega do jakiejś funkcji na zbiorze B, a późnieja chciałem jakoś skorzystać z ciągłości.}
 Skorzystamy z ,,ciągowej'' definicji zwartości przestrzeni metrycznej. 
 Ustalmy dowolny ciąg odwzorowań $(f_n)_{n=0}^{\infty} \subset C(X).$ Z zupełności przestrzeni $X$ istnieje zbiór $B \subset X$, przeliczalny i gęsty w $X.$ Uszeregujmy elementy zbioru $B$ w ciąg. Weźmy element $b_1 \in B.$ Ze zwartości przestrzeni $(X, \rho)$ istnieje taki podciąg $(f_{k_i}(b_1))_{i=0}^{\infty}$ ciągu $(f_n(b_1))_{n=0}^{\infty} \subset X,$ który jest zbieżny do jakiegoś $g_1 \in X.$ Następnie rozważmy podciąg $(f_{k_i})_{i=0}^{\infty} \subset C(X),$ 
 TODO: dokonczyc
@@ -903,85 +913,82 @@ Dla $(x, y) \in X \times Y$ niech $\textrm{pr}_1(x, y) = x$ i $\textrm{pr}_2(x, 
 
 \section{Lematy}
 
+Na potrzeby kolejnych lematów wprowadźmy następujące definicje i oznaczenia.
 
+Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowanych oraz niech $f \in C(X)$ będzie odwzorowaniem chaotycznym w sensie Devaneya.
+Przez $I$ oznaczmy odcinek domknięty $[0, 1].$
+Niech $\mathcal{F}$ będzie zbiorem wszystkich odwzorowań $F = (f, g_x)$ ze zbioru $C_\triangle(X \times I)$ spełniających następujące warunki:
+\begin{enumerate}
+\item Odwzorowanie bazowe $f$ spełnia założenia twierdzenia \ref{twierdzenie_glowne}.
+\item $\forall_{x \in X}$ odwzorowanie $g_x$ jest niemalejące i krańce przedziału I pozostawia niezmienione.
+\item $\forall_{x \in P_0}$ $g_x$ jest identycznością 
+\end{enumerate}
 
 
 \begin{lemma} \label{F_jest_niepustym_domknietym_podzbiorem_trojkatnych}
-% TODO
+Zbiór $\mathcal{F}$ jest niepustym, domkniętym podzbiorem ptrzestrzeni $C_{\triangle}(X \times I)$, 
 \end{lemma}
 
+\begin{proof}
+\textcolor{red}{TODO}
+\end{proof}
 
-
-\begin{lemma} \label{przekroj_rezydualnych_jest_rezydualny}
-% TODO
-\end{lemma}
 
 \begin{theorem} \label{tranzytywne_rezydualne_w_F}
-% TODO
+Zbiór odwzorowań tranzytywnych jest rezydualny w $\mathcal{F}$.
 \cite{alseda1999entropy} - dowod twierdzenia 1.5
 \end{theorem}
 
+\begin{proof}
+\textcolor{red}{TODO: dowód jest w pracy {alseda1999entropy} - dowod twierdzenia 1.5}
+\end{proof}
+
+
+
 \begin{lemma} \label{Fso_sa_otwartymi_podzbiorami_F}
-% TODO
+Niech $U$ będzie dowolnym zbiorem otwartym zawartym w $X \times I$. Zdefiniujmy zbiór $\mathcal{F}_{SO}$ (,,S'' - stabilny, ,,O'' - okresowy) następująco. Odwzorowanie $G$ należy do $\mathcal{F}_{SO}$ wtedy i tylko wtedy, gdy należy do $\mathcal{F}$, posiada punkt okresowy w $U$ oraz wszystkie dostatecznie bliskie $G$ odwzorowania z $\mathcal{F}$ również posiadają punkt okresowy w $U$ (być może różne od punktuów okresowych odwzorowania $G$).
+Wówczas zbiór $\mathcal{F}_{SO}$ jest otwartym podzbiorem $\mathcal{F}$.
 \end{lemma}
+
+\begin{proof}
+\textcolor{red}{TODO}
+\end{proof}
+
+
 
 \begin{lemma}
 \label{w_otoczeniu_niezmienniczego_jest_otwarty_zawarty_w_iteracjach}
-% TODO
+
+Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowanych, $f \in C(X)$ odwzorowaniem chaotycznym w sensie Devaneya, $P$ zbiorem niezmienniczym ze względu na $f$. \textcolor{red}{TODO: Wystarczy żeby P byl niezmienniczy? W głównym dowodzie ewidentnie ten zbiór jest skończony, bo jest orbitą punktu okresowego, ale w treści pracy autorzy nie powołują się na jego skończoność} a $V$ otwartym otoczeniem zbioru $P$ \textcolor{red}{TODO: dodefiniować co znaczy otoczenie zbioru?}.
+Wówczas dla każdego $N \in \mathbb{N}$ istnieje niepusty zbiór otwarty $W \subseteq V$ taki, że $W \cup f(W) \cup \ldots \cup f^N(W) \subseteq V$.
 \end{lemma}
+
+\begin{proof}
+\textcolor{red}{TODO}
+\end{proof}
+
+
 
 \begin{lemma}
 \label{lemat_3_glownego_artykulu_istnieje_orbita_okresowa_krojaca_sie_z_rodzina_otwartych}
 % TODO
-W glownej pracy to byl lemat 3
+\textcolor{red}{W glownej pracy to byl lemat 3}
+Niech $(X, \rho)$ będzie \textcolor{red}{separowalną przestrzenią metryczną drugiej kategorii (oryg. be a separable 2nd category metric space) TODO: Czy to tłymaczenie jest właściwe? Jeżeli tak to muszę dopisać definicje przestrzeni drugiej kategorii i separowalności}. Niech $f \in C(X)$ będzie topologicznie tranzytywnym odwzorowaniem, którego zbiór punktów okresowych jest gęsty w $X$. 
+
+Wtedy dla każdej rodziny niepustych zbiorów otwartych $U_1, U_2, \ldots, U_n \subset X$ istnieje orbita okresowa $f$, której przekrój z każdym ze zbiorów $U_i, i=1,2,\ldots,n$ jest niepusty
 \end{lemma}
+
+\begin{proof}
+\textcolor{red}{TODO: wystarczy przepisać}
+\end{proof}
+
+
 
 \begin{lemma}
 \label{wszystkie_wloknowe_na_implikuje_punkt_okresowy}
 % TODO
 \end{lemma}
 
-\begin{lemma}
-\label{lemat_4_glownego_artykulu}
-\cite{alseda1999entropy}
-Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną i niech $F = (f, g_x)$ będzie odwzorowaniem należącym do $C_\triangle(X \times I)$ którego wszystkie odwzorowania włóknowe są niemalejące i pozostawiają krańce $I$ niezmienione. Niech $\{a_1, a_2, \ldots, a_n\}$ będzie podzbiorem $X$ oraz dla $i = 1, 2, \ldots, n$ niech $U_i$ będą parami rozłącznymi zbiorami otwartymi takimi, że $a_i \in U_i$. Załóżmy, że $h_i$ są niemalejącymi odwzorowaniami z $C(I)$ pozostawiającymi krańce $I$ niezmienione i spełniającymi $d_1(h_i, g_{a_i}) < \epsilon$ dla pewnego dodatniego $\epsilon$ i każdego $i = 1, 2, \ldots, n$. Wówczas istnieje odwzorowanie $\widetilde{F} = (f, \widetilde{g}_x) \in C_\triangle(X \times I)$ spełniające cztery następujące warunki:
-
-\begin{enumerate}
-\item  wszystkie odwzorowania włóknowe $\widetilde{F}$ są niemalejące i pozostawiające krańce $I$ niezmienione,
-\item $d_2(F, \widetilde{F}) < \epsilon$,
-\item $\widetilde{g}_{a_i} = h_i$ dla $i = 1,2,\ldots,n$,
-\item $\widetilde{g}_x = g_x$ dla $x \in X \setminus \bigcup_{i=1}^n U_i$.
-\end{enumerate}
-
-\begin{proof}
-\cite{alseda1999entropy}
-Dla każdego $i = 1, 2, \ldots, n$ niech $V_i \subset U_i$ będzie otwartym sąsiedztwem $a_i$ takim, że dla pewnego dodatniego $\widetilde{\epsilon} < \epsilon$, $d_1(h_i, g_x) < \widetilde{\epsilon}$ zawsze wtedy gdy $x \in V_i$.
-
-Oznaczmy $U = \bigcup_{i=1}^n U_i$, $V = \bigcup_{i=1}^n V_i$. Niech $u : X \longrightarrow [0,1]$ \textcolor{red}{TODO: cwiczenie - dlaczego funkcja u istnieje?} będzie ciągłą funkcją, przyjmującą wartość $1$ na zbiorze $\{a_1, a_2, \ldots, a_n\}$, natomiast $0$ poza zbiorem $V$. Zastąpmy każde odwzorowanie włóknowe $g_x$ przez $\widetilde{g}_x$, gdzie
-
-\begin{equation} \label{lemat4_rownanie_1}
-    \widetilde{g}_x(y) =
-    \begin{cases}
-        g_x(y) & \text{dla $x \in X \setminus V$,}\\
-        g_x(y)(1-u(x))+h_i(y)u(x) & \text{dla $x \in V_i : i \in \{1,2,\ldots,n\}$.}
-    \end{cases}
-\end{equation}
-
-\textcolor{red}{TODO: Przemyslec, w kontekscie powyzszego zdanie: kombinacja wypukla odwzorowan niemalejacych jest niemalejaca - do czego to tutaj jest porzebne}
-
-dla każdego $y \in I$. Zauważmy ponadto, że dla $x \in V_i$ oraz $i \in \{1,2,\ldots,n\}$ możemy równoważnie napisać
-
-\begin{equation} \label{lemat4_rownanie_2}
-\widetilde{g}_x(y) = u(x)(h_i(y) - g_x(y)) + g_x(y).
-\end{equation}
-
-Rozważmy odwzorowanie $\widetilde{F} = (f, \widetilde{g}_x)$. Należy ono do $C_\triangle(X \times I)$. Z równości \ref{lemat4_rownanie_1} widzimy, że wszystkie odwzorowania włóknowe $\widetilde{g}_x$ są niemalejące i krańce przedziału $I$ są ich punktami stałymi. Ponadto $\widetilde{g}_{a_i} = h_i$ dla każdego $i$ oraz $\widetilde{g}_x = g_x$ dla $x \in X \setminus V \supset X \setminus U$. Ponieważ dla $x \in V_i$, gdzie $i \in \{1,2,\ldots,n\}$ mamy $d_1(h_i, g_x) < \widetilde{\epsilon}$ oraz $u(x) \in [0,1]$, zatem z równości \ref{lemat4_rownanie_2} otrzymujemy $d_1(g_x, \widetilde{g}_x) < \widetilde{\epsilon}$ dla każdego $x \in V$. Wynika z tego, że $d_2(F, \widetilde(F)) \leq \widetilde{\epsilon} < \epsilon$ (TODO uzasadnic tutaj wewnatrz to ostatnie przejscie od d1 do d2 z definicji d1 i d2), co kończy dowód.
-
-\end{proof}
-
-
-
-\end{lemma}
 
 \begin{lemma}
 \label{przeliczalny_przekroj_gestych_jest_rezydualny} 
@@ -1022,6 +1029,49 @@ Rozważmy odwzorowanie $\widetilde{F} = (f, \widetilde{g}_x)$. Należy ono do $C
 
 
 
+
+\begin{lemma}
+\label{lemat_4_glownego_artykulu}
+\cite{alseda1999entropy}
+Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną i niech $F = (f, g_x)$ będzie odwzorowaniem należącym do $C_\triangle(X \times I)$ którego wszystkie odwzorowania włóknowe są niemalejące i pozostawiają krańce $I$ niezmienione. Niech $\{a_1, a_2, \ldots, a_n\}$ będzie podzbiorem $X$ oraz dla $i = 1, 2, \ldots, n$ niech $U_i$ będą parami rozłącznymi zbiorami otwartymi takimi, że $a_i \in U_i$. Załóżmy, że $h_i$ są niemalejącymi odwzorowaniami z $C(I)$ pozostawiającymi krańce $I$ niezmienione i spełniającymi $d_1(h_i, g_{a_i}) < \epsilon$ dla pewnego dodatniego $\epsilon$ i każdego $i = 1, 2, \ldots, n$. Wówczas istnieje odwzorowanie $\widetilde{F} = (f, \widetilde{g}_x) \in C_\triangle(X \times I)$ spełniające cztery następujące warunki:
+
+\begin{enumerate}
+\item  wszystkie odwzorowania włóknowe $\widetilde{F}$ są niemalejące i pozostawiające krańce $I$ niezmienione,
+\item $d_2(F, \widetilde{F}) < \epsilon$,
+\item $\widetilde{g}_{a_i} = h_i$ dla $i = 1,2,\ldots,n$,
+\item $\widetilde{g}_x = g_x$ dla $x \in X \setminus \bigcup_{i=1}^n U_i$.
+\end{enumerate}
+
+\begin{proof}
+\cite{alseda1999entropy}
+Dla każdego $i = 1, 2, \ldots, n$ niech $V_i \subset U_i$ będzie otwartym sąsiedztwem $a_i$ takim, że dla pewnego dodatniego $\widetilde{\epsilon} < \epsilon$, $d_1(h_i, g_x) < \widetilde{\epsilon}$ zawsze wtedy gdy $x \in V_i$.
+
+Oznaczmy $U = \bigcup_{i=1}^n U_i$, $V = \bigcup_{i=1}^n V_i$. Niech $u : X \longrightarrow [0,1]$ \textcolor{red}{TODO: cwiczenie - dlaczego funkcja u istnieje?} będzie ciągłą funkcją, przyjmującą wartość $1$ na zbiorze $\{a_1, a_2, \ldots, a_n\}$, natomiast $0$ poza zbiorem $V$. Zastąpmy każde odwzorowanie włóknowe $g_x$ przez $\widetilde{g}_x$, gdzie
+
+\begin{equation} \label{lemat4_rownanie_1}
+    \widetilde{g}_x(y) =
+    \begin{cases}
+        g_x(y) & \text{dla $x \in X \setminus V$,}\\
+        g_x(y)(1-u(x))+h_i(y)u(x) & \text{dla $x \in V_i : i \in \{1,2,\ldots,n\}$.}
+    \end{cases}
+\end{equation}
+
+\textcolor{red}{TODO: Przemyslec, w kontekscie powyzszego zdanie: kombinacja wypukla odwzorowan niemalejacych jest niemalejaca - do czego to tutaj jest porzebne}
+
+dla każdego $y \in I$. Zauważmy ponadto, że dla $x \in V_i$ oraz $i \in \{1,2,\ldots,n\}$ możemy równoważnie napisać
+
+\begin{equation} \label{lemat4_rownanie_2}
+\widetilde{g}_x(y) = u(x)(h_i(y) - g_x(y)) + g_x(y).
+\end{equation}
+
+Rozważmy odwzorowanie $\widetilde{F} = (f, \widetilde{g}_x)$. Należy ono do $C_\triangle(X \times I)$. Z równości \ref{lemat4_rownanie_1} widzimy, że wszystkie odwzorowania włóknowe $\widetilde{g}_x$ są niemalejące i krańce przedziału $I$ są ich punktami stałymi. Ponadto $\widetilde{g}_{a_i} = h_i$ dla każdego $i$ oraz $\widetilde{g}_x = g_x$ dla $x \in X \setminus V \supset X \setminus U$. Ponieważ dla $x \in V_i$, gdzie $i \in \{1,2,\ldots,n\}$ mamy $d_1(h_i, g_x) < \widetilde{\epsilon}$ oraz $u(x) \in [0,1]$, zatem z równości \ref{lemat4_rownanie_2} otrzymujemy $d_1(g_x, \widetilde{g}_x) < \widetilde{\epsilon}$ dla każdego $x \in V$. Wynika z tego, że $d_2(F, \widetilde(F)) \leq \widetilde{\epsilon} < \epsilon$ (TODO uzasadnic tutaj wewnatrz to ostatnie przejscie od d1 do d2 z definicji d1 i d2), co kończy dowód.
+
+\end{proof}
+
+\end{lemma}
+
+
+
 \chapter{Twierdzenie o rozszerzaniu odwzorowań chaotycznych w sensie Devaneya}
 \begin{theorem}[O rozszerzaniu]\label{twierdzenie_glowne}
 Twierdzenie wraz z dowodem przytaczamy za pracą \cite{balibrea2003topological}
@@ -1056,7 +1106,7 @@ Z lematu \ref{warunki_dostateczne_chaotycznosci_devaneya} wynika, że aby odwzor
 \end{enumerate}
 Jest tak gdyż przestrzeń $(X \times I)$ spełnia założenia lematu, tj. jest przestrzenią nieskończoną i zwartą.
 
-Chcemy wykazać, że istnieje $F \in \mathcal{F}$ będące jednocześnie topologicznie tranzytywne i posiadające gęsty w $(X \times I)$ zbiór punktów okresowych. Z lematu \ref{F_jest_niepustym_domknietym_podzbiorem_trojkatnych}wiemy, że$\mathcal{F}$ jest niepustym, domkniętym podzbiorem ptrzestrzeni $C_{\triangle}(X \times I)$, która jak wynika z lematu \ref{ciagle_trojkatne_tworza_przestrzen_metryczna_zupelna} jest przestrzenią metryczną zupełną. 
+Chcemy wykazać, że istnieje $F \in \mathcal{F}$ będące jednocześnie topologicznie tranzytywne i posiadające gęsty w $(X \times I)$ zbiór punktów okresowych. Z lematu \ref{F_jest_niepustym_domknietym_podzbiorem_trojkatnych} wiemy, że $\mathcal{F}$ jest niepustym, domkniętym podzbiorem ptrzestrzeni $C_{\triangle}(X \times I)$, która jak wynika z lematu \ref{ciagle_trojkatne_tworza_przestrzen_metryczna_zupelna} jest przestrzenią metryczną zupełną. 
 
 Przekrój dwóch zbiorów rezydualnych jest rezydualny (patrz lemat \ref{przekroj_rezydualnych_jest_rezydualny}) a więc niepusty. Wystarczy zatem pokazać, że oba zbiory:
 \begin{itemize}
@@ -1076,9 +1126,9 @@ Dla każdego $i=1,2,...$ niech zbiór $\mathcal{F}_{SO}^i$ (,,S'' - stabilny, ,,
 
 Aby wykazać że każdy zbiór $\mathcal{F}_{SO}^i$ jest gęsty w $\mathcal{F}$ ustalmy dowolne: $i \in \mathbb{N}$, $F=(f,g_x) \in \mathcal{F}$ i $\epsilon > 0$. Pokażemy, że istnieje odwrorowanie $G \in \mathcal{F}_{SO}^i$, którego odległość od $F$ nie przekracza $\epsilon$. Dla uproszczenia sytuacji załóżmy, że $\rho(\textrm{pr}_1(U_i), P_0) > 0$ (Jeżeli tak nie jest, zawsze możemy wziąć zamiast $U_i$ mniejszy prostokąt $U_i^* \subset U_i$).
 
-Weźmy dodatnią liczbę naturalną $N \geq \frac{4}{\epsilon}$. Następnie rozważmy otwarte sąsiedztwo $V$ orbity $P_0$ w przestrzeni $(X, \rho)$ takie, że $\rho(\textrm{pr}_1(U_i), V) \geq 0$ oraz $d_1(g_x, \textrm{Id}) < \frac{\epsilon}{4}$ dla każdego $x \in V$ (pamiętamy, że $g_x = \textrm{Id}$ dla $x \in P_0$).
+Weźmy dodatnią liczbę naturalną $N \geq \frac{4}{\epsilon}$. Następnie rozważmy otwarte sąsiedztwo \textcolor{red}{TODO: Sąsiedztwo czy otoczenie? Wydaje mi się, że w literaturze anglojęzycznej nie piszą neighborhood w sensie sąsiedztwa tylko mają na myśli otoczenie, a na nasze polskie sąsiedztwo mówią punctured neighborhood.} $V$ orbity $P_0$ w przestrzeni $(X, \rho)$ takie, że $\rho(\textrm{pr}_1(U_i), V) \geq 0$ oraz $d_1(g_x, \textrm{Id}) < \frac{\epsilon}{4}$ dla każdego $x \in V$ (pamiętamy, że $g_x = \textrm{Id}$ dla $x \in P_0$).
 
-$P_0$ jest zbiorem niezmienniczym ze względu na f, na mocy lematu \ref{w_otoczeniu_niezmienniczego_jest_otwarty_zawarty_w_iteracjach} istnieje niepusty zbiór otwarty $W \subseteq V$ taki, że $W \cup f(W) \cup \ldots \cup f^N(W) \subseteq V$. Na mocy lematu \ref{lemat_3_glownego_artykulu_istnieje_orbita_okresowa_krojaca_sie_z_rodzina_otwartych} istnieje punkt okresowy $x_0$ odwzorowania $f$ taki, że $x_0 \in \textrm{pr}_1(U_i)$ oraz orbita $x_0$ kroi się niepusto ze zbiorem $W$. Niech $r > 0$ będzie pierwszą dodatnią liczbą całkowitą dla której $f^r(x_0) \in W$. Wtedy $f^r(x_0), f^{r+1}(x_0), \ldots, f^{r+N-1}(x_0) \in V$. Niech $s \geq 0$ będzie pierwszą nieujemną liczbą całkowitą dla której $f^{r+N+s}(x_0) = x_0$, tj. $r+N+s$ jest okresem punktu $x_0$. Weźmy $y_0$ takie, że $(x_0, y_0) \in U_i$. Ponieważ wszystkie odwzorowania włóknowe ($g_x$) odwzorowania $F$ są ,,na'', to istnieje punkt $y^* \in (0,1)$ taki, że $F^s(f^{r+N}(x_0), y^*) = (x_0, y_0)$ (patrz lemat \ref{wszystkie_wloknowe_na_implikuje_punkt_okresowy}).
+$P_0$ jest zbiorem niezmienniczym ze względu na $f$, na mocy lematu \ref{w_otoczeniu_niezmienniczego_jest_otwarty_zawarty_w_iteracjach} istnieje niepusty zbiór otwarty $W \subseteq V$ taki, że $W \cup f(W) \cup \ldots \cup f^N(W) \subseteq V$. Na mocy lematu \ref{lemat_3_glownego_artykulu_istnieje_orbita_okresowa_krojaca_sie_z_rodzina_otwartych} istnieje punkt okresowy $x_0$ odwzorowania $f$ taki, że $x_0 \in \textrm{pr}_1(U_i)$ oraz orbita $x_0$ kroi się niepusto ze zbiorem $W$. Niech $r > 0$ będzie pierwszą dodatnią liczbą całkowitą dla której $f^r(x_0) \in W$. Wtedy $f^r(x_0), f^{r+1}(x_0), \ldots, f^{r+N-1}(x_0) \in V$. Niech $s \geq 0$ będzie pierwszą nieujemną liczbą całkowitą dla której $f^{r+N+s}(x_0) = x_0$, tj. $r+N+s$ jest okresem punktu $x_0$. Weźmy $y_0$ takie, że $(x_0, y_0) \in U_i$. Ponieważ wszystkie odwzorowania włóknowe ($g_x$) odwzorowania $F$ są ,,na'', to istnieje punkt $y^* \in (0,1)$ taki, że $F^s(f^{r+N}(x_0), y^*) = (x_0, y_0)$ (patrz lemat \ref{wszystkie_wloknowe_na_implikuje_punkt_okresowy}).
 
 Przypadek 1. $z = \textrm{pr}_2(F^r(x_0, y_0))$ jest różne od 0 i 1.
 Oznaczmy przez $g$ odwzorowanie z $C(I)$ posiadające następujące trzy własności:
