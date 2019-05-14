@@ -661,7 +661,7 @@ $$\lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log
 
 % Pokażemy, że $\forall_{n \in \mathbb{N}, \epsilon>0} \, s_n(f, \epsilon) \leq \frac{n}{\epsilon}.$
 
-Ustalmy dowolne $n \in \mathbb{N}$ i $\epsilon > 0.$ Podzielmy odcinek $[0, 1]$ na $m = \lfloor 1/\epsilon \rfloor + 1 \leq \frac{1}{\epsilon} + 1$ odcinków o (niekoniecznie jednakowych) długościach równych $d_{i,\epsilon} < \epsilon$ w taki sposób aby otrzymać rodzinę odcinków: $\{ [0, d_{1,\epsilon}), [d_{1,\epsilon}, d_{1,\epsilon} + d_{2, \epsilon}), \ldots, [\sum_{i=1}^{m-1} d_{i, \epsilon}, 1] \}.$ Oznaczmy krańce tych odcinków przez $a_0=0, a_1 = d_{1,\epsilon}, a_2 = d_{\epsilon}, \ldots, a_m = 1.$ 
+Ustalmy dowolne $n \in \mathbb{N}$ i $\epsilon > 0.$ Podzielmy odcinek $[0, 1]$ na $m = \lfloor 1/\epsilon \rfloor + 1 \leq \frac{1}{\epsilon} + 1$ odcinków o (niekoniecznie jednakowych) długościach równych $d_{i,\epsilon} < \epsilon$ w taki sposób aby otrzymać rodzinę odcinków: $\{ [0, d_{1,\epsilon}), [d_{1,\epsilon}, d_{1,\epsilon} + d_{2, \epsilon}), \ldots, [\sum_{i=1}^{m-1} d_{i, \epsilon}, 1] \}.$ Oznaczmy krańce tych odcinków przez $a_0=0, \, a_1 = d_{1,\epsilon}, \, a_2 = d_{1,\epsilon} + d_{2,\epsilon}, \, \ldots, \, a_m = 1.$ 
 
 Zdefiniujmy $A_i \coloneqq \{f^{-i}(a_0), f^{-i}(a_1), \ldots, f^{-i}(a_m)\}$, dla $i \in \{0, 1, \ldots, n-1\}$
 
@@ -669,7 +669,7 @@ Niech $B = \bigcup_{i=0}^{n-1} A_i.$ Każdy ze zbiorów $A_i$ zawiera $m+1$ elem
 
 Pokażę, że dowolne dwa punkty $x, y$ należące do tego samego odcinka $B_j$ nie mogą jednocześnie należeć do tego samego zbioru $(n, \epsilon)$-rozdzielonego.
 
-Weźmy dowolny odcinek $B_j = [b_{j-1}, b_{j}] \, j \in \{1, 2, \ldots, |B|-1\}.$ Wybierzmy z niego dwa dowolne punkty $x, y$, $x \neq y$. Bez straty ogólności, niech $x > y.$ Oczywiście nie istnieje punkt $b_k \in B$ dla którego $y \leq b_k \leq x.$ Z konstrukcji $B$ widzimy natychmiast, że $\forall_{i \in \{0, 1, \ldots, n-1\}} \, \exists_{j \in \{1,2,\ldots,m\}} \, f^{-i}(a_{j-1}) \leq y < x \leq f^{-i}(a_j)$. Z monotoniczności funkcji $f$ i lematu \ref{iteraty_niemalejacych_sa_niemalejace} otrzymujemy 
+Weźmy dowolny odcinek $B_j = [b_{j-1}, b_{j}] \, j \in \{1, 2, \ldots, |B|-1\}.$ Wybierzmy z niego dwa dowolne punkty $x, y$, $x \neq y$. Bez straty ogólności, niech $x > y.$ Oczywiście nie istnieje punkt $b_k \in B$ dla którego $y < b_k < x.$ Z konstrukcji $B$ widzimy natychmiast, że $\forall_{i \in \{0, 1, \ldots, n-1\}} \, \exists_{j \in \{1,2,\ldots,m\}} \, f^{-i}(a_{j-1}) \leq y < x \leq f^{-i}(a_j)$. Z monotoniczności funkcji $f$ i lematu \ref{iteraty_niemalejacych_sa_niemalejace} otrzymujemy 
 $$f^i(f^{-i}(a_{j-1})) =  a_{j-1} \leq f^i(y) \leq f^i(x) \leq a_j = f^i(f^{-i}(a_j)).$$
 Ponieważ $\rho(a_{j-1}, a_j) = d_{j,\epsilon} < \epsilon$ to  $\rho(f^i(x), f^i(y)) < \epsilon.$ A więc $x$ i $y$ nie należą do jednego zbioru $(n, \epsilon)$-rozdzielonego.
 
@@ -704,10 +704,6 @@ zatem
 $0 = h_{\textrm{top}}(f^2) = 2 \cdot h_{\textrm{top}}(f),$
 czyli
 $h_{\textrm{top}}(f) = 0.$
-
-
-
-TODO: sprawdzic jeszcze czy nei ma problemu dla x=y albo na krancach tych moich przedzialow
 
 \end{proof}
  
