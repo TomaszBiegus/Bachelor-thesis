@@ -634,15 +634,23 @@ $$h_{\textrm{top}}(f) = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\i
  (ksiazka misiurewicz combinatorial dynamics and entropy in dimension one oraz ksiazka ruette rozdzial 4)}
  
  
-\begin{lemma}[Iteraty funkcji niemalejącej są niemalejące]
-\label{iteraty_niemalejacych_sa_niemalejace}
-Niech $f: [0, 1] \rightarrow [0, 1]$ będzie funkcją niemalejącą, wówczas funkcje $f^{i}$ też są niemalejące dla każdego $i \in \mathbb{N}.$ 
+\textcolor{red}{TODO: nowe} 
+\begin{lemma}[Złożenie funkcji niemalejących jest niemalejące]
+\label{zlozenie_niemalejacych_jest_niemalejace}
+Niech $f: [0, 1] \rightarrow [0, 1]$ i $g: [0, 1] \rightarrow [0,1]$ będą funkcjami niemalejącymi, wówczas ich złożenie $f \circ g$ również jest funkcją niemalejącą. 
 \end{lemma}
 
 \begin{proof}
-Dowód przez indukcję po $i$. Dla $i=1$ mamy $f^i = f^1 = f$, która jest niemalejąca z definicji.
-Załóżmy, że $f^i$ jest niemalejąca dla pewnego $i \in \mathbb{N}$. Pokażemy, że wówczas $f^{i+1}$ też jest niemalejąca. Istotnie, weźmy dowolne $x, y \in [0,1]$, niech $y < x$. Wówczas z założenia indukcyjnego $f^i(y) \leq f^i(x)$, a z faktu, że $f$ jest niemalejąca otrzymujemy $f^{i+1}(y)= f(f^i(y)) \leq f(f^i(x)) = f^{i+1}(x).$
-\end{proof}
+Weźmy dowolne $x, y \in [0,1]$, niech $y < x$. Wówczas, ponieważ $g$ jest niemalejąca zachodzi nierówność $g(y) \leq g(x)$, z faktu, że $f$ również jest niemalejąca otrzymujemy $f(g(y)) \leq f(g(x)).$ Czyli $(f \circ g)(y) \leq (f \circ g)(x).$
+\end{proof} 
+ 
+ 
+\begin{corollary}[Iteraty funkcji niemalejącej są niemalejące]
+\label{iteraty_niemalejacych_sa_niemalejace}
+Niech $f: [0, 1] \rightarrow [0, 1]$ będzie funkcją niemalejącą, wówczas korzystając z lematu \ref{zlozenie_niemalejacych_jest_niemalejace}, przez prostą indukcję otrzymujemy wniosek, że dla każdego $i \in \mathbb{N}$ funkcje $f^{i}$ są niemalejące.
+\end{corollary}
+\textcolor{red}{TODO: end nowe} 
+
  
  
 \begin{theorem}[Entropia topologiczna odwzorowań monotonicznych]
