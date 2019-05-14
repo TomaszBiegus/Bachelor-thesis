@@ -279,10 +279,12 @@ TODO: Dopisać do sekcji definicji definicję punktu skupienia ciągu.
 \item orbita okresowa
 \item niezmienniczosc zbioru ze wzgledu na odwzorowanie
 
-\item topologiczna tranzytywnosc
+
 \item entropia topologiczna Adler
 \item entropia topologiczna Bowen
 \item entropia topologiczna - dowod rownowaznosci (ksiazka misiurewicz combinatorial dynamics and entropy in dimension one oraz ksiazka ruette rozdzial 4)
+
+%\item topologiczna tranzytywnosc, jest
 \item wrazliwosc na warunki poczatkowe
 \item RODZAJE CHAOSU (Devaneya, Li Yorka)
 
@@ -720,9 +722,9 @@ TODO
 
 Pomimo dużej popularności chaotycznych układów dynamicznych, przez długi czas nie było jednej powszechnie akceptowanej definicji chaosu.
 
-\begin{definition}[Tranzytywność]
+\begin{definition}[Topologiczna tranzytywność]
 \cite{onDeveneyDefinitionOfChaos}
-Mówimy, że $f$ jest tranzytywne w przestrzeni metrycznej $X$, gdy dla każdych niepustych, otwartych podzbiorów $U, V$ przestrzeni $X$ istnieje liczba naturalna $k$ taka, że przekrój $f^k(U) \cap V$ jest niepusty.
+Mówimy, że $f$ jest topologicznie tranzytywne w przestrzeni metrycznej $X$, gdy dla każdych niepustych, otwartych podzbiorów $U, V$ przestrzeni $X$ istnieje liczba naturalna $k$ taka, że przekrój $f^k(U) \cap V$ jest niepusty.
 \end{definition}
 
 \begin{definition}[Wrażliwość na warunki początkowe]
@@ -969,19 +971,28 @@ Wówczas dla każdego $N \in \mathbb{N}$ istnieje niepusty zbiór otwarty $W \su
 
 
 
-\begin{lemma}
+\begin{lemma}[Istnienie orbity okresowej odwiedzającej rodzinę zbiorów otwartych]
 \label{lemat_3_glownego_artykulu_istnieje_orbita_okresowa_krojaca_sie_z_rodzina_otwartych}
-% TODO
-\textcolor{red}{W glownej pracy to byl lemat 3}
-Niech $(X, \rho)$ będzie \textcolor{red}{separowalną przestrzenią metryczną drugiej kategorii (oryg. be a separable 2nd category metric space) TODO: Czy to tłymaczenie jest właściwe? Jeżeli tak to muszę dopisać definicje przestrzeni drugiej kategorii i separowalności}. Niech $f \in C(X)$ będzie topologicznie tranzytywnym odwzorowaniem, którego zbiór punktów okresowych jest gęsty w $X$. 
+
+\textcolor{red}{TODO: przeredagowałem twierdzenie i dowód korzystjąc z pracy \cite[s.~7]{someAspectsOfTopologicalTransitivity} - twierdzenie 2.2.2.16}
+
+Na podstawie \cite[s.~231-232 Lemma 3]{balibrea2003topological} i \cite[s.~7]{someAspectsOfTopologicalTransitivity}
+Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną.
+Niech $f \in C(X)$ będzie topologicznie tranzytywnym odwzorowaniem, którego zbiór punktów okresowych jest gęsty w $X$. 
 
 Wtedy dla każdej rodziny niepustych zbiorów otwartych $U_1, U_2, \ldots, U_n \subset X$ istnieje orbita okresowa $f$, której przekrój z każdym ze zbiorów $U_i, i=1,2,\ldots,n$ jest niepusty
 \end{lemma}
 
 \begin{proof}
-\textcolor{red}{TODO: wystarczy przepisać}
+Ponieważ odwzorowanie $f$ jest tranzytywne a przestrzeń $X$ jest zwarta, to istnieje punkt $x_0$, którego orbita jest gęsta w $X$. Zatem orbita punktu $x_0$ odwiedza każdy ze zbiorów otwartych $U_i, \, i = 1,2,\ldots,n.$ Teraz \textcolor{red}{korzystając z ciągłości} odwzorowania $f$ wystarczy wziąć punkt okresowy $f$ dostatecznie bliski $x_0.$
 \end{proof}
 
+\begin{proof}
+Alternatywa.
+x jest zwartaZwarta => osrodkowa i zupelna + twierdzenie bairea
+TODO
+Przestrzeń $X$ jest zwarta, a zatem zupełna i ośrodkowa.
+\end{proof}
 
 
 \begin{lemma}
