@@ -687,16 +687,26 @@ Ostatecznie otrzymujemy:
 \begin{equation}
 \begin{aligned}
 h_{\textrm{top}}(f) & = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log s_n(f, \epsilon) \leq \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log ( n \cdot (m+1) - 1 ) \\
-& \leq \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log ( \frac{n}{\epsilon} + \frac{n}{2} - 1 ) <TODO:!!!??? \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log ( \frac{2 \cdot n + \epsilon \cdot n}{2 \cdot \epsilon}) \\
+& \leq \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log ( \frac{n}{\epsilon} + \frac{n}{2} - 1 ) \leq \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log ( \frac{2 \cdot n + \epsilon \cdot n}{2 \cdot \epsilon}) \\
 & = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} (\frac{1}{n} \log (n \cdot (2 + \epsilon)) - \frac{1}{n} \log ( 2 \cdot \epsilon )) = \lim_{\epsilon \rightarrow 0} 0 = 0
 \end{aligned}
 \end{equation}
+\textcolor{red}{
+Entropia z definicji jest nieujemna, więc $h_{\textrm{top}}(f) = 0.$
+}
 
 \item[Przypadek 2: $f: I \rightarrow I$ nierosnąca.]
+\textcolor{red}{TODO: nowe!!!}
 
-W przypadku gdy $f: I \rightarrow I$ jest nierosnąca, dowód przebiega analogicznie.
+Jeżeli $f$ jest nierosnąca, to $f^2$ jest niemalejąca. Zatem z przypadku pierwszego $h_{\textrm{top}}(f^2) = 0$. Dla entropii topologicznej zachodzi następująca równość: 
+$$h_{\textrm{top}}(f^n) = n \cdot h_{\textrm{top}}(f),$$
+zatem 
+$0 = h_{\textrm{top}}(f^2) = 2 \cdot h_{\textrm{top}}(f),$
+czyli
+$h_{\textrm{top}}(f) = 0.$
 
-TODO: moze warto zaznaczyc ze entropia jest nieujemna moze jakies twierdzenia czy lemat definicja
+
+
 TODO: sprawdzic jeszcze czy nei ma problemu dla x=y albo na krancach tych moich przedzialow
 
 \end{proof}
