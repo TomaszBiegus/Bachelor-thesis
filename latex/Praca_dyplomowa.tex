@@ -388,6 +388,9 @@ czyli $\forall_{a \in K_2} \, a \in K.$ Z dowolności $k$ otrzymujemy, że kula 
 W przestrzeni metrycznej $X$ zbiór $V \subseteq X$ nazywamy otoczeniem punktu $x$, jeżeli istnieje zbiór otwarty $U \subseteq X$ taki, że $x \in U \subseteq V$.
 \end{definition}
 
+\begin{definition}[Otoczenie zbioru]
+W przestrzeni metrycznej $X$ zbiór $V \subseteq X$ nazywamy otoczeniem zbioru $A$, jeżeli istnieje zbiór otwarty $U \subseteq X$ taki, że $A \subseteq U \subseteq V$.
+\end{definition}
 
 \begin{definition}[Sąsiedztwo punktu]
 Sąsiedztwem punktu $x \in X$ nazywamy każdy zbiór $V_x = V \setminus \{x\}$, gdzie $V$ jest pewnym otoczeniem punktu $x$.
@@ -677,7 +680,7 @@ Niech $B = \bigcup_{i=0}^{n-1} A_i.$ Każdy ze zbiorów $A_i$ zawiera $m+1$ elem
 
 Pokażę, że dowolne dwa punkty $x, y$ należące do tego samego odcinka $B_j$ nie mogą jednocześnie należeć do tego samego zbioru $(n, \epsilon)$-rozdzielonego.
 
-Weźmy dowolny odcinek $B_j = [b_{j-1}, b_{j}] \, j \in \{1, 2, \ldots, |B|-1\}.$ Wybierzmy z niego dwa dowolne punkty $x, y$, $x \neq y$. Bez straty ogólności, niech $x > y.$ Oczywiście nie istnieje punkt $b_k \in B$ dla którego $y < b_k < x.$ Z konstrukcji $B$ widzimy natychmiast, że $\forall_{i \in \{0, 1, \ldots, n-1\}} \, \exists_{j \in \{1,2,\ldots,m\}} \, f^{-i}(a_{j-1}) \leq y < x \leq f^{-i}(a_j)$. Z monotoniczności funkcji $f$ i lematu \ref{iteraty_niemalejacych_sa_niemalejace} otrzymujemy 
+Weźmy dowolny odcinek $B_j = [b_{j-1}, b_{j}] \, j \in \{1, 2, \ldots, |B|-1\}.$ Wybierzmy z niego dwa dowolne punkty $x, y$, $x \neq y$. Bez straty ogólności, niech $x > y.$ Oczywiście nie istnieje punkt $b_k \in B$ dla którego $y < b_k < x.$ Z konstrukcji $B$ widzimy natychmiast, że $\forall_{i \in \{0, 1, \ldots, n-1\}} \, \exists_{j \in \{1,2,\ldots,m\}} \, f^{-i}(a_{j-1}) \leq y < x \leq f^{-i}(a_j)$. Z monotoniczności funkcji $f$ i~wniosku \ref{iteraty_niemalejacych_sa_niemalejace} otrzymujemy 
 $$f^i(f^{-i}(a_{j-1})) =  a_{j-1} \leq f^i(y) \leq f^i(x) \leq a_j = f^i(f^{-i}(a_j)).$$
 Ponieważ $\rho(a_{j-1}, a_j) = d_{j,\epsilon} < \epsilon$ to  $\rho(f^i(x), f^i(y)) < \epsilon.$ A więc $x$ i $y$ nie należą do jednego zbioru $(n, \epsilon)$-rozdzielonego.
 
@@ -725,7 +728,7 @@ TODO
 \end{theorem}
 
 \begin{proof}
-TODO
+\textcolor{red}{TODO: jak zabraknie czasu to tylko zacytowac artykul}
 \end{proof}
 
 
@@ -975,7 +978,7 @@ Wówczas zbiór $\mathcal{F}_{SO}$ jest otwartym podzbiorem $\mathcal{F}$.
 \begin{lemma}
 \label{w_otoczeniu_niezmienniczego_jest_otwarty_zawarty_w_iteracjach}
 
-Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowanych, $f \in C(X)$ odwzorowaniem chaotycznym w sensie Devaneya, $P$ zbiorem niezmienniczym ze względu na $f$. \textcolor{red}{TODO: Wystarczy żeby P byl niezmienniczy? W głównym dowodzie ewidentnie ten zbiór jest skończony, bo jest orbitą punktu okresowego, ale w treści pracy autorzy nie powołują się na jego skończoność} a $V$ otwartym otoczeniem zbioru $P$ \textcolor{red}{TODO: dodefiniować co znaczy otoczenie zbioru?}.
+Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowanych, $f \in C(X)$ odwzorowaniem chaotycznym w sensie Devaneya, $P$ skończonym zbiorem niezmienniczym ze względu na $f$, a $V$ otwartym otoczeniem zbioru $P$ \textcolor{red}{TODO: dodefiniować co znaczy otoczenie zbioru?}.
 Wówczas dla każdego $N \in \mathbb{N}$ istnieje niepusty zbiór otwarty $W \subseteq V$ taki, że $W \cup f(W) \cup \ldots \cup f^N(W) \subseteq V$.
 \end{lemma}
 
@@ -1169,7 +1172,7 @@ Aby wykazać że każdy zbiór $\mathcal{F}_{SO}^i$ jest gęsty w $\mathcal{F}$ 
 
 Weźmy dodatnią liczbę naturalną $N \geq \frac{4}{\epsilon}$. Następnie rozważmy otwarte sąsiedztwo \textcolor{red}{TODO: Sąsiedztwo czy otoczenie? Wydaje mi się, że w literaturze anglojęzycznej nie piszą neighborhood w sensie sąsiedztwa tylko mają na myśli otoczenie, a na nasze polskie sąsiedztwo mówią punctured neighborhood.} $V$ orbity $P_0$ w przestrzeni $(X, \rho)$ takie, że $\rho(\textrm{pr}_1(U_i), V) \geq 0$ oraz $d_1(g_x, \textrm{Id}) < \frac{\epsilon}{4}$ dla każdego $x \in V$ (pamiętamy, że $g_x = \textrm{Id}$ dla $x \in P_0$).
 
-$P_0$ jest zbiorem niezmienniczym ze względu na $f$, na mocy lematu \ref{w_otoczeniu_niezmienniczego_jest_otwarty_zawarty_w_iteracjach} istnieje niepusty zbiór otwarty $W \subseteq V$ taki, że $W \cup f(W) \cup \ldots \cup f^N(W) \subseteq V$. Na mocy lematu \ref{lemat_3_glownego_artykulu_istnieje_orbita_okresowa_krojaca_sie_z_rodzina_otwartych} istnieje punkt okresowy $x_0$ odwzorowania $f$ taki, że $x_0 \in \textrm{pr}_1(U_i)$ oraz orbita $x_0$ kroi się niepusto ze zbiorem $W$. Niech $r > 0$ będzie pierwszą dodatnią liczbą całkowitą dla której $f^r(x_0) \in W$. Wtedy $f^r(x_0), f^{r+1}(x_0), \ldots, f^{r+N-1}(x_0) \in V$. Niech $s \geq 0$ będzie pierwszą nieujemną liczbą całkowitą dla której $f^{r+N+s}(x_0) = x_0$, tj. $r+N+s$ jest okresem punktu $x_0$. Weźmy $y_0$ takie, że $(x_0, y_0) \in U_i$. Ponieważ wszystkie odwzorowania włóknowe ($g_x$) odwzorowania $F$ są ,,na'', to istnieje punkt $y^* \in (0,1)$ taki, że $F^s(f^{r+N}(x_0), y^*) = (x_0, y_0)$ (patrz lemat \ref{wszystkie_wloknowe_na_implikuje_punkt_okresowy}).
+$P_0$ jest skończonym zbiorem niezmienniczym ze względu na $f$, na mocy lematu \ref{w_otoczeniu_niezmienniczego_jest_otwarty_zawarty_w_iteracjach} istnieje niepusty zbiór otwarty $W \subseteq V$ taki, że $W \cup f(W) \cup \ldots \cup f^N(W) \subseteq V$. Na mocy lematu \ref{lemat_3_glownego_artykulu_istnieje_orbita_okresowa_krojaca_sie_z_rodzina_otwartych} istnieje punkt okresowy $x_0$ odwzorowania $f$ taki, że $x_0 \in \textrm{pr}_1(U_i)$ oraz orbita $x_0$ kroi się niepusto ze zbiorem $W$. Niech $r > 0$ będzie pierwszą dodatnią liczbą całkowitą dla której $f^r(x_0) \in W$. Wtedy $f^r(x_0), f^{r+1}(x_0), \ldots, f^{r+N-1}(x_0) \in V$. Niech $s \geq 0$ będzie pierwszą nieujemną liczbą całkowitą dla której $f^{r+N+s}(x_0) = x_0$, tj. $r+N+s$ jest okresem punktu $x_0$. Weźmy $y_0$ takie, że $(x_0, y_0) \in U_i$. Ponieważ wszystkie odwzorowania włóknowe ($g_x$) odwzorowania $F$ są ,,na'', to istnieje punkt $y^* \in (0,1)$ taki, że $F^s(f^{r+N}(x_0), y^*) = (x_0, y_0)$ (patrz lemat \ref{wszystkie_wloknowe_na_implikuje_punkt_okresowy}).
 
 Przypadek 1. $z = \textrm{pr}_2(F^r(x_0, y_0))$ jest różne od 0 i 1.
 Oznaczmy przez $g$ odwzorowanie z $C(I)$ posiadające następujące trzy własności:

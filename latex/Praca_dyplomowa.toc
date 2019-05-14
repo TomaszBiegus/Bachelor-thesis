@@ -14,13 +14,13 @@
 \contentsline {subsection}{\numberline {1.1.3}Fakty og\IeC {\'o}lne, dotycz\IeC {\k a}ce zwartych przestrzeni metrycznych}{9}{subsection.1.1.3}
 \contentsline {subsection}{\numberline {1.1.4}Twierdzenie Baire'a}{10}{subsection.1.1.4}
 \contentsline {subsection}{\numberline {1.1.5}Definicje dotycz\IeC {\k a}ce uk\IeC {\l }ad\IeC {\'o}w dynamicznych}{10}{subsection.1.1.5}
-\contentsline {subsection}{\numberline {1.1.6}Entropia topologiczna}{10}{subsection.1.1.6}
-\contentsline {subsubsection}{Definicja Adlera, Konheima i McAndrew}{10}{section*.3}
+\contentsline {subsection}{\numberline {1.1.6}Entropia topologiczna}{11}{subsection.1.1.6}
+\contentsline {subsubsection}{Definicja Adlera, Konheima i McAndrew}{11}{section*.3}
 \contentsline {subsubsection}{Definicja Bowena}{11}{section*.4}
 \contentsline {subsection}{\numberline {1.1.7}Chaos}{13}{subsection.1.1.7}
-\contentsline {subsection}{\numberline {1.1.8}Odwzorowania tr\IeC {\'o}jk\IeC {\k a}tne}{14}{subsection.1.1.8}
-\contentsline {subsection}{\numberline {1.1.9}Definicje utworzone na potrzeby dowodu twierdzenia o rozszerzaniu}{15}{subsection.1.1.9}
-\contentsline {section}{\numberline {1.2}Lematy}{16}{section.1.2}
+\contentsline {subsection}{\numberline {1.1.8}Odwzorowania tr\IeC {\'o}jk\IeC {\k a}tne}{15}{subsection.1.1.8}
+\contentsline {subsection}{\numberline {1.1.9}Definicje utworzone na potrzeby dowodu twierdzenia o rozszerzaniu}{16}{subsection.1.1.9}
+\contentsline {section}{\numberline {1.2}Lematy}{17}{section.1.2}
 \contentsline {chapter}{\numberline {2}Twierdzenie o rozszerzaniu odwzorowa\IeC {\'n} chaotycznych w sensie Devaneya}{21}{chapter.2}
 \contentsline {chapter}{Podsumowanie}{25}{chapter*.5}
 \contentsline {chapter}{Dodatek}{27}{chapter*.6}
