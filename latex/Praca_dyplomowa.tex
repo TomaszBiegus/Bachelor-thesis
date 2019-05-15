@@ -280,14 +280,14 @@ TODO: Dopisać do sekcji definicji definicję punktu skupienia ciągu.
 %\item niezmienniczosc zbioru ze wzgledu na odwzorowanie, jest
 
 
-\item entropia topologiczna Adler
-\item entropia topologiczna Bowen
+%\item entropia topologiczna Adler, jest
+%\item entropia topologiczna Bowen, jest
 \item entropia topologiczna - dowod rownowaznosci (ksiazka misiurewicz combinatorial dynamics and entropy in dimension one oraz ksiazka ruette rozdzial 4)
 
 %\item topologiczna tranzytywnosc, jest
 %\item wrazliwosc na warunki poczatkowe, jest
 %\item RODZAJE CHAOSU (Devaneya, jest
-\item chaos Li Yorka)
+%\item chaos Li Yorka), jest
 
 
 \item napisac ze chaotycznosc odwzorowania rozumiem przez chaotycznosc odpowiedniego ukladu dynamicznego
@@ -1208,6 +1208,7 @@ Następnie, rozważmy odwzorowanie $h \in C(I)$ posiadające trzy następujące 
 Weźmy teraz odwzorowanie $G = (f, \widetilde{g}_x) \in \mathcal{F}$ takie, że $d_2(G, F) < \frac{\epsilon}{2}$ oraz
 
 \begin{equation}
+\label{rownanie_g_z_falka}
     \widetilde{g}_x =
     \begin{cases}
         h & \text{if $x=x_0$,}\\
@@ -1225,13 +1226,23 @@ Punkt $(x_0, y_0) \in U_i$ jest punktem okresowym odwzorowania $G$, ponieważ
 
 \begin{equation}
 \begin{split}
-G^{r+N+s}(x_0, y_0) & = G^{r+N+s-1}(G(x_0, y_0)) \\
-& = G^{r+N+s-1}(F(x_0, y_0)) = G^{N+s}(F^r(x_0, y_0)) \\
-& = G^{N+s}(f^r(x_0), z) = G^s(f^{r+N}(x_0), y^*) \\
-& = F^s(f^{r+N}(x_0), y^*) = (x_0, y_0).
+G^{r+N+s}(x_0, y_0) & \stackrel{(1)}{=} G^{r+N+s-1}(G(x_0, y_0)) \\
+& \stackrel{(2)}{=} G^{r+N+s-1}(F(x_0, y_0)) \stackrel{(3)}{=} G^{N+s}(F^r(x_0, y_0)) \\
+& \stackrel{(4)}{=} G^{N+s}(f^r(x_0), z) \stackrel{(5)}{=} G^s(f^{r+N}(x_0), y^*) \\
+& \stackrel{(6)}{=} F^s(f^{r+N}(x_0), y^*) \stackrel{(7)}{=} (x_0, y_0).
 \end{split}
 \end{equation}
-\textcolor{red}{TODO: Szczegółowe uzasadnienie powyższej równości:}
+{\color{red}nowe: Szczegółowe uzasadnienie powyższych równości:
+\begin{enumerate}
+\item Nie musimy rozważać odwracalności $G$ gdyż $r > 0, \, N > 0, \, s \geq 0$, a więc $r+N+s \geq 2.$
+\item $G = (f, \widetilde{g}_x), \, \widetilde{g}_{x_0} = h$ a $h(y_0) = g_{x_0}(y_0).$
+\item Z równania \ref{rownanie_g_z_falka} mamy $\widetilde{g}_x = g_x,$ dla $x \in \{f^k(x_0) : 1 \leq k \leq r-1\}.$
+\item Wynika z definicji $z.$
+\item Z równania \ref{rownanie_g_z_falka} dla $x \in \{f^k(x_0) : r \leq k \leq r+N-1\},$ oraz \ref{g_trzy}.
+\item Z równania \ref{rownanie_g_z_falka} mamy $\widetilde{g}_x = g_x,$ dla $x \in \{f^k(x_0) : r+N \leq k \leq r+N+s-1\}.$
+\item Wprost z definicji $y^*.$
+\end{enumerate}
+}
 
 Ponadto, ze względu na \ref{h_trzy}, na mocy \ref{obraz_x0_razy_ab_przez_iterate_G_rowna_sie_x0y0} zachodzi
 $$G^{r+N+s}(\{x_0\} \times [a, b]) = \{(x_0, y_0)\}.$$
