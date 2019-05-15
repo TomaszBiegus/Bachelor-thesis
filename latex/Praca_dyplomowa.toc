@@ -22,6 +22,6 @@
 \contentsline {subsection}{\numberline {1.1.9}Definicje utworzone na potrzeby dowodu twierdzenia o rozszerzaniu}{16}{subsection.1.1.9}
 \contentsline {section}{\numberline {1.2}Lematy}{17}{section.1.2}
 \contentsline {chapter}{\numberline {2}Twierdzenie o rozszerzaniu odwzorowa\IeC {\'n} chaotycznych w sensie Devaneya}{21}{chapter.2}
-\contentsline {chapter}{Podsumowanie}{25}{chapter*.5}
-\contentsline {chapter}{Dodatek}{27}{chapter*.6}
-\contentsline {chapter}{Bibliografia}{28}{section*.7}
+\contentsline {chapter}{Podsumowanie}{27}{chapter*.5}
+\contentsline {chapter}{Dodatek}{29}{chapter*.6}
+\contentsline {chapter}{Bibliografia}{30}{section*.7}

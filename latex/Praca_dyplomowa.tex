@@ -1033,15 +1033,10 @@ Niech $B_1, B_2, \ldots $ będą gęstymi podzbiorami zbioru $A$. Wówczas $\big
 \label{nadzbior_rezydualnego_jest_rezydualny}
 Nadzbiór zbioru rezydualnego jest rezydualny.
 \textcolor{red}{TODO: To jest oczywiste? Wynika z twierdzenia Baire'a? Może ten i poprzedni lemat powinny stanowić jedną całość plus powołanie się na tw Baire'a. Komentarz: ten i poprzedni lemat mają na celu uzasadnienie następującego fragmentu głównego dowodu: Zbiory $\mathcal{F}_{SO}^i$ są otwartymi podzbiorami $\mathcal{F}$ (patrz lemat \ref{Fso_sa_otwartymi_podzbiorami_F}). Ponieważ $\mathcal{F}_{DP} \supseteq \bigcap_{i=1}^{\infty} \mathcal{F}_{SO}^i$ aby pokazać, że $\mathcal{F}_{DP}$ jest rezydualny w $\mathcal{F}$ wystarczy pokazać, że $\forall_{i \in \mathbb{N}} \, \mathcal{F}_{SO}^i$ jest gęsty w $\mathcal{F}$.}
-
 \end{lemma}
 
 
 
-\begin{lemma}
-\label{obraz_x0_razy_ab_przez_iterate_G_rowna_sie_x0y0}
-% TODO
-\end{lemma}
 
 
 
@@ -1244,8 +1239,22 @@ G^{r+N+s}(x_0, y_0) & \stackrel{(1)}{=} G^{r+N+s-1}(G(x_0, y_0)) \\
 \end{enumerate}
 }
 
-Ponadto, ze względu na \ref{h_trzy}, na mocy \ref{obraz_x0_razy_ab_przez_iterate_G_rowna_sie_x0y0} zachodzi
+Ponadto, ze względu na \ref{h_trzy} zachodzi
 $$G^{r+N+s}(\{x_0\} \times [a, b]) = \{(x_0, y_0)\}.$$
+
+{\color{red}nowe: Szczegółowe uzasadnienie powyższej równości (Pytanie czy zastąpić powyższą równość przez poniższą, czy pozostawić obie w takiej formie jak jest teraz czyli najpierw zwięzła wersja a później, poniżej uzasadnienie?)
+\begin{equation}
+\begin{aligned}
+G^{r+N+s}(\{x_0\} \times [a, b]) & = G^{r+N+s-1}\big(G(\{x_0\} \times [a, b])\big) \\
+& = G^{r+N+s-1}\big(\{f(x_0)\} \times \widetilde{g}_x([a,b])\big) \\
+& \stackrel{\ref{h_trzy}}{=} G^{r+N+s-1}\big(\{f(x_0)\} \times \widetilde{g}_{x_0}([a,b])\big) \\
+& \stackrel{\ref{h_dwa}}{=} G^{r+N+s-1}\big(\{f(x_0)\} \times \{g_{x_0}(y_0)\}\big) \\
+& = G^{r+N+s-1}\big(\{(f(x_0), g_{x_0}(y_0))\}\big) \\
+& = G^{r+N+s-1}\big(\{F(x_0, y_0)\}\big) \\
+& = \{(x_0, y_0)\}.
+\end{aligned}
+\end{equation}
+}
 
 Z faktu $y_0 \in (a, b)$ oraz \ref{obraz_przez_iterate_kazdego_dostatecznie_bliskiego_G_zawiera_sie_w_x0_razy_ab} wynika, że każde odwzorowanie $\widetilde{G} \in \mathcal{F}$ dostatecznie bliskie $G$ posiada własność
 $$\widetilde{G}^{r+N+s}(\{x_0\} \times [a, b]) \subseteq \{x_0\} \times [a, b].$$
