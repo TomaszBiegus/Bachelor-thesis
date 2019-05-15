@@ -248,7 +248,7 @@ TODO: Dopisać do sekcji definicji definicję punktu skupienia ciągu.
 %\item sąsiedztwo punktu jest
 %\item wnętrze zbioru jest 
 %\item domknięcie jest
-\item zbiór domknięty w przestrzeni metrycznej
+%\item zbiór domknięty w przestrzeni metrycznej, jest
 \item kula domknięta
 
 
@@ -260,7 +260,7 @@ TODO: Dopisać do sekcji definicji definicję punktu skupienia ciągu.
 \item zbiór nigdziegęsty
 %\item pokrycie zbiorami otwartymi jest
 %\item przestrzen metryczna zwarta, jest
-\item ośrodkowość
+%\item ośrodkowość
 \item \textcolor{red}{baza topologii w przestrzeni zwartej (kule o środkach w ośrodku i promieniach wymiernych - potrzebne w dowodzie ogólnym patrz TODO na czerwono)}
 %\item zupelnosc, jest
 \item punkt izolowany w przestrzeni metrycznej
@@ -277,7 +277,7 @@ TODO: Dopisać do sekcji definicji definicję punktu skupienia ciągu.
 %\item punkt stały, jest
 %\item punkt okresowy odwzorowania, jest
 \item orbita okresowa
-\item niezmienniczosc zbioru ze wzgledu na odwzorowanie
+%\item niezmienniczosc zbioru ze wzgledu na odwzorowanie, jest
 
 
 \item entropia topologiczna Adler
@@ -285,8 +285,9 @@ TODO: Dopisać do sekcji definicji definicję punktu skupienia ciągu.
 \item entropia topologiczna - dowod rownowaznosci (ksiazka misiurewicz combinatorial dynamics and entropy in dimension one oraz ksiazka ruette rozdzial 4)
 
 %\item topologiczna tranzytywnosc, jest
-\item wrazliwosc na warunki poczatkowe
-\item RODZAJE CHAOSU (Devaneya, Li Yorka)
+%\item wrazliwosc na warunki poczatkowe, jest
+%\item RODZAJE CHAOSU (Devaneya, jest
+\item chaos Li Yorka)
 
 
 \item napisac ze chaotycznosc odwzorowania rozumiem przez chaotycznosc odpowiedniego ukladu dynamicznego
@@ -556,7 +557,7 @@ TODO
 \end{definition}
 
 \begin{definition}[Niezmienniczość zbioru ze względu na odwzorowanie]
-TODO
+Zbiór $A \subset X$ nazywamy niezmienniczym ze względu na odwzorowanie $f: X \rightarrow X$ jeżeli $f(A) \subset A.$
 \end{definition}
 
 
@@ -735,9 +736,8 @@ TODO
 
 \subsection{Chaos}
 
-\cite{onDeveneyDefinitionOfChaos}
 
-Pomimo dużej popularności chaotycznych układów dynamicznych, przez długi czas nie było jednej powszechnie akceptowanej definicji chaosu.
+Pomimo dużej popularności chaotycznych układów dynamicznych, przez długi czas nie było jednej powszechnie akceptowanej definicji chaosu. W niniejszej pracy prezentujemy dwie spośród powszechnie stosowanych: chaos w sensie Devaneya oraz w sensie Li-Yorke'a. W dalszej części pracy korzystać zajmować się będziemy odwzorowaniami chaotycznymi w sensie Devaneya.
 
 \begin{definition}[Topologiczna tranzytywność]
 \cite{onDeveneyDefinitionOfChaos}
@@ -751,8 +751,7 @@ Mówimy, że $f$ jest wrażliwe na warunki początkowe jeżeli  istnieje $\delta
 \end{definition}
 
 \begin{definition}[Chaos w sensie Devaneya]
-Twierdzenie i dowód na podstawie \cite{onDeveneyDefinitionOfChaos}.
-Niech $X$ będzie przestrzenią metryczną. Ciągłe odwzorowanie $f: X \rightarrow X$ nazywamy chaotycznym na $X$ jeżeli:
+Niech $X$ będzie przestrzenią metryczną. Ciągłe odwzorowanie $f: X \rightarrow X$ nazywamy chaotycznym (w sensie Devaneya) na $X$ jeżeli:
 \begin{enumerate}
 \item $f$ jest tranzytywne,
 \item zbiór punktów okresowych $f$ jest gęsty w $X$,
@@ -810,6 +809,13 @@ Ostatecznie, korzystając z nierówności trójkąta dostajemy, że albo $\rho(f
 
 
 \begin{definition}[Chaos w sensie Li-Yorke'a]
+\cite[s.~25]{aulbach2001three}
+Ciągłe odwzorowanie $f: X \rightarrow X$ na zwartej przestrzeni metrycznej $(X, \rho)$ jest chaotyczne (w sensie Li-Yorke'a) jeżeli istnieje nieprzeliczalny podzbiór $S$ przestrzeni $X$ o następujących własnościach:
+\begin{enumerate}
+\item $\limsup_{n \rightarrow \infty} \rho(f^n(x), f^n(y)) > 0$ dla każdych $x,y \in S, \, x \neq y,$
+\item $\liminf_{n \rightarrow \infty} \rho(f^n(x), f^n(y)) = 0$ dla każdych $x,y \in S, \, x \neq y,$
+\item $\limsup_{n \rightarrow \infty} \rho(f^n(x), f^n(p)) > 0$ dla każdych $x \in S, \, p \in X, \, p \textrm{ - okresowy.}$
+\end{enumerate}
 \end{definition}
 
 
