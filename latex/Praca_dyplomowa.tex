@@ -1043,24 +1043,6 @@ Nadzbiór zbioru rezydualnego jest rezydualny.
 
 
 
-
-\begin{lemma}
-\label{na_mocy_lematu_4_mozemy_dostac_odwzorowanie_H_z_wloknami_scisle_rosnacymi}
-% TODO
-\end{lemma}
-
-
-
-
-
-
-
-
-
-
-
-
-
 \begin{lemma}
 \label{lemat_4_glownego_artykulu}
 \cite{alseda1999entropy}
@@ -1265,12 +1247,17 @@ Zatem $G \in \mathcal{F}_{SO}^i$, co kończy dowód dla przypadku 1.
 
 Przypadek 2. $\textrm{pr}_2(F^r(x_0, y_0))$ jest równy $0$ lub $1$.
 
-W takim przypadku użyjemy lematu \ref{lemat_4_glownego_artykulu} aby dostać odwzorowanie $H = (f, h_x) \in \mathcal{F}$ takie, że $d_2(H, F) < \frac{\epsilon}{2}$ i dla $x \in \{x_0, f(x_0), \ldots, f^{r-1}(x_0)\}$ odwzorowania włóknowe $h_x$ są ściśle rosnące. (Odwzorowanie takie istnieje na mocy \ref{na_mocy_lematu_4_mozemy_dostac_odwzorowanie_H_z_wloknami_scisle_rosnacymi}) Ponieważ $y_0$ jest różnie od $0$ i $1$ dostajemy, że $\textrm{pr}_2(H^r(x_0, y_0))$ również jest różne od $0$ i $1$.
+W takim przypadku użyjemy lematu \ref{lemat_4_glownego_artykulu} aby dostać odwzorowanie $H = (f, h_x) \in \mathcal{F}$ takie, że $d_2(H, F) < \frac{\epsilon}{2}$ i dla $x \in \{x_0, f(x_0), \ldots, f^{r-1}(x_0)\}$ odwzorowania włóknowe $h_x$ są ściśle rosnące.
+
+{\color{red}nowe: Chciałem to uzasadniać, ale po zerknięciu do lematu \ref{lemat_4_glownego_artykulu} zorientowałem się, że odwzorowania $h_x$ mogą być dowolne byle niemalejące, pozostawiajace krance niezmienione i dostatecznie bliskie oryginalnym. Warto umieścić tutaj jakiś komentarz uzasadniający? Może, uzasadnić dlaczego możemy znaleźć odwzorowanie ściśle rosnące dowolnie bliskie ustalonemu niemalejącemu?}
+
+ 
+Ponieważ $y_0$ jest różnie od $0$ i $1$ dostajemy, że $\textrm{pr}_2(H^r(x_0, y_0))$ również jest różne od $0$ i $1$.
 
 {\color{red}nowe: (Ponieważ $H = (f, h_x) \in \mathcal{F}$, to każde z odwzorowań $h_x$ pozostawia niezmienione punkty $0$ i $1$. Wprowadźmy oznaczenie $\textrm{pr}_2(H^r(x_0, y_0)) = (h_{f^{r-1}(x_0)} \circ \ldots \circ h_{f(x_0)} \circ h_{x_0})(y_0) = h_0(y_0)$. Odwzorowanie $h_0$ jako złożenie odwzorowań ściśle rosnących i pozostawiających punkty $0$ i $1$ niezmienione jest ściśle rosnące i pozostawia niezmienione punkty $0$ i $1$.  Ponieważ $y_0 > 0$ to oczywiście $h_0(y_0) > h_0(0) = 0$. Natomiast ze względu na fakt, że $y_0 < 1$, to zachodzi $h_0(y_0) < h_0(1) = 1$.)
 }
  
-Następnie korzystając z przypadku 1 dostajemy odwzorowanie $G \in \mathcal{F}_{SO}^i$, dla którego zachodzi nierówność $d_2(G, H) < \frac{\epsilon}{2}$. Wówczas $d_2(G, F) < \epsilon$. (TODO powolac sie na nierownosc trojkata)
+Następnie korzystając z przypadku 1 dostajemy odwzorowanie $G \in \mathcal{F}_{SO}^i$, dla którego zachodzi nierówność $d_2(G, H) < \frac{\epsilon}{2}$. Wówczas, korzystając z nierówności trójkąta otrzymujemy $d_2(G, F) \leq d_2(G, H) + d_2(H, F) < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon$.
 
 
 \end{proof}
