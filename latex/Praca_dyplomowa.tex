@@ -249,6 +249,7 @@ TODO: Dopisać do sekcji definicji definicję punktu skupienia ciągu.
 %\item wnętrze zbioru jest 
 %\item domknięcie jest
 %\item zbiór domknięty w przestrzeni metrycznej, jest
+%\item zbiór brzegowy, jest
 \item kula domknięta
 
 
@@ -410,12 +411,12 @@ Domknięciem zbioru $A \subset X$ nazywamy zbiór $\{x \in X: \forall_{r>0} \, K
 Zbiór $A$ jest domknięty gdy $A = \textrm{Cl}(A)$.
 \end{definition}
 
-
-
-
-
 \begin{definition}[Zbiór gęsty]
 Dla danej przestrzeni metrycznej $(X, \rho)$. Zbiór $A \subset X$ nazwiemy gęstym, gdy $\forall_{x \in X} \, \forall_{\epsilon>0} \, \exists_{a \in A} : \rho(x, a) < \epsilon$.
+\end{definition}
+
+\begin{definition}[Zbiór brzegowy]
+Zbiór $A$ nazwiemy brzegowym, gdy ma puste wnętrze.
 \end{definition}
 
 \begin{definition}[Zbiór nigdziegęsty]
@@ -510,18 +511,23 @@ Zatem $\forall_{n > N}: \rho(x_n, g) \leq \rho(x_n, x_M) + \rho(x_M, g) < \frac{
 
 \subsection{Twierdzenie Baire'a}
 
-\begin{definition}[Zbiór rezydualny]
-TODO
+\begin{definition}[Zbiór mizerny (zbiór pierwszej kategorii)]
+W zupełnej przestrzeni metrycznej zbiorem pierwszej kategorii nazywamy zbiór będący przeliczalną sumą zbiorów nigdziegęstych.
+\end{definition}
+
+\begin{definition}[Zbiór rezydualny (zbiór drugiej kategorii)]
+Zbiorem rezydualnym nazywamy dopełnienie zbioru mizernego.
 \end{definition}
 
 
-\begin{lemma}[Przekrój zbiorów rezydualnych jest rezydualny] \label{przekroj_rezydualnych_jest_rezydualny}
-Przekrój dwóch \textcolor{red}{(TODO: przeliczalnej mnogości? W twierdzeniu głównym wykorzystują tylko dla dwóch, pokazać dla skończenie wielu, dwóch, przeliczalnej mnogości?)} zbiorów rezydualnych jest rezydualny. (A więc w szczególności niepusty).
-\end{lemma}
+\begin{theorem}[Twierdzenie Baire'a]
+W niepustej, zupełnej przestrzeni metrycznej $X$, przekrój przeliczalnie wielu gęstych zbiorów otwartych jest zbiorem gęstym.
+\end{theorem}
 
-\begin{proof}
-\textcolor{red}{TODO}
-\end{proof}
+
+\begin{lemma}[Przekrój zbiorów rezydualnych jest rezydualny] \label{przekroj_rezydualnych_jest_rezydualny}
+W przestrzeni zupełnej przekrój przeliczalnej mnogości zbiorów rezydualnych jest rezydualny. (A więc w szczególności niepusty).
+\end{lemma}
 
 
 
