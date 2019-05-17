@@ -526,7 +526,7 @@ W niepustej, zupełnej przestrzeni metrycznej $X$, przekrój przeliczalnie wielu
 
 
 \begin{lemma}[Przekrój zbiorów rezydualnych jest rezydualny] \label{przekroj_rezydualnych_jest_rezydualny}
-W przestrzeni zupełnej przekrój przeliczalnej mnogości zbiorów rezydualnych jest rezydualny. (A więc w szczególności niepusty).
+W przestrzeni metrycznej zupełnej, przekrój przeliczalnie wielu zbiorów rezydualnych jest rezydualny. W szczególności niepusty.
 \end{lemma}
 
 
@@ -541,7 +541,7 @@ Układem dynamicznym nazywamy parę $(X, T)$, gdzie $X$ jest zbiorem a $T:X \rig
 Orbita punktu $x$ to ciąg $x, Tx, T^2x, T^3x,\ldots$, czyli 
 $$O_T(x) = \{T^nx: n=0,1,2,\ldots\}.$$
 
-Jeśli $T$ jest odwracalne (czyli różnowartościowe i "na"), to możemy rozważać orbitę obustronną:
+Jeśli $T$ jest odwracalne (czyli różnowartościowe i ,,na''), to możemy rozważać orbitę obustronną:
 $$\{T^nx: n \in \mathbb{Z}\}.$$
 \end{definition}
 
@@ -600,7 +600,7 @@ $$h(f) = \sup h(f, \mathcal{A}),$$ gdzie supremum jest brane po wszystkich otwar
 \subsubsection{Definicja Bowena}
 \cite{ruette2017chaos}
 
-Niech $(X, \rho)$ będzie \textcolor{red}{ dopisane: zwartą} przestrzenią metryczną, a $f: X \rightarrow X$ ciągłym odwzorowaniem (TODO: ma byc uniformly continous - tak jest u Bowena, jest tak ze zwartości $X$, napisać to tutaj?).
+Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną, a $f: X \rightarrow X$ ciągłym odwzorowaniem (TODO: ma byc uniformly continous - tak jest u Bowena, jest tak ze zwartości $X$, napisać to tutaj?).
 
 \begin{definition}[Kula Bowena]
 Niech  $\epsilon > 0$ oraz $n \geq 1$. Kulę Bowena rzędu $n$ o środku w punkcie $x \in X$ i promieniu $\epsilon$ definiujemy następująco
@@ -645,19 +645,23 @@ $$h_{\textrm{top}}(f) = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\i
  
  
 \textcolor{red}{TODO: nowe} 
-\begin{lemma}[Złożenie funkcji niemalejących jest niemalejące]
-\label{zlozenie_niemalejacych_jest_niemalejace}
+\begin{lemma}[Złożenie dwóch funkcji niemalejących jest niemalejące]
+\label{zlozenie_dwoch_niemalejacych_jest_niemalejace}
 Niech $f: [0, 1] \rightarrow [0, 1]$ i $g: [0, 1] \rightarrow [0,1]$ będą funkcjami niemalejącymi, wówczas ich złożenie $f \circ g$ również jest funkcją niemalejącą. 
 \end{lemma}
 
 \begin{proof}
 Weźmy dowolne $x, y \in [0,1]$, niech $y < x$. Wówczas, ponieważ $g$ jest niemalejąca zachodzi nierówność $g(y) \leq g(x)$, z faktu, że $f$ również jest niemalejąca otrzymujemy $f(g(y)) \leq f(g(x)).$ Czyli $(f \circ g)(y) \leq (f \circ g)(x).$
 \end{proof} 
- 
- 
+
+\begin{corollary}[Złożenie skończenie wielu funkcji niemalejących jest niemalejące]
+\label{zlozenie_skonczenie_wielu_niemalejacych_jest_niemalejace}
+Wniosek ten otrzymujemy z lematu \ref{zlozenie_dwoch_niemalejacych_jest_niemalejace} przez zastosowanie indukcji matematycznej.
+\end{corollary}
+
 \begin{corollary}[Iteraty funkcji niemalejącej są niemalejące]
 \label{iteraty_niemalejacych_sa_niemalejace}
-Niech $f: [0, 1] \rightarrow [0, 1]$ będzie funkcją niemalejącą, wówczas korzystając z lematu \ref{zlozenie_niemalejacych_jest_niemalejace}, przez prostą indukcję otrzymujemy wniosek, że dla każdego $i \in \mathbb{N}$ funkcje $f^{i}$ są niemalejące.
+Niech $f: [0, 1] \rightarrow [0, 1]$ będzie funkcją niemalejącą, wówczas dla każdego $i \in \mathbb{N}$ funkcje $f^{i}$ są niemalejące.
 \end{corollary}
 \textcolor{red}{TODO: end nowe} 
 
