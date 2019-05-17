@@ -516,11 +516,14 @@ W zupełnej przestrzeni metrycznej zbiorem pierwszej kategorii nazywamy zbiór b
 \end{definition}
 
 \begin{definition}[Zbiór rezydualny (zbiór drugiej kategorii)]
-Zbiorem rezydualnym nazywamy dopełnienie zbioru mizernego.
+\label{definicja_zbioru_rezydualnego}
+Zbiór nazywamy rezydualnym, jeżeli zawiera przekrój przeliczalnie wielu gęstych zbiorów otwartych.
 \end{definition}
 
 
+
 \begin{theorem}[Twierdzenie Baire'a]
+\label{twierdzenie_bairea}
 W niepustej, zupełnej przestrzeni metrycznej $X$, przekrój przeliczalnie wielu gęstych zbiorów otwartych jest zbiorem gęstym.
 \end{theorem}
 
@@ -1029,30 +1032,6 @@ Przestrzeń $X$ jest zwarta, a zatem zupełna i ośrodkowa.
 
 
 
-
-
-\begin{lemma}
-\label{przeliczalny_przekroj_gestych_jest_rezydualny} 
-Niech $B_1, B_2, \ldots $ będą gęstymi podzbiorami zbioru $A$. Wówczas $\bigcap_{i=0}^{\infty} B_i$ jest rezydualny.
-\textcolor{red}{TODO: Czy nie mówi o tym właśnie twierdzenie Baire'a? Wtedy ten lemat usuwamy i powołujemy się na twierdzenie Baire'a}
-\end{lemma}
-
-
-
-\begin{lemma}
-\label{nadzbior_rezydualnego_jest_rezydualny}
-Nadzbiór zbioru rezydualnego jest rezydualny.
-\textcolor{red}{TODO: To jest oczywiste? Wynika z twierdzenia Baire'a? Może ten i poprzedni lemat powinny stanowić jedną całość plus powołanie się na tw Baire'a. Komentarz: ten i poprzedni lemat mają na celu uzasadnienie następującego fragmentu głównego dowodu: Zbiory $\mathcal{F}_{SO}^i$ są otwartymi podzbiorami $\mathcal{F}$ (patrz lemat \ref{Fso_sa_otwartymi_podzbiorami_F}). Ponieważ $\mathcal{F}_{DP} \supseteq \bigcap_{i=1}^{\infty} \mathcal{F}_{SO}^i$ aby pokazać, że $\mathcal{F}_{DP}$ jest rezydualny w $\mathcal{F}$ wystarczy pokazać, że $\forall_{i \in \mathbb{N}} \, \mathcal{F}_{SO}^i$ jest gęsty w $\mathcal{F}$.}
-\end{lemma}
-
-
-
-
-
-
-
-
-
 \begin{lemma}
 \label{lemat_4_glownego_artykulu}
 \cite{alseda1999entropy}
@@ -1145,7 +1124,7 @@ Oznaczmy zbiór takich odwzorowań (jednocześnie należących do $\mathcal{F}$)
 
 Niech $\{U_i^X\}_{i=1}^{\infty}$ będzie \textcolor{red}{TODO: bazą topologii komentarz: moze nie pisac ogolnie o bazie topologii tylko o konkretnej bazie dla przypadku przestrzeni zwartej tzn baza - rodzina kul o srodkach w osrodku i promieniach wymiernych} $X$ i niech $\{U_i^I\}_{i=1}^{\infty}$ będzie zbiorem wszystkich odcinków otwartych o końcach wymiernych, należących do odcinka otwartego $(0, 1)$. Niech $\{U_i\}_{i=1}^{\infty}$ będzie ponumerowaniem zbioru $\{U_i^X \times U_j^I : i,j \in \mathbb{N}\}$. Wtedy każda kula otwarta w $X \times I$ zawiera jakiś spośród otwartych zbiorów $U_i$.
 
-Dla każdego $i=1,2,...$ niech zbiór $\mathcal{F}_{SO}^i$ (,,S'' - stabilny, ,,O'' - okresowy) będzie zdefiniowany następująco. Odwzorowanie G należy do $\mathcal{F}_{SO}^i$ wtedy i tylko wtedy, gdy należy do $\mathcal{F}$, posiada punkt okresowy w $U_i$ oraz wszystkie dostatecznie bliskie $G$ odwzorowania z $\mathcal{F}$ również posiadają punkt okresowy w $U_i$ (być może różne od punktów okresowych odwzorowania $G$). Zbiory $\mathcal{F}_{SO}^i$ są otwartymi podzbiorami $\mathcal{F}$ (patrz lemat \ref{Fso_sa_otwartymi_podzbiorami_F}). Ponieważ $\mathcal{F}_{DP} \supseteq \bigcap_{i=1}^{\infty} \mathcal{F}_{SO}^i$ aby pokazać, że $\mathcal{F}_{DP}$ jest rezydualny w $\mathcal{F}$ wystarczy pokazać, że $\forall_{i \in \mathbb{N}} \, \mathcal{F}_{SO}^i$ jest gęsty w $\mathcal{F}$. (Wynika to z faktów: \ref{przeliczalny_przekroj_gestych_jest_rezydualny}  i \ref{nadzbior_rezydualnego_jest_rezydualny}).
+Dla każdego $i=1,2,...$ niech zbiór $\mathcal{F}_{SO}^i$ (,,S'' - stabilny, ,,O'' - okresowy) będzie zdefiniowany następująco. Odwzorowanie G należy do $\mathcal{F}_{SO}^i$ wtedy i tylko wtedy, gdy należy do $\mathcal{F}$, posiada punkt okresowy w $U_i$ oraz wszystkie dostatecznie bliskie $G$ odwzorowania z $\mathcal{F}$ również posiadają punkt okresowy w $U_i$ (być może różne od punktów okresowych odwzorowania $G$). Zbiory $\mathcal{F}_{SO}^i$ są otwartymi podzbiorami $\mathcal{F}$ (patrz lemat \ref{Fso_sa_otwartymi_podzbiorami_F}). Ponieważ $\mathcal{F}_{DP} \supseteq \bigcap_{i=1}^{\infty} \mathcal{F}_{SO}^i$ aby pokazać, że $\mathcal{F}_{DP}$ jest rezydualny w $\mathcal{F}$ wystarczy pokazać, że $\forall_{i \in \mathbb{N}} \, \mathcal{F}_{SO}^i$ jest gęsty w $\mathcal{F}$. (Wynika to z twierdzenia Baire'a \ref{twierdzenie_bairea} oraz definicji \ref{definicja_zbioru_rezydualnego}).
 
 Aby wykazać że każdy zbiór $\mathcal{F}_{SO}^i$ jest gęsty w $\mathcal{F}$ ustalmy dowolne: $i \in \mathbb{N}$, $F=(f,g_x) \in \mathcal{F}$ i $\epsilon > 0$. Pokażemy, że istnieje odwzorowanie $G \in \mathcal{F}_{SO}^i$, którego odległość od $F$ nie przekracza $\epsilon$. Dla uproszczenia sytuacji załóżmy, że $\rho(\textrm{pr}_1(U_i), P_0) > 0$ (Jeżeli tak nie jest, zawsze możemy wziąć zamiast $U_i$ mniejszy prostokąt $U_i^* \subset U_i$).
 
