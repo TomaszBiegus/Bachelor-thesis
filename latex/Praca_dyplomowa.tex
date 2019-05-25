@@ -387,11 +387,11 @@ czyli $\forall_{a \in K_2} \, a \in K.$ Z dowolności $k$ otrzymujemy, że kula 
 
 
 \begin{definition}[Otoczenie punktu]
-W przestrzeni metrycznej $X$ zbiór $V \subseteq X$ nazywamy otoczeniem punktu $x$, jeżeli istnieje zbiór otwarty $U \subseteq X$ taki, że $x \in U \subseteq V$.
+W przestrzeni metrycznej $X$ zbiór $V \subseteq X$ nazywamy otoczeniem punktu $x$, jeżeli istnieje zbiór otwarty $U \subseteq X,$ taki że $x \in U \subseteq V$.
 \end{definition}
 
 \begin{definition}[Otoczenie zbioru]
-W przestrzeni metrycznej $X$ zbiór $V \subseteq X$ nazywamy otoczeniem zbioru $A$, jeżeli istnieje zbiór otwarty $U \subseteq X$ taki, że $A \subseteq U \subseteq V$.
+W przestrzeni metrycznej $X$ zbiór $V \subseteq X$ nazywamy otoczeniem zbioru $A$, jeżeli istnieje zbiór otwarty $U \subseteq X,$ taki że $A \subseteq U \subseteq V$.
 \end{definition}
 
 %\begin{definition}[Sąsiedztwo punktu]
@@ -430,7 +430,7 @@ Pokryciem otwartym przestrzeni metrycznej $X$ nazywamy rodzinę zbiorów otwarty
 
 \begin{definition}[Przestrzeń metryczna zwarta, definicja pokryciowa]
 Na podstawie \cite[s.~196]{ruette2017chaos}.
-Przestrzeń metryczną $(X, \rho)$ nazywamy zwartą jeżeli każde pokrycie otwarte $(U_i)_{i \in I}$ tej przestrzeni zawiera podpokrycie skończone, to znaczy istnieje skończony zbiór indeksów $J \subset I$ taki, że $X = \bigcup_{i \in J}U_i$.
+Przestrzeń metryczną $(X, \rho)$ nazywamy zwartą jeżeli każde pokrycie otwarte $(U_i)_{i \in I}$ tej przestrzeni zawiera podpokrycie skończone, to znaczy istnieje skończony zbiór indeksów $J \subset I,$ taki że $X = \bigcup_{i \in J}U_i$.
 Podzbiór $Y \subset X$ jest zwarty jeżeli $(Y, \rho)$ jest przestrzenią zwartą.
 \end{definition}
 
@@ -453,7 +453,7 @@ Dowód przez kontrapozycję. Pokażemy, że jeżeli istnieje pokrycie $X$, z kt�
 
 Załóżmy zatem, że nieskończona, przeliczalna rodzina zbiorów otwartych $\{U_i\}_{i=1}^{\infty}$ stanowi pokrycie X. Skonstruujmy następujący ciąg: 
 $$x_1 \notin U_1$$
-$$x_n \notin \bigcup_{k=1}^{n-1} U_k$$ Zawsze znajdziemy taki $x_n \in X$, gdyż gdyby taki nie istniał znaczyłoby to, że $\bigcup_{i=1}^{n-1}{U_{k_i}} = X$, czyli istniałoby podpokrycie skończone. Załóżmy teraz, że ciąg $(x_n)$ ma podciąg zbieżny. Wtedy istniałaby jego granica, tj. element $g \in X$ taki że dla każdego $\epsilon > 0$ nieskończenie wiele elementów ciągu leży wewnątrz kuli $B(g, \epsilon)$, z kolei z otwartości zbiorów $U_n$ możemy wybrać taki $\epsilon$, że $B(g, \epsilon) \subset U_k$, gdzie $U_k$ jest dowolnym zbiorem z pokrycia X, zawierającym g. Z konstrukcji naszego ciągu wynika jednak, że $\forall_{n \in N} \forall_{m>n} \, x_m \notin U_n$, czyli do każdego $U_n$ należy jedynie skończenie wiele elementów. Zatem otrzymujemy sprzeczność. Czyli ciąg $(x_n)$ nie zawiera podciągu zbieżnego.
+$$x_n \notin \bigcup_{k=1}^{n-1} U_k$$ Zawsze znajdziemy taki $x_n \in X$, gdyż gdyby taki nie istniał znaczyłoby to, że $\bigcup_{i=1}^{n-1}{U_{k_i}} = X$, czyli istniałoby podpokrycie skończone. Załóżmy teraz, że ciąg $(x_n)$ ma podciąg zbieżny. Wtedy istniałaby jego granica, tj. element $g \in X,$ taki że dla każdego $\epsilon > 0$ nieskończenie wiele elementów ciągu leży wewnątrz kuli $B(g, \epsilon)$, z kolei z otwartości zbiorów $U_n$ możemy wybrać taki $\epsilon$, że $B(g, \epsilon) \subset U_k$, gdzie $U_k$ jest dowolnym zbiorem z pokrycia X, zawierającym g. Z konstrukcji naszego ciągu wynika jednak, że $\forall_{n \in N} \forall_{m>n} \, x_m \notin U_n$, czyli do każdego $U_n$ należy jedynie skończenie wiele elementów. Zatem otrzymujemy sprzeczność. Czyli ciąg $(x_n)$ nie zawiera podciągu zbieżnego.
 \end{proof}
 
 
@@ -484,7 +484,7 @@ Niech teraz
 $$C = \{ s : \exists_{i \in \mathbb{N}} \, K\left(s, \frac{1}{i}\right) \in B \}.$$
 Zbiór $C$ jest równoliczny ze zbiorem $B$, a więc przeliczalny.
 Ponadto $C$ jest gęsty w $X$:
-Niech $\epsilon > 0$. Weźmy dowolny $x \in X$. Oczywiście istnieje $i_0 \in \mathbb{N}$ takie, że $\frac{1}{i_0} < \epsilon$. Wiemy, że $\mathcal{B}_{i_0}$ stanowi pokrycie $X$ i składa się ze zbiorów postaci $K(s, \frac{1}{i_0})$, gdzie $s \in X$. Skoro $\mathcal{B}_{i_0}$ jest pokryciem $X$ to $\exists_{K(s, \frac{1}{i_0}) \in \mathcal{B}_{i_0}} : x \in K(s, \frac{1}{i_0})$, czyli $\rho(x, s) < \frac{1}{i_0} < \epsilon$, natomiast $s \in C$ z definicji zbioru $C$
+Niech $\epsilon > 0$. Weźmy dowolny $x \in X$. Oczywiście istnieje $i_0 \in \mathbb{N},$ takie że $\frac{1}{i_0} < \epsilon$. Wiemy, że $\mathcal{B}_{i_0}$ stanowi pokrycie $X$ i składa się ze zbiorów postaci $K(s, \frac{1}{i_0})$, gdzie $s \in X$. Skoro $\mathcal{B}_{i_0}$ jest pokryciem $X$ to $\exists_{K(s, \frac{1}{i_0}) \in \mathcal{B}_{i_0}} : x \in K(s, \frac{1}{i_0})$, czyli $\rho(x, s) < \frac{1}{i_0} < \epsilon$, natomiast $s \in C$ z definicji zbioru $C$
 
 Czyli X zawiera podzbiór przeliczalny i gęsty, zatem przestrzeń $(X, \rho)$ jest ośrodkowa.
 \end{proof}
@@ -618,7 +618,7 @@ B_n(x,\epsilon) & \coloneqq \{y \in X : \rho(f^k(x), f^k(y)) \leq \epsilon, k \i
 
 
 \begin{definition}[Zbiór $(n,\epsilon)$-rozdzielony]
-Mówimy, że zbiór $E \subset X$ jest $(n, \epsilon)$-rozdzielony jeżeli dla każdych $x, y \in E$ takich, że $x \neq y$ istnieje $k \in \{0, 1, \ldots, n-1\}$ takie, że $\rho(f^k(x), f^k(y)) > \epsilon.$
+Mówimy, że zbiór $E \subset X$ jest $(n, \epsilon)$-rozdzielony jeżeli dla każdych $x, y \in E,$ takich że $x \neq y$ istnieje $k \in \{0, 1, \ldots, n-1\},$ takie że $\rho(f^k(x), f^k(y)) > \epsilon.$
 
 Maksymalną moc zbioru $(n, \epsilon)$-rozdzielonego oznaczamy przez $s_n(f, \epsilon).$
 \end{definition}
@@ -759,7 +759,7 @@ Mówimy, że $f$ jest topologicznie tranzytywne w przestrzeni metrycznej $X$, gd
 \begin{definition}[Wrażliwość na warunki początkowe]
 \cite{balibrea2003topological}
 Niech $(X, \rho)$ będzie przestrzenią metryczną, a $f: X \rightarrow X$ odwzorowaniem ciągłym.
-Mówimy, że $f$ jest wrażliwe na warunki początkowe jeżeli  istnieje $\delta > 0$ taki, że dla każdego $x \in X$ i dla każdego otoczenia $U$ punktu $x$, istnieją $y \in U$ i $n \geq 0$ dla których zachodzi $\rho(f^n(x), f^n(y)) > \delta$.
+Mówimy, że $f$ jest wrażliwe na warunki początkowe jeżeli  istnieje $\delta > 0,$ taki że dla każdego $x \in X$ i dla każdego otoczenia $U$ punktu $x$, istnieją $y \in U$ i $n \geq 0$ dla których zachodzi $\rho(f^n(x), f^n(y)) > \delta$.
 \end{definition}
 
 \begin{definition}[Chaos w sensie Devaneya]
@@ -793,7 +793,7 @@ Weźmy dowolny punkt $x \in X$ i niech $N$ będzie pewnym otoczeniem punktu $x$.
 
 $$V = \bigcap_{i=0}^n f^{-i}(K(f^i(q), \delta)).$$
 
-Zbiór $V$ jest otwarty i niepusty, gdyż $q \in V.$ W związku z tym, ponieważ $f$ jest tranzytywne, to istnieją $y \in U$ i $k \in \mathbb{N}$ takie, że $f^k(y) \in V$.
+Zbiór $V$ jest otwarty i niepusty, gdyż $q \in V.$ W związku z tym, ponieważ $f$ jest tranzytywne, to istnieją $y \in U$ i $k \in \mathbb{N},$ takie że $f^k(y) \in V$.
 
 Niech teraz $j$ będzie częścią całkowitą z $\frac{k}{n} + 1$. Wtedy $1 \leq nj - k \leq n$. Z konstrukcji mamy
 
@@ -924,10 +924,32 @@ Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną. Przestrzeń metryczn
 \end{lemma}
 
 \begin{proof}
-\textcolor{red}{To poniżej to raczej nieudolna próba, konstrukcja miała by postępować tak, że wybieram kolejne podciągi dla kolejnych punktów ze zbioru B, więc otrzymam w granicy tego procesu taki podciąg, który zbiega do jakiejś funkcji na zbiorze B, a późnieja chciałem jakoś skorzystać z ciągłości.}
-Skorzystamy z ,,ciągowej'' definicji zwartości przestrzeni metrycznej. 
-Ustalmy dowolny ciąg odwzorowań $(f_n)_{n=0}^{\infty} \subset C(X).$ Z zupełności przestrzeni $X$ istnieje zbiór $B \subset X$, przeliczalny i gęsty w $X.$ Uszeregujmy elementy zbioru $B$ w ciąg. Weźmy element $b_1 \in B.$ Ze zwartości przestrzeni $(X, \rho)$ istnieje taki podciąg $(f_{k_i}(b_1))_{i=0}^{\infty}$ ciągu $(f_n(b_1))_{n=0}^{\infty} \subset X,$ który jest zbieżny do jakiegoś $g_1 \in X.$ Następnie rozważmy podciąg $(f_{k_i})_{i=0}^{\infty} \subset C(X),$ 
-TODO: dokonczyc
+{\color{red} !!!NOWE!!!
+MOJE:
+Musimy pokazać, że każdy ciąg Cauchy'ego w przestrzeni $(C(X), d_1)$ jest zbieżny do elementu tej przestrzeni.
+Niech $(f_n)_{n=0}^{\infty} \subset C(X),$ będzie ciągiem Cauchy'ego, czyli 
+\begin{equation}
+\label{warunek_cauchyego_na_przestrzeni_funkcji_ciaglych}
+\forall_{\epsilon > 0} \, \exists_{N \in \mathbb{N}} \, \forall_{n,m > N} \, d_1(f_n, f_m) = \max_{x \in X} \rho\big(f_n(x), f_m(x)\big) < \epsilon.
+\end{equation}
+
+Weźmy dowolny $x_0 \in X$, oczywiście 
+\begin{equation}
+\label{metryka_w_punkcie_mniej_rowna_niz_metryka_zbieznosci_jednostajnej}
+\forall_{n,m \in \mathbb{N}} \, \rho\big(f_n(x_0), f_m(x_0)\big) \leq \max_{x \in X} \rho\big(f_n(x), f_m(x)\big).
+\end{equation}
+
+Podstawiając \ref{metryka_w_punkcie_mniej_rowna_niz_metryka_zbieznosci_jednostajnej} do \ref{warunek_cauchyego_na_przestrzeni_funkcji_ciaglych} otrzymujemy, że dla każdego $x \in X$ ciąg $\big(f_n(x)\big)_{n=0}^{\infty}$ jest ciągiem Cauchy'ego w przestrzeni $(X, \rho).$ Ponieważ $(X, \rho)$ jest przestrzenią zwartą a więc zupełną (twierdzenie \ref{zwarta_jest_zupelna}), to dla każdego $x \in X$ ciąg $\big(f_n(x)\big)_{n=0}^{\infty}$ jest zbieżny.
+
+Oznaczmy teraz $f(x) = \lim_{n \rightarrow \infty} f_n(x).$ 
+
+
+Pozostało pokazać, że ciąg $(f_n)_{n=0}^{\infty} \subset C(X)$ zbiega do $f$ w przestrzeni $(C(X), d_1).$ Weźmy dowolny $\epsilon > 0$ pokażemy, że istnieje $n_0 \in \mathbb{N},$ takie że dla każdego $n > n_0$ zachodzi
+
+$$d_1(f_n, f) = \max_{x \in X} \rho\big(f_n(x), f(x)\big) < \epsilon$$
+
+Zauważmy, że $d_1$ jest metryką zbieżności jednostajnej. Odwzorowanie $f$ jest granicą ciągu odwzorowań ciągłych w metryce zbieżności jednostajnej, a więc $f \in C(X).$
+}
 \end{proof}
 
 \begin{lemma}[Ciągłe odwzorowania trójkątne tworzą przestrzeń metryczną zupełną]
@@ -997,7 +1019,7 @@ Wówczas zbiór $\mathcal{F}_{SO}$ jest otwartym podzbiorem $\mathcal{F}$.
 \label{w_otoczeniu_niezmienniczego_jest_otwarty_zawarty_w_iteracjach}
 
 Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowanych, $f \in C(X)$ odwzorowaniem chaotycznym w sensie Devaneya, $P$ skończonym zbiorem niezmienniczym ze względu na $f$, a $V$ otwartym otoczeniem zbioru $P$.
-Wówczas dla każdego $N \in \mathbb{N}$ istnieje niepusty zbiór otwarty $W \subseteq V$ taki, że $W \cup f(W) \cup \ldots \cup f^N(W) \subseteq V$.
+Wówczas dla każdego $N \in \mathbb{N}$ istnieje niepusty zbiór otwarty $W \subseteq V,$ taki że $W \cup f(W) \cup \ldots \cup f^N(W) \subseteq V$.
 \end{lemma}
 
 \begin{proof}
@@ -1005,7 +1027,7 @@ Wówczas dla każdego $N \in \mathbb{N}$ istnieje niepusty zbiór otwarty $W \su
 W pierwszej kolejności pokażemy prawdziwość tezy dla $N=2.$
 $P$ jest zbiorem skończonym, więc możemy wypisać wszystkie jego elementy: 
 $$P = \{p_1, p_2, \ldots, p_k\}$$
-Ponieważ $V$ jest otwartym otoczeniem zbioru $P$ to istnieje $d>0$ takie, że dla każdego ${0<\epsilon<d}$ zbiór $\bigcup_{i=0}^k K(p_i, \epsilon)$ zawiera się w $V.$ Ustalmy $0<\epsilon<d$ i oznaczmy $U=\bigcup_{i=0}^k K(p_i, \epsilon),$ oczywiście $U \subseteq V.$ Rozważmy dowolny, ustalony punkt $p_i$ ze zbioru $P.$ Wiemy, że $P$ jest niezmienniczy ze względu na odwzorowanie $f$, a więc istnieją punkty $p_{j_1}, p_{j_2}, \ldots, p_{j_N} \in P$ dla których zachodzi $f(p_i) = p_{j_1}, \, f^2(p_i) = p_{j_2}, \, \ldots, \, f^N(p_i) = p_{j_N}.$ Z kolei z ciągłości odwzorowania $f$, również jego iteraty są ciągłe, a z tego wynika, że znajdziemy taką $\delta_i,$ że $\epsilon >\delta_i > 0$ i dla której $f^n(K(p_i, \delta_i)) \subset K(p_{j_n}, \epsilon) \subset U,$ dla każdego $n \in \{1,2,\ldots,N\}.$ Z dowolności wyboru $p_i$ otrzymujemy, że każdy zbiór postaci $f^n(K(p_i, \delta_i)),$ (gdzie $n \in \{1,2,\ldots,N\}$ a $p_i \in P$) zawiera się w $U$. Oznaczmy $W = \bigcup_{i=1}^k K(p_i, \delta_i),$ oczywiście $W$ jest niepustym zbiorem otwartym, który zawiera się w $U$ ponieważ $\delta_i < \epsilon$ dla każdego $i \in \{1,2,\ldots,k\}.$ Ponadto
+Ponieważ $V$ jest otwartym otoczeniem zbioru $P$ to istnieje $d>0,$ takie że dla każdego ${0<\epsilon<d}$ zbiór $\bigcup_{i=0}^k K(p_i, \epsilon)$ zawiera się w $V.$ Ustalmy $0<\epsilon<d$ i oznaczmy $U=\bigcup_{i=0}^k K(p_i, \epsilon),$ oczywiście $U \subseteq V.$ Rozważmy dowolny, ustalony punkt $p_i$ ze zbioru $P.$ Wiemy, że $P$ jest niezmienniczy ze względu na odwzorowanie $f$, a więc istnieją punkty $p_{j_1}, p_{j_2}, \ldots, p_{j_N} \in P$ dla których zachodzi $f(p_i) = p_{j_1}, \, f^2(p_i) = p_{j_2}, \, \ldots, \, f^N(p_i) = p_{j_N}.$ Z kolei z ciągłości odwzorowania $f$, również jego iteraty są ciągłe, a z tego wynika, że znajdziemy taką $\delta_i,$ że $\epsilon >\delta_i > 0$ i dla której $f^n(K(p_i, \delta_i)) \subset K(p_{j_n}, \epsilon) \subset U,$ dla każdego $n \in \{1,2,\ldots,N\}.$ Z dowolności wyboru $p_i$ otrzymujemy, że każdy zbiór postaci $f^n(K(p_i, \delta_i)),$ (gdzie $n \in \{1,2,\ldots,N\}$ a $p_i \in P$) zawiera się w $U$. Oznaczmy $W = \bigcup_{i=1}^k K(p_i, \delta_i),$ oczywiście $W$ jest niepustym zbiorem otwartym, który zawiera się w $U$ ponieważ $\delta_i < \epsilon$ dla każdego $i \in \{1,2,\ldots,k\}.$ Ponadto
 $$\forall_{n \in \{1,2,\ldots,k\}} \, f^n(W) = f^n(\bigcup_{i=1}^k K(p_i, \delta_i)) = \bigcup_{i=1}^k f^n(K(p_i, \delta_i)) \subset U.$$
 Ostatecznie otrzymujemy $W \cup f(W) \cup \ldots \cup f^N(W) \subset U \subseteq V.$
 
@@ -1042,7 +1064,7 @@ Przestrzeń $X$ jest zwarta, a zatem zupełna i ośrodkowa.
 \begin{lemma}
 \label{lemat_4_glownego_artykulu}
 \cite{alseda1999entropy}
-Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną i niech $F = (f, g_x)$ będzie odwzorowaniem należącym do $C_\triangle(X \times I)$ którego wszystkie odwzorowania włóknowe są niemalejące i pozostawiają krańce $I$ niezmienione. Niech $\{a_1, a_2, \ldots, a_n\}$ będzie podzbiorem $X$ oraz dla $i = 1, 2, \ldots, n$ niech $U_i$ będą parami rozłącznymi zbiorami otwartymi takimi, że $a_i \in U_i$. Załóżmy, że $h_i$ są niemalejącymi odwzorowaniami z $C(I)$ pozostawiającymi krańce $I$ niezmienione i spełniającymi $d_1(h_i, g_{a_i}) < \epsilon$ dla pewnego dodatniego $\epsilon$ i każdego $i = 1, 2, \ldots, n$. Wówczas istnieje odwzorowanie $\widetilde{F} = (f, \widetilde{g}_x) \in C_\triangle(X \times I)$ spełniające cztery następujące warunki:
+Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną i niech $F = (f, g_x)$ będzie odwzorowaniem należącym do $C_\triangle(X \times I)$ którego wszystkie odwzorowania włóknowe są niemalejące i pozostawiają krańce $I$ niezmienione. Niech $\{a_1, a_2, \ldots, a_n\}$ będzie podzbiorem $X$ oraz dla $i = 1, 2, \ldots, n$ niech $U_i$ będą parami rozłącznymi zbiorami otwartymi, takimi że $a_i \in U_i$. Załóżmy, że $h_i$ są niemalejącymi odwzorowaniami z $C(I)$ pozostawiającymi krańce $I$ niezmienione i spełniającymi $d_1(h_i, g_{a_i}) < \epsilon$ dla pewnego dodatniego $\epsilon$ i każdego $i = 1, 2, \ldots, n$. Wówczas istnieje odwzorowanie $\widetilde{F} = (f, \widetilde{g}_x) \in C_\triangle(X \times I)$ spełniające cztery następujące warunki:
 
 \begin{enumerate}
 \item  wszystkie odwzorowania włóknowe $\widetilde{F}$ są niemalejące i pozostawiające krańce $I$ niezmienione,
@@ -1053,7 +1075,7 @@ Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną i niech $F = (f, g_x)
 
 \begin{proof}
 \cite{alseda1999entropy}
-Dla każdego $i = 1, 2, \ldots, n$ niech $V_i \subset U_i$ będzie otwartym otoczeniem $a_i$ takim, że dla pewnego dodatniego $\widetilde{\epsilon} < \epsilon$, $d_1(h_i, g_x) < \widetilde{\epsilon}$ zawsze wtedy gdy $x \in V_i$.
+Dla każdego $i = 1, 2, \ldots, n$ niech $V_i \subset U_i$ będzie otwartym otoczeniem $a_i,$ takim że dla pewnego dodatniego $\widetilde{\epsilon} < \epsilon$, $d_1(h_i, g_x) < \widetilde{\epsilon}$ zawsze wtedy gdy $x \in V_i$.
 
 Oznaczmy $U = \bigcup_{i=1}^n U_i$, $V = \bigcup_{i=1}^n V_i$. Niech $u : X \longrightarrow [0,1]$ \textcolor{red}{TODO: cwiczenie - dlaczego funkcja u istnieje?} będzie ciągłą funkcją, przyjmującą wartość $1$ na zbiorze $\{a_1, a_2, \ldots, a_n\}$, natomiast $0$ poza zbiorem $V$. Zastąpmy każde odwzorowanie włóknowe $g_x$ przez $\widetilde{g}_x$, gdzie
 
@@ -1134,9 +1156,9 @@ Dla każdego $i=1,2,...$ niech zbiór $\mathcal{F}_{SO}^i$ (,,S'' - stabilny, ,,
 
 Aby wykazać że każdy zbiór $\mathcal{F}_{SO}^i$ jest gęsty w $\mathcal{F}$ ustalmy dowolne: $i \in \mathbb{N}$, $F=(f,g_x) \in \mathcal{F}$ i $\epsilon > 0$. Pokażemy, że istnieje odwzorowanie $G \in \mathcal{F}_{SO}^i$, którego odległość od $F$ nie przekracza $\epsilon$. Dla uproszczenia sytuacji załóżmy, że $\rho(\textrm{pr}_1(U_i), P_0) > 0$ (Jeżeli tak nie jest, zawsze możemy wziąć zamiast $U_i$ mniejszy prostokąt $U_i^* \subset U_i$).
 
-Weźmy dodatnią liczbę naturalną $N \geq \frac{4}{\epsilon}$. Następnie rozważmy otwarte otoczenie $V$ orbity $P_0$ w przestrzeni $(X, \rho)$ takie, że $\rho(\textrm{pr}_1(U_i), V) \geq 0$ oraz $d_1(g_x, \textrm{Id}) < \frac{\epsilon}{4}$ dla każdego $x \in V$ (pamiętamy, że $g_x = \textrm{Id}$ dla $x \in P_0$).
+Weźmy dodatnią liczbę naturalną $N \geq \frac{4}{\epsilon}$. Następnie rozważmy otwarte otoczenie $V$ orbity $P_0$ w przestrzeni $(X, \rho),$ takie że $\rho(\textrm{pr}_1(U_i), V) \geq 0$ oraz $d_1(g_x, \textrm{Id}) < \frac{\epsilon}{4}$ dla każdego $x \in V$ (pamiętamy, że $g_x = \textrm{Id}$ dla $x \in P_0$).
 
-$P_0$ jest skończonym zbiorem niezmienniczym ze względu na $f$, więc na mocy lematu \ref{w_otoczeniu_niezmienniczego_jest_otwarty_zawarty_w_iteracjach} istnieje niepusty zbiór otwarty $W \subseteq V$ taki, że $W \cup f(W) \cup \ldots \cup f^N(W) \subseteq V$. Na mocy lematu \ref{lemat_3_glownego_artykulu_istnieje_orbita_okresowa_krojaca_sie_z_rodzina_otwartych} istnieje punkt okresowy $x_0$ odwzorowania $f$ taki, że $x_0 \in \textrm{pr}_1(U_i)$ oraz orbita $x_0$ ma niepusty przekrój ze zbiorem $W$. Niech $r > 0$ będzie pierwszą dodatnią liczbą całkowitą dla której $f^r(x_0) \in W$. Wtedy $f^r(x_0), f^{r+1}(x_0), \ldots, f^{r+N-1}(x_0) \in V$. Niech $s \geq 0$ będzie pierwszą nieujemną liczbą całkowitą dla której $f^{r+N+s}(x_0) = x_0$, tj. $r+N+s$ jest okresem punktu $x_0$. Weźmy $y_0$ takie, że $(x_0, y_0) \in U_i$. Ponieważ wszystkie odwzorowania włóknowe $(g_x)$ odwzorowania $F$ są ,,na'', to istnieje punkt $y^* \in (0,1)$ taki, że $F^s(f^{r+N}(x_0), y^*) = (x_0, y_0)$. Uzasadnienie:
+$P_0$ jest skończonym zbiorem niezmienniczym ze względu na $f$, więc na mocy lematu \ref{w_otoczeniu_niezmienniczego_jest_otwarty_zawarty_w_iteracjach} istnieje niepusty zbiór otwarty $W \subseteq V,$ taki że $W \cup f(W) \cup \ldots \cup f^N(W) \subseteq V$. Na mocy lematu \ref{lemat_3_glownego_artykulu_istnieje_orbita_okresowa_krojaca_sie_z_rodzina_otwartych} istnieje punkt okresowy $x_0$ odwzorowania $f,$ taki że $x_0 \in \textrm{pr}_1(U_i)$ oraz orbita $x_0$ ma niepusty przekrój ze zbiorem $W$. Niech $r > 0$ będzie pierwszą dodatnią liczbą całkowitą dla której $f^r(x_0) \in W$. Wtedy $f^r(x_0), f^{r+1}(x_0), \ldots, f^{r+N-1}(x_0) \in V$. Niech $s \geq 0$ będzie pierwszą nieujemną liczbą całkowitą dla której $f^{r+N+s}(x_0) = x_0$, tj. $r+N+s$ jest okresem punktu $x_0$. Weźmy $y_0,$ takie że $(x_0, y_0) \in U_i$. Ponieważ wszystkie odwzorowania włóknowe $(g_x)$ odwzorowania $F$ są ,,na'', to istnieje punkt $y^* \in (0,1),$ taki że $F^s(f^{r+N}(x_0), y^*) = (x_0, y_0)$. Uzasadnienie:
 
 
 \begin{equation}
@@ -1146,7 +1168,7 @@ F^s(f^{r+N}(x_0), y^*) & = \Big( f^{r+N+s}(x_0), \, g_{x_s}\big(g_{x_{s-1}}\big(
 \end{aligned}
 \end{equation}
 gdzie $x_1 = f^{r+N}(x_0), \, x_{k+1} = f(x_k)$ dla $k=1,2,\ldots,s-1.$
-Oznaczmy  $\big(g_{x_s} \circ g_{x_{s-1}} \circ \ldots \circ g_{x_1} \big)$ przez $g_s.$ Funkcja $g_s$ jest ,,na'' jako złożenie funkcji ,,na''. W związku z tym, dla każdego $z \in [0,1]$ istnieje $z^* \in [0,1]$ takie, że $g_s(z^*) = z.$ Ponadto jeżeli $z \in (0,1)$, to $z^* \in (0,1)$ bo $g_s$ pozostawia krańce przedziału $[0,1]$ niezmienione.
+Oznaczmy  $\big(g_{x_s} \circ g_{x_{s-1}} \circ \ldots \circ g_{x_1} \big)$ przez $g_s.$ Funkcja $g_s$ jest ,,na'' jako złożenie funkcji ,,na''. W związku z tym, dla każdego $z \in [0,1]$ istnieje $z^* \in [0,1],$ takie że $g_s(z^*) = z.$ Ponadto jeżeli $z \in (0,1)$, to $z^* \in (0,1)$ bo $g_s$ pozostawia krańce przedziału $[0,1]$ niezmienione.
 
 
 
@@ -1165,7 +1187,7 @@ Następnie, rozważmy odwzorowanie $h \in C(I)$ posiadające trzy następujące 
 \item \label{h_trzy} $h$ jest stałe na zwartym odcinku $[a,b] \subseteq \textrm{pr}_2(U_i)$ zawierającym punkt $y_0$ w swoim wnętrzu.
 \end{enumerate}
 
-Weźmy teraz odwzorowanie $G = (f, \widetilde{g}_x) \in \mathcal{F}$ takie, że $d_2(G, F) < \frac{\epsilon}{2}$ oraz
+Weźmy teraz odwzorowanie $G = (f, \widetilde{g}_x) \in \mathcal{F},$ takie że $d_2(G, F) < \frac{\epsilon}{2}$ oraz
 
 \begin{equation}
 \label{rownanie_g_z_falka}
@@ -1229,7 +1251,7 @@ Zatem $G \in \mathcal{F}_{SO}^i$, co kończy dowód dla przypadku 1.
 
 Przypadek 2. $\textrm{pr}_2(F^r(x_0, y_0))$ jest równy $0$ lub $1$.
 
-W takim przypadku użyjemy lematu \ref{lemat_4_glownego_artykulu} aby dostać odwzorowanie $H = (f, h_x) \in \mathcal{F}$ takie, że $d_2(H, F) < \frac{\epsilon}{2}$ i dla $x \in \{x_0, f(x_0), \ldots, f^{r-1}(x_0)\}$ odwzorowania włóknowe $h_x$ są ściśle rosnące. Takie odwzorowanie istnieje, ponieważ każdą funkcję niemalejącą możemy jednostajnie przybliżać funkcjami ściśle rosnącymi.
+W takim przypadku użyjemy lematu \ref{lemat_4_glownego_artykulu} aby dostać odwzorowanie $H = (f, h_x) \in \mathcal{F},$ takie że $d_2(H, F) < \frac{\epsilon}{2}$ i dla $x \in \{x_0, f(x_0), \ldots, f^{r-1}(x_0)\}$ odwzorowania włóknowe $h_x$ są ściśle rosnące. Takie odwzorowanie istnieje, ponieważ każdą funkcję niemalejącą możemy jednostajnie przybliżać funkcjami ściśle rosnącymi.
 
  
 Ponieważ $y_0$ jest różnie od $0$ i $1$ dostajemy, że $\textrm{pr}_2(H^r(x_0, y_0))$ również jest różne od $0$~i~$1$. (Ponieważ $H = (f, h_x) \in \mathcal{F}$, to każde z odwzorowań $h_x$ pozostawia niezmienione punkty $0$ i $1$. Wprowadźmy oznaczenie $\textrm{pr}_2(H^r(x_0, y_0)) = (h_{f^{r-1}(x_0)} \circ \ldots \circ h_{f(x_0)} \circ h_{x_0})(y_0) = h_0(y_0)$. Odwzorowanie $h_0$ jako złożenie odwzorowań ściśle rosnących i pozostawiających punkty $0$ i $1$ niezmienione jest ściśle rosnące i pozostawia niezmienione punkty $0$ i $1$.  Ponieważ $y_0 > 0$ to oczywiście $h_0(y_0) > h_0(0) = 0$. Natomiast ze względu na fakt, że $y_0 < 1$, to zachodzi $h_0(y_0) < h_0(1) = 1$.)
