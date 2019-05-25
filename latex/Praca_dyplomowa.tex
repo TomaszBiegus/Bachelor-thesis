@@ -925,7 +925,7 @@ Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną. Przestrzeń metryczn
 
 \begin{proof}
 {\color{red} !!!NOWE!!!
-MOJE:
+
 Musimy pokazać, że każdy ciąg Cauchy'ego w przestrzeni $(C(X), d_1)$ jest zbieżny do elementu tej przestrzeni.
 Niech $(f_n)_{n=0}^{\infty} \subset C(X),$ będzie ciągiem Cauchy'ego, czyli 
 \begin{equation}
@@ -944,9 +944,11 @@ Podstawiając \ref{metryka_w_punkcie_mniej_rowna_niz_metryka_zbieznosci_jednosta
 Oznaczmy teraz $f(x) = \lim_{n \rightarrow \infty} f_n(x).$ 
 
 
-Pozostało pokazać, że ciąg $(f_n)_{n=0}^{\infty} \subset C(X)$ zbiega do $f$ w przestrzeni $(C(X), d_1).$ Weźmy dowolny $\epsilon > 0$ pokażemy, że istnieje $n_0 \in \mathbb{N},$ takie że dla każdego $n > n_0$ zachodzi
+Pozostało pokazać, że ciąg $(f_n)_{n=0}^{\infty} \subset C(X)$ zbiega do $f$ w przestrzeni $(C(X), d_1).$ Weźmy dowolny $\epsilon > 0.$ Pokażemy, że istnieje $n_0 \in \mathbb{N},$ takie że dla każdego $n > n_0$ zachodzi
 
 $$d_1(f_n, f) = \max_{x \in X} \rho\big(f_n(x), f(x)\big) < \epsilon$$
+
+Z definicji odwzorowania $f$, dla każdego $x \in X$ ciąg $\big(f_n(x)\big)_{n=0}^{\infty}$ jest zbieżny do $f(x)$, a więc istnieje $n_x \in \mathbb{N},$ takie że $\forall_{n > n_x} \, \rho\big(f_n(x), f(x)\big) < \epsilon.$ Wystarczy więc wziąć $n_0 = \max_{x \in X} n_x.$
 
 Zauważmy, że $d_1$ jest metryką zbieżności jednostajnej. Odwzorowanie $f$ jest granicą ciągu odwzorowań ciągłych w metryce zbieżności jednostajnej, a więc $f \in C(X).$
 }
