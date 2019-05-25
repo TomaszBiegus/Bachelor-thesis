@@ -394,9 +394,9 @@ W przestrzeni metrycznej $X$ zbiór $V \subseteq X$ nazywamy otoczeniem punktu $
 W przestrzeni metrycznej $X$ zbiór $V \subseteq X$ nazywamy otoczeniem zbioru $A$, jeżeli istnieje zbiór otwarty $U \subseteq X$ taki, że $A \subseteq U \subseteq V$.
 \end{definition}
 
-\begin{definition}[Sąsiedztwo punktu]
-Sąsiedztwem punktu $x \in X$ nazywamy każdy zbiór $V_x = V \setminus \{x\}$, gdzie $V$ jest pewnym otoczeniem punktu $x$.
-\end{definition}
+%\begin{definition}[Sąsiedztwo punktu]
+%Sąsiedztwem punktu $x \in X$ nazywamy każdy zbiór $V_x = V \setminus \{x\}$, gdzie $V$ jest pewnym otoczeniem punktu $x$.
+%\end{definition}
 
 
 \begin{definition}[Wnętrze zbioru]
@@ -429,8 +429,7 @@ Pokryciem otwartym przestrzeni metrycznej $X$ nazywamy rodzinę zbiorów otwarty
 \end{definition}
 
 \begin{definition}[Przestrzeń metryczna zwarta, definicja pokryciowa]
-\cite[s.~196]{ruette2017chaos}
-\textcolor{red}{TODO: Nieznacznie zmieniliśmy definicję względem tej, która pojawia się u Ruette (tam była mowa o topologii indukowanej na Y, a my zastąpiliśmy to po prostu przez podprzestrzen $(Y, \rho)$) czy w takim razie usunac cytowanie?}
+Na podstawie \cite[s.~196]{ruette2017chaos}.
 Przestrzeń metryczną $(X, \rho)$ nazywamy zwartą jeżeli każde pokrycie otwarte $(U_i)_{i \in I}$ tej przestrzeni zawiera podpokrycie skończone, to znaczy istnieje skończony zbiór indeksów $J \subset I$ taki, że $X = \bigcup_{i \in J}U_i$.
 Podzbiór $Y \subset X$ jest zwarty jeżeli $(Y, \rho)$ jest przestrzenią zwartą.
 \end{definition}
@@ -450,7 +449,7 @@ Następnie niech $y_n$ będzie pierwszym elementem ciągu $(x_n)$ różnym od $g
 
 $(\Leftarrow)$
 Złóżmy, że $X$ spełnia definicję pokryciową.
-Dowód przez kontrapozycję (TODO: Opisać na czym polega kontrapozycja w logice czy to zbyt elementarne na poziom pracy licencjackiej?). Pokażemy, że jeżeli istnieje pokrycie $X$, z którego nie można wybrać podpokrycia skończonego to istnieje ciąg z którego nie można wybrać podciągu zbieżnego.
+Dowód przez kontrapozycję. Pokażemy, że jeżeli istnieje pokrycie $X$, z którego nie można wybrać podpokrycia skończonego to istnieje ciąg z którego nie można wybrać podciągu zbieżnego.
 
 Załóżmy zatem, że nieskończona, przeliczalna rodzina zbiorów otwartych $\{U_i\}_{i=1}^{\infty}$ stanowi pokrycie X. Skonstruujmy następujący ciąg: 
 $$x_1 \notin U_1$$
@@ -482,7 +481,7 @@ Dla $i \in \mathbb{N}$, niech $\mathcal{A}_{i} = \{ K(x, \frac{1}{i}) : x \in X 
 $$B = \bigcup\limits_{i=1}^{\infty} \mathcal{B}_{i}.$$
 Składa się ona ze zbiorów postaci $K(x, \frac{1}{i})$ dla pewnych $i \in \mathbb{N}$ i $x \in X$ i jako przeliczalna suma rodzin skończonych jest przeliczalną rodziną zbiorów.
 Niech teraz 
-$$C = \{ s : \exists_{i \in \mathbb{N}} \, K(s, \frac{1}{i}) \in B \}.$$
+$$C = \{ s : \exists_{i \in \mathbb{N}} \, K\left(s, \frac{1}{i}\right) \in B \}.$$
 Zbiór $C$ jest równoliczny ze zbiorem $B$, a więc przeliczalny.
 Ponadto $C$ jest gęsty w $X$:
 Niech $\epsilon > 0$. Weźmy dowolny $x \in X$. Oczywiście istnieje $i_0 \in \mathbb{N}$ takie, że $\frac{1}{i_0} < \epsilon$. Wiemy, że $\mathcal{B}_{i_0}$ stanowi pokrycie $X$ i składa się ze zbiorów postaci $K(s, \frac{1}{i_0})$, gdzie $s \in X$. Skoro $\mathcal{B}_{i_0}$ jest pokryciem $X$ to $\exists_{K(s, \frac{1}{i_0}) \in \mathcal{B}_{i_0}} : x \in K(s, \frac{1}{i_0})$, czyli $\rho(x, s) < \frac{1}{i_0} < \epsilon$, natomiast $s \in C$ z definicji zbioru $C$
@@ -760,7 +759,7 @@ Mówimy, że $f$ jest topologicznie tranzytywne w przestrzeni metrycznej $X$, gd
 \begin{definition}[Wrażliwość na warunki początkowe]
 \cite{balibrea2003topological}
 Niech $(X, \rho)$ będzie przestrzenią metryczną, a $f: X \rightarrow X$ odwzorowaniem ciągłym.
-Mówimy, że $f$ jest wrażliwe na warunki początkowe jeżeli  istnieje $\delta > 0$ taki, że dla każdego $x \in X$ i dla każdego sąsiedztwa $U$ punktu $x$, istnieją $y \in U$ i $n \geq 0$ dla których zachodzi $\rho(f^n(x), f^n(y)) > \delta$.
+Mówimy, że $f$ jest wrażliwe na warunki początkowe jeżeli  istnieje $\delta > 0$ taki, że dla każdego $x \in X$ i dla każdego otoczenia $U$ punktu $x$, istnieją $y \in U$ i $n \geq 0$ dla których zachodzi $\rho(f^n(x), f^n(y)) > \delta$.
 \end{definition}
 
 \begin{definition}[Chaos w sensie Devaneya]
@@ -1020,7 +1019,7 @@ Wtedy dla każdej rodziny niepustych zbiorów otwartych $U_1, U_2, \ldots, U_n \
 \end{lemma}
 
 \begin{proof}
-Ponieważ odwzorowanie $f$ jest tranzytywne a przestrzeń $X$ jest zwarta, to istnieje punkt $x_0$, którego orbita jest gęsta w $X$. Zatem orbita punktu $x_0$ odwiedza każdy ze zbiorów otwartych $U_i, \, i = 1,2,\ldots,n.$ Teraz \textcolor{red}{korzystając z ciągłości} odwzorowania $f$ wystarczy wziąć punkt okresowy $f$ dostatecznie bliski $x_0.$
+Ponieważ odwzorowanie $f$ jest tranzytywne a przestrzeń $X$ jest zwarta, to istnieje punkt $x_0$, którego orbita jest gęsta w $X$. Zatem orbita punktu $x_0$ odwiedza każdy ze zbiorów otwartych $U_i, \, i = 1,2,\ldots,n.$ Teraz korzystając z ciągłości odwzorowania $f$ wystarczy wziąć punkt okresowy $f$ dostatecznie bliski $x_0.$
 \end{proof}
 
 \begin{proof}
@@ -1046,7 +1045,7 @@ Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną i niech $F = (f, g_x)
 
 \begin{proof}
 \cite{alseda1999entropy}
-Dla każdego $i = 1, 2, \ldots, n$ niech $V_i \subset U_i$ będzie otwartym sąsiedztwem $a_i$ takim, że dla pewnego dodatniego $\widetilde{\epsilon} < \epsilon$, $d_1(h_i, g_x) < \widetilde{\epsilon}$ zawsze wtedy gdy $x \in V_i$.
+Dla każdego $i = 1, 2, \ldots, n$ niech $V_i \subset U_i$ będzie otwartym otoczeniem $a_i$ takim, że dla pewnego dodatniego $\widetilde{\epsilon} < \epsilon$, $d_1(h_i, g_x) < \widetilde{\epsilon}$ zawsze wtedy gdy $x \in V_i$.
 
 Oznaczmy $U = \bigcup_{i=1}^n U_i$, $V = \bigcup_{i=1}^n V_i$. Niech $u : X \longrightarrow [0,1]$ \textcolor{red}{TODO: cwiczenie - dlaczego funkcja u istnieje?} będzie ciągłą funkcją, przyjmującą wartość $1$ na zbiorze $\{a_1, a_2, \ldots, a_n\}$, natomiast $0$ poza zbiorem $V$. Zastąpmy każde odwzorowanie włóknowe $g_x$ przez $\widetilde{g}_x$, gdzie
 
@@ -1087,18 +1086,17 @@ Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowan
 
 
 \begin{proof}[Dowód twierdzenia o rozszerzaniu]
-Odwzorowanie $f$ jest chaotyczne w sensie Devaneya, zatem spełnia warunek $(2)$, czyli ma gęsty zbiór punktów okresowych, w szczególności istnieje orbita okresowa.
+Odwzorowanie $f$ jest chaotyczne w sensie Devaneya, zatem ma gęsty zbiór punktów okresowych, w szczególności istnieje orbita okresowa.
 Możemy zatem ustalić okresową orbitę $P_0$ odwzorowania $f$. Ponieważ $P_0$ jest zbiorem skończonym a $X$ nie ma punktów izolowanych, to $P_0$ jest nigdziegęstym domkniętym podzbiorem $X$.
 
 Rozważmy zbiór $\mathcal{F}$ wszystkich odwzorowań $F = (f, g_x)$ ze zbioru $C_\triangle(X \times I)$ spełniających następujące warunki:
 \begin{enumerate}
-\item\label{dowod_glowny_a} Odwzorowanie bazowe $f$ spełnia założenia twierdzenia \ref{twierdzenie_glowne}.
+\item\label{dowod_glowny_a} Odwzorowanie bazowe $f$ jest odwzorowaniem z założenia twierdzenia \ref{twierdzenie_glowne}.
 \item\label{dowod_glowny_b} $\forall_{x \in X}$ odwzorowanie $g_x$ jest niemalejące i krańce przedziału I pozostawia niezmienione.
 \item\label{dowod_glowny_c} $\forall_{x \in P_0}$ $g_x$ jest identycznością 
 \end{enumerate}
 
-Warunek \ref{dowod_glowny_b} implikuje, że dla każdego odwzorowania z $\mathcal{F}$ zbiory $X \times \{0\}$ i $X \times \{1\}$ są niezmiennicze, czyli $\forall_{F \in \mathcal{F}}$ zachodzi warunek \ref{twierdzenie_glowne_c}  twierdzenia \ref{twierdzenie_glowne}.
-\textcolor{red}{Zachodzenie warunku \ref{twierdzenie_glowne_b} twierdzenia \ref{twierdzenie_glowne} dla każdego odwzorowania $F \in \mathcal{F}$ wynika z faktu, że każde odwzorowanie z $C_\triangle(X \times I)$, gdzie $X$ jest zwartą przestrzenią metryczną (a więc w szczególności każde odwzorowanie z $\mathcal{F}$), którego wszystkie odwzorowania włóknowe są niemalejące, ma taką samą entropię topologiczną jak jego odwzorowanie bazowe (twierdzenie \ref{rownosc_entropii_gdy_wlokna_monotoniczne}).}
+Warunek \ref{dowod_glowny_b} implikuje, że dla każdego odwzorowania z $\mathcal{F}$ zbiory $X \times \{0\}$ i $X \times \{1\}$ są niezmiennicze, czyli $\forall_{F \in \mathcal{F}}$ zachodzi warunek \ref{twierdzenie_glowne_c}  twierdzenia \ref{twierdzenie_glowne}. Zachodzenie warunku \ref{twierdzenie_glowne_b} twierdzenia \ref{twierdzenie_glowne} dla każdego odwzorowania $F \in \mathcal{F}$ wynika z faktu, że każde odwzorowanie z $C_\triangle(X \times I)$, gdzie $X$ jest zwartą przestrzenią metryczną (a więc w szczególności każde odwzorowanie z $\mathcal{F}$), którego wszystkie odwzorowania włóknowe są niemalejące, ma taką samą entropię topologiczną jak jego odwzorowanie bazowe (twierdzenie \ref{rownosc_entropii_gdy_wlokna_monotoniczne}).
 Pozostaje zatem wykazać prawdziwość warunku \ref{twierdzenie_glowne_a}, czyli chaotyczność w sensie Devaneya jakiegoś odwzorowania $F \in \mathcal{F}$. Takie odwzorowanie będzie bowiem łącznie spełniało wszystkie 3 warunki, czyli tezę twierdzenia.
 
 Z lematu \ref{warunki_dostateczne_chaotycznosci_devaneya} wynika, że aby odwzorowanie $F$ było chaotyczne w sense Devaneya potrzeba i wystarcza, żeby spełniało dwa poniższe warunki:
@@ -1122,15 +1120,15 @@ Zbiór odwzorowań tranzytywnych jest rezydualny w $\mathcal{F}$, zostało to ud
 Pozostało wykazać, że również zbiór odwzorowań posiadających gęsty zbiór punktów okresowych jest rezydualny w $\mathcal{F}$.
 Oznaczmy zbiór takich odwzorowań (jednocześnie należących do $\mathcal{F}$) przez $\mathcal{F}_{DP}$.
 
-Niech $\{U_i^X\}_{i=1}^{\infty}$ będzie \textcolor{red}{TODO: bazą topologii komentarz: moze nie pisac ogolnie o bazie topologii tylko o konkretnej bazie dla przypadku przestrzeni zwartej tzn baza - rodzina kul o srodkach w osrodku i promieniach wymiernych} $X$ i niech $\{U_i^I\}_{i=1}^{\infty}$ będzie zbiorem wszystkich odcinków otwartych o końcach wymiernych, należących do odcinka otwartego $(0, 1)$. Niech $\{U_i\}_{i=1}^{\infty}$ będzie ponumerowaniem zbioru $\{U_i^X \times U_j^I : i,j \in \mathbb{N}\}$. Wtedy każda kula otwarta w $X \times I$ zawiera jakiś spośród otwartych zbiorów $U_i$.
+Niech $\{U_i^X\}_{i=1}^{\infty}$ będzie bazą topologii $X$ i niech $\{U_i^I\}_{i=1}^{\infty}$ będzie zbiorem wszystkich odcinków otwartych o końcach wymiernych, należących do odcinka otwartego $(0, 1)$. Niech $\{U_i\}_{i=1}^{\infty}$ będzie ponumerowaniem zbioru $\{U_i^X \times U_j^I : i,j \in \mathbb{N}\}$. Wtedy każda kula otwarta w $X \times I$ zawiera jakiś spośród otwartych zbiorów $U_i$.
 
 Dla każdego $i=1,2,...$ niech zbiór $\mathcal{F}_{SO}^i$ (,,S'' - stabilny, ,,O'' - okresowy) będzie zdefiniowany następująco. Odwzorowanie G należy do $\mathcal{F}_{SO}^i$ wtedy i tylko wtedy, gdy należy do $\mathcal{F}$, posiada punkt okresowy w $U_i$ oraz wszystkie dostatecznie bliskie $G$ odwzorowania z $\mathcal{F}$ również posiadają punkt okresowy w $U_i$ (być może różne od punktów okresowych odwzorowania $G$). Zbiory $\mathcal{F}_{SO}^i$ są otwartymi podzbiorami $\mathcal{F}$ (patrz lemat \ref{Fso_sa_otwartymi_podzbiorami_F}). Ponieważ $\mathcal{F}_{DP} \supseteq \bigcap_{i=1}^{\infty} \mathcal{F}_{SO}^i$ aby pokazać, że $\mathcal{F}_{DP}$ jest rezydualny w $\mathcal{F}$ wystarczy pokazać, że $\forall_{i \in \mathbb{N}} \, \mathcal{F}_{SO}^i$ jest gęsty w $\mathcal{F}$. (Wynika to z twierdzenia Baire'a \ref{twierdzenie_bairea} oraz definicji \ref{definicja_zbioru_rezydualnego}).
 
 Aby wykazać że każdy zbiór $\mathcal{F}_{SO}^i$ jest gęsty w $\mathcal{F}$ ustalmy dowolne: $i \in \mathbb{N}$, $F=(f,g_x) \in \mathcal{F}$ i $\epsilon > 0$. Pokażemy, że istnieje odwzorowanie $G \in \mathcal{F}_{SO}^i$, którego odległość od $F$ nie przekracza $\epsilon$. Dla uproszczenia sytuacji załóżmy, że $\rho(\textrm{pr}_1(U_i), P_0) > 0$ (Jeżeli tak nie jest, zawsze możemy wziąć zamiast $U_i$ mniejszy prostokąt $U_i^* \subset U_i$).
 
-Weźmy dodatnią liczbę naturalną $N \geq \frac{4}{\epsilon}$. Następnie rozważmy otwarte sąsiedztwo \textcolor{red}{TODO: Sąsiedztwo czy otoczenie? Wydaje mi się, że w literaturze anglojęzycznej nie piszą neighborhood w sensie sąsiedztwa tylko mają na myśli otoczenie, a na nasze polskie sąsiedztwo mówią punctured neighborhood.} $V$ orbity $P_0$ w przestrzeni $(X, \rho)$ takie, że $\rho(\textrm{pr}_1(U_i), V) \geq 0$ oraz $d_1(g_x, \textrm{Id}) < \frac{\epsilon}{4}$ dla każdego $x \in V$ (pamiętamy, że $g_x = \textrm{Id}$ dla $x \in P_0$).
+Weźmy dodatnią liczbę naturalną $N \geq \frac{4}{\epsilon}$. Następnie rozważmy otwarte otoczenie $V$ orbity $P_0$ w przestrzeni $(X, \rho)$ takie, że $\rho(\textrm{pr}_1(U_i), V) \geq 0$ oraz $d_1(g_x, \textrm{Id}) < \frac{\epsilon}{4}$ dla każdego $x \in V$ (pamiętamy, że $g_x = \textrm{Id}$ dla $x \in P_0$).
 
-$P_0$ jest skończonym zbiorem niezmienniczym ze względu na $f$, na mocy lematu \ref{w_otoczeniu_niezmienniczego_jest_otwarty_zawarty_w_iteracjach} istnieje niepusty zbiór otwarty $W \subseteq V$ taki, że $W \cup f(W) \cup \ldots \cup f^N(W) \subseteq V$. Na mocy lematu \ref{lemat_3_glownego_artykulu_istnieje_orbita_okresowa_krojaca_sie_z_rodzina_otwartych} istnieje punkt okresowy $x_0$ odwzorowania $f$ taki, że $x_0 \in \textrm{pr}_1(U_i)$ oraz orbita $x_0$ kroi się niepusto ze zbiorem $W$. Niech $r > 0$ będzie pierwszą dodatnią liczbą całkowitą dla której $f^r(x_0) \in W$. Wtedy $f^r(x_0), f^{r+1}(x_0), \ldots, f^{r+N-1}(x_0) \in V$. Niech $s \geq 0$ będzie pierwszą nieujemną liczbą całkowitą dla której $f^{r+N+s}(x_0) = x_0$, tj. $r+N+s$ jest okresem punktu $x_0$. Weźmy $y_0$ takie, że $(x_0, y_0) \in U_i$. Ponieważ wszystkie odwzorowania włóknowe $(g_x)$ odwzorowania $F$ są ,,na'', to istnieje punkt $y^* \in (0,1)$ taki, że $F^s(f^{r+N}(x_0), y^*) = (x_0, y_0)$. {\color{red}nowe: Uzasadnienie:
+$P_0$ jest skończonym zbiorem niezmienniczym ze względu na $f$, więc na mocy lematu \ref{w_otoczeniu_niezmienniczego_jest_otwarty_zawarty_w_iteracjach} istnieje niepusty zbiór otwarty $W \subseteq V$ taki, że $W \cup f(W) \cup \ldots \cup f^N(W) \subseteq V$. Na mocy lematu \ref{lemat_3_glownego_artykulu_istnieje_orbita_okresowa_krojaca_sie_z_rodzina_otwartych} istnieje punkt okresowy $x_0$ odwzorowania $f$ taki, że $x_0 \in \textrm{pr}_1(U_i)$ oraz orbita $x_0$ ma niepusty przekrój ze zbiorem $W$. Niech $r > 0$ będzie pierwszą dodatnią liczbą całkowitą dla której $f^r(x_0) \in W$. Wtedy $f^r(x_0), f^{r+1}(x_0), \ldots, f^{r+N-1}(x_0) \in V$. Niech $s \geq 0$ będzie pierwszą nieujemną liczbą całkowitą dla której $f^{r+N+s}(x_0) = x_0$, tj. $r+N+s$ jest okresem punktu $x_0$. Weźmy $y_0$ takie, że $(x_0, y_0) \in U_i$. Ponieważ wszystkie odwzorowania włóknowe $(g_x)$ odwzorowania $F$ są ,,na'', to istnieje punkt $y^* \in (0,1)$ taki, że $F^s(f^{r+N}(x_0), y^*) = (x_0, y_0)$. Uzasadnienie:
 
 
 \begin{equation}
@@ -1139,11 +1137,9 @@ F^s(f^{r+N}(x_0), y^*) & = \Big( f^{r+N+s}(x_0), \, g_{x_s}\big(g_{x_{s-1}}\big(
 & = \Big( x_0, \, \big(g_{x_s} \circ g_{x_{s-1}} \circ \ldots \circ g_{x_1} \big)(y^*) \Big),
 \end{aligned}
 \end{equation}
-
-gdzie $x_1 = f^{r+N}(x_0), \, x_{k+1} = f(x_k)$ dla $k=1,2,\ldots,s-1$
-
+gdzie $x_1 = f^{r+N}(x_0), \, x_{k+1} = f(x_k)$ dla $k=1,2,\ldots,s-1.$
 Oznaczmy  $\big(g_{x_s} \circ g_{x_{s-1}} \circ \ldots \circ g_{x_1} \big)$ przez $g_s.$ Funkcja $g_s$ jest ,,na'' jako złożenie funkcji ,,na''. W związku z tym, dla każdego $z \in [0,1]$ istnieje $z^* \in [0,1]$ takie, że $g_s(z^*) = z.$ Ponadto jeżeli $z \in (0,1)$, to $z^* \in (0,1)$ bo $g_s$ pozostawia krańce przedziału $[0,1]$ niezmienione.
-}
+
 
 
 Przypadek 1. $z = \textrm{pr}_2(F^r(x_0, y_0))$ jest różne od 0 i 1.
@@ -1188,7 +1184,8 @@ G^{r+N+s}(x_0, y_0) & \stackrel{(1)}{=} G^{r+N+s-1}(G(x_0, y_0)) \\
 & \stackrel{(6)}{=} F^s(f^{r+N}(x_0), y^*) \stackrel{(7)}{=} (x_0, y_0).
 \end{split}
 \end{equation}
-{\color{red}nowe: Szczegółowe uzasadnienie powyższych równości:
+
+Szczegółowe uzasadnienie powyższych równości:
 \begin{enumerate}
 \item Nie musimy rozważać odwracalności $G$ gdyż $r > 0, \, N > 0, \, s \geq 0$, a więc $r+N+s \geq 2.$
 \item $G = (f, \widetilde{g}_x), \, \widetilde{g}_{x_0} = h$ a $h(y_0) = g_{x_0}(y_0).$
@@ -1198,12 +1195,9 @@ G^{r+N+s}(x_0, y_0) & \stackrel{(1)}{=} G^{r+N+s-1}(G(x_0, y_0)) \\
 \item Z równania \ref{rownanie_g_z_falka} mamy $\widetilde{g}_x = g_x,$ dla $x \in \{f^k(x_0) : r+N \leq k \leq r+N+s-1\}.$
 \item Wprost z definicji $y^*.$
 \end{enumerate}
-}
 
 Ponadto, ze względu na \ref{h_trzy} zachodzi
-$$G^{r+N+s}(\{x_0\} \times [a, b]) = \{(x_0, y_0)\}.$$
 
-{\color{red}nowe: Szczegółowe uzasadnienie powyższej równości (Pytanie czy zastąpić powyższą równość przez poniższą, czy pozostawić obie w takiej formie jak jest teraz czyli najpierw zwięzła wersja a później, poniżej uzasadnienie?)
 \begin{equation}
 \begin{aligned}
 G^{r+N+s}(\{x_0\} \times [a, b]) & = G^{r+N+s-1}\big(G(\{x_0\} \times [a, b])\big) \\
@@ -1215,36 +1209,22 @@ G^{r+N+s}(\{x_0\} \times [a, b]) & = G^{r+N+s-1}\big(G(\{x_0\} \times [a, b])\bi
 & = \{(x_0, y_0)\}.
 \end{aligned}
 \end{equation}
-}
+
 
 Z faktu $y_0 \in (a, b)$ wynika, że każde odwzorowanie $\widetilde{G} \in \mathcal{F}$ dostatecznie bliskie $G$ posiada własność
 $$\widetilde{G}^{r+N+s}(\{x_0\} \times [a, b]) \subseteq \{x_0\} \times [a, b].$$
 
-{\color{red}nowe: Uzasadnienie:
-W zasadzie chyba to widzę: $x_0$ wraca do $x_0$ bo odwzorowanie bazowe jest takie samo: $f$, po jednej iteracji cały odcinek $[a,b]$ przejdzie na $y_0$ +/- jakis epsilon (odleglosc miedzy odwzorowaniami) i w kolejnych iteracjach mozemy sie przesunac na osi Y o najwyzej (r+N+s-1) epsilonow, czyli znajdziemy taki epsilon, ze nie wyjdziemy poza odcinek [a,b].
-Warto to rozpisać?
-}
-
-
+$\widetilde G^{r+N+s}$ na pierwszej współrzędnej przeprowadza $x_0$ na $x_0$, zaś na drugiej przeprowadza odcinek $[a,b]$ w $[a,b]$. Każde ciągłe odwzorowanie odcinka w siebie ma punkt stały, a punkt stały iteraty jest punktem okresowym oryginalnego odwzorowania.
 Zatem $\widetilde{G}$ posiada punkt okresowy w $\{x_0\} \times [a, b] \subseteq U_i$.
-
-{\color{red}nowe: Uzasadnienie:
-Powyższe nie jest dla mnie oczywiste. To wynika z jakiejś własności odwzorowań z $\mathcal{F}$? Autorzy użyli tutaj implicite jakiegoś twierdzenia o punkcie stałym?
-}
 
 Zatem $G \in \mathcal{F}_{SO}^i$, co kończy dowód dla przypadku 1.
 
 Przypadek 2. $\textrm{pr}_2(F^r(x_0, y_0))$ jest równy $0$ lub $1$.
 
-W takim przypadku użyjemy lematu \ref{lemat_4_glownego_artykulu} aby dostać odwzorowanie $H = (f, h_x) \in \mathcal{F}$ takie, że $d_2(H, F) < \frac{\epsilon}{2}$ i dla $x \in \{x_0, f(x_0), \ldots, f^{r-1}(x_0)\}$ odwzorowania włóknowe $h_x$ są ściśle rosnące.
-
-{\color{red}nowe: Chciałem to uzasadniać, ale po zerknięciu do lematu \ref{lemat_4_glownego_artykulu} zorientowałem się, że odwzorowania $h_x$ mogą być dowolne byle niemalejące, pozostawiajace krance niezmienione i dostatecznie bliskie oryginalnym. Warto umieścić tutaj jakiś komentarz uzasadniający? Może, uzasadnić dlaczego możemy znaleźć odwzorowanie ściśle rosnące dowolnie bliskie ustalonemu niemalejącemu?}
+W takim przypadku użyjemy lematu \ref{lemat_4_glownego_artykulu} aby dostać odwzorowanie $H = (f, h_x) \in \mathcal{F}$ takie, że $d_2(H, F) < \frac{\epsilon}{2}$ i dla $x \in \{x_0, f(x_0), \ldots, f^{r-1}(x_0)\}$ odwzorowania włóknowe $h_x$ są ściśle rosnące. Takie odwzorowanie istnieje, ponieważ każdą funkcję niemalejącą możemy jednostajnie przybliżać funkcjami ściśle rosnącymi.
 
  
-Ponieważ $y_0$ jest różnie od $0$ i $1$ dostajemy, że $\textrm{pr}_2(H^r(x_0, y_0))$ również jest różne od $0$ i $1$.
-
-{\color{red}nowe: (Ponieważ $H = (f, h_x) \in \mathcal{F}$, to każde z odwzorowań $h_x$ pozostawia niezmienione punkty $0$ i $1$. Wprowadźmy oznaczenie $\textrm{pr}_2(H^r(x_0, y_0)) = (h_{f^{r-1}(x_0)} \circ \ldots \circ h_{f(x_0)} \circ h_{x_0})(y_0) = h_0(y_0)$. Odwzorowanie $h_0$ jako złożenie odwzorowań ściśle rosnących i pozostawiających punkty $0$ i $1$ niezmienione jest ściśle rosnące i pozostawia niezmienione punkty $0$ i $1$.  Ponieważ $y_0 > 0$ to oczywiście $h_0(y_0) > h_0(0) = 0$. Natomiast ze względu na fakt, że $y_0 < 1$, to zachodzi $h_0(y_0) < h_0(1) = 1$.)
-}
+Ponieważ $y_0$ jest różnie od $0$ i $1$ dostajemy, że $\textrm{pr}_2(H^r(x_0, y_0))$ również jest różne od $0$~i~$1$. (Ponieważ $H = (f, h_x) \in \mathcal{F}$, to każde z odwzorowań $h_x$ pozostawia niezmienione punkty $0$ i $1$. Wprowadźmy oznaczenie $\textrm{pr}_2(H^r(x_0, y_0)) = (h_{f^{r-1}(x_0)} \circ \ldots \circ h_{f(x_0)} \circ h_{x_0})(y_0) = h_0(y_0)$. Odwzorowanie $h_0$ jako złożenie odwzorowań ściśle rosnących i pozostawiających punkty $0$ i $1$ niezmienione jest ściśle rosnące i pozostawia niezmienione punkty $0$ i $1$.  Ponieważ $y_0 > 0$ to oczywiście $h_0(y_0) > h_0(0) = 0$. Natomiast ze względu na fakt, że $y_0 < 1$, to zachodzi $h_0(y_0) < h_0(1) = 1$.)
  
 Następnie korzystając z przypadku 1 dostajemy odwzorowanie $G \in \mathcal{F}_{SO}^i$, dla którego zachodzi nierówność $d_2(G, H) < \frac{\epsilon}{2}$. Wówczas, korzystając z nierówności trójkąta otrzymujemy $d_2(G, F) \leq d_2(G, H) + d_2(H, F) < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon$.
 
