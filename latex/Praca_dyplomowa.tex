@@ -298,6 +298,7 @@ TODO: Dopisać do sekcji definicji definicję punktu skupienia ciągu.
 \item separable, second category (czyli 1 i 2 kategoria bairea)
 \item twierdzenie baire'a dla przestrzeni metrycznych zupełnych napisac
 \item g-delta
+\item topologia zbieżności jednostajnej? Potrzebne do lematow 1.60 i 1.61 jezeli nie usune fragmentu sformuowania tych lematow
 
 
 
@@ -316,22 +317,21 @@ TODO: Dopisać do sekcji definicji definicję punktu skupienia ciągu.
 \subsection{Definicje i fakty ogólne}
 
 \begin{definition}[Ciąg]
-Ciąg $(x_n)_{n=1}^\infty$ jest to funkcja określona na zbiorze liczb naturalnych. Wartości tej funkcji dla kolejnych liczb naturalnych nazywamy wyrazami ciągu i oznaczamy: $x_1, x_2, \ldots$. Niekiedy ciąg oznaczamy skrótowo przez $(x_n)$. W pracy rozważać będziemy ciągi w przestrzeniach metrycznych, czyli funkcje postaci $x: \mathbb{N} \rightarrow X,$ gdzie $X$ jest rozważaną przestrzenią metryczną
-
+Ciąg $(x_n)_{n=1}^\infty$ jest to funkcja określona na zbiorze liczb naturalnych. Wartości tej funkcji dla kolejnych liczb naturalnych nazywamy wyrazami ciągu i oznaczamy: $x_1, x_2, \ldots$. Niekiedy ciąg oznaczamy skrótowo przez $(x_n)$. W pracy rozważać będziemy ciągi w przestrzeniach metrycznych, czyli funkcje postaci $x: \mathbb{N} \rightarrow X,$ gdzie $X$ jest rozważaną przestrzenią metryczną.
 \end{definition}
 
 \begin{definition}[Podciąg]
-TODO
+\textcolor{red}{TODO}
 \end{definition}
 
 \begin{definition}[Granica ciągu]
-TODO
+\textcolor{red}{TODO}
 \end{definition}
 
-TODO: granica górna granica dolna - występuje przy entropii Bowena
+\textcolor{red}{TODO: granica górna granica dolna - występuje przy entropii Bowena}
 
 \begin{definition}[Punkt skupienia ciągu]
-TODO
+\textcolor{red}{TODO}
 \end{definition}
 
 \begin{definition}[Ciąg Cauchy'ego]
@@ -562,7 +562,7 @@ Punkt $x$ jest okresowy, gdy jest stały dla jakiejś iteraty, tzn. gdy $\exists
 
 
 \begin{definition}[Orbita okresowa]
-TODO
+\textcolor{red}{TODO}
 \end{definition}
 
 \begin{definition}[Niezmienniczość zbioru ze względu na odwzorowanie]
@@ -647,7 +647,7 @@ $$h_{\textrm{top}}(f) = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\i
  (ksiazka misiurewicz combinatorial dynamics and entropy in dimension one oraz ksiazka ruette rozdzial 4)}
  
  
-\textcolor{red}{TODO: nowe} 
+
 \begin{lemma}[Złożenie dwóch funkcji niemalejących jest niemalejące]
 \label{zlozenie_dwoch_niemalejacych_jest_niemalejace}
 Niech $f: [0, 1] \rightarrow [0, 1]$ i $g: [0, 1] \rightarrow [0,1]$ będą funkcjami niemalejącymi, wówczas ich złożenie $f \circ g$ również jest funkcją niemalejącą. 
@@ -666,7 +666,6 @@ Wniosek ten otrzymujemy z lematu \ref{zlozenie_dwoch_niemalejacych_jest_niemalej
 \label{iteraty_niemalejacych_sa_niemalejace}
 Niech $f: [0, 1] \rightarrow [0, 1]$ będzie funkcją niemalejącą, wówczas dla każdego $i \in \mathbb{N}$ funkcje $f^{i}$ są niemalejące.
 \end{corollary}
-\textcolor{red}{TODO: end nowe} 
 
  
  
@@ -716,12 +715,10 @@ h_{\textrm{top}}(f) & = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\i
 & = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} (\frac{1}{n} \log (n \cdot (2 + \epsilon)) - \frac{1}{n} \log ( 2 \cdot \epsilon )) = \lim_{\epsilon \rightarrow 0} 0 = 0
 \end{aligned}
 \end{equation}
-\textcolor{red}{
+
 Entropia z definicji jest nieujemna, więc $h_{\textrm{top}}(f) = 0.$
-}
 
 \item[Przypadek 2: $f: I \rightarrow I$ nierosnąca.]
-\textcolor{red}{TODO: nowe!!!}
 
 Jeżeli $f$ jest nierosnąca, to $f^2$ jest niemalejąca. Zatem z przypadku pierwszego $h_{\textrm{top}}(f^2) = 0$. Dla entropii topologicznej zachodzi następująca równość: 
 $$h_{\textrm{top}}(f^n) = n \cdot h_{\textrm{top}}(f),$$
