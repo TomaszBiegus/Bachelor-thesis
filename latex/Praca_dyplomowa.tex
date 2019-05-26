@@ -213,6 +213,7 @@
 \section{Motywacje}
 Studia matematyczne podjąłem w dość późnym wieku, już po ukończeniu innych kierunków. Od zawsze jednak matematyka pociągała mnie jako klucz do zrozumienia pozostałych dziedzin, jako narzędzie pozwalające dostrzec lepiej i głębiej urodę przyrody. Wykorzystując matematykę, możemy uchwycić reguły, wzorce i schematy które opisują niewyobrażalną złożoność świata w którym żyjemy. Matematykę postrzegam jako klamrę spinające wszystkie dziedziny intelektualnej działalności człowieka, począwszy od fizyki, poprzez chemię, biologię, aż po psychologię czy nauki społeczne. Decyzję o rozpoczęciu studiów matematycznych podjąłem w lecie siedząc nad rzeką i przyglądając się hipnotyzującym zawirowaniom na powierzchni wody płynącej w rzece Odrze przepływającej przez Wrocław, oraz leniwemu ruchowi fraktalnych kształtów chmur na błękitnym niebie. Byłem wówczas absolwentem wyższej uczelni, w którym wciąż żyło pragnienie poznawania głębiej wszystkich tych pięknych zjawisk, które nas otaczają. Byłem również świeżo po lekturze inspirującej popularnonaukowej książki Jamesa Gleicka zatytułowanej ,,Chaos'' \cite{gleick1987chaos}...
 \section{Historia badań nad układami dynamicznymi}
+
 \subsection{Od starożytności do Newtona}
 \subsection{Problem stabilności układu słonecznego}
 \subsection{Lorenz i jego atraktor}
@@ -786,7 +787,18 @@ Załóżmy, że $f: X \rightarrow X$ jest tranzytywne i posiada gęsty zbiór pu
 
 W pierwszej kolejności zauważmy, że istnieje liczba $\delta_0 > 0$ taka, że dla każdego $x \in X$ istnieje punkt okresowy $q \in X$, którego orbita $O(q)$ jest w odległości co najmniej $\frac{\delta_0}{2}$ od $x$: 
 
-Wybierzmy dwa dowolne punkty okresowe $q_1$ i $q_2$ o rozłącznych \textcolor{red}{(TODO: Trzeba uzasadnic dlaczego moge wybrac w punkty o rozlacznych orbitach?, moze napisac tez dlaczego potrzebne jest zalozenie o nieskonczonosci X - pokazac jakis degenerate case)} orbitach $O(q_1), O(q_2)$. Oznaczmy przez $\delta_0$ odległość między $O(q_1)$ a $O(q_2)$. Wówczas z nierówności trójkąta, każdy punkt $x \in X$ jest w odległości co najmniej $\frac{\delta_0}{2}$ od  jednej z dwóch wybranych orbit.
+Wybierzmy dwa dowolne punkty okresowe $q_1$ i $q_2$ o rozłącznych orbitach $O(q_1), O(q_2)$. 
+
+{\color{red}!!!NOWE!!!
+Takie punkty istnieją, ponieważ:
+\begin{enumerate}
+\item Orbity okresowe są skończone, więc żadna taka orbita nie może być gęsta w nieskończonym zbiorze $X.$
+\item Zbiór punktów okresowych odwzorowania $f$ jest gęsty w $X,$ więc istnieją punkty okresowe, należące do różnych orbit.
+\item Rozważmy dwie orbity $O(p), O(q)$, bez straty ogólności niech $|O(p)| \geq |O(q)|$. Jeżeli te orbity są różne to $\exists_{p_0 \in O(p)} \, p_0 \notin O(q).$ Przypuśćmy, że istnieje $n \in \mathbb{N},$ takie że $f^n(p_0) \in O(q).$ Wówczas, ponieważ $O(q)$ jest orbitą okresową, istniałoby $k \in \mathbb{N},$ takie że $O(q) \ni f^{n+k}(p_0) = p_0,$ co stanowi sprzeczność. Zatem $\forall{n \in \mathbb{N}} \, f^n(p_0) \notin O(q),$ czyli jeżeli orbity są różne to są one rozłączne.
+\end{enumerate}
+} 
+
+Oznaczmy przez $\delta_0$ odległość między $O(q_1)$ a $O(q_2)$. Wówczas z nierówności trójkąta, każdy punkt $x \in X$ jest w odległości co najmniej $\frac{\delta_0}{2}$ od  jednej z dwóch wybranych orbit.
 Pokażemy, że $f$ jest wrażliwe na warunki początkowe ze stałą (ang. \textit{sensitivity constant}) $\delta = \frac{\delta_0}{8}.$
 
 Weźmy dowolny punkt $x \in X$ i niech $N$ będzie pewnym otoczeniem punktu $x$. Ponieważ zbiór punktów okresowych odwzorowania $f$ jest gęsty, to istnieje punkt okresowy $p$ należący do przekroju $U = N \cap K(x, \delta)$. Niech $n$ oznacza okres punktu $p$. Z wcześniejszych rozważań wiemy, że istnieje punkt okresowy $q \in X$, którego orbita $O(q)$ jest w odległości co najmniej $4\delta$ od $x$. Oznaczmy
