@@ -968,11 +968,36 @@ Zauważmy, że $d_1$ jest metryką zbieżności jednostajnej. Odwzorowanie $f$ j
 
 \begin{lemma}[Ciągłe odwzorowania trójkątne tworzą przestrzeń metryczną zupełną]
 \label{ciagle_trojkatne_tworza_przestrzen_metryczna_zupelna}
-Przestrzeń metryczna $(C_\triangle(X \times Y), d_2)$ jest zupełna i topologia na niej jest topologią zbieżności jednostajnej.
+Niech $(X, \rho)$ i $(Y, \tau)$ będą zwartymi przestrzeniami metrycznymi.
+Wówczas przestrzeń metryczna $(C_\triangle(X \times Y), d_2)$ jest zupełna i topologia na niej jest topologią zbieżności jednostajnej.
 \end{lemma}
 
 \begin{proof}
-TODO
+{\color{red} !!!NOWE!!!
+{\color{green} Treść notatki od Pana (później oczywiście to usunę)
+Tutaj mój pomysł na strategię dowodu byłby takim, żeby pokazać, że odwzorowania trójkątne tworzą zbiór domknięty w przestrzeni wszystkich ciągłych odwzorowań produktu w siebie (z metryką zbieżności jednostajnej). Ta ostatnia jest zupełna, co pokazaliśmy wyżej, a podprzestrzeń domknięta przestrzeni zupełnej też jest zupełna.}
+
+Rozważmy przestrzeń $(C(X \times Y), d)$ wszystkich ciągłych odwzorowań postaci: 
+$$F: X \times Y \rightarrow X \times Y; \, F(x,y) = \big(f_x(x,y), f_y(x,y)\big)$$ 
+z metryką 
+$$d(F, G) = \max_{(x,y) \in X \times Y} \max \left\{ \rho\big(f_x(x,y), g_x(x,y)\big), \tau\big(f_y(x,y), g_y(x,y)\big) \right\}$$ 
+{\color{blue}(pytanie - czy wystarczy nam max a nie sup?, wynika to ze zwartości przestrzeni X i Y?)}
+
+Pokażemy, że zbiór $(C_\triangle(X \times Y), d_2)$ jest domkniętym podzbiorem $(C(X \times Y), d)$ {\color{blue}(Pytanie: pokazać, że $d$ obcięte do $C_\triangle(X \times Y)$ jest równe $d_2$??)}
+Weźmy dowolny zbieżny ciąg odwzorowań: $(F_n)_{n=1}^{\infty} \subset C_\triangle(X \times Y).$ Oznaczmy $F = \lim_{n \rightarrow \infty} F_n.$
+Mamy 
+$$\forall_{\epsilon > 0} \, \exists_{n_0} \, \forall_{n > n_0} d(F_n, F) = \max_{(x,y) \in X \times Y} \max \left\{ \rho\big(f_{n,x}(x,y), f_x(x,y)\big), \tau\big(f_{n,y}(x,y), f_y(x,y)\big) \right\} < \epsilon,$$
+oznacza to, że 
+$$\forall_{(x,y) \in X \times Y} \, \lim_{n \rightarrow \infty} \rho\big(f_{n,x}(x,y), f_x(x,y)\big) = \lim_{n \rightarrow \infty} \tau\big(f_{n,y}(x,y), f_y(x,y)\big) = 0.$$
+Ponieważ $\forall_{n \in \mathbb{N}} \, F_n \in C_\triangle(X \times Y),$ to $f_{n,x}(x,y) = f_{n,x}(x).$ 
+Mamy więc 
+$$\forall_{(x,y) \in X \times Y} \, \lim_{n \rightarrow \infty} \rho\big(f_{n,x}(x), f_x(x,y)\big) = 0,$$
+czyli odwzorowania $f_x$ nie mogą zależeć od współrzędnej $y.$ Zatem odwzorowanie $F$ jest odwzorowaniem trójkątnym, czyli zbiór odwzorowań trójkątnych jest domkniętym podzbiorem przestrzeni $C(X \times Y).$ 
+
+Przestrzeń $(C(X \times Y), d)$ jest zupełna na mocy lematu \ref{przestrzen_ciaglych_jest_zupelna}. Ostatecznie $(C_\triangle(X \times Y), d_2)$ jako domknięta podprzestrzeń zupełnej przestrzeni $(C(X \times Y), d)$ również jest przestrzenią zupełną.
+{\color{blue} Tutaj nie jestem pewien czy lemat \ref{przestrzen_ciaglych_jest_zupelna} można tak bezpośrednio przenieść do sytuacji na produkcie, mniej więcej to widzę i wiem, że tak jest ale czy dostatecznie jest to w tekście wykazane? Ponadto tak samo jak w poprzednim lemacie - zostawić część zdania "... i topologia na niej jest topologią zbieżności jednostajnej" czy to usinąć? Jeżeli zostawić to chyba powinienem w sekcji z definicjami dorzucić co to znaczy topologia zbieżności jednostajnej}
+
+}
 \end{proof}
 
 
@@ -1037,7 +1062,7 @@ Wówczas dla każdego $N \in \mathbb{N}$ istnieje niepusty zbiór otwarty $W \su
 \end{lemma}
 
 \begin{proof}
-{\color{red} !!!NOWE!!! Pytanie: czy zawsze zlozenie funkcji ciaglych jest ciagle? Korzystam tutaj z tego. Poza tym wygląda na to że wystarczyły jedynie założenia o ciągłości f i skończoności niezmienniczego zbioru P, czy ja czegoś nie przeoczyłem?
+{\color{red} !!!NOWE!!! {\color{blue}Pytanie: czy zawsze zlozenie funkcji ciaglych jest ciagle? Korzystam tutaj z tego. Poza tym wygląda na to że wystarczyły jedynie założenia o ciągłości f i skończoności niezmienniczego zbioru P, czy ja czegoś nie przeoczyłem?}
 W pierwszej kolejności pokażemy prawdziwość tezy dla $N=2.$
 $P$ jest zbiorem skończonym, więc możemy wypisać wszystkie jego elementy: 
 $$P = \{p_1, p_2, \ldots, p_k\}$$
