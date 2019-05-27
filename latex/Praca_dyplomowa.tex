@@ -239,7 +239,8 @@ TODO: Dopisać do sekcji definicji definicję punktu skupienia ciągu.
 \item ciąg Cauchy'ego (pojawia się w definicji zupełności, TODO ma być tutaj czy w faktach ogólnych dotyczących zwartych przestrzeni metrycznych?)
 
 
-\item topologia zbieżności jednostajnej (pojawia się w definicji metryki na przestrzeni odwzorowań trójkątnych)
+
+\item zbieżność jednostajna (topologia zbieżności jednostajnej (pojawia się w definicji metryki na przestrzeni odwzorowań trójkątnych))
 %\item metryka jest
 %\item przestrzeń metryczna jest
 %\item kula otwarta jest
@@ -786,14 +787,14 @@ W pierwszej kolejności zauważmy, że istnieje liczba $\delta_0 > 0$ taka, że 
 
 Wybierzmy dwa dowolne punkty okresowe $q_1$ i $q_2$ o rozłącznych orbitach $O(q_1), O(q_2)$. 
 
-{\color{red}!!!NOWE!!!
+
 Takie punkty istnieją, ponieważ:
 \begin{enumerate}
 \item Orbity okresowe są skończone, więc żadna taka orbita nie może być gęsta w nieskończonym zbiorze $X.$
 \item Zbiór punktów okresowych odwzorowania $f$ jest gęsty w $X,$ więc istnieją punkty okresowe, należące do różnych orbit.
 \item Rozważmy dwie orbity $O(p), O(q)$, bez straty ogólności niech $|O(p)| \geq |O(q)|$. Jeżeli te orbity są różne to $\exists_{p_0 \in O(p)} \, p_0 \notin O(q).$ Przypuśćmy, że istnieje $n \in \mathbb{N},$ takie że $f^n(p_0) \in O(q).$ Wówczas, ponieważ $O(q)$ jest orbitą okresową, istniałoby $k \in \mathbb{N},$ takie że $O(q) \ni f^{n+k}(p_0) = p_0,$ co stanowi sprzeczność. Zatem $\forall{n \in \mathbb{N}} \, f^n(p_0) \notin O(q),$ czyli jeżeli orbity są różne to są one rozłączne.
 \end{enumerate}
-} 
+
 
 Oznaczmy przez $\delta_0$ odległość między $O(q_1)$ a $O(q_2)$. Wówczas z nierówności trójkąta, każdy punkt $x \in X$ jest w odległości co najmniej $\frac{\delta_0}{2}$ od  jednej z dwóch wybranych orbit.
 Pokażemy, że $f$ jest wrażliwe na warunki początkowe ze stałą (ang. \textit{sensitivity constant}) $\delta = \frac{\delta_0}{8}.$
@@ -919,22 +920,26 @@ Niech $(M, \sigma)$ będzie zwartą przestrzenią metryczną, rozważmy odwzorow
 
 
 \begin{definition}[Metryka na przestrzeni odwzorowań trójkątnych]
-Odległość między odwzorowaniami trójkątnymi definiujemy wówczas następująco: Niech $(X, \rho)$ i $(Y, \tau)$ będą zwartymi przestrzeniami metrycznymi a $F(x,y) = (f(x), g_x(y))$ i $\Phi(x,y) = (\phi(x), \psi_x(y))$ trójkątnymi odwzorowaniami należącymi do $C_\triangle(X \times Y)$. Odległość definiujemy wówczas jako 
+Odległość między odwzorowaniami trójkątnymi definiujemy następująco: Niech $(X, \rho)$ i $(Y, \tau)$ będą zwartymi przestrzeniami metrycznymi a $F(x,y) = (f(x), g_x(y))$ i $\Phi(x,y) = (\phi(x), \psi_x(y))$ trójkątnymi odwzorowaniami należącymi do $C_\triangle(X \times Y)$. Odległość definiujemy wówczas jako 
 \begin{align*}
 d_2(F, \Phi) = \max_{(x,y) \in X \times Y} \max\{\rho(f(x),\phi(x)), \tau(g_x(y), \psi_x(y))\} \\ 
 = \max\{d_1(f,\phi), \max_{x \in X}d_1(g_x, \psi_x)\}
 \end{align*}
-Zauważmy, że jak wynika z lematów \ref{przestrzen_ciaglych_jest_zupelna} i \ref{ciagle_trojkatne_tworza_przestrzen_metryczna_zupelna} przestrzenie metryczne $(C(X), d_1)$ oraz $(C_\triangle(X \times Y), d_2)$ są zupełne i odpowiednie topologie na nich są topologiami zbieżności jednostajnej.
 \end{definition}
+
+Uwaga: Rozważmy przestrzeń $(C(X \times Y), d)$ wszystkich ciągłych odwzorowań $X \times Y$ w siebie, z metryką zbieżności jednostajnej: 
+$$d(F, G) = \max_{(x,y) \in X \times Y} \max \left\{ \rho\big(f_x(x,y), g_x(x,y)\big), \tau\big(f_y(x,y), g_y(x,y)\big) \right\}$$ 
+Wówczas metryka $d_2$ jest równa metryce $d$ obciętej do zbioru $C_\triangle(X \times Y).$
+
+Zbieżność w metrykach $d_1$ i $d_2$ jest tym samym, co zbieżność jednostajna.
+Z lematów \ref{przestrzen_ciaglych_jest_zupelna} i \ref{ciagle_trojkatne_tworza_przestrzen_metryczna_zupelna} wynika, że przestrzenie metryczne $(C(X), d_1)$ oraz $(C_\triangle(X \times Y), d_2)$ są zupełne.
 
 
 \begin{lemma}[Przestrzeń $(C(X), d_1)$ jest zupełna]\label{przestrzen_ciaglych_jest_zupelna}
-Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną. Przestrzeń metryczna $(C(X), d_1)$ jest zupełna i topologia na niej jest topologią zbieżności jednostajnej.
+Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną. Przestrzeń metryczna $(C(X), d_1)$ jest zupełna.
 \end{lemma}
 
 \begin{proof}
-{\color{red} !!!NOWE!!!
-
 Musimy pokazać, że każdy ciąg Cauchy'ego w przestrzeni $(C(X), d_1)$ jest zbieżny do elementu tej przestrzeni.
 Niech $(f_n)_{n=0}^{\infty} \subset C(X),$ będzie ciągiem Cauchy'ego, czyli 
 \begin{equation}
@@ -960,39 +965,37 @@ $$d_1(f_n, f) = \max_{x \in X} \rho\big(f_n(x), f(x)\big) < \epsilon$$
 Z definicji odwzorowania $f$, dla każdego $x \in X$ ciąg $\big(f_n(x)\big)_{n=0}^{\infty}$ jest zbieżny do $f(x)$, a więc istnieje $n_x \in \mathbb{N},$ takie że $\forall_{n > n_x} \, \rho\big(f_n(x), f(x)\big) < \epsilon.$ Wystarczy więc wziąć $n_0 = \max_{x \in X} n_x.$
 
 Zauważmy, że $d_1$ jest metryką zbieżności jednostajnej. Odwzorowanie $f$ jest granicą ciągu odwzorowań ciągłych w metryce zbieżności jednostajnej, a więc $f \in C(X).$
-}
 \end{proof}
 
 \begin{lemma}[Ciągłe odwzorowania trójkątne tworzą przestrzeń metryczną zupełną]
 \label{ciagle_trojkatne_tworza_przestrzen_metryczna_zupelna}
 Niech $(X, \rho)$ i $(Y, \tau)$ będą zwartymi przestrzeniami metrycznymi.
-Wówczas przestrzeń metryczna $(C_\triangle(X \times Y), d_2)$ jest zupełna i topologia na niej jest topologią zbieżności jednostajnej.
+Wówczas przestrzeń metryczna $(C_\triangle(X \times Y), d_2)$ jest zupełna.
 \end{lemma}
 
 \begin{proof}
 {\color{red} !!!NOWE!!!
-{\color{green} Treść notatki od Pana (później oczywiście to usunę)
-Tutaj mój pomysł na strategię dowodu byłby takim, żeby pokazać, że odwzorowania trójkątne tworzą zbiór domknięty w przestrzeni wszystkich ciągłych odwzorowań produktu w siebie (z metryką zbieżności jednostajnej). Ta ostatnia jest zupełna, co pokazaliśmy wyżej, a podprzestrzeń domknięta przestrzeni zupełnej też jest zupełna.}
+
 
 Rozważmy przestrzeń $(C(X \times Y), d)$ wszystkich ciągłych odwzorowań postaci: 
-$$F: X \times Y \rightarrow X \times Y; \, F(x,y) = \big(f_x(x,y), f_y(x,y)\big)$$ 
-z metryką 
-$$d(F, G) = \max_{(x,y) \in X \times Y} \max \left\{ \rho\big(f_x(x,y), g_x(x,y)\big), \tau\big(f_y(x,y), g_y(x,y)\big) \right\}$$ 
-{\color{blue}(pytanie - czy wystarczy nam max a nie sup?, wynika to ze zwartości przestrzeni X i Y?)}
+$$F: X \times Y \rightarrow X \times Y.$$ 
+Weźmy dwa dowolne odwzorowania $F, \Phi \in C(X \times Y)$: 
+$$F(x,y) = \big(f(x,y), g(x,y)\big); \, \Phi(x,y) = \big(\phi(x,y), \psi(x,y)\big).$$
+Zdefiniujmy metrykę $d$ następująco:
+$$d(F, \Phi) = \max_{(x,y) \in X \times Y} \max \left\{ \rho\big(f(x,y), \phi(x,y)\big), \tau\big(g(x,y), \psi(x,y)\big) \right\}$$ 
 
-Pokażemy, że zbiór $(C_\triangle(X \times Y), d_2)$ jest domkniętym podzbiorem $(C(X \times Y), d)$ {\color{blue}(Pytanie: pokazać, że $d$ obcięte do $C_\triangle(X \times Y)$ jest równe $d_2$??)}
-Weźmy dowolny zbieżny ciąg odwzorowań: $(F_n)_{n=1}^{\infty} \subset C_\triangle(X \times Y).$ Oznaczmy $F = \lim_{n \rightarrow \infty} F_n.$
+
+Pokażemy, że zbiór $(C_\triangle(X \times Y), d_2)$ jest domkniętym podzbiorem $(C(X \times Y), d).$ Weźmy dowolny zbieżny ciąg odwzorowań: $(F_n)_{n=1}^{\infty} \subset C_\triangle(X \times Y).$ Oznaczmy $F = \lim_{n \rightarrow \infty} F_n,$ $\big(F=(f,g), \, F_n=(f_n, g_n)\big).$
 Mamy 
-$$\forall_{\epsilon > 0} \, \exists_{n_0} \, \forall_{n > n_0} d(F_n, F) = \max_{(x,y) \in X \times Y} \max \left\{ \rho\big(f_{n,x}(x,y), f_x(x,y)\big), \tau\big(f_{n,y}(x,y), f_y(x,y)\big) \right\} < \epsilon,$$
+$$\forall_{\epsilon > 0} \, \exists_{n_0} \, \forall_{n > n_0} d(F_n, F) = \max_{(x,y) \in X \times Y} \max \left\{ \rho\big(f_n(x,y), f(x,y)\big), \tau\big(g_n(x,y), g(x,y)\big) \right\} < \epsilon,$$
 oznacza to, że 
-$$\forall_{(x,y) \in X \times Y} \, \lim_{n \rightarrow \infty} \rho\big(f_{n,x}(x,y), f_x(x,y)\big) = \lim_{n \rightarrow \infty} \tau\big(f_{n,y}(x,y), f_y(x,y)\big) = 0.$$
-Ponieważ $\forall_{n \in \mathbb{N}} \, F_n \in C_\triangle(X \times Y),$ to $f_{n,x}(x,y) = f_{n,x}(x).$ 
+$$\forall_{(x,y) \in X \times Y} \, \lim_{n \rightarrow \infty} \rho\big(f_n(x,y), f(x,y)\big) = \lim_{n \rightarrow \infty} \tau\big(g_n(x,y), g(x,y)\big) = 0.$$
+Ponieważ $\forall_{n \in \mathbb{N}} \, F_n \in C_\triangle(X \times Y),$ to $f_n(x,y) = f_n(x).$ 
 Mamy więc 
-$$\forall_{(x,y) \in X \times Y} \, \lim_{n \rightarrow \infty} \rho\big(f_{n,x}(x), f_x(x,y)\big) = 0,$$
-czyli odwzorowania $f_x$ nie mogą zależeć od współrzędnej $y.$ Zatem odwzorowanie $F$ jest odwzorowaniem trójkątnym, czyli zbiór odwzorowań trójkątnych jest domkniętym podzbiorem przestrzeni $C(X \times Y).$ 
+$$\forall_{(x,y) \in X \times Y} \, \lim_{n \rightarrow \infty} \rho\big(f_n(x), f(x,y)\big) = \lim_{n \rightarrow \infty} \rho\big(f_n(x), f_x(y)\big) = 0.$$
+Ponadto dla każdych $n \in \mathbb{N}, x \in X, y_1, y_2 \in Y$ mamy $f_n(x, y_1) = f_n(x, y_2),$ wobec czego tę samą własność ma odwzorowanie $f.$ Ponieważ $f$ nie zależy od współrzędnej $y$ to odwzorowanie $F$ jest odwzorowaniem trójkątnym, czyli zbiór odwzorowań trójkątnych jest domkniętym podzbiorem przestrzeni $C(X \times Y).$ 
 
 Przestrzeń $(C(X \times Y), d)$ jest zupełna na mocy lematu \ref{przestrzen_ciaglych_jest_zupelna}. Ostatecznie $(C_\triangle(X \times Y), d_2)$ jako domknięta podprzestrzeń zupełnej przestrzeni $(C(X \times Y), d)$ również jest przestrzenią zupełną.
-{\color{blue} Tutaj nie jestem pewien czy lemat \ref{przestrzen_ciaglych_jest_zupelna} można tak bezpośrednio przenieść do sytuacji na produkcie, mniej więcej to widzę i wiem, że tak jest ale czy dostatecznie jest to w tekście wykazane? Ponadto tak samo jak w poprzednim lemacie - zostawić część zdania "... i topologia na niej jest topologią zbieżności jednostajnej" czy to usinąć? Jeżeli zostawić to chyba powinienem w sekcji z definicjami dorzucić co to znaczy topologia zbieżności jednostajnej}
 
 }
 \end{proof}
