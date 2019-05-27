@@ -993,7 +993,8 @@ $$\forall_{(x,y) \in X \times Y} \, \lim_{n \rightarrow \infty} \rho\big(f_n(x,y
 Ponieważ $\forall_{n \in \mathbb{N}} \, F_n \in C_\triangle(X \times Y),$ to $f_n(x,y) = f_n(x).$ 
 Mamy więc 
 $$\forall_{(x,y) \in X \times Y} \, \lim_{n \rightarrow \infty} \rho\big(f_n(x), f(x,y)\big) = \lim_{n \rightarrow \infty} \rho\big(f_n(x), f_x(y)\big) = 0.$$
-Ponadto dla każdych $n \in \mathbb{N}, x \in X, y_1, y_2 \in Y$ mamy $f_n(x, y_1) = f_n(x, y_2),$ wobec czego tę samą własność ma odwzorowanie $f.$ Ponieważ $f$ nie zależy od współrzędnej $y$ to odwzorowanie $F$ jest odwzorowaniem trójkątnym, czyli zbiór odwzorowań trójkątnych jest domkniętym podzbiorem przestrzeni $C(X \times Y).$ 
+{\color{blue}
+Ponadto dla każdych $n \in \mathbb{N}, x \in X, y_1, y_2 \in Y$ mamy $f_n(x, y_1) = f_n(x, y_2),$ wobec czego tę samą własność ma odwzorowanie $f.$ Ponieważ $f$ nie zależy od współrzędnej $y$ to odwzorowanie $F$ jest odwzorowaniem trójkątnym, czyli zbiór odwzorowań trójkątnych jest domkniętym podzbiorem przestrzeni $C(X \times Y).$}
 
 Przestrzeń $(C(X \times Y), d)$ jest zupełna na mocy lematu \ref{przestrzen_ciaglych_jest_zupelna}. Ostatecznie $(C_\triangle(X \times Y), d_2)$ jako domknięta podprzestrzeń zupełnej przestrzeni $(C(X \times Y), d)$ również jest przestrzenią zupełną.
 
@@ -1062,15 +1063,11 @@ Wówczas dla każdego $N \in \mathbb{N}$ istnieje niepusty zbiór otwarty $W \su
 \end{lemma}
 
 \begin{proof}
-{\color{red} !!!NOWE!!! {\color{blue}Pytanie: czy zawsze zlozenie funkcji ciaglych jest ciagle? Korzystam tutaj z tego. Poza tym wygląda na to że wystarczyły jedynie założenia o ciągłości f i skończoności niezmienniczego zbioru P, czy ja czegoś nie przeoczyłem?}
-W pierwszej kolejności pokażemy prawdziwość tezy dla $N=2.$
 $P$ jest zbiorem skończonym, więc możemy wypisać wszystkie jego elementy: 
 $$P = \{p_1, p_2, \ldots, p_k\}$$
 Ponieważ $V$ jest otwartym otoczeniem zbioru $P$ to istnieje $d>0,$ takie że dla każdego ${0<\epsilon<d}$ zbiór $\bigcup_{i=0}^k K(p_i, \epsilon)$ zawiera się w $V.$ Ustalmy $0<\epsilon<d$ i oznaczmy $U=\bigcup_{i=0}^k K(p_i, \epsilon),$ oczywiście $U \subseteq V.$ Rozważmy dowolny, ustalony punkt $p_i$ ze zbioru $P.$ Wiemy, że $P$ jest niezmienniczy ze względu na odwzorowanie $f$, a więc istnieją punkty $p_{j_1}, p_{j_2}, \ldots, p_{j_N} \in P$ dla których zachodzi $f(p_i) = p_{j_1}, \, f^2(p_i) = p_{j_2}, \, \ldots, \, f^N(p_i) = p_{j_N}.$ Z kolei z ciągłości odwzorowania $f$, również jego iteraty są ciągłe, a z tego wynika, że znajdziemy taką $\delta_i,$ że $\epsilon >\delta_i > 0$ i dla której $f^n(K(p_i, \delta_i)) \subset K(p_{j_n}, \epsilon) \subset U,$ dla każdego $n \in \{1,2,\ldots,N\}.$ Z dowolności wyboru $p_i$ otrzymujemy, że każdy zbiór postaci $f^n(K(p_i, \delta_i)),$ (gdzie $n \in \{1,2,\ldots,N\}$ a $p_i \in P$) zawiera się w $U$. Oznaczmy $W = \bigcup_{i=1}^k K(p_i, \delta_i),$ oczywiście $W$ jest niepustym zbiorem otwartym, który zawiera się w $U$ ponieważ $\delta_i < \epsilon$ dla każdego $i \in \{1,2,\ldots,k\}.$ Ponadto
 $$\forall_{n \in \{1,2,\ldots,k\}} \, f^n(W) = f^n(\bigcup_{i=1}^k K(p_i, \delta_i)) = \bigcup_{i=1}^k f^n(K(p_i, \delta_i)) \subset U.$$
 Ostatecznie otrzymujemy $W \cup f(W) \cup \ldots \cup f^N(W) \subset U \subseteq V.$
-
-}
 \end{proof}
 
 
