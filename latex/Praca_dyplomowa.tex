@@ -1023,13 +1023,31 @@ Niech $\mathcal{F}$ będzie zbiorem wszystkich odwzorowań $F = (f, g_x)$ ze zbi
 \item $\forall_{x \in P_0}$ $g_x$ jest identycznością 
 \end{enumerate}
 
+{\color{red} TODO: Opisać tutaj zbiór $P_0$, czy to tutaj dowolny zbiór skończony, czy muszę tutaj wziąć takie $P_0,$ który jest orbitą okresową odwzorowania $f$?}
+
 
 \begin{lemma} \label{F_jest_niepustym_domknietym_podzbiorem_trojkatnych}
 Zbiór $\mathcal{F}$ jest niepustym, domkniętym podzbiorem przestrzeni $C_{\triangle}(X \times I)$, 
 \end{lemma}
 
 \begin{proof}
-\textcolor{red}{TODO}
+{\color{red} !!!NOWE!!!
+Niech $f \in C(X)$ będzie odwzorowaniem chaotycznym w sensie Devaneya {\color{blue}(pytanie: pokazać, że takie istnieje w $C(X)$?)}. Zdefiniujmy $F_0(x,y) = (f(x), y).$ Dla każdego $x \in X$ odwzorowanie $g_x$ jest identycznością, więc w szczególności jest niemalejące i pozostawia krańce przedziału $I$ niezmienione. Zatem $F_0 \in \mathcal{F},$ czyli $\mathcal{F}$ jest zbiorem niepustym.
+
+Pokazujemy domkniętość. Weźmy dowolny ciąg zbieżny $\big(F_n=(f_n, g_{x,n})\big)_{n=1}^{\infty} \subset \mathcal{F}.$ Oznaczmy jego granicę przez $F=(f, g_x).$
+Wiemy, że zachodzi 
+\begin{equation}
+\label{rownanie_granica_ciagu_odwzorowan_ze_zbioru_mathcal_F}
+\lim_{n \rightarrow \infty} d_2(F_n, F) = \lim_{n \rightarrow \infty} \max\{d_1(f_n, f), \max_{x \in X} d_1(g_{x,n}, g_x)\} = 0
+\end{equation}
+Ponieważ $\forall_{n \in \mathcal{N}} \, F_n \in \mathcal{F},$ to $\forall_{n \in \mathcal{N}} \, f_n$ jest ciągłym odwzorowaniem chaotycznym w sensie Devaneya...
+
+Z równości \ref{rownanie_granica_ciagu_odwzorowan_ze_zbioru_mathcal_F} otrzymujemy również 
+$$\lim_{n \rightarrow \infty} \max_{x \in X} d_1(g_{x,n}, g_x) = 0$$
+a z tego mamy 
+$$\forall_{x \in X} \, \lim_{n \rightarrow \infty} d_1(g_{x,n}, g_x) = 0$$
+TODO: dokończyć tj pokazac ze f jest ciagla i chaotyczna w sensie devaneya i ze dla kazdego x gx jest niemalejaca ciagla i zostawia krance I niezmienione a dla tych gx, gdzie x nalezy do P0  gx sa identycznoscia.
+}
 \end{proof}
 
 
