@@ -233,39 +233,15 @@ Li-Yorke, Von Neumann, Birkhoff, Smale, Szarkowski, Devaney
 
 
 \begin{enumerate}
-\item ciąg
+
 \item podciąg
 TODO: Dopisać do sekcji definicji definicję punktu skupienia ciągu.
-\item ciąg Cauchy'ego (pojawia się w definicji zupełności, TODO ma być tutaj czy w faktach ogólnych dotyczących zwartych przestrzeni metrycznych?)
-
-
 
 \item zbieżność jednostajna (topologia zbieżności jednostajnej (pojawia się w definicji metryki na przestrzeni odwzorowań trójkątnych))
-%\item metryka jest
-%\item przestrzeń metryczna jest
-%\item kula otwarta jest
-%\item zbiór otwarty (korzystamy z pojecia kuli otwartej) jest
-%\item pokazac ze kula otwarta jest zbiorem otwartym jest
-%\item otoczenie punktu jest
-%\item sąsiedztwo punktu jest
-%\item wnętrze zbioru jest 
-%\item domknięcie jest
-%\item zbiór domknięty w przestrzeni metrycznej, jest
-%\item zbiór brzegowy, jest
-\item kula domknięta
 
 
 
-
-
-
-%\item gęstość w przestrzeni metrycznej jest
-\item zbiór nigdziegęsty
-%\item pokrycie zbiorami otwartymi jest
-%\item przestrzen metryczna zwarta, jest
-%\item ośrodkowość
 \item \textcolor{red}{baza topologii w przestrzeni zwartej (kule o środkach w ośrodku i promieniach wymiernych - potrzebne w dowodzie ogólnym patrz TODO na czerwono)}
-%\item zupelnosc, jest
 \item punkt izolowany w przestrzeni metrycznej
 
 
@@ -273,18 +249,10 @@ TODO: Dopisać do sekcji definicji definicję punktu skupienia ciągu.
 \item (zbiór $C(X)$)
 
 
-%\item uklad dynamiczny, jest
-%\item orbita, jest
-%\item iterata odwzorowania, jest
-\item iteracja odwzorowania
-%\item punkt stały, jest
-%\item punkt okresowy odwzorowania, jest
-\item orbita okresowa
-%\item niezmienniczosc zbioru ze wzgledu na odwzorowanie, jest
 
 
-%\item entropia topologiczna Adler, jest
-%\item entropia topologiczna Bowen, jest
+
+
 \item entropia topologiczna - dowod rownowaznosci (ksiazka misiurewicz combinatorial dynamics and entropy in dimension one oraz ksiazka ruette rozdzial 4)
 
 %\item topologiczna tranzytywnosc, jest
@@ -412,6 +380,8 @@ Domknięciem zbioru $A \subset X$ nazywamy zbiór $\{x \in X: \forall_{r>0} \, K
 \begin{definition}[Zbiór domknięty]
 Zbiór $A$ jest domknięty gdy $A = \textrm{Cl}(A)$.
 \end{definition}
+
+{\color{red}TODO: moze tu cos z punktami skupienia i definicja z punktami skupienia bedize lepsza - korzystam z niej przy dowodach}
 
 \begin{definition}[Zbiór gęsty]
 Dla danej przestrzeni metrycznej $(X, \rho)$. Zbiór $A \subset X$ nazwiemy gęstym, gdy $\forall_{x \in X} \, \forall_{\epsilon>0} \, \exists_{a \in A} : \rho(x, a) < \epsilon$.
@@ -541,16 +511,16 @@ W przestrzeni metrycznej zupełnej, przekrój przeliczalnie wielu zbiorów rezyd
 Układem dynamicznym nazywamy parę $(X, T)$, gdzie $X$ jest zbiorem a $T:X \rightarrow X$ przekształceniem (odwzorowaniem).
 \end{definition}
 
+\begin{definition}[Iterata przekształcenia]
+Iterata przekształcenia $T$ to potęga przekształcenia $T^n$, $n \in \mathbb{N}$. Potęgę rozumiemy tutaj jako $n-$krotne złożenie odwzorowania z samym sobą: $T^n = (T \circ T \circ \ldots \circ T).$
+\end{definition}
+
 \begin{definition}[Orbita]
 Orbita punktu $x$ to ciąg $x, Tx, T^2x, T^3x,\ldots$, czyli 
 $$O_T(x) = \{T^nx: n=0,1,2,\ldots\}.$$
 
 Jeśli $T$ jest odwracalne (czyli różnowartościowe i ,,na''), to możemy rozważać orbitę obustronną:
 $$\{T^nx: n \in \mathbb{Z}\}.$$
-\end{definition}
-
-\begin{definition}[Iterata przekształcenia]
-Iterata przekształcenia $T$ to potęga przekształcenia $T^n$, $n \in \mathbb{N}$.
 \end{definition}
 
 \begin{definition}[Punkt stały]
@@ -563,7 +533,9 @@ Punkt $x$ jest okresowy, gdy jest stały dla jakiejś iteraty, tzn. gdy $\exists
 
 
 \begin{definition}[Orbita okresowa]
-\textcolor{red}{TODO}
+{\color{red}!!!NOWE!!!
+Orbitą okresową nazywamy orbitę punktu okresowego. Zauważmy, że orbity okresowe traktowane jako zbiory są zawsze skończone.
+}
 \end{definition}
 
 \begin{definition}[Niezmienniczość zbioru ze względu na odwzorowanie]
@@ -595,6 +567,7 @@ $$h(f, \mathcal{A}) = \lim_{n \rightarrow \infty}{\frac{1}{n}\log\mathcal{N}(\ma
 \end{definition}
 
 \begin{definition}[Entropia topologiczna Adler, Konheim, McAndrew]
+\label{definicja_entropii_topologicznej_adlera}
 Na podstawie \cite{misiurewicz1993}.
 Adler, Konheim i McAndrew entropię topologiczną odwzorowania $f$ definiują następująco: 
 $$h(f) = \sup h(f, \mathcal{A}),$$ gdzie supremum jest brane po wszystkich otwartych pokryciach $\mathcal{A}$ przestrzeni $X$.
@@ -635,6 +608,7 @@ Minimalną moc zbioru $(n, \epsilon)$-rozpinającego oznaczamy przez $r_n(f, \ep
 
 
 \begin{definition}[Entropia topologiczna Bowena]
+\label{definicja_entropii_topologicznej_bowena}
 Niech $(X, f)$ będzie układem dynamicznym.
 Wtedy
 
@@ -642,11 +616,11 @@ $$h_{\textrm{top}}(f) = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\i
 
 \end{definition}
 
-
-
-\textcolor{red}{TODO: entropia topologiczna - dowod rownowaznosci
- (ksiazka misiurewicz combinatorial dynamics and entropy in dimension one oraz ksiazka ruette rozdzial 4)}
- 
+{\color{red} !!!NOWE!!!
+\begin{theorem}(Równość entropii Adlera, Konheima, McAndrew i entropii topologicznej Bowena)
+Definicje \ref{definicja_entropii_topologicznej_adlera} i \ref{definicja_entropii_topologicznej_bowena} entropii topologicznej są równoważne. \cite[s.~59]{ruette2017chaos}
+\end{theorem}
+} 
  
 
 \begin{lemma}[Złożenie dwóch funkcji niemalejących jest niemalejące]
@@ -731,18 +705,6 @@ $h_{\textrm{top}}(f) = 0.$
 \end{proof}
  
  
- 
- 
-\begin{theorem}[Dolne ograniczenie na entropię na odcinku] \label{dolne_ograniczenie_entropii_na_odcinku}
-\cite{ruette2017chaos}
-Jeżeli $f$ jest topologicznie tranzytywne, to entropia topologiczna $h(f) \geq \frac{1}{2} \log(2)$.
-TODO
-\end{theorem}
-
-\begin{proof}
-\textcolor{red}{TODO: jak zabraknie czasu to tylko zacytowac artykul}
-\end{proof}
-
 
 
 \subsection{Chaos}
@@ -840,6 +802,20 @@ Ciągłe odwzorowanie $f: X \rightarrow X$ na zwartej przestrzeni metrycznej $(X
 \end{enumerate}
 \end{definition}
 
+
+
+{\color{red} !!!NOWE!!!
+\subsection{Tranzytywność a entropia}
+
+Zarówno tranzytywność, chaotyczność jak i topologiczną entropię możemy intuicyjnie pojmować jako pewne ,,miary skomplikowania'' układu dynamicznego. Pojawia się więc pytanie czy są to pojęcia tożsame, a jeżeli nie, to jak bardzo się różnią. Czy możliwe jest aby odwzorowanie topologicznie tranzytywne miało zerową entropię topologiczną i odwrotnie: czy odwzorowanie o niezerowej entropii topologicznej może nie być tranzytywne. Okazuje się, że odpowiedź na oba te pytania jest twierdząca. Wiele zależy od przestrzeni którą rozważamy.
+Mając daną przestrzeń, możemy zadać pytanie czy istnieje dla niej odwzorowanie tranzytywne (a nawet więcej: chaotyczne), ale o zerowej entropii topologicznej. Ogólniej: jaką wartość przyjmuje dolne ograniczenie na entropię topologiczną dla odwzorowań chaotycznych na danej przestrzeni i czy istnieje odwzorowanie o entropii równej temu ograniczeniu. Innymi słowy możemy rozważać problem istnienia i wartości minimum bądź supremum entropii topologicznej po wszystkich chaotycznych odwzorowaniach danej przestrzeni w nią samą. Poniżej przedstawiamy kilka znanych wyników przedstawionych w \cite{balibrea2003topological}.
+W każdym z poniższych punktów zakładamy, że $f$ jest chaotyczne w sensie Devaneya.
+\begin{enumerate}
+\item Jeżeli $f: [0,1] \rightarrow [0,1],$ to entropia topologiczna $h(f) \geq \frac{1}{2} \log(2)$.
+\item Istnieje $f: C \rightarrow C,$ gdzie $C$ jest zbiorem Cantora, takie że $h(f) = 0.$
+\item Niech $F = \{f : S^1 \rightarrow S^1 \, | \, f \textrm{ jest chaotyczne w sensie Devaneya}\},$ gdzie $S^1$ oznacza okrąg. Dla każdego $\epsilon > 0$ istnieje $f \in F$ dla którego $h(f) < \epsilon,$ jednocześnie nie istnieje takie $f \in F,$ dla którego wartość entropii osiąga zero.
+\end{enumerate}
+}
 
 
 \subsection{Odwzorowania trójkątne}
@@ -1013,17 +989,14 @@ Dla $(x, y) \in X \times Y$ niech $\textrm{pr}_1(x, y) = x$ i $\textrm{pr}_2(x, 
 \section{Lematy}
 
 Na potrzeby kolejnych lematów wprowadźmy następujące definicje i oznaczenia.
-
 Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowanych oraz niech $f \in C(X)$ będzie odwzorowaniem chaotycznym w sensie Devaneya.
-Przez $I$ oznaczmy odcinek domknięty $[0, 1].$
-Niech $\mathcal{F}$ będzie zbiorem wszystkich odwzorowań $F = (f, g_x)$ ze zbioru $C_\triangle(X \times I)$ spełniających następujące warunki:
+$I = [0, 1].$
+$P_0$ to dowolny, skończony zbiór zawarty w $X.$ Przez $\mathcal{F}$ oznaczmy zbiór wszystkich odwzorowań $F = (f, g_x)$ ze zbioru $C_\triangle(X \times I)$ spełniających następujące warunki:
 \begin{enumerate}
 \item Odwzorowanie bazowe $f$ spełnia założenia twierdzenia \ref{twierdzenie_glowne}.
 \item $\forall_{x \in X}$ odwzorowanie $g_x$ jest niemalejące i krańce przedziału I pozostawia niezmienione.
 \item $\forall_{x \in P_0}$ $g_x$ jest identycznością 
 \end{enumerate}
-
-{\color{red} TODO: Opisać tutaj zbiór $P_0$, czy to tutaj dowolny zbiór skończony, czy muszę tutaj wziąć takie $P_0,$ który jest orbitą okresową odwzorowania $f$?}
 
 
 \begin{lemma} \label{F_jest_niepustym_domknietym_podzbiorem_trojkatnych}
