@@ -598,7 +598,7 @@ $$h(f) = \sup h(f, \mathcal{A}),$$ gdzie supremum jest brane po wszystkich otwar
 \subsubsection{Definicja Bowena}
 \cite{ruette2017chaos}
 
-Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną, a $f: X \rightarrow X$ ciągłym odwzorowaniem (TODO: ma byc uniformly continous - tak jest u Bowena, jest tak ze zwartości $X$, napisać to tutaj?).
+Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną, a $f: X \rightarrow X$ ciągłym odwzorowaniem {\color{red}(TODO: ma byc uniformly continous - tak jest u Bowena, jest tak ze zwartości $X$, napisać to tutaj?)}.
 
 \begin{definition}[Kula Bowena]
 Niech  $\epsilon > 0$ oraz $n \geq 1$. Kulę Bowena rzędu $n$ o środku w punkcie $x \in X$ i promieniu $\epsilon$ definiujemy następująco
@@ -875,7 +875,7 @@ $$h(F) = h(f)$$
 \begin{proof}
 %\cite{do_dowodu_rownosci_topologicznej_entropii_2_twierdzenieD}
 
-Rozważamy $X \times I$, oraz $X.$ Są to zwarte przestrzenie metryczne (TODO: pokazać zwartość? Jaką metrykę mamy na $X \times I$? max($\rho_x, \rho_y$)?).
+Rozważamy $X \times I$, oraz $X.$ Są to zwarte przestrzenie metryczne {\color{red}(TODO: pokazać zwartość? Jaką metrykę mamy na $X \times I$? max($\rho_x, \rho_y$)?)}.
 Zdefiniujmy odwzorowanie $\pi: X \times I \rightarrow X$, $\pi(x,a) = x$. Oczywiście $\pi$ jest ciągłe i ,,na''.
 Wówczas $F: X \times I \rightarrow X \times Y$, $f: X \rightarrow X$ oraz $\pi: X \times I \rightarrow X$ (,,na'') są ciągłymi odwzorowaniami. 
 
@@ -896,11 +896,47 @@ $$\forall_{x \in X} \, h(F, \pi^{-1}(x)) = h(g_x) = 0,$$
 czyli również:
 $$\sup_{x \in X} h(F, \pi^{-1}(x)) = 0.$$
 
-Ostatecznie dostajemy:
+Otrzymujemy zatem nierówność:
+\begin{equation}
+\label{twierdzenie_o_rownosci_entropii_nierownosc_pierwsza}
+h(F) \leq h(f)
+\end{equation}
 
-$$h(F) \leq h(f)$$
 
-\textcolor{red}{TODO: pokazac ze $h(F) \geq h(f)$}
+{\color{red} !!!NOWE!!! (Pokazuję ze $h(F) \geq h(f)$)
+Skorzystamy z definicji \ref{definicja_entropii_topologicznej_adlera} (Adlera) entropii topologicznej. Rozważmy wszystkie pokrycia otwarte przestrzeni $X \times I$ postaci $\widetilde{\mathcal{A}} = \{A \times I : A \in \mathcal{A}\},$ gdzie $\mathcal{A}$ jest dowolnym pokryciem otwartym przestrzeni $X.$ Wtedy dla każdego takiego pokrycia $\widetilde{\mathcal{A}}$ zachodzi:
+\begin{align*}
+F^{-n}(A \times I) & = \{(x,y): F^n(x,y) \in A \times I\} \\
+& = \left\{(x,y): f^n(x) \in A \wedge \big(g_{f^n(x)} \circ \ldots \circ g_{f(x)} \circ g_x\big)(y) \in I\right\} \\
+& = \{x : f^n(x) \in A\} \times I \\
+& = f^{-n}(A) \times I,
+\end{align*}
+dla każdego $A \times I \in \widetilde{\mathcal{A}}.$ 
+Dalej 
+$$F^{-n}\left(\widetilde{\mathcal{A}}\right) = \left\{F^{-n}(A \times I) : A \times I \in \widetilde{\mathcal{A}}\right\} = \left\{f^{-n}(A) \times I : A \in \mathcal{A}\right\}.$$
+Ponadto dla każdych $A_1 \times I, A_2 \times I$ mamy $(A_1 \times I) \cap (A_2 \times I) = (A_1 \cap A_2) \times I,$ a więc $${\widetilde{\mathcal{A}}}^n = \bigvee_{i=0}^{n-1}F^{-i}\left(\widetilde{\mathcal{A}}\right) = \left\{A \times I : A \in \bigvee_{i=0}^{n-1}f^{-i}({\mathcal{A}}) \right\}.$$
+
+Skoro dla każdego $n \in \mathbb{N}$ wszystkie zbiory należące do ${\widetilde{\mathcal{A}}}^n$ są postaci jak wyżej, to podrodzina ${\widetilde{\mathcal{B}}}^n \subseteq {\widetilde{\mathcal{A}}}^n$ jest podpokryciem przestrzeni $X \times I$ wtedy i tylko wtedy, gdy podrodzina $\mathcal{B}^n \subseteq \mathcal{A}^n$ jest podpokryciem przestrzeni $X.$
+Z powyższego wynika, że dla każdego $n \in \mathbb{N}$ zachodzi
+$\mathcal{N}\left({\widetilde{\mathcal{A}}}^n\right) = \mathcal{N}(\mathcal{A}^n),$
+co w konsekwencji daje:
+$$\sup_{\widetilde{\mathcal{A}} \in \mathcal{R}} h(F, \widetilde{\mathcal{A}}) = \sup_{\mathcal{A}} h(f, \mathcal{A}),$$
+gdzie 
+$$\mathcal{R} = \left\{\widetilde{\mathcal{A}} : \widetilde{\mathcal{A}} = \{A \times I : A \in \mathcal{A}\}, \textrm{ gdzie } \mathcal{A} \textrm{ jest dowolnym pokryciem otwartym przestrzeni } X\right\},$$
+Drugie supremum w powyższym wzorze brane jest po wszystkich pokryciach przestrzeni $X,$ czyli otrzymujemy:
+$$\sup_{\widetilde{\mathcal{A}} \in \mathcal{R}} h(F, \widetilde{\mathcal{A}}) = h(f).$$
+
+Aby otrzymać entropię odwzorowania $F$ bierzemy supremum po wszystkich pokryciach przestrzeni $X \times I,$ czyli po nadzbiorze zbioru $\mathcal{R},$ więc:
+\begin{equation}
+\label{twierdzenie_o_rownosci_entropii_nierownosc_druga}
+h(F) \geq \sup_{\widetilde{\mathcal{A}} \in \mathcal{R}} h(F, \widetilde{\mathcal{A}})  = h(f)
+\end{equation}
+
+
+Ostatecznie z nierówności \ref{twierdzenie_o_rownosci_entropii_nierownosc_pierwsza} i \ref{twierdzenie_o_rownosci_entropii_nierownosc_druga} dostajemy:
+$$h(F) = h(f).$$
+
+}
 
 \end{proof}
 
@@ -1117,19 +1153,23 @@ Wtedy dla każdej rodziny niepustych zbiorów otwartych $U_1, U_2, \ldots, U_n \
 Ponieważ odwzorowanie $f$ jest tranzytywne a przestrzeń $X$ jest zwarta, to istnieje punkt $x_0$, którego orbita jest gęsta w $X$. Zatem orbita punktu $x_0$ odwiedza każdy ze zbiorów otwartych $U_i, \, i = 1,2,\ldots,n.$ Teraz korzystając z ciągłości odwzorowania $f$ wystarczy wziąć punkt okresowy $f$ dostatecznie bliski $x_0.$
 \end{proof}
 
+{\color{red}
+{\color{blue}Poniżej alternatywa dla powyższego dowodu, jeżeli powyższy jest dobry, to tego alternatywnego nie będę wykorzystywał.}
 \begin{proof}
-Alternatywa.
+Alternatywa (dowód alternatywny).
 x jest zwartaZwarta => osrodkowa i zupelna + twierdzenie bairea
 TODO
 Przestrzeń $X$ jest zwarta, a zatem zupełna i ośrodkowa.
 \end{proof}
+}
 
 
 
 \begin{lemma}
 \label{lemat_4_glownego_artykulu}
 \cite{alseda1999entropy}
-Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną i niech $F = (f, g_x)$ będzie odwzorowaniem należącym do $C_\triangle(X \times I)$ którego wszystkie odwzorowania włóknowe są niemalejące i pozostawiają krańce $I$ niezmienione. Niech $\{a_1, a_2, \ldots, a_n\}$ będzie podzbiorem $X$ oraz dla $i = 1, 2, \ldots, n$ niech $U_i$ będą parami rozłącznymi zbiorami otwartymi, takimi że $a_i \in U_i$. Załóżmy, że $h_i$ są niemalejącymi odwzorowaniami z $C(I)$ pozostawiającymi krańce $I$ niezmienione i spełniającymi $d_1(h_i, g_{a_i}) < \epsilon$ dla pewnego dodatniego $\epsilon$ i każdego $i = 1, 2, \ldots, n$. Wówczas istnieje odwzorowanie $\widetilde{F} = (f, \widetilde{g}_x) \in C_\triangle(X \times I)$ spełniające cztery następujące warunki:
+Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną i niech $F = (f, g_x)$ będzie odwzorowaniem należącym do $C_\triangle(X \times I)$ którego wszystkie odwzorowania włóknowe są niemalejące i pozostawiają krańce $I$ niezmienione. Niech $\{a_1, a_2, \ldots, a_n\}$ będzie podzbiorem $X$ oraz dla $i = 1, 2, \ldots, n$ niech $U_i$ będą parami rozłącznymi zbiorami otwartymi, takimi że $a_i \in U_i$. Załóżmy, że $h_i$ są niemalejącymi odwzorowaniami z $C(I)$ pozostawiającymi krańce $I$ niezmienione i spełniającymi $d_1(h_i, g_{a_i}) < \epsilon$ dla pewnego dodatniego $\epsilon$ i każdego $i = 1, 2, \ldots, n$. Wówczas istnieje odwzorowanie 
+$$\widetilde{F} = (f, \widetilde{g}_x) \in C_\triangle(X \times I)$$ spełniające cztery następujące warunki:
 
 \begin{enumerate}
 \item  wszystkie odwzorowania włóknowe $\widetilde{F}$ są niemalejące i pozostawiające krańce $I$ niezmienione,
@@ -1160,8 +1200,17 @@ dla każdego $y \in I$. Zauważmy ponadto, że dla $x \in V_i$ oraz $i \in \{1,2
 \widetilde{g}_x(y) = u(x)(h_i(y) - g_x(y)) + g_x(y).
 \end{equation}
 
-Rozważmy odwzorowanie $\widetilde{F} = (f, \widetilde{g}_x)$. Należy ono do $C_\triangle(X \times I)$. Z równości \ref{lemat4_rownanie_1} widzimy, że wszystkie odwzorowania włóknowe $\widetilde{g}_x$ są niemalejące i krańce przedziału $I$ są ich punktami stałymi. Ponadto $\widetilde{g}_{a_i} = h_i$ dla każdego $i$ oraz $\widetilde{g}_x = g_x$ dla $x \in X \setminus V \supset X \setminus U$. Ponieważ dla $x \in V_i$, gdzie $i \in \{1,2,\ldots,n\}$ mamy $d_1(h_i, g_x) < \widetilde{\epsilon}$ oraz $u(x) \in [0,1]$, zatem z równości \ref{lemat4_rownanie_2} otrzymujemy $d_1(g_x, \widetilde{g}_x) < \widetilde{\epsilon}$ dla każdego $x \in V$. Wynika z tego, że $d_2(F, \widetilde(F)) \leq \widetilde{\epsilon} < \epsilon$ (TODO uzasadnic tutaj wewnatrz to ostatnie przejscie od d1 do d2 z definicji d1 i d2), co kończy dowód.
-
+Rozważmy odwzorowanie $\widetilde{F} = (f, \widetilde{g}_x)$. Należy ono do $C_\triangle(X \times I)$. Z równości \ref{lemat4_rownanie_1} widzimy, że wszystkie odwzorowania włóknowe $\widetilde{g}_x$ są niemalejące i krańce przedziału $I$ są ich punktami stałymi. Ponadto $\widetilde{g}_{a_i} = h_i$ dla każdego $i$ oraz $\widetilde{g}_x = g_x$ dla $x \in X \setminus V \supset X \setminus U$. Ponieważ dla $x \in V_i$, gdzie $i \in \{1,2,\ldots,n\}$ mamy $d_1(h_i, g_x) < \widetilde{\epsilon}$ oraz $u(x) \in [0,1]$, zatem z równości \ref{lemat4_rownanie_2} otrzymujemy $d_1(g_x, \widetilde{g}_x) < \widetilde{\epsilon}$ dla każdego $x \in V$. {\color{red} !!!NOWE!!!
+Wynika z tego, że 
+\begin{align*}
+d_2(F, \widetilde{F}) & = d_2\big((f, g_x), (f, \widetilde{g_x})\big) \\
+& = \max\{d_1(f, f), \max_{x \in X}d_1(g_x, \widetilde{g_x})\} \\
+& = \max\{0, \max_{x \in X}d_1(g_x, \widetilde{g_x})\} \\
+& = \max_{x \in X}d_1(g_x, \widetilde{g_x}) \\
+& \leq \widetilde{\epsilon} < \epsilon,
+\end{align*}
+co kończy dowód.
+}
 \end{proof}
 
 \end{lemma}

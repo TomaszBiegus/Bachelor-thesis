@@ -20,9 +20,9 @@
 \contentsline {subsection}{\numberline {1.1.7}Chaos}{13}{subsection.1.1.7}
 \contentsline {subsection}{\numberline {1.1.8}Tranzytywno\IeC {\'s}\IeC {\'c} a entropia}{15}{subsection.1.1.8}
 \contentsline {subsection}{\numberline {1.1.9}Odwzorowania tr\IeC {\'o}jk\IeC {\k a}tne}{16}{subsection.1.1.9}
-\contentsline {subsection}{\numberline {1.1.10}Definicje utworzone na potrzeby dowodu twierdzenia o rozszerzaniu}{17}{subsection.1.1.10}
-\contentsline {section}{\numberline {1.2}Lematy}{19}{section.1.2}
-\contentsline {chapter}{\numberline {2}Twierdzenie o rozszerzaniu odwzorowa\IeC {\'n} chaotycznych w sensie Devaneya}{23}{chapter.2}
-\contentsline {chapter}{Podsumowanie}{29}{chapter*.5}
-\contentsline {chapter}{Dodatek}{31}{chapter*.6}
-\contentsline {chapter}{Bibliografia}{32}{section*.7}
+\contentsline {subsection}{\numberline {1.1.10}Definicje utworzone na potrzeby dowodu twierdzenia o rozszerzaniu}{18}{subsection.1.1.10}
+\contentsline {section}{\numberline {1.2}Lematy}{20}{section.1.2}
+\contentsline {chapter}{\numberline {2}Twierdzenie o rozszerzaniu odwzorowa\IeC {\'n} chaotycznych w sensie Devaneya}{25}{chapter.2}
+\contentsline {chapter}{Podsumowanie}{31}{chapter*.5}
+\contentsline {chapter}{Dodatek}{33}{chapter*.6}
+\contentsline {chapter}{Bibliografia}{34}{section*.7}
