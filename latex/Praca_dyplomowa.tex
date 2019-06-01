@@ -639,6 +639,7 @@ $$h_{\textrm{top}}(f) = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\i
 
 {\color{red} !!!NOWE!! {\color{blue} Definicję entropii bowena wzialem z pracy Ruette, ona tam nie rozwazala entropii na podzbiorze tak jak Bowen, dlatego mialem klopot z interpretacja oznaczenia h(F, A) gdzie A jest zbiorem, w celu unikniecia przepisywania na nowo definicji zamiescilem tutaj tylko taka notke. Moze dopisac ze ruette defniuje nieco inaczej a w oryginale bowen korzysta z takich entropii jak ponizej i pozniej wlasciwa entropie na calej przestrzeni dostaje bierzac supremum po wszystkich zwartych podzbiorach przestrzeni?}
 \begin{definition}[Entropia topologiczna Bowena na podzbiorze przestrzeni]
+\label{entropia_bowena_podzbior_przestrzeni}
 \cite[s.~402]{bowen1971entropy__do_dowodu_rownosci_topologicznej_entropii_2_twierdzenie17}
 Powyższe definicje występują też w wersjach ograniczonych do ustalonego zbioru zwartego $K \subset X.$ I tak, niech $K \subset X$ będzie zbiorem zwartym, wtedy:
 \begin{enumerate}
@@ -902,6 +903,12 @@ a więc $\pi \circ F = f \circ \pi.$
 Na podstawie twierdzenia 17 z pracy  \cite[s.~409]{bowen1971entropy__do_dowodu_rownosci_topologicznej_entropii_2_twierdzenie17} otrzymujemy, że 
 
 $$h(F) \leq h(f) + \sup_{x \in X} h(F, \pi^{-1}(x))$$
+
+
+{\color{orange}
+Mówimy, że zbiór $E \subset X$ jest $(n, \epsilon)$-rozdzielony jeżeli dla każdych $x, y \in E,$ takich że $x \neq y$ istnieje $k \in \{0, 1, \ldots, n-1\},$ takie że $\rho(f^k(x), f^k(y)) > \epsilon.$
+Maksymalną moc zbioru $(n, \epsilon)$-rozdzielonego zawartego w $K$ oznaczamy przez $s_n(f, \epsilon, K).$
+$h_{\textrm{top}}(f, K) = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log s_n(f, \epsilon, K).$}
 
 \textcolor{red}{Ustalmy $x \in X$, $h(F, \pi^{-1}(x)) = h(F, \{x\} \times I) =???= h(g_x)$ TODO: nie do konca rozumiem zapis $h(F, A)$, gdzie $A$ jest zbiorem, w pracy Bowena zbiór zwarty $K$ występuje przy definicji 2 na stronie 402 i nie jest powiedziane wprost, że ograniczamy się do tego zbioru, tylko, że przy zbiorach $(\epsilon, n)$-rozdzielonych ograniczamy się do największej mocy zbioru $(\epsilon, n)$-rozdzielonego zawartego w K. Chyba powinienem wykazać, że to sprowadza się do entropii na zbiorze K (w naszym przypadku do włókna z odwzorowaniem $g_x$)}
 
