@@ -637,6 +637,20 @@ $$h_{\textrm{top}}(f) = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\i
 
 \end{definition}
 
+{\color{red} !!!NOWE!! {\color{blue} Definicję entropii bowena wzialem z pracy Ruette, ona tam nie rozwazala entropii na podzbiorze tak jak Bowen, dlatego mialem klopot z interpretacja oznaczenia h(F, A) gdzie A jest zbiorem, w celu unikniecia przepisywania na nowo definicji zamiescilem tutaj tylko taka notke. Moze dopisac ze ruette defniuje nieco inaczej a w oryginale bowen korzysta z takich entropii jak ponizej i pozniej wlasciwa entropie na calej przestrzeni dostaje bierzac supremum po wszystkich zwartych podzbiorach przestrzeni?}
+\begin{definition}[Entropia topologiczna Bowena na podzbiorze przestrzeni]
+\cite[s.~402]{bowen1971entropy__do_dowodu_rownosci_topologicznej_entropii_2_twierdzenie17}
+Powyższe definicje występują też w wersjach ograniczonych do ustalonego zbioru zwartego $K \subset X.$ I tak, niech $K \subset X$ będzie zbiorem zwartym, wtedy:
+\begin{enumerate}
+\item Maksymalną moc zbioru $(n, \epsilon)$-rozdzielonego zawartego w $K$ oznaczamy przez $s_n(f, \epsilon, K).$
+\item $h_{\textrm{top}}(f, K) = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log s_n(f, \epsilon, K).$
+\end{enumerate}
+
+\end{definition}
+
+W dalszej części pracy będziemy używali oznaczenia $h$ zamiast $h_{\textrm{top}},$ w miejscach gdzie nie będzie prowadziło to do nieporozumień.
+}
+
 {\color{red} !!!NOWE!!!
 \begin{theorem}(Równość entropii Adlera, Konheima, McAndrew i entropii topologicznej Bowena)
 Definicje \ref{definicja_entropii_topologicznej_adlera} i \ref{definicja_entropii_topologicznej_bowena} entropii topologicznej są równoważne. \cite[s.~59]{ruette2017chaos}
