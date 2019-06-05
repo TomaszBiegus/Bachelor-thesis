@@ -285,43 +285,7 @@ TODO: Dopisać do sekcji definicji definicję punktu skupienia ciągu.
 
 \subsection{Definicje i fakty ogólne}
 
-\begin{definition}[Ciąg]
-Ciąg $(x_n)_{n=1}^{\infty}$ jest to funkcja określona na zbiorze liczb naturalnych. Wartości tej funkcji dla kolejnych liczb naturalnych nazywamy wyrazami ciągu i oznaczamy: $x_1, x_2, \ldots$. Niekiedy ciąg oznaczamy skrótowo przez $(x_n)$. W pracy rozważać będziemy ciągi w przestrzeniach metrycznych, czyli funkcje postaci $x: \mathbb{N} \rightarrow X,$ gdzie $X$ jest rozważaną przestrzenią metryczną.
-\end{definition}
 
-{\color{red} !!!NOWE!!!
-\begin{definition}[Podciąg]
-Niech $(x_n)_{n=1}^{\infty}$ będzie ciągiem o wyrazach ze zbioru $X$. Niech $(k_i)_{i=1}^{\infty} \subset \mathbb{N}$ będzie silnie rosnącym ciągiem indeksów. Wówczas ciąg $(x_{k_i})_{i=1}^{\infty}$ nazywamy podciągiem ciągu $(x_n)_{n=1}^{\infty}.$
-\end{definition}
-
-\begin{definition}[Granica ciągu]
-W przestrzeni metrycznej $(X, \rho),$ punkt $g$ nazywamy granicą ciągu $(x_n)_{n=1}^\infty$ gdy zachodzi warunek:
-
-$$\forall_{\epsilon>0} \, \exists_{N \in \mathbb{N}} \, \forall_{n>N} \, \rho(x_n, g) < \epsilon.$$
-\end{definition}
-
-
-\begin{definition}[Granica dolna ciągu]
-Granicę dolną ciągu $(x_n)_{n=1}^\infty$ definiujemy następująco:
-
-$$\liminf_{n \rightarrow \infty} x_n = \lim_{n \rightarrow \infty} \left(\inf_{k \geq n} x_k\right) = \sup_{n \geq 0} \inf_{k \geq n} x_k.$$
-\end{definition}
-
-\begin{definition}[Granica górna ciągu]
-Granicę górną ciągu $(x_n)_{n=1}^\infty$ definiujemy następująco:
-
-$$\limsup_{n \rightarrow \infty} x_n = \lim_{n \rightarrow \infty} \left(\sup_{k \geq n} x_k\right) = \inf_{n \geq 0} \sup_{k \geq n} x_k.$$
-\end{definition}
-
-\begin{definition}[Punkt skupienia ciągu]
-Punkt $x_0$ nazywamy punktem skupienia ciągu $(x_n)_{n=1}^{\infty}$ gdy w dowolnym otoczeniu punktu $x_0$ znajduje się nieskończenie wiele wyrazów tego ciągu. {\color{blue} pytanie: Korzystam tutaj z pojęcia otoczenia, umieścić tę definicję później, po definicji otoczenia czy przeredagowac tak, żeby nie była wymagana definicja otoczenia?}
-\end{definition}
-}
-
-\begin{definition}[Ciąg Cauchy'ego]
-Ciągiem Cauchy'ego w przestrzeni metrycznej $(X, \rho)$ nazywamy ciąg $(x_n)$ spełniający warunek:
-$$\forall_{\epsilon>0} \, \exists_{N \in \mathbb{N}} \, \forall_{n,m > N} \, \rho(x_n, x_m) < \epsilon.$$
-\end{definition}
 
 
 
@@ -396,13 +360,13 @@ Domknięciem zbioru $A \subset X$ nazywamy zbiór $\{x \in X: \forall_{r>0} \, K
 Zbiór $A$ jest domknięty, gdy $A = \textrm{Cl}(A)$.
 \end{definition}
 
-{\color{red}TODO: !!!NOWE!!! - poniżej - z tej definicji domknietosci korzystam w dowodach, więc ją dodałem
+
 
 \begin{theorem}[Charakteryzacja zbioru domkniętego w przestrzeni metrycznej]
 Podzbiór $A$ przestrzeni metrycznej $(X, \rho)$ jest domknięty wtedy i tylko wtedy, gdy dla dowolnego ciągu zbieżnego $(x_n)_{n=1}^{\infty},$ zawartego w  $A,$ jego granica również należy do $A.$
 \end{theorem}
 
-}
+
 
 \begin{definition}[Zbiór gęsty]
 Dla danej przestrzeni metrycznej $(X, \rho)$. Zbiór $A \subset X$ nazwiemy gęstym, gdy $\forall_{x \in X} \, \forall_{\epsilon>0} \, \exists_{a \in A} : \rho(x, a) < \epsilon$.
@@ -415,6 +379,47 @@ Zbiór $A$ nazwiemy brzegowym, gdy ma puste wnętrze.
 \begin{definition}[Zbiór nigdziegęsty]
 Dla danej przestrzeni metrycznej $(X, \rho)$. Zbiór $A \subset X$ nazwiemy nigdziegęstym, gdy wnętrze domknięcia tego zbioru jest puste.
 \end{definition}
+
+
+\begin{definition}[Ciąg]
+Ciąg $(x_n)_{n=1}^{\infty}$ jest to funkcja określona na zbiorze liczb naturalnych. Wartości tej funkcji dla kolejnych liczb naturalnych nazywamy wyrazami ciągu i oznaczamy: $x_1, x_2, \ldots$. Niekiedy ciąg oznaczamy skrótowo przez $(x_n)$. W pracy rozważać będziemy ciągi w przestrzeniach metrycznych, czyli funkcje postaci $x: \mathbb{N} \rightarrow X,$ gdzie $X$ jest rozważaną przestrzenią metryczną.
+\end{definition}
+
+
+\begin{definition}[Podciąg]
+Niech $(x_n)_{n=1}^{\infty}$ będzie ciągiem o wyrazach ze zbioru $X$. Niech $(k_i)_{i=1}^{\infty} \subset \mathbb{N}$ będzie silnie rosnącym ciągiem indeksów. Wówczas ciąg $(x_{k_i})_{i=1}^{\infty}$ nazywamy podciągiem ciągu $(x_n)_{n=1}^{\infty}.$
+\end{definition}
+
+\begin{definition}[Granica ciągu]
+W przestrzeni metrycznej $(X, \rho),$ punkt $g$ nazywamy granicą ciągu $(x_n)_{n=1}^\infty$ gdy zachodzi warunek:
+
+$$\forall_{\epsilon>0} \, \exists_{N \in \mathbb{N}} \, \forall_{n>N} \, \rho(x_n, g) < \epsilon.$$
+\end{definition}
+
+
+\begin{definition}[Granica dolna ciągu]
+Granicę dolną ciągu $(x_n)_{n=1}^\infty$ definiujemy następująco:
+
+$$\liminf_{n \rightarrow \infty} x_n = \lim_{n \rightarrow \infty} \left(\inf_{k \geq n} x_k\right) = \sup_{n \geq 0} \inf_{k \geq n} x_k.$$
+\end{definition}
+
+\begin{definition}[Granica górna ciągu]
+Granicę górną ciągu $(x_n)_{n=1}^\infty$ definiujemy następująco:
+
+$$\limsup_{n \rightarrow \infty} x_n = \lim_{n \rightarrow \infty} \left(\sup_{k \geq n} x_k\right) = \inf_{n \geq 0} \sup_{k \geq n} x_k.$$
+\end{definition}
+
+\begin{definition}[Punkt skupienia ciągu]
+Punkt $x_0$ nazywamy punktem skupienia ciągu $(x_n)_{n=1}^{\infty}$ gdy w dowolnym otoczeniu punktu $x_0$ znajduje się nieskończenie wiele wyrazów tego ciągu.
+\end{definition}
+
+
+\begin{definition}[Ciąg Cauchy'ego]
+Ciągiem Cauchy'ego w przestrzeni metrycznej $(X, \rho)$ nazywamy ciąg $(x_n)$ spełniający warunek:
+$$\forall_{\epsilon>0} \, \exists_{N \in \mathbb{N}} \, \forall_{n,m > N} \, \rho(x_n, x_m) < \epsilon.$$
+\end{definition}
+
+
 
 \begin{definition}[Pokrycie otwarte]
 \cite[s.~195]{ruette2017chaos}
@@ -554,9 +559,7 @@ Punkt $x$ jest okresowy, gdy jest stały dla jakiejś iteraty, tzn. gdy $\exists
 
 
 \begin{definition}[Orbita okresowa]
-{\color{red}!!!NOWE!!!
 Orbitą okresową nazywamy orbitę punktu okresowego. Zauważmy, że orbity okresowe traktowane jako zbiory są zawsze skończone.
-}
 \end{definition}
 
 \begin{definition}[Niezmienniczość zbioru ze względu na odwzorowanie]
@@ -652,11 +655,11 @@ Powyższe definicje występują też w wersjach ograniczonych do ustalonego zbio
 W dalszej części pracy będziemy używali oznaczenia $h$ zamiast $h_{\textrm{top}},$ w miejscach gdzie nie będzie prowadziło to do nieporozumień.
 }
 
-{\color{red} !!!NOWE!!!
+
 \begin{theorem}(Równość entropii Adlera, Konheima, McAndrew i entropii topologicznej Bowena)
 Definicje \ref{definicja_entropii_topologicznej_adlera} i \ref{definicja_entropii_topologicznej_bowena} entropii topologicznej są równoważne. \cite[s.~59]{ruette2017chaos}
 \end{theorem}
-} 
+
  
 
 \begin{lemma}[Złożenie dwóch funkcji niemalejących jest niemalejące]
@@ -840,7 +843,7 @@ Ciągłe odwzorowanie $f: X \rightarrow X$ na zwartej przestrzeni metrycznej $(X
 
 
 
-{\color{red} !!!NOWE!!!
+
 \subsection{Tranzytywność a entropia}
 
 Zarówno tranzytywność, chaotyczność jak i topologiczną entropię możemy intuicyjnie pojmować jako pewne ,,miary skomplikowania'' układu dynamicznego. Pojawia się więc pytanie czy są to pojęcia tożsame, a jeżeli nie, to jak bardzo się różnią. Czy możliwe jest aby odwzorowanie topologicznie tranzytywne miało zerową entropię topologiczną i odwrotnie: czy odwzorowanie o niezerowej entropii topologicznej może nie być tranzytywne. Okazuje się, że odpowiedź na oba te pytania jest twierdząca. Wiele zależy od przestrzeni którą rozważamy.
@@ -851,7 +854,7 @@ W każdym z poniższych punktów zakładamy, że $f$ jest chaotyczne w sensie De
 \item Istnieje $f: C \rightarrow C,$ gdzie $C$ jest zbiorem Cantora, takie że $h(f) = 0.$
 \item Niech $F = \{f : S^1 \rightarrow S^1 \, | \, f \textrm{ jest chaotyczne w sensie Devaneya}\},$ gdzie $S^1$ oznacza okrąg. Dla każdego $\epsilon > 0$ istnieje $f \in F$ dla którego $h(f) < \epsilon,$ jednocześnie nie istnieje takie $f \in F,$ dla którego wartość entropii osiąga zero.
 \end{enumerate}
-}
+
 
 
 \subsection{Odwzorowania trójkątne}
@@ -993,7 +996,7 @@ Z lematów \ref{przestrzen_ciaglych_jest_zupelna} i \ref{ciagle_trojkatne_tworza
 Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną. Przestrzeń metryczna $(C(X), d_1)$ jest zupełna.
 \end{lemma}
 
-{\color{red} !!!NOWE!!! - POPRAWIONE
+
 \begin{proof}
 Musimy pokazać, że każdy ciąg Cauchy'ego w przestrzeni $(C(X), d_1)$ jest zbieżny do elementu tej przestrzeni.
 Niech $(f_n)_{n=0}^{\infty} \subset C(X),$ będzie ciągiem Cauchy'ego, czyli 
@@ -1029,7 +1032,7 @@ czyli zbieżności ciągu $(f_n)_{n=0}^{\infty}$ do $f$ w metryce $d_1.$
 
 Zauważmy, że $d_1$ jest metryką zbieżności jednostajnej. Odwzorowanie $f$ jest granicą ciągu odwzorowań ciągłych w metryce zbieżności jednostajnej, a więc $f \in C(X).$
 \end{proof}
-}
+
 
 
 \begin{lemma}[Ciągłe odwzorowania trójkątne tworzą przestrzeń metryczną zupełną]
@@ -1082,7 +1085,6 @@ Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną bez punktów izolowan
 $I = [0, 1].$
 $P_0$ to dowolny, skończony zbiór zawarty w $X.$ Przez $\mathcal{F}$ oznaczmy zbiór wszystkich odwzorowań $F = (f, g_x)$ ze zbioru $C_\triangle(X \times I)$ spełniających następujące warunki:
 \begin{enumerate}
-{\color{red}\item Odwzorowanie bazowe $f$ spełnia założenia twierdzenia \ref{twierdzenie_glowne}. <- to po prostu usunę, bo te założenia to po prostu ciągłość i chaotyczność Devaneya, i wypisałem je powyżej a dzięki temu nie ma zamieszania czy odwzorowania bazowe moga byc rozne i tylko spelniac zalozenia czy jest ono tylko jedno i jest to nasze $f$ z zalozenia, zostawię tylko warunki 2 i 3}
 \item $\forall_{x \in X}$ odwzorowanie $g_x$ jest niemalejące i krańce przedziału I pozostawia niezmienione.
 \item $\forall_{x \in P_0}$ $g_x$ jest identycznością 
 \end{enumerate}
@@ -1093,7 +1095,6 @@ Zbiór $\mathcal{F}$ jest niepustym, domkniętym podzbiorem przestrzeni $C_{\tri
 \end{lemma}
 
 \begin{proof}
-{\color{red} !!!NOWE!!!
 Niech $f \in C(X)$ będzie odwzorowaniem chaotycznym w sensie Devaneya. Zdefiniujmy $F_0(x,y) = (f(x), y).$ Dla każdego $x \in X$ odwzorowanie $g_x$ jest identycznością, więc w szczególności jest niemalejące i pozostawia krańce przedziału $I$ niezmienione. Zatem $F_0 \in \mathcal{F},$ czyli $\mathcal{F}$ jest zbiorem niepustym.
 
 Pokazujemy domkniętość. Weźmy dowolny ciąg zbieżny $\big(F_n=(f_n, g_{x,n})\big)_{n=1}^{\infty} \subset \mathcal{F}.$ Oznaczmy jego granicę przez $\widetilde{F}=(\widetilde{f}, \widetilde{g_x}).$
@@ -1109,12 +1110,11 @@ $$\lim_{n \rightarrow \infty} \max_{x \in X} d_1(g_{x,n}, \widetilde{g_x}) = 0,$
 a z tego mamy 
 $$\forall_{x \in X} \, \lim_{n \rightarrow \infty} d_1(g_{x,n}, \widetilde{g_x}) = 0.$$
 
-Metryka $d_1$ na przestrzeni $C(I)$ jest metryką zbieżności jednostajnej, a wszystkie odwzorowania $g_{x,n}$ są oczywiście ciągłe i monotoniczne, więc dla każdego $x \in X$ odwzorowanie $\widetilde{g_x}$ jest ciągłe i monotoniczne jako granica jednostajnie zbieżnego ciągu monotonicznych odwzorowań ciągłych {\color{blue} Pytanie: Monotoniczność jest oczywista, czy udowodnić, że w granicy nie popsuje się nam monotoniczność?}.
+Metryka $d_1$ na przestrzeni $C(I)$ jest metryką zbieżności jednostajnej, a wszystkie odwzorowania $g_{x,n}$ są oczywiście ciągłe i monotoniczne, więc dla każdego $x \in X$ odwzorowanie $\widetilde{g_x}$ jest ciągłe i monotoniczne jako granica jednostajnie zbieżnego ciągu monotonicznych odwzorowań ciągłych.
 Ponadto, skoro prawdziwy jest warunek 
 $$\forall_{x \in X} \, \lim_{n \rightarrow \infty} d_1(g_{x,n}, \widetilde{g_x}) = \lim_{n \rightarrow \infty} \max_{a \in I}(g_{x,n}(a), \widetilde{g_x}(a)) = 0,$$
 to w szczególności zachodzi on dla $a \in \{0, 1\},$ więc skoro odwzorowania $g_{x,n}$ pozostawiają krańce przedziału $I$ niezmienione, to jest to prawdą również dla odwzorowań $\widetilde{g_x}.$ Wiemy, że wszystkie odwzorowania $g_{n,x}$ są monotoniczne. Ustalmy $x_0 \in P_0,$ wszystkie odwzorowania $g_{x_0,n}$ są identycznością, wówczas $\widetilde{g_{x_0}} = \textrm{Id}$ jako granica ciągu stałego. Odwzorowania $\widetilde{g_x}$ spełniają więc warunki narzucane przez definicję zbioru $\mathcal{F}.$
 Zatem granica $\widetilde{F}$ należy do $\mathcal{F},$ czyli dowolny, ustalony ciąg zbiega do elementu zbioru $\mathcal{F},$ więc zbiór ten jest domknięty.
-}
 \end{proof}
 
 
@@ -1128,16 +1128,12 @@ Zbiór odwzorowań tranzytywnych jest rezydualny w $\mathcal{F}$.
 \end{proof}
 
 
-{\color{red} !!NOWE!! Chyba rzeczywiście poniższy lemat \ref{Fso_sa_otwartymi_podzbiorami_F} nie zasługuje na miano lematu, usunąć?
-\begin{lemma} \label{Fso_sa_otwartymi_podzbiorami_F}
-Niech $U$ będzie dowolnym zbiorem otwartym zawartym w $X \times I$. Zdefiniujmy zbiór $\mathcal{F}_{SO}$ (,,S'' - stabilny, ,,O'' - okresowy) następująco. Odwzorowanie $G$ należy do $\mathcal{F}_{SO}$ wtedy i tylko wtedy, gdy należy do $\mathcal{F}$, posiada punkt okresowy w $U$ oraz wszystkie dostatecznie bliskie $G$ odwzorowania z $\mathcal{F}$ również posiadają punkt okresowy w $U$ (być może różne od punktów okresowych odwzorowania $G$).
-Wówczas zbiór $\mathcal{F}_{SO}$ jest otwartym podzbiorem $\mathcal{F}$.
-\end{lemma}
 
-\begin{proof}
-Weźmy dowolny element $G \in \mathcal{F_{SO}},$ z definicji należy on do $\mathcal{F}$ wraz z pewnym swoim otoczeniem
-\end{proof}
-}
+\begin{definition} \label{Fso_sa_otwartymi_podzbiorami_F}
+Niech $U$ będzie dowolnym zbiorem otwartym zawartym w $X \times I$. Zdefiniujmy zbiór $\mathcal{F}_{SO}$ (,,S'' - stabilny, ,,O'' - okresowy) następująco. Odwzorowanie $G$ należy do $\mathcal{F}_{SO}$ wtedy i tylko wtedy, gdy należy do $\mathcal{F}$, posiada punkt okresowy w $U$ oraz wszystkie dostatecznie bliskie $G$ odwzorowania z $\mathcal{F}$ również posiadają punkt okresowy w $U$ (być może różne od punktów okresowych odwzorowania $G$).
+\end{definition}
+Bezpośrednio z tej definicji wynika, że $\mathcal{F}_{SO}$ jest otwartym podzbiorem $\mathcal{F}.$
+
 
 
 
