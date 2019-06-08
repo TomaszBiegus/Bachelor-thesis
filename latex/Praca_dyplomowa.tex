@@ -902,7 +902,9 @@ $$h(F) = h(f)$$
 \begin{proof}
 %\cite{do_dowodu_rownosci_topologicznej_entropii_2_twierdzenieD}
 
-Rozważamy $X \times I$, oraz $X.$ Są to zwarte przestrzenie metryczne {\color{red}(TODO: pokazać zwartość? Jaką metrykę mamy na $X \times I$? max($\rho_x, \rho_y$)?)}.
+{\color{red} !!!NOWE!!! Poprawione
+Rozważamy dwie zwarte przestrzenie metryczne: $(X, d_1)$ oraz $(X \times I, d_2)$ z metrykami zdefiniowanymi w \ref{definicja_metryki_d_jeden} i \ref{definicja_metryki_d_dwa}. Przestrzeń $X$ jest zwarta z założenia, natomiast przestrzeń $X \times I$ jest zwarta jako produkt dwóch przestrzeni zwartych. 
+}
 Zdefiniujmy odwzorowanie $\pi: X \times I \rightarrow X$, $\pi(x,a) = x$. Oczywiście $\pi$ jest ciągłe i ,,na''.
 Wówczas $F: X \times I \rightarrow X \times Y$, $f: X \rightarrow X$ oraz $\pi: X \times I \rightarrow X$ (,,na'') są ciągłymi odwzorowaniami. 
 
@@ -981,11 +983,13 @@ Definicje i własności odwzorowań trójkątnych podajemy na podstawie pracy \c
 Na potrzeby dowodu wprowadźmy pojęcia odległości między odwzorowaniami oraz dwie funkcje: $\textrm{pr}_1(x, y)$ i $\textrm{pr}_2(x, y)$. 
 
 \begin{definition}[Metryka na przestrzeni ciągłych przekształceń zwartej przestrzeni metrycznej]
+\label{definicja_metryki_d_jeden}
 Niech $(M, \sigma)$ będzie zwartą przestrzenią metryczną, rozważmy odwzorowania $h,k \in C(M)$. Odległość między nimi zdefiniujmy jako $\max_{m \in M} \sigma(h(m), k(m))$ i oznaczmy ją jako $d_1(h,k)$.
 \end{definition}
 
 
 \begin{definition}[Metryka na przestrzeni odwzorowań trójkątnych]
+\label{definicja_metryki_d_dwa}
 Odległość między odwzorowaniami trójkątnymi definiujemy następująco: Niech $(X, \rho)$ i $(Y, \tau)$ będą zwartymi przestrzeniami metrycznymi a $F(x,y) = (f(x), g_x(y))$ i $\Phi(x,y) = (\phi(x), \psi_x(y))$ trójkątnymi odwzorowaniami należącymi do $C_\triangle(X \times Y)$. Odległość definiujemy wówczas jako 
 \begin{align*}
 d_2(F, \Phi) = \max_{(x,y) \in X \times Y} \max\{\rho(f(x),\phi(x)), \tau(g_x(y), \psi_x(y))\} \\ 
