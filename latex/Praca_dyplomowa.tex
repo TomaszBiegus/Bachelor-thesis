@@ -47,7 +47,7 @@
 \autor{Imię i nazwisko dyplomanta}
 %
 % Tytuł pracy dyplomowej 
-\tytul{Tytuł pracy dyplomowej} 
+\tytul{Dynamika odwzorowań trójkątnych} 
 \tytulang{Tytuł pracy dyplomowej w języku angielskim}
 %
 % Tytuł / stopień / imię i nazwisko opiekuna
@@ -104,8 +104,14 @@
 %
 % Podajemy najważniejsze słowa kluczowe po polsku i angielsku
 % - w obu przypadkach, nie więcej niż 150 znaków.
-\slowakluczowe{tutaj podajemy najważniejsze słowa kluczowe (łącznie nie powinny być dłuższe niż 150 znaków).}  
-\slowakluczoweang{tutaj podajemy najważniejsze słowa kluczowe w języku angielskim (łącznie nie powinny być dłuższe niż 150 znaków)}
+\slowakluczowe{chaos,
+entropia topologiczna, 
+odwzorowania trójkątne, 
+układy dynamiczne.}  
+\slowakluczoweang{chaos,
+topological entropy,
+triangular maps,
+dynamical systems.}
 %
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -617,8 +623,9 @@ B_n(x,\epsilon) & \coloneqq \{y \in X : \rho(f^k(x), f^k(y)) \leq \epsilon, k \i
 
 
 \begin{definition}[Zbiór $(n,\epsilon)$-rozdzielony]
+\label{definicja_n_eps_rozdzielonego}
 \cite[s.~58]{ruette2017chaos}
-Mówimy, że zbiór $E \subset X$ jest $(n, \epsilon)$-rozdzielony jeżeli dla każdych $x, y \in E,$ takich że $x \neq y$ istnieje $k \in \{0, 1, \ldots, n-1\},$ takie że $\rho(f^k(x), f^k(y)) > \epsilon.$
+Mówimy, że zbiór $E \subset X$ jest $(n, \epsilon)$-rozdzielony, jeżeli dla każdych $x, y \in E,$ takich że $x \neq y$ istnieje $k \in \{0, 1, \ldots, n-1\},$ takie że $\rho(f^k(x), f^k(y)) > \epsilon.$
 
 Maksymalną moc zbioru $(n, \epsilon)$-rozdzielonego oznaczamy przez $s_n(f, \epsilon).$
 \end{definition}
@@ -919,17 +926,60 @@ Na podstawie twierdzenia 17 z pracy  \cite[s.~409]{bowen1971entropy__do_dowodu_r
 $$h(F) \leq h(f) + \sup_{x \in X} h(F, \pi^{-1}(x))$$
 
 
-{\color{orange}
+{\color{orange} !!!POMOCNICZE, DO USUNIECIA!!!
 Mówimy, że zbiór $E \subset X$ jest $(n, \epsilon)$-rozdzielony jeżeli dla każdych $x, y \in E,$ takich że $x \neq y$ istnieje $k \in \{0, 1, \ldots, n-1\},$ takie że $\rho(f^k(x), f^k(y)) > \epsilon.$
 Maksymalną moc zbioru $(n, \epsilon)$-rozdzielonego zawartego w $K$ oznaczamy przez $s_n(f, \epsilon, K).$
-$h_{\textrm{top}}(f, K) = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log s_n(f, \epsilon, K).$}
+$h_{\textrm{top}}(f, K) = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log s_n(f, \epsilon, K).$
 
-\textcolor{red}{Ustalmy $x \in X$, $h(F, \pi^{-1}(x)) = h(F, \{x\} \times I) =???= h(g_x)$ TODO: nie do konca rozumiem zapis $h(F, A)$, gdzie $A$ jest zbiorem, w pracy Bowena zbiór zwarty $K$ występuje przy definicji 2 na stronie 402 i nie jest powiedziane wprost, że ograniczamy się do tego zbioru, tylko, że przy zbiorach $(\epsilon, n)$-rozdzielonych ograniczamy się do największej mocy zbioru $(\epsilon, n)$-rozdzielonego zawartego w K. Chyba powinienem wykazać, że to sprowadza się do entropii na zbiorze K (w naszym przypadku do włókna z odwzorowaniem $g_x$)}
+next:
+Mówimy, że zbiór $E \subset X$ jest $(n, \epsilon)$-rozdzielony, jeżeli dla każdych $x, y \in E,$ takich że $x \neq y$ istnieje $k \in \{0, 1, \ldots, n-1\},$ takie że $\rho(f^k(x), f^k(y)) > \epsilon.$
 
-Z twierdzenia \ref{entropia_topologiczna_odwzorowan_monotonicznych} i faktu, że wszystkie odwzorowania włóknowe $g_x$ są monotoniczne mamy :
-$$\forall_{x \in X} \, h(F, \pi^{-1}(x)) = h(g_x) = 0,$$
+Maksymalną moc zbioru $(n, \epsilon)$-rozdzielonego oznaczamy przez $s_n(f, \epsilon).$
+
+
+next:
+Powyższe definicje występują też w wersjach ograniczonych do ustalonego zbioru zwartego $K \subset X.$ I tak, niech $K \subset X$ będzie zbiorem zwartym, wtedy:
+\begin{enumerate}
+\item Maksymalną moc zbioru $(n, \epsilon)$-rozdzielonego zawartego w $K$ oznaczamy przez $s_n(f, \epsilon, K).$
+\item $h_{\textrm{top}}(f, K) = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log s_n(f, \epsilon, K).$
+\end{enumerate}
+
+}
+
+{\color{red} !!!NOWE!!!
+
+Ustalmy $x \in X.$ Wiemy, że:
+$$h(F, \pi^{-1}(x)) = h(F, \{x\} \times I) = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log s_n(F, \epsilon, \{x\} \times I),$$
+
+gdzie $s_n(F, \epsilon, \{x\} \times I)$ jest maksymalną mocą zbioru $(n, \epsilon)-$rozdzielonego, zawartego w $\{x\} \times I.$
+
+Zauważmy, że zbiór $\{x\} \times I$ jest $(n, \epsilon)$-rozdzielony, jeżeli dla każdych $(x, y_1), (x, y_2) \in \{x\} \times I,$ takich że $y_1 \neq y_2$ istnieje $k \in \{0, 1, \ldots, n-1\},$ takie że 
+
+\begin{equation}
+\label{nierownosc_zbioru_rozdzielonego_d2}
+\begin{aligned}
+& d_2(F^k(x, y_1), F^k(x, y_2)) \\
+& = d_2 \big( \big(f^k(x), (g_{f^{k-1}(x)} \circ \ldots \circ g_{f(x)} \circ g_x)(y_1) \big), \big(f^k(x), (g_{f^{k-1}(x)} \circ \ldots \circ g_{f(x)} \circ g_x)(y_2) \big)
+\big) \\
+& = d_1\big((g_{f^{k-1}(x)} \circ \ldots \circ g_{f(x)} \circ g_x)(y_1), (g_{f^{k-1}(x)} \circ \ldots \circ g_{f(x)} \circ g_x)(y_2)\big) \\
+& > \epsilon.
+\end{aligned}
+\end{equation}
+
+
+ Podstawmy nierówność \ref{nierownosc_zbioru_rozdzielonego_d2} w miejsce $\rho(f^k(x), f^k(y)) > \epsilon$ z definicji \ref{definicja_n_eps_rozdzielonego}. Przedefiniujmy zbiór $A_i$  z twierdzenia \ref{entropia_topologiczna_odwzorowan_monotonicznych} w następujący sposób:
+ $A_i \coloneqq \{F^{-i}(x, a_0), F^{-i}(x, a_1), \ldots, F^{-i}(x, a_m)\}$, dla $i \in \{0, 1, \ldots, n-1\}.$ 
+Dla każdych $i \in \mathbb{N}, \, x \in X, \, a \in I$ zachodzi:
+$$F^{-i}(x, a) = \big( f^{-i}(x), (g_{f^{-i}(x)}^{-1}\circ \ldots \circ g_{f^{-2}(x)}^{-1} \circ g_{f^{-1}(x)}^{-1})(a) \big)$$
+Wszystkie odwzorowania włóknowe $g_x$ są niemalejące, a więc ich złożenia również (na mocy wniosku \ref{zlozenie_skonczenie_wielu_niemalejacych_jest_niemalejace}).
+
+Korzystając z powyższego możemy łatwo zaadaptować twierdzenie \ref{entropia_topologiczna_odwzorowan_monotonicznych}, aby wykazać, że:
+
+$$\forall_{x \in X} \, h(F, \pi^{-1}(x)) = 0,$$
 czyli również:
 $$\sup_{x \in X} h(F, \pi^{-1}(x)) = 0.$$
+}
+
 
 Otrzymujemy zatem nierówność:
 \begin{equation}
@@ -938,7 +988,7 @@ h(F) \leq h(f)
 \end{equation}
 
 
-{\color{red} !!!NOWE!!! (Pokazuję ze $h(F) \geq h(f)$)
+Pokażemy teraz, że $h(F) \geq h(f).$
 Skorzystamy z definicji \ref{definicja_entropii_topologicznej_adlera} (Adlera) entropii topologicznej. Rozważmy wszystkie pokrycia otwarte przestrzeni $X \times I$ postaci $\widetilde{\mathcal{A}} = \{A \times I : A \in \mathcal{A}\},$ gdzie $\mathcal{A}$ jest dowolnym pokryciem otwartym przestrzeni $X.$ Wtedy dla każdego takiego pokrycia $\widetilde{\mathcal{A}}$ zachodzi:
 \begin{align*}
 F^{-n}(A \times I) & = \{(x,y): F^n(x,y) \in A \times I\} \\
@@ -971,7 +1021,6 @@ h(F) \geq \sup_{\widetilde{\mathcal{A}} \in \mathcal{R}} h(F, \widetilde{\mathca
 Ostatecznie z nierówności \ref{twierdzenie_o_rownosci_entropii_nierownosc_pierwsza} i \ref{twierdzenie_o_rownosci_entropii_nierownosc_druga} dostajemy:
 $$h(F) = h(f).$$
 
-}
 
 \end{proof}
 
