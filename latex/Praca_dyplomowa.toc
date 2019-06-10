@@ -2,11 +2,7 @@
 \contentsline {chapter}{Wst\IeC {\k e}p}{3}{chapter*.2}
 \contentsline {section}{\numberline {0.1}Motywacje}{3}{section.0.1}
 \contentsline {section}{\numberline {0.2}Historia bada\IeC {\'n} nad uk\IeC {\l }adami dynamicznymi}{3}{section.0.2}
-\contentsline {subsection}{\numberline {0.2.1}Od staro\IeC {\.z}ytno\IeC {\'s}ci do Newtona}{3}{subsection.0.2.1}
-\contentsline {subsection}{\numberline {0.2.2}Problem stabilno\IeC {\'s}ci uk\IeC {\l }adu s\IeC {\l }onecznego}{3}{subsection.0.2.2}
-\contentsline {subsection}{\numberline {0.2.3}Lorenz i jego atraktor}{3}{subsection.0.2.3}
-\contentsline {subsection}{\numberline {0.2.4}Mandelbrodt i fraktale}{3}{subsection.0.2.4}
-\contentsline {subsection}{\numberline {0.2.5}Chaos}{3}{subsection.0.2.5}
+\contentsline {subsection}{\numberline {0.2.1}Chaos}{4}{subsection.0.2.1}
 \contentsline {chapter}{\numberline {1}Wprowadzenie}{5}{chapter.1}
 \contentsline {section}{\numberline {1.1}Definicje}{5}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Definicje i fakty og\IeC {\'o}lne}{6}{subsection.1.1.1}
