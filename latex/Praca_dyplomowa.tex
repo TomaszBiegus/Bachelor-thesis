@@ -216,10 +216,10 @@ dynamical systems.}
 
 % MOJE ================================================
 {\backmatter \chapter{Wstęp}}
-\section{Motywacje}
+\subsubsection{Motywacje}
 Studia matematyczne podjąłem w dość późnym wieku, już po ukończeniu innych kierunków. Od zawsze jednak matematyka pociągała mnie jako klucz do zrozumienia pozostałych dziedzin, jako narzędzie pozwalające dostrzec lepiej i głębiej urodę przyrody. Wykorzystując matematykę, możemy uchwycić reguły, wzorce i schematy które opisują niewyobrażalną złożoność świata w którym żyjemy. Matematykę postrzegam jako klamrę spinające wszystkie dziedziny intelektualnej działalności człowieka, począwszy od fizyki, poprzez chemię, biologię, aż po psychologię czy nauki społeczne. Decyzję o rozpoczęciu studiów matematycznych podjąłem w lecie siedząc nad rzeką i przyglądając się hipnotyzującym zawirowaniom na powierzchni wody płynącej w rzece Odrze przepływającej przez Wrocław, oraz leniwemu ruchowi fraktalnych kształtów chmur na błękitnym niebie. Byłem wówczas absolwentem wyższej uczelni, w którym wciąż żyło pragnienie poznawania głębiej wszystkich tych pięknych zjawisk, które nas otaczają. Byłem również świeżo po lekturze inspirującej popularnonaukowej książki Jamesa Gleicka zatytułowanej ,,Chaos'' \cite{gleick1987chaos}...
 
-\section{Historia badań nad układami dynamicznymi}
+\subsubsection{Historia badań nad układami dynamicznymi}
 Historia rozwoju nauki nierozerwalnie wiąże się z pojęciem ruchu. Bez ruchu nie ma sensu mówić o upływie czasu, zachodzeniu procesów fizycznych chemicznych czy też biologicznych, czyli tych wszystkich rzeczach wokół których koncentrują się badania naukowe. Rozważania nad ruchem są zapewne tak stare jak gatunek ludzki. Pisane świadectwa zadawania sobie takich pytań znajdujemy już w dziełach starożytnych. Heraklit z Efezu (ur. ok. 540 p.n.e., zm. ok. 480 p.n.e.) miał powiedzieć ,,pantha rei'' co znaczy ,,wszystko płynie'' dostrzegając procesy nieustannych zmian w otaczającym nas świecie. Zenon z Elei rozważał paradoksy ruchu (przypis), Arystoteles sformuował swoje prawa ruchu (przypis). Następnie Izaak Newton jak sam to ujął ,,stojąc na barkach gigantów'' Galileusza, Tychona Brachego i Keplera zapoczątkował rozkwit współczesnych nauk empirycznych formułując zasady dynamiki i (równolegle z Leibnizem) dając początek rachunkowi różniczkowemu. Rachunek różniczkowy dał potężne narzędzie do modelowania rzeczywistości, pozwalając na przykład na przewidywanie konfiguracji ciał niebieskich na niebie w dalekiej przyszłości. Niesamowity rozwój nauki w wieku XIX skłaniał ludzi do pokładania coraz większej ufności w możliwość absolutnie pewnego przewidywania stanów dowolnych układów. Rozbudzało to wyobraźnię i nadzieje na dokładne przewidywanie pogody, rozwoju chorób a być może nawet zachowania ludzi. Na przełomie wieków XIX i XX pojawiły się potężne pęknięcia, niwecząc tak ambitne wyobrażenia. Nastąpiły trzy odkrycia, wskazujące na immanentne ograniczenia w możliwościach badania świata. Były to: twierdzenie G\"odla, zasada nieoznaczoności Heisenberga i odkrycie chaosu deterministycznego. Tego ostatniego dotyczy niniejsza praca. Historia badań nad układami chaotycznymi sięga XIX wieku, kiedy to wielki matematyk francuski Henry Poincare postanowił zmierzyć się z wielkim pytaniem: ,,Czy układ słoneczny jest stabilny?'', nie udało mu się udzielić odpowiedzi, ale metody które rozwinął przyczyniły się do powstania nowej gałęzi matematyki, nazywanej teorią układów dynamicznych. Przełomową chwilą dla nauki o chaosie było okrycie Lorenza - Meteorologa. Pokazał on, że uproszczony układ trzech równań róźniczkowych opisujących ruch powietrza w atmosferze, prowadzi do chaosu. To znaczy, że orbity rozwiązań tych równań dążą do atraktora który ma niezwykłą strukturę, która tłumaczy dlaczego przewidywanie pogody na dowolnie długie okresy wprzód nie jest i co ważniejsze nigdy nie będzie możliwe.
 
 Opisywane do tej pory zagadnienia opierały się na równaniach różniczkowych. Czas w tym modelu jest ciągły, to znaczy, rozwiązanie układu równań róźniczkowych jest funkcja czasu postaci $f: \mathbb{R} \rightarrow X,$ gdzie $X$ jest przestrzenią wszystkich możliwych stanów układu, tak zwaną przestrzenią fazową. Matematycy badają jednak również układy w których znamy stan układu tylko w dyskretnych chwilach czasu i dysponujemy formułą określającą jaki będzie kolejny stan układu jeżeli znamy stan obecny. Przykładem zastosowania takiego podejścia do badań fizycznych są przekroje Poincarego stosowane przez niego podczas prób rozwiązania wspomnianego wcześniej problemu stabilności układu słonecznego. W takim przypadku zamiast równań różniczkowych mamy odwzorowanie $f: X \rightarrow X,$ gdzie stan układu w kolejnych chwilach czasu przyjmuje wartości $x_0, f(x_0), f^2(x_0), f^3(x_0), \ldots.$
@@ -586,10 +586,10 @@ Na podstawie \cite{misiurewicz1993}.
 Rozważamy układ dynamiczny $(X, f)$, gdzie $X$ jest zwartą przestrzenią metryczną. Niech $\mathcal{A}$ będzie otwartym pokryciem $X$.
 Wprowadzamy oznaczenia:
 
-$$\bigvee_{i=1}^n \mathcal{A}_i = \{A_1 \cap A_2 \cap \ldots \cap A_n : A_1 \in \mathcal{A}_1, A_2 \in \mathcal{A}_2, \ldots, A_n \in \mathcal{A}_n, A_1 \cap A_2 \cap \ldots \cap A_n \neq \emptyset \},$$ 
+$$\bigvee_{i=1}^n \mathcal{A}_i = \left\{A_1 \cap A_2 \cap \ldots \cap A_n : A_1 \in \mathcal{A}_1, A_2 \in \mathcal{A}_2, \ldots, A_n \in \mathcal{A}_n, A_1 \cap A_2 \cap \ldots \cap A_n \neq \emptyset \right\},$$ 
 gdzie $\mathcal{A}_1, \mathcal{A}_2, \ldots, \mathcal{A}_n$ są otwartymi pokryciami $X$.
 
-$$f^{-n}(\mathcal{A}) = \{f^{-n}(A):A\in \mathcal{A}\},$$
+$$f^{-n}(\mathcal{A}) = \left\{f^{-n}(A):A\in \mathcal{A}\right\},$$
 
 $$\mathcal{A}^n = \bigvee_{i=0}^{n-1}f^{-i}(\mathcal{A}).$$
 
@@ -829,25 +829,25 @@ Zbiór $V$ jest otwarty i niepusty, gdyż $q \in V.$ W związku z tym, ponieważ
 
 Niech teraz $j$ będzie częścią całkowitą z $\frac{k}{n} + 1$. Wtedy $1 \leq nj - k \leq n$. Z konstrukcji mamy
 
-$$f^{nj}(y) = f^{nj-k}(f^k(y)) \in f^{nj-k}(V) \subseteq K(f^{nj-k}(q), \delta).$$
+$$f^{nj}(y) = f^{nj-k}\left(f^k(y)\right) \in f^{nj-k}(V) \subseteq K\left(f^{nj-k}(q), \delta\right).$$
 
 Liczba $n$ jest okresem $p$, więc $f^{nj}(p) = p$, a z nierówności trójkąta:
 
-$$\rho(x, f^{nj-k}(q)) \leq \rho(x, p) + \rho(p, f^{nj}(y)) + \rho(f^{nj}(y), f^{nj-k}(q)),$$
+$$\rho\left(x, f^{nj-k}(q)\right) \leq \rho(x, p) + \rho\left(p, f^{nj}(y)\right) + \rho\left(f^{nj}(y), f^{nj-k}(q)\right),$$
 
 po przekształceniach dostajemy:
 
 \begin{equation}
 \begin{aligned}
-\rho(f^{nj}(p), f^{nj}(y)) & = \rho(p, f^{nj}(y)) \\
-& \geq \rho(x, f^{nj-k}(q)) - \rho(f^{nj-k}(q), f^{nj}(y)) - \rho(p, x),
+\rho\left(f^{nj}(p), f^{nj}(y)\right) & = \rho\left(p, f^{nj}(y)\right) \\
+& \geq \rho\left(x, f^{nj-k}(q)\right) - \rho\left(f^{nj-k}(q), f^{nj}(y)\right) - \rho\left(p, x\right),
 \end{aligned}
 \end{equation}
-Następnie, ponieważ $p \in K(x, \delta)$ oraz $f^{nj}(y) \in K(f^{nj-k}(q), \delta)$ otrzymujemy
+Następnie, ponieważ $p \in K(x, \delta)$ oraz $f^{nj}(y) \in K\left(f^{nj-k}(q), \delta\right)$ otrzymujemy
 
-$$\rho(f^{nj}(p), f^{nj}(y) > 4\delta - \delta - \delta = 2\delta.$$
+$$\rho\left(f^{nj}(p), f^{nj}(y)\right) > 4\delta - \delta - \delta = 2\delta.$$
 
-Ostatecznie, korzystając z nierówności trójkąta dostajemy, że albo $\rho(f^{nj}(x), f^{nj}(y)) > \delta$, albo $\rho(f^{nj}(x), f^{nj}(p)) > \delta.$ W obu przypadkach znaleźliśmy punkt, którego $nj$-ta iterata jest w odległości większej od $\delta$ od $f^{nj}(x).$
+Ostatecznie, korzystając z nierówności trójkąta dostajemy, że albo $\rho\left(f^{nj}(x), f^{nj}(y)\right) > \delta$, albo $\rho\left(f^{nj}(x), f^{nj}(p)\right) > \delta.$ W obu przypadkach znaleźliśmy punkt, którego $nj$-ta iterata jest w odległości większej od $\delta$ od $f^{nj}(x).$
 \end{proof}
 
 
@@ -856,9 +856,9 @@ Ostatecznie, korzystając z nierówności trójkąta dostajemy, że albo $\rho(f
 \cite[s.~25]{aulbach2001three}
 Ciągłe odwzorowanie $f: X \rightarrow X$ na zwartej przestrzeni metrycznej $(X, \rho)$ jest chaotyczne (w sensie Li-Yorke'a) jeżeli istnieje nieprzeliczalny podzbiór $S$ przestrzeni $X$ o następujących własnościach:
 \begin{enumerate}
-\item $\limsup_{n \rightarrow \infty} \rho(f^n(x), f^n(y)) > 0$ dla każdych $x,y \in S, \, x \neq y,$
-\item $\liminf_{n \rightarrow \infty} \rho(f^n(x), f^n(y)) = 0$ dla każdych $x,y \in S, \, x \neq y,$
-\item $\limsup_{n \rightarrow \infty} \rho(f^n(x), f^n(p)) > 0$ dla każdych $x \in S, \, p \in X, \, p \textrm{ - okresowy.}$
+\item $\limsup_{n \rightarrow \infty} \rho\left(f^n(x), f^n(y)\right) > 0$ dla każdych $x,y \in S, \, x \neq y,$
+\item $\liminf_{n \rightarrow \infty} \rho\left(f^n(x), f^n(y)\right) = 0$ dla każdych $x,y \in S, \, x \neq y,$
+\item $\limsup_{n \rightarrow \infty} \rho\left(f^n(x), f^n(p)\right) > 0$ dla każdych $x \in S, \, p \in X, \, p \textrm{ - okresowy.}$
 \end{enumerate}
 \end{definition}
 
@@ -884,7 +884,7 @@ W każdym z poniższych punktów zakładamy, że $f$ jest chaotyczne w sensie De
 \begin{definition}[Odwzorowanie trójkątne]
 Rozważmy ,,prostokąt'' $X \times Y$, gdzie $X, Y$ są przestrzeniami metrycznymi. 
 Odwzorowaniem trójkątnym nazywamy funkcję $F: X \times Y \rightarrow X \times Y$ postaci:
-$$F(x,y) = (f(x), g(x,y)).$$
+$$F(x,y) = \big(f(x), g(x,y)\big).$$
 \end{definition}
 
 
@@ -920,8 +920,8 @@ Zdefiniujmy odwzorowanie $\pi: X \times I \rightarrow X$, $\pi(x,a) = x$. Oczywi
 Wówczas $F: X \times I \rightarrow X \times Y$, $f: X \rightarrow X$ oraz $\pi: X \times I \rightarrow X$ (,,na'') są ciągłymi odwzorowaniami. 
 
 Weźmy dowolny punkt $(x, a) \in X \times I$:
-$$(\pi \circ F)(x, a) = \pi(F(x,a)) = \pi(f(x), g_x(a)) = f(x),$$
-$$(f \circ \pi)(x, a) = f(\pi(x,a)) = f(x),$$
+$$(\pi \circ F)(x, a) = \pi\big(F(x,a)\big) = \pi\big(f(x), g_x(a)\big) = f(x),$$
+$$(f \circ \pi)(x, a) = f\big(\pi(x,a)\big) = f(x),$$
 a więc $\pi \circ F = f \circ \pi.$
 
 
@@ -1023,8 +1023,8 @@ Niech $(M, \sigma)$ będzie zwartą przestrzenią metryczną, rozważmy odwzorow
 \label{definicja_metryki_d_dwa}
 Odległość między odwzorowaniami trójkątnymi definiujemy następująco: Niech $(X, \rho)$ i $(Y, \tau)$ będą zwartymi przestrzeniami metrycznymi a $F(x,y) = (f(x), g_x(y))$ i $\Phi(x,y) = (\phi(x), \psi_x(y))$ trójkątnymi odwzorowaniami należącymi do $C_\triangle(X \times Y)$. Odległość definiujemy wówczas jako 
 \begin{align*}
-d_2(F, \Phi) = \max_{(x,y) \in X \times Y} \max\{\rho(f(x),\phi(x)), \tau(g_x(y), \psi_x(y))\} \\ 
-= \max\{d_1(f,\phi), \max_{x \in X}d_1(g_x, \psi_x)\}
+d_2(F, \Phi) = \max_{(x,y) \in X \times Y} \max\left\{\rho(f(x),\phi(x)), \tau(g_x(y), \psi_x(y))\right\} \\ 
+= \max\left\{d_1(f,\phi), \max_{x \in X}d_1(g_x, \psi_x)\right\}
 \end{align*}
 \end{definition}
 
@@ -1156,7 +1156,7 @@ $$\forall_{x \in X} \, \lim_{n \rightarrow \infty} d_1(g_{x,n}, \widetilde{g_x})
 
 Metryka $d_1$ na przestrzeni $C(I)$ jest metryką zbieżności jednostajnej, a wszystkie odwzorowania $g_{x,n}$ są oczywiście ciągłe i monotoniczne, więc dla każdego $x \in X$ odwzorowanie $\widetilde{g_x}$ jest ciągłe i monotoniczne jako granica jednostajnie zbieżnego ciągu monotonicznych odwzorowań ciągłych.
 Ponadto, skoro prawdziwy jest warunek 
-$$\forall_{x \in X} \, \lim_{n \rightarrow \infty} d_1(g_{x,n}, \widetilde{g_x}) = \lim_{n \rightarrow \infty} \max_{a \in I}(g_{x,n}(a), \widetilde{g_x}(a)) = 0,$$
+$$\forall_{x \in X} \, \lim_{n \rightarrow \infty} d_1(g_{x,n}, \widetilde{g_x}) = \lim_{n \rightarrow \infty} \max_{a \in I}\left(g_{x,n}(a), \widetilde{g_x}(a)\right) = 0,$$
 to w szczególności zachodzi on dla $a \in \{0, 1\},$ więc skoro odwzorowania $g_{x,n}$ pozostawiają krańce przedziału $I$ niezmienione, to jest to prawdą również dla odwzorowań $\widetilde{g_x}.$ Wiemy, że wszystkie odwzorowania $g_{n,x}$ są monotoniczne. Ustalmy $x_0 \in P_0,$ wszystkie odwzorowania $g_{x_0,n}$ są identycznością, wówczas $\widetilde{g_{x_0}} = \textrm{Id}$ jako granica ciągu stałego. Odwzorowania $\widetilde{g_x}$ spełniają więc warunki narzucane przez definicję zbioru $\mathcal{F}.$
 Zatem granica $\widetilde{F}$ należy do $\mathcal{F},$ czyli dowolny, ustalony ciąg zbiega do elementu zbioru $\mathcal{F},$ więc zbiór ten jest domknięty.
 \end{proof}
@@ -1192,7 +1192,7 @@ Wówczas dla każdego $N \in \mathbb{N}$ istnieje niepusty zbiór otwarty $W \su
 $P$ jest zbiorem skończonym, więc możemy wypisać wszystkie jego elementy: 
 $$P = \{p_1, p_2, \ldots, p_k\}$$
 Ponieważ $V$ jest otwartym otoczeniem zbioru $P$ to istnieje $d>0,$ takie że dla każdego ${0<\epsilon<d}$ zbiór $\bigcup_{i=0}^k K(p_i, \epsilon)$ zawiera się w $V.$ Ustalmy $0<\epsilon<d$ i oznaczmy $U=\bigcup_{i=0}^k K(p_i, \epsilon),$ oczywiście $U \subseteq V.$ Rozważmy dowolny, ustalony punkt $p_i$ ze zbioru $P.$ Wiemy, że $P$ jest niezmienniczy ze względu na odwzorowanie $f$, a więc istnieją punkty $p_{j_1}, p_{j_2}, \ldots, p_{j_N} \in P$ dla których zachodzi $f(p_i) = p_{j_1}, \, f^2(p_i) = p_{j_2}, \, \ldots, \, f^N(p_i) = p_{j_N}.$ Z kolei z ciągłości odwzorowania $f$, również jego iteraty są ciągłe, a z tego wynika, że znajdziemy taką $\delta_i,$ że $\epsilon >\delta_i > 0$ i dla której $f^n(K(p_i, \delta_i)) \subset K(p_{j_n}, \epsilon) \subset U,$ dla każdego $n \in \{1,2,\ldots,N\}.$ Z dowolności wyboru $p_i$ otrzymujemy, że każdy zbiór postaci $f^n(K(p_i, \delta_i)),$ (gdzie $n \in \{1,2,\ldots,N\}$ a $p_i \in P$) zawiera się w $U$. Oznaczmy $W = \bigcup_{i=1}^k K(p_i, \delta_i),$ oczywiście $W$ jest niepustym zbiorem otwartym, który zawiera się w $U$ ponieważ $\delta_i < \epsilon$ dla każdego $i \in \{1,2,\ldots,k\}.$ Ponadto
-$$\forall_{n \in \{1,2,\ldots,k\}} \, f^n(W) = f^n(\bigcup_{i=1}^k K(p_i, \delta_i)) = \bigcup_{i=1}^k f^n(K(p_i, \delta_i)) \subset U.$$
+$$\forall_{n \in \{1,2,\ldots,k\}} \, f^n(W) = f^n\left(\bigcup_{i=1}^k K(p_i, \delta_i)\right) = \bigcup_{i=1}^k f^n\big(K(p_i, \delta_i)\big) \subset U.$$
 Ostatecznie otrzymujemy $W \cup f(W) \cup \ldots \cup f^N(W) \subset U \subseteq V.$
 \end{proof}
 
@@ -1253,8 +1253,8 @@ Rozważmy odwzorowanie $\widetilde{F} = (f, \widetilde{g}_x)$. Należy ono do $C
 Wynika z tego, że 
 \begin{align*}
 d_2(F, \widetilde{F}) & = d_2\big((f, g_x), (f, \widetilde{g_x})\big) \\
-& = \max\{d_1(f, f), \max_{x \in X}d_1(g_x, \widetilde{g_x})\} \\
-& = \max\{0, \max_{x \in X}d_1(g_x, \widetilde{g_x})\} \\
+& = \max\left\{d_1(f, f), \max_{x \in X}d_1(g_x, \widetilde{g_x})\right\} \\
+& = \max\left\{0, \max_{x \in X}d_1(g_x, \widetilde{g_x})\right\} \\
 & = \max_{x \in X}d_1(g_x, \widetilde{g_x}) \\
 & \leq \widetilde{\epsilon} < \epsilon,
 \end{align*}
@@ -1326,7 +1326,7 @@ $P_0$ jest skończonym zbiorem niezmienniczym ze względu na $f$, więc na mocy 
 
 \begin{equation}
 \begin{aligned}
-F^s(f^{r+N}(x_0), y^*) & = \Big( f^{r+N+s}(x_0), \, g_{x_s}\big(g_{x_{s-1}}\big( \ldots \big(g_{x_1}(y^*)\big) \ldots \big)\big) \Big) \\
+F^s\left(f^{r+N}(x_0), y^*\right) & = \Big( f^{r+N+s}(x_0), \, g_{x_s}\big(g_{x_{s-1}}\big( \ldots \big(g_{x_1}(y^*)\big) \ldots \big)\big) \Big) \\
 & = \Big( x_0, \, \big(g_{x_s} \circ g_{x_{s-1}} \circ \ldots \circ g_{x_1} \big)(y^*) \Big),
 \end{aligned}
 \end{equation}
@@ -1357,24 +1357,24 @@ Weźmy teraz odwzorowanie $G = (f, \widetilde{g}_x) \in \mathcal{F},$ takie że 
     \widetilde{g}_x =
     \begin{cases}
         h & \text{if $x=x_0$,}\\
-        g & \text{if $x \in \{f^k(x_0) : r \leq k \leq r+N-1\}$,}\\
-        g_x & \text{if $x \in \{f^k(x_0) : 1 \leq k \leq r-1$ or $r+N \leq k \leq r+N+s-1\}$.}
+        g & \text{if $x \in \left\{f^k(x_0) : r \leq k \leq r+N-1\right\}$,}\\
+        g_x & \text{if $x \in \left\{f^k(x_0) : 1 \leq k \leq r-1 \lor r+N \leq k \leq r+N+s-1\right\}$.}
     \end{cases}
 \end{equation}
 
 Odwzorowanie takie istnieje na mocy lematu \ref{lemat_4_glownego_artykulu}, ponieważ
 $$d_1(\widetilde{g}_{x_0}, g_{x_0}) = d_1(h, g_{x_0}) < \frac{\epsilon}{4}$$
-oraz dla $x \in \{f^r(x_0), f^{r+1}(x_0), \ldots, f^{r+N-1}(x_0)\}$,
+oraz dla $x \in \left\{f^r(x_0), f^{r+1}(x_0), \ldots, f^{r+N-1}(x_0)\right\}$,
 $$d_1(\widetilde{g}_x, g_x) = d_1(g, g_x) \leq d_1(g, \mathrm{Id}) + d_1(\mathrm{Id}, g_x) < \frac{\epsilon}{4} + \frac{\epsilon}{4} = \frac{\epsilon}{2}$$.
 
 Punkt $(x_0, y_0) \in U_i$ jest punktem okresowym odwzorowania $G$, ponieważ
 
 \begin{equation}
 \begin{split}
-G^{r+N+s}(x_0, y_0) & \stackrel{(1)}{=} G^{r+N+s-1}(G(x_0, y_0)) \\
-& \stackrel{(2)}{=} G^{r+N+s-1}(F(x_0, y_0)) \stackrel{(3)}{=} G^{N+s}(F^r(x_0, y_0)) \\
-& \stackrel{(4)}{=} G^{N+s}(f^r(x_0), z) \stackrel{(5)}{=} G^s(f^{r+N}(x_0), y^*) \\
-& \stackrel{(6)}{=} F^s(f^{r+N}(x_0), y^*) \stackrel{(7)}{=} (x_0, y_0).
+G^{r+N+s}\left(x_0, y_0\right) & \stackrel{(1)}{=} G^{r+N+s-1}\big(G(x_0, y_0)\big) \\
+& \stackrel{(2)}{=} G^{r+N+s-1}\big(F(x_0, y_0)\big) \stackrel{(3)}{=} G^{N+s}\big(F^r(x_0, y_0)\big) \\
+& \stackrel{(4)}{=} G^{N+s}\big(f^r(x_0), z\big) \stackrel{(5)}{=} G^s\big(f^{r+N}(x_0), y^*\big) \\
+& \stackrel{(6)}{=} F^s\big(f^{r+N}(x_0), y^*\big) \stackrel{(7)}{=} (x_0, y_0).
 \end{split}
 \end{equation}
 

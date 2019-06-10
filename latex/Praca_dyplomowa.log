@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.5.6)  10 JUN 2019 19:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.5.6)  10 JUN 2019 20:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1413,7 +1413,12 @@ l.140 \maketitle
 ] [3
 
 
-] [4]
+]
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 231.
+
+[4]
 Rozdzia\l  1.
 [5
 
@@ -1470,17 +1475,17 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1454.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1454.
 
 Package rerunfilecheck Info: File `Praca_dyplomowa.out' has not changed.
-(rerunfilecheck)             Checksum: D5B3704B41CF35D90BDEE1BC6C4A6656;1434.
+(rerunfilecheck)             Checksum: F558D6C569AC9AE1B8F04C4320E0A36D;1285.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1454.
  ) 
 Here is how much of TeX's memory you used:
- 23563 strings out of 493029
- 419981 string characters out of 6136235
- 846052 words of memory out of 5000000
- 26214 multiletter control sequences out of 15000+600000
+ 23561 strings out of 493029
+ 419953 string characters out of 6136235
+ 846049 words of memory out of 5000000
+ 26212 multiletter control sequences out of 15000+600000
  91189 words of font info for 168 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,16n,62p,2686b,2387s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,19n,62p,2686b,2387s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/l
@@ -1496,10 +1501,10 @@ mf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy
 10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/font
 s/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/symbols/msbm10.pfb>
-Output written on Praca_dyplomowa.pdf (35 pages, 443124 bytes).
+Output written on Praca_dyplomowa.pdf (35 pages, 443853 bytes).
 PDF statistics:
- 617 PDF objects out of 1000 (max. 8388607)
- 557 compressed objects within 6 object streams
+ 609 PDF objects out of 1000 (max. 8388607)
+ 549 compressed objects within 6 object streams
  213 named destinations out of 1000 (max. 500000)
- 25253 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 25237 words of extra memory for PDF output out of 29859 (max. 10000000)
 
