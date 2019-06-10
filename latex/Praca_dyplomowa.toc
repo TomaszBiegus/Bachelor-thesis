@@ -1,22 +1,23 @@
 \select@language {polish}
 \contentsline {chapter}{Wst\IeC {\k e}p}{3}{chapter*.2}
 \contentsline {subsubsection}{Motywacje}{3}{section*.3}
-\contentsline {subsubsection}{Historia bada\IeC {\'n} nad uk\IeC {\l }adami dynamicznymi}{3}{section*.4}
-\contentsline {subsection}{\numberline {0.0.1}Chaos}{4}{subsection.0.0.1}
-\contentsline {chapter}{\numberline {1}Wprowadzenie}{5}{chapter.1}
-\contentsline {section}{\numberline {1.1}Definicje}{5}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}Definicje i fakty og\IeC {\'o}lne}{6}{subsection.1.1.1}
-\contentsline {subsection}{\numberline {1.1.2}Definicje dotycz\IeC {\k a}ce zwartych przestrzeni metrycznych}{6}{subsection.1.1.2}
-\contentsline {subsection}{\numberline {1.1.3}Fakty og\IeC {\'o}lne, dotycz\IeC {\k a}ce zwartych przestrzeni metrycznych}{9}{subsection.1.1.3}
-\contentsline {subsection}{\numberline {1.1.4}Twierdzenie Baire'a}{10}{subsection.1.1.4}
-\contentsline {subsection}{\numberline {1.1.5}Definicje dotycz\IeC {\k a}ce uk\IeC {\l }ad\IeC {\'o}w dynamicznych}{10}{subsection.1.1.5}
-\contentsline {subsection}{\numberline {1.1.6}Entropia topologiczna}{11}{subsection.1.1.6}
-\contentsline {subsubsection}{Definicja Adlera, Konheima i McAndrew}{11}{section*.5}
-\contentsline {subsubsection}{Definicja Bowena}{11}{section*.6}
-\contentsline {subsection}{\numberline {1.1.7}Chaos}{13}{subsection.1.1.7}
-\contentsline {subsection}{\numberline {1.1.8}Tranzytywno\IeC {\'s}\IeC {\'c} a entropia}{15}{subsection.1.1.8}
-\contentsline {subsection}{\numberline {1.1.9}Odwzorowania tr\IeC {\'o}jk\IeC {\k a}tne}{16}{subsection.1.1.9}
-\contentsline {subsection}{\numberline {1.1.10}Definicje utworzone na potrzeby dowodu twierdzenia o rozszerzaniu}{18}{subsection.1.1.10}
-\contentsline {section}{\numberline {1.2}Lematy}{21}{section.1.2}
-\contentsline {chapter}{\numberline {2}Twierdzenie o rozszerzaniu odwzorowa\IeC {\'n} chaotycznych w sensie Devaneya}{25}{chapter.2}
-\contentsline {chapter}{Bibliografia}{30}{section*.7}
+\contentsline {subsubsection}{Cel pracy}{3}{section*.4}
+\contentsline {subsubsection}{Historia bada\IeC {\'n} nad uk\IeC {\l }adami dynamicznymi}{3}{section*.5}
+\contentsline {subsubsection}{Chaos deterministyczny}{4}{section*.6}
+\contentsline {chapter}{\numberline {1}Wprowadzenie}{7}{chapter.1}
+\contentsline {section}{\numberline {1.1}Definicje}{7}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Definicje i fakty og\IeC {\'o}lne}{8}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Definicje dotycz\IeC {\k a}ce zwartych przestrzeni metrycznych}{8}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Fakty og\IeC {\'o}lne, dotycz\IeC {\k a}ce zwartych przestrzeni metrycznych}{11}{subsection.1.1.3}
+\contentsline {subsection}{\numberline {1.1.4}Twierdzenie Baire'a}{12}{subsection.1.1.4}
+\contentsline {subsection}{\numberline {1.1.5}Definicje dotycz\IeC {\k a}ce uk\IeC {\l }ad\IeC {\'o}w dynamicznych}{12}{subsection.1.1.5}
+\contentsline {subsection}{\numberline {1.1.6}Entropia topologiczna}{13}{subsection.1.1.6}
+\contentsline {subsubsection}{Definicja Adlera, Konheima i McAndrew}{13}{section*.7}
+\contentsline {subsubsection}{Definicja Bowena}{13}{section*.8}
+\contentsline {subsection}{\numberline {1.1.7}Chaos}{16}{subsection.1.1.7}
+\contentsline {subsection}{\numberline {1.1.8}Tranzytywno\IeC {\'s}\IeC {\'c} a entropia}{18}{subsection.1.1.8}
+\contentsline {subsection}{\numberline {1.1.9}Odwzorowania tr\IeC {\'o}jk\IeC {\k a}tne}{18}{subsection.1.1.9}
+\contentsline {subsection}{\numberline {1.1.10}Definicje utworzone na potrzeby dowodu twierdzenia o rozszerzaniu}{21}{subsection.1.1.10}
+\contentsline {section}{\numberline {1.2}Lematy}{23}{section.1.2}
+\contentsline {chapter}{\numberline {2}Twierdzenie o rozszerzaniu odwzorowa\IeC {\'n} chaotycznych w sensie Devaneya}{27}{chapter.2}
+\contentsline {chapter}{Bibliografia}{32}{section*.9}
