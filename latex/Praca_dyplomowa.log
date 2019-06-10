@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.5.6)  10 JUN 2019 16:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.5.6)  10 JUN 2019 17:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1419,13 +1419,13 @@ l.140 \maketitle
 ]
 Rozdzia\l  1.
 [5] [6] [7] [8]
-Overfull \hbox (0.64056pt too wide) in paragraph at lines 464--464
+Overfull \hbox (0.64056pt too wide) in paragraph at lines 463--463
 []\T1/lmr/bx/n/14.4 Fakty ogólne, do-ty-cz¡ce zwar-tych prze-strzeni me-trycz-n
 ych 
  []
 
 [9] [10] [11] [12] [13] [14] [15] [16]
-Overfull \hbox (24.26448pt too wide) in paragraph at lines 970--973
+Overfull \hbox (24.26448pt too wide) in paragraph at lines 969--972
 \T1/lmr/m/n/12 (-20) zbiór $\OML/lmm/m/it/12 A[]$ \T1/lmr/m/n/12 (-20) z twier-
 dze-nia []1.52[] w na-st¦-pu-j¡cy spo-sób: $\OML/lmm/m/it/12 A[] [][]\OT1/lmr/m
 /n/12 (-20) = \OMS/lmsy/m/n/12 f\OML/lmm/m/it/12 F[]\OT1/lmr/m/n/12 (-20) (\OML
@@ -1436,7 +1436,7 @@ y/m/n/12 g$\T1/lmr/m/n/12 (-20) ,
  []
 
 [17]
-Overfull \hbox (29.09703pt too wide) detected at line 1010
+Overfull \hbox (29.09703pt too wide) detected at line 1009
 \OMS/lmsy/m/n/12 R \OT1/lmr/m/n/12 = [] \OML/lmm/m/it/12 ;
  []
 
@@ -1446,13 +1446,13 @@ Rozdzia\l  2.
 
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 1336
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 1335
 .
  (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 1336.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 1335.
 
  [26] [27] [28] [29] [30
 
@@ -1475,15 +1475,15 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
 ) [35]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1490.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1490.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1489.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1489.
  (./Praca_dyplomowa.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1490.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1490.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1489.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1489.
 
 Package rerunfilecheck Info: File `Praca_dyplomowa.out' has not changed.
 (rerunfilecheck)             Checksum: 78A3ED6831199F2A6E803030ACB61C72;1858.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1490.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1489.
  ) 
 Here is how much of TeX's memory you used:
  23577 strings out of 493029
@@ -1508,7 +1508,7 @@ mf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy
 10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/font
 s/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/symbols/msbm10.pfb>
-Output written on Praca_dyplomowa.pdf (39 pages, 442920 bytes).
+Output written on Praca_dyplomowa.pdf (39 pages, 443328 bytes).
 PDF statistics:
  674 PDF objects out of 1000 (max. 8388607)
  609 compressed objects within 7 object streams

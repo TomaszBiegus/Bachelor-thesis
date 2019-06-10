@@ -452,10 +452,9 @@ Oznaczmy przez $g$ punkt skupienia ciągu $(x_n)$. Oznaczmy przez $y_1$ pierwszy
 Następnie niech $y_n$ będzie pierwszym elementem ciągu $(x_n)$ różnym od $g$ i spełniającym warunek $y_n \in K(g, \frac{d_{n-1}}{2})$, gdzie $d_{n-1} = \rho(y_{n-1}, g)$. Powstały w ten sposób podciąg $(y_n) \subset (x_n)$ jest zbieżny do $g \in X$. W przypadku gdyby na którymś etapie powyższej konstrukcji nie można było wskazać kolejnego elementu różnego od $g$, znaczyłoby to, że od pewnego miejsca ciąg $(x_n)$ jest stale równy $g$, a więc zbieżny.
 
 $(\Leftarrow)$
-Złóżmy, że $X$ spełnia definicję pokryciową.
 Dowód przez kontrapozycję. Pokażemy, że jeżeli istnieje pokrycie $X$, z którego nie można wybrać podpokrycia skończonego to istnieje ciąg z którego nie można wybrać podciągu zbieżnego.
 
-Załóżmy zatem, że nieskończona, przeliczalna rodzina zbiorów otwartych $\{U_i\}_{i=1}^{\infty}$ stanowi pokrycie X. Skonstruujmy następujący ciąg: 
+Załóżmy zatem, że nieskończona, przeliczalna {\color{blue} PYTANIE??? Czy nie wystarczy nam tutaj wziąć rodziny dowolnej (być może nieprzeliczalnej), wydaje mi się, że nie musimy mieć podpokrycia przeliczalnego, żęby ten dowód przeszedł, korzystamy tylko z otwartości zbiorów w rodzinie i faktu, że zawsze możemy wciąć kolejnego $x_n$ nie nalezacego do zadnego ze zbiorów $U_1 ... U_n$} rodzina zbiorów otwartych $\{U_i\}_{i=1}^{\infty}$ stanowi pokrycie X. Skonstruujmy następujący ciąg: 
 $$x_1 \notin U_1$$
 $$x_n \notin \bigcup_{k=1}^{n-1} U_k$$ Zawsze znajdziemy taki $x_n \in X$, gdyż gdyby taki nie istniał znaczyłoby to, że $\bigcup_{i=1}^{n-1}{U_{k_i}} = X$, czyli istniałoby podpokrycie skończone. Załóżmy teraz, że ciąg $(x_n)$ ma podciąg zbieżny. Wtedy istniałaby jego granica, tj. element $g \in X,$ taki że dla każdego $\epsilon > 0$ nieskończenie wiele elementów ciągu leży wewnątrz kuli $B(g, \epsilon)$, z kolei z otwartości zbiorów $U_n$ możemy wybrać taki $\epsilon$, że $B(g, \epsilon) \subset U_k$, gdzie $U_k$ jest dowolnym zbiorem z pokrycia X, zawierającym g. Z konstrukcji naszego ciągu wynika jednak, że $\forall_{n \in N} \forall_{m>n} \, x_m \notin U_n$, czyli do każdego $U_n$ należy jedynie skończenie wiele elementów. Zatem otrzymujemy sprzeczność. Czyli ciąg $(x_n)$ nie zawiera podciągu zbieżnego.
 \end{proof}
