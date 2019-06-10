@@ -613,8 +613,8 @@ Niech  $\epsilon > 0$ oraz $n \geq 1$. Kulę Bowena rzędu $n$ o środku w punkc
 
 \begin{equation}
 \begin{aligned}
-B_n(x,\epsilon) & \coloneqq \{y \in X : \rho(f^k(x), f^k(y)) \leq \epsilon, k \in \{0, 1, \ldots, n-1\}\} \\
-& = \bigcap_{i=0}^{n-1}f^{-i}(\overline{K}(f^i(x), \epsilon)).
+B_n(x,\epsilon) & \coloneqq \left\{y \in X : \rho\left(f^k(x), f^k(y)\right) \leq \epsilon, k \in \{0, 1, \ldots, n-1\}\right\} \\
+& = \bigcap_{i=0}^{n-1}f^{-i}\left(\overline{K}\big(f^i(x), \epsilon\big)\right).
 \end{aligned}
 \end{equation}
 
@@ -624,7 +624,7 @@ B_n(x,\epsilon) & \coloneqq \{y \in X : \rho(f^k(x), f^k(y)) \leq \epsilon, k \i
 \begin{definition}[Zbiór $(n,\epsilon)$-rozdzielony]
 \label{definicja_n_eps_rozdzielonego}
 \cite[s.~58]{ruette2017chaos}
-Mówimy, że zbiór $E \subset X$ jest $(n, \epsilon)$-rozdzielony, jeżeli dla każdych $x, y \in E,$ takich że $x \neq y$ istnieje $k \in \{0, 1, \ldots, n-1\},$ takie że $\rho(f^k(x), f^k(y)) > \epsilon.$
+Mówimy, że zbiór $E \subset X$ jest $(n, \epsilon)$-rozdzielony, jeżeli dla każdych $x, y \in E,$ takich że $x \neq y$ istnieje $k \in \{0, 1, \ldots, n-1\},$ takie że $\rho\left(f^k(x), f^k(y)\right) > \epsilon.$
 
 Maksymalną moc zbioru $(n, \epsilon)$-rozdzielonego oznaczamy przez $s_n(f, \epsilon).$
 \end{definition}
@@ -714,7 +714,9 @@ $$\lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log
 
 % Pokażemy, że $\forall_{n \in \mathbb{N}, \epsilon>0} \, s_n(f, \epsilon) \leq \frac{n}{\epsilon}.$
 
-Ustalmy dowolne $n \in \mathbb{N}$ i $\epsilon > 0.$ Podzielmy odcinek $[0, 1]$ na $m = \lfloor 1/\epsilon \rfloor + 1 \leq \frac{1}{\epsilon} + 1$ odcinków o (niekoniecznie jednakowych) długościach równych $d_{i,\epsilon} < \epsilon$ w taki sposób aby otrzymać rodzinę odcinków: $\{ [0, d_{1,\epsilon}), [d_{1,\epsilon}, d_{1,\epsilon} + d_{2, \epsilon}), \ldots, [\sum_{i=1}^{m-1} d_{i, \epsilon}, 1] \}.$ Oznaczmy krańce tych odcinków przez $a_0=0, \, a_1 = d_{1,\epsilon}, \, a_2 = d_{1,\epsilon} + d_{2,\epsilon}, \, \ldots, \, a_m = 1.$ 
+Ustalmy dowolne $n \in \mathbb{N}$ i $\epsilon > 0.$ Podzielmy odcinek $[0, 1]$ na $m = \lfloor 1/\epsilon \rfloor + 1 \leq \frac{1}{\epsilon} + 1$ odcinków o (niekoniecznie jednakowych) długościach równych $d_{i,\epsilon} < \epsilon$ w taki sposób aby otrzymać rodzinę odcinków: 
+$$\left\{ [0, d_{1,\epsilon}), [d_{1,\epsilon}, d_{1,\epsilon} + d_{2, \epsilon}), \ldots, [\sum_{i=1}^{m-1} d_{i, \epsilon}, 1] \right\}.$$
+Oznaczmy krańce tych odcinków przez $a_0=0, \, a_1 = d_{1,\epsilon}, \, a_2 = d_{1,\epsilon} + d_{2,\epsilon}, \, \ldots, \, a_m = 1.$ 
 
 Zdefiniujmy $A_i \coloneqq \{f^{-i}(a_0), f^{-i}(a_1), \ldots, f^{-i}(a_m)\}$, dla $i \in \{0, 1, \ldots, n-1\}$
 
@@ -739,9 +741,9 @@ Z wcześniejszych rozważań wynika, że do dowolnego zbioru $(n, \epsilon)$-roz
 Ostatecznie otrzymujemy:
 \begin{equation}
 \begin{aligned}
-h_{\textrm{top}}(f) & = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log s_n(f, \epsilon) \leq \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log ( n \cdot (m+1) - 1 ) \\
-& \leq \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log ( \frac{n}{\epsilon} + \frac{n}{2} - 1 ) \leq \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log ( \frac{2 \cdot n + \epsilon \cdot n}{2 \cdot \epsilon}) \\
-& = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} (\frac{1}{n} \log (n \cdot (2 + \epsilon)) - \frac{1}{n} \log ( 2 \cdot \epsilon )) = \lim_{\epsilon \rightarrow 0} 0 = 0
+h_{\textrm{top}}(f) & = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log s_n(f, \epsilon) \leq \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log \big( n \cdot (m+1) - 1 \big) \\
+& \leq \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log \left( \frac{n}{\epsilon} + \frac{n}{2} - 1 \right) \leq \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log \left( \frac{2 \cdot n + \epsilon \cdot n}{2 \cdot \epsilon}\right) \\
+& = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \left(\frac{1}{n} \log \big(n \cdot (2 + \epsilon)\big) - \frac{1}{n} \log ( 2 \cdot \epsilon )\right) = \lim_{\epsilon \rightarrow 0} 0 = 0
 \end{aligned}
 \end{equation}
 
@@ -908,9 +910,8 @@ $$h(F) = h(f)$$
 \begin{proof}
 %\cite{do_dowodu_rownosci_topologicznej_entropii_2_twierdzenieD}
 
-{\color{red} !!!NOWE!!! Poprawione
 Rozważamy dwie zwarte przestrzenie metryczne: $(X, d_1)$ oraz $(X \times I, d_2)$ z metrykami zdefiniowanymi w \ref{definicja_metryki_d_jeden} i \ref{definicja_metryki_d_dwa}. Przestrzeń $X$ jest zwarta z założenia, natomiast przestrzeń $X \times I$ jest zwarta jako produkt dwóch przestrzeni zwartych. 
-}
+
 Zdefiniujmy odwzorowanie $\pi: X \times I \rightarrow X$, $\pi(x,a) = x$. Oczywiście $\pi$ jest ciągłe i ,,na''.
 Wówczas $F: X \times I \rightarrow X \times Y$, $f: X \rightarrow X$ oraz $\pi: X \times I \rightarrow X$ (,,na'') są ciągłymi odwzorowaniami. 
 
@@ -924,28 +925,6 @@ Na podstawie twierdzenia 17 z pracy  \cite[s.~409]{bowen1971entropy__do_dowodu_r
 
 $$h(F) \leq h(f) + \sup_{x \in X} h(F, \pi^{-1}(x))$$
 
-
-{\color{orange} !!!POMOCNICZE, DO USUNIECIA!!!
-Mówimy, że zbiór $E \subset X$ jest $(n, \epsilon)$-rozdzielony jeżeli dla każdych $x, y \in E,$ takich że $x \neq y$ istnieje $k \in \{0, 1, \ldots, n-1\},$ takie że $\rho(f^k(x), f^k(y)) > \epsilon.$
-Maksymalną moc zbioru $(n, \epsilon)$-rozdzielonego zawartego w $K$ oznaczamy przez $s_n(f, \epsilon, K).$
-$h_{\textrm{top}}(f, K) = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log s_n(f, \epsilon, K).$
-
-next:
-Mówimy, że zbiór $E \subset X$ jest $(n, \epsilon)$-rozdzielony, jeżeli dla każdych $x, y \in E,$ takich że $x \neq y$ istnieje $k \in \{0, 1, \ldots, n-1\},$ takie że $\rho(f^k(x), f^k(y)) > \epsilon.$
-
-Maksymalną moc zbioru $(n, \epsilon)$-rozdzielonego oznaczamy przez $s_n(f, \epsilon).$
-
-
-next:
-Powyższe definicje występują też w wersjach ograniczonych do ustalonego zbioru zwartego $K \subset X.$ I tak, niech $K \subset X$ będzie zbiorem zwartym, wtedy:
-\begin{enumerate}
-\item Maksymalną moc zbioru $(n, \epsilon)$-rozdzielonego zawartego w $K$ oznaczamy przez $s_n(f, \epsilon, K).$
-\item $h_{\textrm{top}}(f, K) = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log s_n(f, \epsilon, K).$
-\end{enumerate}
-
-}
-
-{\color{red} !!!NOWE!!!
 
 Ustalmy $x \in X.$ Wiemy, że:
 $$h(F, \pi^{-1}(x)) = h(F, \{x\} \times I) = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log s_n(F, \epsilon, \{x\} \times I),$$
@@ -972,12 +951,12 @@ Dla każdych $i \in \mathbb{N}, \, x \in X, \, a \in I$ zachodzi:
 $$F^{-i}(x, a) = \big( f^{-i}(x), (g_{f^{-i}(x)}^{-1}\circ \ldots \circ g_{f^{-2}(x)}^{-1} \circ g_{f^{-1}(x)}^{-1})(a) \big)$$
 Wszystkie odwzorowania włóknowe $g_x$ są niemalejące, a więc ich złożenia również (na mocy wniosku \ref{zlozenie_skonczenie_wielu_niemalejacych_jest_niemalejace}).
 
-Korzystając z powyższego możemy łatwo zaadaptować twierdzenie \ref{entropia_topologiczna_odwzorowan_monotonicznych}, aby wykazać, że:
+W takim razie rozumując analogicznie jak w twierdzeniu \ref{entropia_topologiczna_odwzorowan_monotonicznych}, łatwo stwierdzamy, że:
 
 $$\forall_{x \in X} \, h(F, \pi^{-1}(x)) = 0,$$
 czyli również:
 $$\sup_{x \in X} h(F, \pi^{-1}(x)) = 0.$$
-}
+
 
 
 Otrzymujemy zatem nierówność:
@@ -1218,8 +1197,6 @@ Ostatecznie otrzymujemy $W \cup f(W) \cup \ldots \cup f^N(W) \subset U \subseteq
 \begin{lemma}[Istnienie orbity okresowej odwiedzającej rodzinę zbiorów otwartych]
 \label{lemat_3_glownego_artykulu_istnieje_orbita_okresowa_krojaca_sie_z_rodzina_otwartych}
 
-\textcolor{red}{TODO: przeredagowałem twierdzenie i dowód korzystjąc z pracy \cite[s.~7]{someAspectsOfTopologicalTransitivity} - twierdzenie 2.2.2.16}
-
 Na podstawie \cite[s.~231-232 Lemma 3]{balibrea2003topological} i \cite[s.~7]{someAspectsOfTopologicalTransitivity}
 Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną.
 Niech $f \in C(X)$ będzie topologicznie tranzytywnym odwzorowaniem, którego zbiór punktów okresowych jest gęsty w $X$. 
@@ -1230,16 +1207,6 @@ Wtedy dla każdej rodziny niepustych zbiorów otwartych $U_1, U_2, \ldots, U_n \
 \begin{proof}
 Ponieważ odwzorowanie $f$ jest tranzytywne a przestrzeń $X$ jest zwarta, to istnieje punkt $x_0$, którego orbita jest gęsta w $X$. Zatem orbita punktu $x_0$ odwiedza każdy ze zbiorów otwartych $U_i, \, i = 1,2,\ldots,n.$ Teraz korzystając z ciągłości odwzorowania $f$ wystarczy wziąć punkt okresowy $f$ dostatecznie bliski $x_0.$
 \end{proof}
-
-{\color{red}
-{\color{blue}Poniżej alternatywa dla powyższego dowodu, jeżeli powyższy jest dobry, to tego alternatywnego nie będę wykorzystywał.}
-\begin{proof}
-Alternatywa (dowód alternatywny).
-x jest zwartaZwarta => osrodkowa i zupelna + twierdzenie bairea
-TODO
-Przestrzeń $X$ jest zwarta, a zatem zupełna i ośrodkowa.
-\end{proof}
-}
 
 
 
