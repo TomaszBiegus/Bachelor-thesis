@@ -483,13 +483,8 @@ Niech $(X, \rho)$ będzie przestrzenią metryczną. Jeżeli z każdego ciągu $(
 \begin{proof}
 Najpierw pokażemy, że przestrzeń $X$ jest całkowicie ograniczona, to znaczy, że  dla każdego $\epsilon$ można ją pokryć skończenie wieloma kulami o promieniu $\epsilon.$
 
-Ustalmy dowolne $\epsilon > 0.$ Załóżmy, że nie możemy pokryć $X$ skończenie wieloma kulami o promieniu $\epsilon.$ Skonstruujemy wówczas ciąg $(K_i(s_i, \epsilon))_{i=0}^{\infty}$ rozłącznych kul zawartych w $X.$
-
-Możemy skonstruować taki ciąg kul, ponieważ gdybyśmy w którymś kroku nie mogli dołożyć kolejnej kuli rozłącznej ze wszystkimi poprzednimi, znaczyłoby to, że nie istnieje punkt odległy od środków wszystkich poprzednich kul o więcej niż $2 \epsilon.$ Znaczyłoby to, że każdy punkt przestrzeni znajdowałby się bliżej niż $2 \epsilon$ od środka którejś ze skończenie wielu kul. W takim razie, aby pokryć całą przestrzeń należałoby pokryć skończenie wiele kul o promieniach $2 \epsilon$ kulami o promieniu $\epsilon,$ a do tego wystarczyłoby skończenie wiele kul o promieniu $\epsilon.$
-
-Ciąg środków tych kul oczywiście nie zawiera podciągu zbieżnego gdyż dla każdych $i,j \in \mathbb{N}, $ $i \neq j: $ $\rho(s_i, s_j) \geq 2 \epsilon.$ Co prowadzi do sprzeczności, więc przestrzeń $X$ jest całkowicie ograniczona.
-
-
+Ustalmy dowolne $\epsilon > 0.$ Załóżmy, że nie możemy pokryć $X$ skończenie wieloma kulami o promieniu $\epsilon.$ 
+Konstruujemy następujący ciąg: $x_1$-dowolny element $X,$ następnie indukcyjnie, niech elementem o numerze $n+1$ będzie $x_{n+1}$ taki, że $\forall_{k \in \{1,2, \ldots, n\}} \, \rho(x_{n+1}, x_k) > \epsilon.$ Gdyby taki $x_{n+1}$ nie istniał znaczyłoby to, że skończenie wiele kul o promieniu $\epsilon$: $K(x_1, \epsilon), K(x_2, \epsilon), \ldots, K(x_n, \epsilon)$ pokrywa $X.$ Tak skonstruowany ciąg oczywiście nie zawiera podciągu zbieżnego, gdyż z konstrukcji, dla każdych $i,j \in \mathbb{N}, $ $i \neq j: $ $\rho(x_i, x_j) \geq \epsilon.$ Co prowadzi do sprzeczności, a zatem przestrzeń $X$ jest całkowicie ograniczona.
 
 
 {\color{blue}2. Wywnioskować, że jest ośrodkowa}
