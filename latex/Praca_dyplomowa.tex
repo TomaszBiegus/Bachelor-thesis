@@ -48,7 +48,7 @@
 %
 % Tytuł pracy dyplomowej 
 \tytul{Dynamika odwzorowań trójkątnych} 
-\tytulang{Tytuł pracy dyplomowej w języku angielskim}
+\tytulang{Dynamics of triangular maps}
 %
 % Tytuł / stopień / imię i nazwisko opiekuna
 \opiekun{dr inż. Dawid Huczek}
@@ -463,7 +463,7 @@ Załóżmy, że z dowolnego pokrycia $X$ zbiorami otwartymi możemy wybrać podp
 Oznaczmy przez $g$ punkt skupienia ciągu $(x_n)$. Oznaczmy przez $y_1$ pierwszy element ciągu $(x_n)$ różny od $g$. przez $y_2$ pierwszy element ciągu $(x_n)$ różny od $g$ i taki, że $y_2 \in K(g, \frac{d}{2})$, gdzie $d = \rho(y_1, g)$.
 Następnie niech $y_n$ będzie pierwszym elementem ciągu $(x_n)$ różnym od $g$ i spełniającym warunek $y_n \in K(g, \frac{d_{n-1}}{2})$, gdzie $d_{n-1} = \rho(y_{n-1}, g)$. Powstały w ten sposób podciąg $(y_n) \subset (x_n)$ jest zbieżny do $g \in X$. W przypadku gdyby na którymś etapie powyższej konstrukcji nie można było wskazać kolejnego elementu różnego od $g$, znaczyłoby to, że od pewnego miejsca ciąg $(x_n)$ jest stale równy $g$, a więc zbieżny.
 
-{\color{red}TODO  To trzeba bedzie jeszcze poprawic
+{\color{red}
 $(\Leftarrow)$
 Załóżmy, że z każdego ciągu $(x_n) \subset X$ możemy wybrać podciąg zbieżny oraz że istnieje pokrycie $X,$ z którego nie można wybrać podpokrycia skończonego.
 
@@ -474,22 +474,37 @@ $$x_n \notin \bigcup_{k=1}^{n-1} U_k$$ Zawsze znajdziemy taki $x_n \in X$, gdyż
 }
 \end{proof}
 
-{\color{red} TODO: Dokonczyc
+{\color{red} 
 \begin{lemma}
 \label{z_kazdego_pokrycia_mozna_wybrac_podpokrycie_przeliczalne}
 Niech $(X, \rho)$ będzie przestrzenią metryczną. Jeżeli z każdego ciągu $(x_n) \subset X$ można wybrać podciąg zbieżny, to z każdego pokrycia $X$ można wybrać podpokrycie przeliczalne.
 \end{lemma}
 
 \begin{proof}
-Najpierw pokażemy, że przestrzeń $X$ jest całkowicie ograniczona, to znaczy:  dla każdego $\epsilon$ można ją pokryć skończenie wieloma kulami o promieniu epsilon;
+Najpierw pokażemy, że przestrzeń $X$ jest całkowicie ograniczona, to znaczy, że  dla każdego $\epsilon$ można ją pokryć skończenie wieloma kulami o promieniu $\epsilon.$
 
-Ustalmy dowolne $\epsilon > 0.$ Załóżmy, że nie możemy pokryć $X$ skończenie wieloma kulami o promieniu $\epsilon.$ Zatem możemy skonstruować nieskończony ciąg 
+Ustalmy dowolne $\epsilon > 0.$ Załóżmy, że nie możemy pokryć $X$ skończenie wieloma kulami o promieniu $\epsilon.$ Skonstruujemy wówczas ciąg $(K_i(s_i, \epsilon))_{i=0}^{\infty}$ rozłącznych kul zawartych w $X.$
+
+Możemy skonstruować taki ciąg kul, ponieważ gdybyśmy w którymś kroku nie mogli dołożyć kolejnej kuli rozłącznej ze wszystkimi poprzednimi, znaczyłoby to, że nie istnieje punkt odległy od środków wszystkich poprzednich kul o więcej niż $2 \epsilon.$ Znaczyłoby to, że każdy punkt przestrzeni znajdowałby się bliżej niż $2 \epsilon$ od środka którejś ze skończenie wielu kul. W takim razie, aby pokryć całą przestrzeń należałoby pokryć skończenie wiele kul o promieniach $2 \epsilon$ kulami o promieniu $\epsilon,$ a do tego wystarczyłoby skończenie wiele kul o promieniu $\epsilon.$
+
+Ciąg środków tych kul oczywiście nie zawiera podciągu zbieżnego gdyż dla każdych $i,j \in \mathbb{N}, $ $i \neq j: $ $\rho(s_i, s_j) \geq 2 \epsilon.$ Co prowadzi do sprzeczności, więc przestrzeń $X$ jest całkowicie ograniczona.
 
 
 
 
-2. Wywnioskować, że jest ośrodkowa
-3. Posiłkując się kulami o środkach w punktach z ośrodka i promieniach wymiernych, wybrać z dowolnego pokrycia otwartego podpokrycie przeliczalne.
+{\color{blue}2. Wywnioskować, że jest ośrodkowa}
+Z powyższego łatwo zauważamy, że przestrzeń $X$ jest ośrodkowa. Ośrodkiem jest zbiór 
+$$A = \left\{ s : K(s, r) \in \bigcup_{n=1}^{\infty}\mathcal{K}_n \right\},$$
+gdzie $\mathcal{K}_n$ jest skończonym pokryciem $X$ kulami o promieniach $\frac{1}{n}.$ Zbiór $\bigcup_{n=1}^{\infty}\mathcal{K}_n$ jest przeliczalny jako przeliczalna suma zbiorów skończonych, więc $A$ jest przeliczalny. Gęstość $A$ w $X$ jest oczywista.
+
+
+{\color{blue}3. Posiłkując się kulami o środkach w punktach z ośrodka i promieniach wymiernych, wybrać z dowolnego pokrycia otwartego podpokrycie przeliczalne.}
+Weźmy teraz dowolne pokrycie $\mathcal{O}$ przestrzeni $X.$ Wiemy, że $X$ jest ośrodkowa. Skoro $\mathcal{O}$ jest pokryciem otwartym, to dla każdego punktu $x$ z ośrodka istnieje takie $r_x$ wymierne i taki zbiór $O_x \in \mathcal{O}$, że $K(x,r_x) \subset O_x.$ Oznaczmy punkty z ośrodka przez $x_1, x_2, x_3, \ldots.$ Oczywiście:
+$$X = \bigcup_{n=1}^{\infty}K(x_n, r_{x_n}) \subset \bigcup_{n=1}^{\infty}O_{x_n},$$
+zatem rodzina 
+$$\left\{O_{x_n} : x_n \textrm{należy do ośrodka} \right\}$$
+jest przeliczalnym podpokryciem $X.$
+
 \end{proof}
 }
 
