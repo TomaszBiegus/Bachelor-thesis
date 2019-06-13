@@ -290,7 +290,6 @@ Niech $(X, \rho)$ będzie przestrzenią metryczną. Weźmy dowolną kulę otwart
 czyli $\forall_{a \in K_2} \, a \in K.$ Z dowolności $k$ otrzymujemy, że kula $K$ jest otwarta a z dowolności wyboru kuli $K$ otrzymujemy tezę.
 \end{proof}
 
-{\color{red} !!!NOWE!!!
 \begin{definition}[Topologia]
 Topologią na przestrzeni $A$ nazywamy rodzinę wszystkich zbiorów otwartych w tej przestrzeni.
 \end{definition}
@@ -298,7 +297,6 @@ Topologią na przestrzeni $A$ nazywamy rodzinę wszystkich zbiorów otwartych w 
 \begin{definition}[Topologia generowana przez metrykę]
 Topologią generowaną przez metrykę $\rho$ na zbiorze $X,$ nazywamy rodzinę wszystkich zbiorów będących sumami kul otwartych zawartych w $X.$
 \end{definition}
-}
 
 \begin{definition}[Otoczenie punktu]
 W przestrzeni metrycznej $X$ zbiór $V \subseteq X$ nazywamy otoczeniem punktu $x$, jeżeli istnieje zbiór otwarty $U \subseteq X,$ taki że $x \in U \subseteq V$.
@@ -377,7 +375,7 @@ $$\limsup_{n \rightarrow \infty} x_n = \lim_{n \rightarrow \infty} \left(\sup_{k
 \begin{definition}[Punkt skupienia ciągu]
 Punkt $x_0$ nazywamy punktem skupienia ciągu $(x_n)_{n=1}^{\infty}$ gdy w dowolnym otoczeniu punktu $x_0$ znajduje się nieskończenie wiele wyrazów tego ciągu.
 \end{definition}
-{\color{red} !!!NOWE!!!
+
 \begin{definition}[Punkt skupienia zbioru]
 Niech $(X, \rho)$ będzie przestrzenią metryczną.
 Punkt $a$ nazywamy punktem skupienia zbioru $A \subset X,$ gdy w dowolnym otoczeniu punktu $a$ znajduje się nieskończenie wiele elementów zbioru $A$.
@@ -386,7 +384,7 @@ Punkt $a$ nazywamy punktem skupienia zbioru $A \subset X,$ gdy w dowolnym otocze
 \begin{definition}[Punkt izolowany]
 Mówimy, że $a$ jest punktem izolowanym zbioru $A,$ gdy $a \in A$ i $a$ nie jest punktem skupienia zbioru $A.$
 \end{definition}
-}
+
 
 \begin{definition}[Ciąg Cauchy'ego]
 Ciągiem Cauchy'ego w przestrzeni metrycznej $(X, \rho)$ nazywamy ciąg $(x_n)$ spełniający warunek:
@@ -503,7 +501,7 @@ $$M > n_0 \implies \rho(x_M, g) < \frac{\epsilon}{2}$$
 Zatem $\forall_{n > N}: \rho(x_n, g) \leq \rho(x_n, x_M) + \rho(x_M, g) < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon$, czyli $g \in X$ jest granicą ciągu $(x_n)$, a więc $(x_n)$ jest zbieżny w $(X, \rho)$.
 \end{proof}
 
-{\color{red} !!!NOWE!!!
+
 \begin{lemma}[Baza topologii zwartej przestrzeni metrycznej]
 W zwartej, a więc i ośrodkowej przestrzeni metrycznej, bazę topologii stanowi rodzina kul otwartych, o środkach w ośrodku i promieniach wymiernych.
 \end{lemma}
@@ -512,10 +510,10 @@ W zwartej, a więc i ośrodkowej przestrzeni metrycznej, bazę topologii stanowi
 \label{istnieje_przeliczalna_baza_topologii}
 Topologia zwartej przestrzeni metrycznej posiada przeliczalną bazę.
 \end{corollary}
-}
 
 
-{\color{red} !!!NOWE!!!
+
+
 \section{Przestrzenie funkcyjne}
 
 \begin{definition}[Odwzorowanie ciągłe]
@@ -533,7 +531,6 @@ Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną. Wówczas na przestrz
 $$d(f,g) = \sup_{x \in X} \rho\big(f(x), g(x)\big).$$
 Metrykę $d$ nazywamy metryką zbieżności jednostajnej.
 \end{definition}
-}
 
 
 \section{Twierdzenie Baire'a}
@@ -630,7 +627,7 @@ $$h(f) = \sup h(f, \mathcal{A}),$$ gdzie supremum jest brane po wszystkich otwar
 
 \subsection{Definicja Bowena}
 
-Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną, a $f: X \rightarrow X$ odwzorowaniem ciągłym. Rozważamy układ dynamiczny $(X, f).$ {\color{red}(TODO: ma byc uniformly continous - tak jest u Bowena, jest tak ze zwartości $X$, napisać to tutaj?)}.
+Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną, a $f: X \rightarrow X$ odwzorowaniem ciągłym. Rozważamy układ dynamiczny $(X, f).$
 
 \begin{definition}[Kula Bowena]
 \cite[s.~58]{ruette2017chaos}
@@ -815,9 +812,9 @@ Niech $X$ będzie przestrzenią metryczną. Ciągłe odwzorowanie $f: X \rightar
 \item zbiór punktów okresowych $f$ jest gęsty w $X$,
 \item $f$ jest wrażliwe na warunki początkowe.
 \end{enumerate}
-{\color{red} !!!NOWE!!! 
+
 Często, zamiast mówić o chaotyczności odwzorowania $f$, mówimy o chaotyczności układu dynamicznego $(X, f).$
-}
+
 \end{definition}
 
 
@@ -1061,7 +1058,7 @@ Uwaga: Rozważmy przestrzeń $(C(X \times Y), d)$ wszystkich ciągłych odwzorow
 $$d(F, \Phi) = \max_{(x,y) \in X \times Y} \max \left\{ \rho\big(f(x,y), \phi(x,y)\big), \tau\big(g(x,y), \psi(x,y)\big) \right\}.$$ 
 Wówczas metryka $d_2$ jest równa metryce $d$ obciętej do zbioru $C_\triangle(X \times Y).$
 
-Zbieżność w metrykach $d_1$ i $d_2$ jest tym samym, co zbieżność jednostajna {\color{red} !!!NOWE!!! (por. definicja \ref{definicja_zbieznosci_jednostajnej})}.
+Zbieżność w metrykach $d_1$ i $d_2$ jest tym samym, co zbieżność jednostajna (por. definicja \ref{definicja_zbieznosci_jednostajnej}).
 Z lematów \ref{przestrzen_ciaglych_jest_zupelna} i \ref{ciagle_trojkatne_tworza_przestrzen_metryczna_zupelna} wynika, że przestrzenie metryczne $(C(X), d_1)$ oraz $(C_\triangle(X \times Y), d_2)$ są zupełne.
 
 
@@ -1115,9 +1112,6 @@ Wówczas przestrzeń metryczna $(C_\triangle(X \times Y), d_2)$ jest zupełna.
 \end{lemma}
 
 \begin{proof}
-{\color{orange} !!!DOUBLE CHECK!!!
-
-
 Rozważmy przestrzeń $(C(X \times Y), d)$ wszystkich ciągłych odwzorowań postaci: 
 $$F: X \times Y \rightarrow X \times Y.$$ 
 Weźmy dwa dowolne odwzorowania $F, \Phi \in C(X \times Y)$: 
@@ -1134,12 +1128,10 @@ $$\forall_{(x,y) \in X \times Y} \, \lim_{n \rightarrow \infty} \rho\big(f_n(x,y
 Ponieważ $\forall_{n \in \mathbb{N}} \, F_n \in C_\triangle(X \times Y),$ to $f_n(x,y) = f_n(x).$ 
 Mamy więc 
 $$\forall_{(x,y) \in X \times Y} \, \lim_{n \rightarrow \infty} \rho\big(f_n(x), f(x,y)\big) = \lim_{n \rightarrow \infty} \rho\big(f_n(x), f_x(y)\big) = 0.$$
-{\color{blue}
-Ponadto dla każdych $n \in \mathbb{N}, x \in X, y_1, y_2 \in Y$ mamy $f_n(x, y_1) = f_n(x, y_2),$ wobec czego tę samą własność ma odwzorowanie $f.$ Ponieważ $f$ nie zależy od współrzędnej $y$ to odwzorowanie $F$ jest odwzorowaniem trójkątnym, czyli zbiór odwzorowań trójkątnych jest domkniętym podzbiorem przestrzeni $C(X \times Y).$}
+
+Ponadto dla każdych $n \in \mathbb{N}, x \in X, y_1, y_2 \in Y$ mamy $f_n(x, y_1) = f_n(x, y_2),$ wobec czego tę samą własność ma odwzorowanie $f.$ Ponieważ $f$ nie zależy od współrzędnej $y$ to odwzorowanie $F$ jest odwzorowaniem trójkątnym, czyli zbiór odwzorowań trójkątnych jest domkniętym podzbiorem przestrzeni $C(X \times Y).$
 
 Przestrzeń $(C(X \times Y), d)$ jest zupełna na mocy lematu \ref{przestrzen_ciaglych_jest_zupelna}. Ostatecznie $(C_\triangle(X \times Y), d_2)$ jako domknięta podprzestrzeń zupełnej przestrzeni $(C(X \times Y), d)$ również jest przestrzenią zupełną.
-
-}
 \end{proof}
 
 
@@ -1277,7 +1269,7 @@ dla każdego $y \in I$. Zauważmy ponadto, że dla $x \in V_i$ oraz $i \in \{1,2
 \widetilde{g}_x(y) = u(x)(h_i(y) - g_x(y)) + g_x(y).
 \end{equation}
 
-Rozważmy odwzorowanie $\widetilde{F} = (f, \widetilde{g}_x)$. Należy ono do $C_\triangle(X \times I)$. Z równości \ref{lemat4_rownanie_1} widzimy, że wszystkie odwzorowania włóknowe $\widetilde{g}_x$ są niemalejące i krańce przedziału $I$ są ich punktami stałymi. Ponadto $\widetilde{g}_{a_i} = h_i$ dla każdego $i$ oraz $\widetilde{g}_x = g_x$ dla $x \in X \setminus V \supset X \setminus U$. Ponieważ dla $x \in V_i$, gdzie $i \in \{1,2,\ldots,n\}$ mamy $d_1(h_i, g_x) < \widetilde{\epsilon}$ oraz $u(x) \in [0,1]$, zatem z równości \ref{lemat4_rownanie_2} otrzymujemy $d_1(g_x, \widetilde{g}_x) < \widetilde{\epsilon}$ dla każdego $x \in V$. {\color{orange} !!!DOUBLE CHECK!!!
+Rozważmy odwzorowanie $\widetilde{F} = (f, \widetilde{g}_x)$. Należy ono do $C_\triangle(X \times I)$. Z równości \ref{lemat4_rownanie_1} widzimy, że wszystkie odwzorowania włóknowe $\widetilde{g}_x$ są niemalejące i krańce przedziału $I$ są ich punktami stałymi. Ponadto $\widetilde{g}_{a_i} = h_i$ dla każdego $i$ oraz $\widetilde{g}_x = g_x$ dla $x \in X \setminus V \supset X \setminus U$. Ponieważ dla $x \in V_i$, gdzie $i \in \{1,2,\ldots,n\}$ mamy $d_1(h_i, g_x) < \widetilde{\epsilon}$ oraz $u(x) \in [0,1]$, zatem z równości \ref{lemat4_rownanie_2} otrzymujemy $d_1(g_x, \widetilde{g}_x) < \widetilde{\epsilon}$ dla każdego $x \in V$.
 Wynika z tego, że 
 \begin{align*}
 d_2(F, \widetilde{F}) & = d_2\big((f, g_x), (f, \widetilde{g_x})\big) \\
@@ -1287,7 +1279,6 @@ d_2(F, \widetilde{F}) & = d_2\big((f, g_x), (f, \widetilde{g_x})\big) \\
 & \leq \widetilde{\epsilon} < \epsilon,
 \end{align*}
 co kończy dowód.
-}
 \end{proof}
 
 \end{lemma}
@@ -1341,7 +1332,7 @@ Zbiór odwzorowań tranzytywnych jest rezydualny w $\mathcal{F}$, zostało to ud
 Pozostało wykazać, że również zbiór odwzorowań posiadających gęsty zbiór punktów okresowych jest rezydualny w $\mathcal{F}$.
 Oznaczmy zbiór takich odwzorowań (jednocześnie należących do $\mathcal{F}$) przez $\mathcal{F}_{DP}$.
 
-Niech $\{U_i^X\}_{i=1}^{\infty}$ będzie bazą topologii $X$ {\color{red}!!!NOWE!!! ($X$ jest jest przestrzenią zwartą, więc topologia na niej określona posiada przeliczalną bazę, por. wniosek \ref{istnieje_przeliczalna_baza_topologii})} i niech $\{U_i^I\}_{i=1}^{\infty}$ będzie zbiorem wszystkich odcinków otwartych o końcach wymiernych, należących do odcinka otwartego $(0, 1)$. Niech $\{U_i\}_{i=1}^{\infty}$ będzie ponumerowaniem zbioru $\{U_i^X \times U_j^I : i,j \in \mathbb{N}\}$. Wtedy każda kula otwarta w $X \times I$ zawiera jakiś spośród otwartych zbiorów $U_i$.
+Niech $\{U_i^X\}_{i=1}^{\infty}$ będzie bazą topologii $X$ ($X$ jest jest przestrzenią zwartą, więc topologia na niej określona posiada przeliczalną bazę, por. wniosek \ref{istnieje_przeliczalna_baza_topologii}) i niech $\{U_i^I\}_{i=1}^{\infty}$ będzie zbiorem wszystkich odcinków otwartych o końcach wymiernych, należących do odcinka otwartego $(0, 1)$. Niech $\{U_i\}_{i=1}^{\infty}$ będzie ponumerowaniem zbioru $\{U_i^X \times U_j^I : i,j \in \mathbb{N}\}$. Wtedy każda kula otwarta w $X \times I$ zawiera jakiś spośród otwartych zbiorów $U_i$.
 
 Dla każdego $i=1,2,...$ niech zbiór $\mathcal{F}_{SO}^i$ (,,S'' - stabilny, ,,O'' - okresowy) będzie zdefiniowany następująco. Odwzorowanie G należy do $\mathcal{F}_{SO}^i$ wtedy i tylko wtedy, gdy należy do $\mathcal{F}$, posiada punkt okresowy w $U_i$ oraz wszystkie dostatecznie bliskie $G$ odwzorowania z $\mathcal{F}$ również posiadają punkt okresowy w $U_i$ (być może różne od punktów okresowych odwzorowania $G$). Zbiory $\mathcal{F}_{SO}^i$ są otwartymi podzbiorami $\mathcal{F}$ (patrz lemat \ref{Fso_sa_otwartymi_podzbiorami_F}). Ponieważ $\mathcal{F}_{DP} \supseteq \bigcap_{i=1}^{\infty} \mathcal{F}_{SO}^i$ aby pokazać, że $\mathcal{F}_{DP}$ jest rezydualny w $\mathcal{F}$ wystarczy pokazać, że $\forall_{i \in \mathbb{N}} \, \mathcal{F}_{SO}^i$ jest gęsty w $\mathcal{F}$. (Wynika to z twierdzenia Baire'a \ref{twierdzenie_bairea} oraz definicji \ref{definicja_zbioru_rezydualnego}).
 
