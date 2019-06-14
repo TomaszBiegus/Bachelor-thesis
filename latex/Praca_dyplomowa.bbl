@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{alseda1999entropy}
 {\sc Alseda, L., Kolyada, S., Llibre, J., Snoha, L.}
@@ -41,6 +41,11 @@
 {\sc Kolyada, S., Snoha, L.}
 \newblock Some aspects of topological transitivity - a survey.
 \newblock {\em Grazer Mathematische Berichte 334\/} (01 1997), 3--35.
+
+\bibitem{lorenz1963deterministic}
+{\sc Lorenz, E.~N.}
+\newblock Deterministic nonperiodic flow.
+\newblock {\em Journal of the atmospheric sciences 20}, 2 (1963), 130--141.
 
 \bibitem{ruette2017chaos}
 {\sc Ruette, S.}
