@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.5.6)  14 JUN 2019 21:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.5.6)  15 JUN 2019 10:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1129,21 +1129,21 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 (./Praca_dyplomowa.aux)
 \openout1 = `Praca_dyplomowa.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 138.
-LaTeX Font Info:    ... okay on input line 138.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 138.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 139.
+LaTeX Font Info:    ... okay on input line 139.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 139.
  (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1181,7 +1181,7 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 138.
+LaTeX Info: Redefining \microtypecontext on input line 139.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1196,7 +1196,7 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 )
 \AtBeginShipoutBox=\box49
-Package hyperref Info: Link coloring OFF on input line 138.
+Package hyperref Info: Link coloring OFF on input line 139.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1206,9 +1206,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count159
 )
-LaTeX Info: Redefining \ref on input line 138.
-LaTeX Info: Redefining \pageref on input line 138.
-LaTeX Info: Redefining \nameref on input line 138.
+LaTeX Info: Redefining \ref on input line 139.
+LaTeX Info: Redefining \pageref on input line 139.
+LaTeX Info: Redefining \nameref on input line 139.
 
 (./Praca_dyplomowa.out) (./Praca_dyplomowa.out)
 \@outlinefile=\write5
@@ -1279,37 +1279,37 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 140.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 141.
 
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 140.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 141.
 
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 140
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 141
 .
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 140
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 141
 .
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 140.
+(Font)              <10.95> on input line 141.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 140.
+(Font)              <8> on input line 141.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 140.
-LaTeX Font Info:    Try loading font information for U+msa on input line 140.
+(Font)              <6> on input line 141.
+LaTeX Font Info:    Try loading font information for U+msa on input line 141.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1317,7 +1317,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 140.
+LaTeX Font Info:    Try loading font information for U+msb on input line 141.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1326,7 +1326,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 140.
+(Font)              <12> on input line 141.
  [1
 
 
@@ -1338,7 +1338,7 @@ ination with the same identifier (name{page.}) has been already used, duplicate
  ignored
 <to be read again> 
                    \relax 
-l.140 \maketitle
+l.141 \maketitle
                  [2
 
 
@@ -1377,7 +1377,7 @@ l.140 \maketitle
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Underfull \hbox (badness 2318) in paragraph at lines 140--140
+Underfull \hbox (badness 2318) in paragraph at lines 141--141
 []\T1/lmr/m/n/10.95 (+20) chaos, to-po-lo-gi-cal en-tropy, trian-gu-lar
  []
 
@@ -1385,7 +1385,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.140 \maketitle
+l.141 \maketitle
                  [3
 
 
@@ -1393,7 +1393,7 @@ l.140 \maketitle
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.140 \maketitle
+l.141 \maketitle
                  [4
 
 
@@ -1419,12 +1419,12 @@ l.140 \maketitle
 ]
 Rozdzia\l  1.
 
-Overfull \hbox (2.75983pt too wide) in paragraph at lines 266--266
+Overfull \hbox (2.75983pt too wide) in paragraph at lines 267--267
 []\T1/lmr/bx/n/17.28 Definicje do-ty-cz¡ce zwar-tych prze-strzeni me-trycz-
  []
 
 [7] [8] [9] [10] [11] [12] [13]
-Overfull \hbox (3.4237pt too wide) in paragraph at lines 699--701
+Overfull \hbox (3.4237pt too wide) in paragraph at lines 700--702
 [][]\T1/lmr/bx/n/12 Definicja 1.56 \T1/lmr/m/n/12 (-20) (Zbiór $\OT1/lmr/m/n/12
  (-20) (\OML/lmm/m/it/12 n; ^^O\OT1/lmr/m/n/12 (-20) )$\T1/lmr/m/n/12 (-20) -ro
 zpinaj¡cy)\T1/lmr/bx/n/12 . []\T1/lmr/m/n/12 (-20) [[], s. 58] Zbiór $\OML/lmm/
@@ -1433,7 +1433,7 @@ t/12 n; ^^O\OT1/lmr/m/n/12 (-20) )$\T1/lmr/m/n/12 (-20) -rozpinaj¡cym
  []
 
 [14] [15] [16] [17] [18] [19]
-Overfull \hbox (24.26448pt too wide) in paragraph at lines 1021--1024
+Overfull \hbox (24.26448pt too wide) in paragraph at lines 1022--1025
 \T1/lmr/m/n/12 (-20) zbiór $\OML/lmm/m/it/12 A[]$ \T1/lmr/m/n/12 (-20) z twier-
 dze-nia []1.64[] w na-st¦-pu-j¡cy spo-sób: $\OML/lmm/m/it/12 A[] [][]\OT1/lmr/m
 /n/12 (-20) = \OMS/lmsy/m/n/12 f\OML/lmm/m/it/12 F[]\OT1/lmr/m/n/12 (-20) (\OML
@@ -1444,7 +1444,7 @@ y/m/n/12 g$\T1/lmr/m/n/12 (-20) ,
  []
 
 [20]
-Overfull \hbox (29.09703pt too wide) detected at line 1061
+Overfull \hbox (29.09703pt too wide) detected at line 1062
 \OMS/lmsy/m/n/12 R \OT1/lmr/m/n/12 = [] \OML/lmm/m/it/12 ;
  []
 
@@ -1454,13 +1454,13 @@ Rozdzia\l  2.
 
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 1368
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 1369
 .
  (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 1368.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 1369.
 
  [28] [29] [30] [31]
 (./Praca_dyplomowa.bbl [32
@@ -1471,24 +1471,24 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/12'.
 (microtype)             Ignoring protrusion settings for this character.
 ) [33]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1516.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1516.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1517.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1517.
  (./Praca_dyplomowa.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1516.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1516.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1517.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1517.
 
 Package rerunfilecheck Info: File `Praca_dyplomowa.out' has not changed.
 (rerunfilecheck)             Checksum: CECCB0D214AB7A1786072AC7240D3F64;1443.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1516.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1517.
  ) 
 Here is how much of TeX's memory you used:
- 23579 strings out of 493029
- 420310 string characters out of 6136235
- 845308 words of memory out of 5000000
+ 23583 strings out of 493029
+ 420354 string characters out of 6136235
+ 846321 words of memory out of 5000000
  26220 multiletter control sequences out of 15000+600000
- 91600 words of font info for 171 fonts, out of 8000000 for 9000
+ 91774 words of font info for 173 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 71i,19n,62p,2391b,2387s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,19n,62p,2318b,2387s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/s
 hare/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
@@ -1504,7 +1504,7 @@ mf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy
 10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf/font
 s/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/symbols/msbm10.pfb>
-Output written on Praca_dyplomowa.pdf (37 pages, 457251 bytes).
+Output written on Praca_dyplomowa.pdf (37 pages, 457219 bytes).
 PDF statistics:
  641 PDF objects out of 1000 (max. 8388607)
  579 compressed objects within 6 object streams
