@@ -281,14 +281,12 @@ Warunek \ref{nierownosc_trojkata} nazywany jest zwykle nierównością trójkąt
 Przestrzenią metryczną nazywamy parę $(X, \rho)$, gdzie $X$ jest zbiorem a $\rho$ zdefiniowaną na nim metryką. Czasami, tam gdzie nie będzie prowadziło to do nieporozumień, przestrzeń metryczną $(X, \rho)$ będziemy oznaczać przez samo $X$.
 \end{definition}
 
-{\color{red} !!!NOWE!!!
 \begin{definition}[Odległość punktu od zbioru]
 \label{definicja_odleglosci_punktu_od_zbioru}
 W przestrzeni metrycznej $(X, \rho),$ odległość punktu $x \in X$ od zbioru $A \subset X$ definiujemy następująco:
 
 $$d(x, A) = \inf_{a \in A} \rho(x, a)$$
 \end{definition}
-}
 
 \begin{definition}[Kula otwarta]
 Kulą otwartą w przestrzeni metrycznej $(X, \rho)$ nazywamy zbiór: $K(s, r) = \{x \in X: \rho(s, x) < r\}$.
@@ -360,6 +358,10 @@ Podzbiór $A$ przestrzeni metrycznej $(X, \rho)$ jest domknięty wtedy i tylko w
 
 \begin{definition}[Zbiór gęsty]
 Dla danej przestrzeni metrycznej $(X, \rho)$. Zbiór $A \subset X$ nazwiemy gęstym, gdy $\forall_{x \in X} \, \forall_{\epsilon>0} \, \exists_{a \in A} : \rho(x, a) < \epsilon$.
+\end{definition}
+
+\begin{definition}[Ośrodkowość]
+Przestrzeń metryczna $(X, \rho)$ jest ośrodkowa, gdy zawiera podzbiór przeliczalny i gęsty.
 \end{definition}
 
 \begin{definition}[Zbiór brzegowy]
@@ -450,8 +452,8 @@ Załóżmy, że z każdego ciągu $(x_n) \subset X$ możemy wybrać podciąg zbi
 
 Niech $\{\mathcal{O}_i\}_{i \in I}$ będzie pokryciem $X,$ które nie ma podpokrycia skończonego. Na mocy lematu \ref{z_kazdego_pokrycia_mozna_wybrac_podpokrycie_przeliczalne} możemy wybrać z niego podpokrycie przeliczalne.
 Załóżmy zatem, że nieskończona, przeliczalna rodzina zbiorów otwartych $\{U_i\}_{i=1}^{\infty}$ stanowi pokrycie $X$. Skonstruujmy następujący ciąg: 
-$$x_1 \notin U_1$$
-$$x_n \notin \bigcup_{k=1}^{n-1} U_k$$ Zawsze znajdziemy taki $x_n \in X$, gdyż gdyby taki nie istniał znaczyłoby to, że $\bigcup_{i=1}^{n-1}{U_{k_i}} = X$, czyli istniałoby podpokrycie skończone. Załóżmy teraz, że ciąg $(x_n)$ ma podciąg zbieżny. Wtedy istniałaby jego granica, tj. element $g \in X,$ taki że dla każdego $\epsilon > 0$ nieskończenie wiele elementów ciągu leży wewnątrz kuli $B(g, \epsilon)$, z kolei z otwartości zbiorów $U_n$ możemy wybrać taki $\epsilon$, że $B(g, \epsilon) \subset U_k$, gdzie $U_k$ jest dowolnym zbiorem z pokrycia X, zawierającym g. Z konstrukcji naszego ciągu wynika jednak, że $\forall_{n \in N} \forall_{m>n} \, x_m \notin U_n$, czyli do każdego $U_n$ należy jedynie skończenie wiele elementów. Zatem otrzymujemy sprzeczność.
+$$x_1 \notin U_1,$$
+$$x_n \notin \bigcup_{k=1}^{n-1} U_k.$$ Zawsze znajdziemy taki $x_n \in X$, gdyż gdyby taki nie istniał znaczyłoby to, że $\bigcup_{i=1}^{n-1}{U_{k_i}} = X$, czyli istniałoby podpokrycie skończone. Załóżmy teraz, że ciąg $(x_n)$ ma podciąg zbieżny. Wtedy istniałaby jego granica, tj. element $g \in X,$ taki że dla każdego $\epsilon > 0$ nieskończenie wiele elementów ciągu leży wewnątrz kuli $B(g, \epsilon)$, z kolei z otwartości zbiorów $U_n$ możemy wybrać taki $\epsilon$, że $B(g, \epsilon) \subset U_k$, gdzie $U_k$ jest dowolnym zbiorem z pokrycia X, zawierającym g. Z konstrukcji naszego ciągu wynika jednak, że $\forall_{n \in N} \forall_{m>n} \, x_m \notin U_n$, czyli do każdego $U_n$ należy jedynie skończenie wiele elementów. Zatem otrzymujemy sprzeczność.
 \end{proof}
 
 
@@ -473,7 +475,7 @@ gdzie $\mathcal{K}_n$ jest skończonym pokryciem $X$ kulami o promieniach $\frac
 Weźmy teraz dowolne pokrycie $\mathcal{O}$ przestrzeni $X.$ Wiemy, że $X$ jest ośrodkowa. Skoro $\mathcal{O}$ jest pokryciem otwartym, to dla każdego punktu $x$ z ośrodka istnieje takie $r_x$ wymierne i taki zbiór $O_x \in \mathcal{O}$, że $K(x,r_x) \subset O_x.$ Oznaczmy punkty z ośrodka przez $x_1, x_2, x_3, \ldots.$ Oczywiście:
 $$X = \bigcup_{n=1}^{\infty}K(x_n, r_{x_n}) \subset \bigcup_{n=1}^{\infty}O_{x_n},$$
 zatem rodzina 
-$$\left\{O_{x_n} : x_n \textrm{należy do ośrodka} \right\}$$
+$$\left\{O_{x_n} : x_n \textrm{należy do ośrodka} \right\},$$
 jest przeliczalnym podpokryciem $X.$
 
 \end{proof}
@@ -482,9 +484,7 @@ jest przeliczalnym podpokryciem $X.$
 \section{Fakty ogólne, dotyczące zwartych przestrzeni metrycznych}
 
 
-\begin{definition}[Ośrodkowość]
-Przestrzeń metryczna $(X, \rho)$ jest ośrodkowa, gdy zawiera podzbiór przeliczalny i gęsty.
-\end{definition}
+
 
 
 \begin{definition}[Zupełność]
@@ -497,18 +497,7 @@ Jeżeli przestrzeń metryczna jest zwarta to jest również ośrodkowa.
 \end{theorem}
 
 \begin{proof}
-Niech $(X, \rho)$ będzie przestrzenią metryczną zwartą. Oznacza to, że z każdego pokrycia $X$ zbiorami otwartymi, można wybrać podpokrycie skończone.
-
-Dla $i \in \mathbb{N}$, niech $\mathcal{A}_{i} = \{ K(x, \frac{1}{i}) : x \in X \}$, $\mathcal{A}_{i}$ jest oczywiście pokryciem $X$ zbiorami otwartymi, zatem z każdej rodziny $\mathcal{A}_{i}$ możemy wybrać podpokrycie skończone, oznaczmy je przez $\mathcal{B}_{i}$. Rozważmy teraz następującą rodzinę: 
-$$B = \bigcup\limits_{i=1}^{\infty} \mathcal{B}_{i}.$$
-Składa się ona ze zbiorów postaci $K(x, \frac{1}{i})$ dla pewnych $i \in \mathbb{N}$ i $x \in X$ i jako przeliczalna suma rodzin skończonych jest przeliczalną rodziną zbiorów.
-Niech teraz 
-$$C = \{ s : \exists_{i \in \mathbb{N}} \, K\left(s, \frac{1}{i}\right) \in B \}.$$
-Zbiór $C$ jest równoliczny ze zbiorem $B$, a więc przeliczalny.
-Ponadto $C$ jest gęsty w $X$:
-Niech $\epsilon > 0$. Weźmy dowolny $x \in X$. Oczywiście istnieje $i_0 \in \mathbb{N},$ takie że $\frac{1}{i_0} < \epsilon$. Wiemy, że $\mathcal{B}_{i_0}$ stanowi pokrycie $X$ i składa się ze zbiorów postaci $K(s, \frac{1}{i_0})$, gdzie $s \in X$. Skoro $\mathcal{B}_{i_0}$ jest pokryciem $X$ to $\exists_{K(s, \frac{1}{i_0}) \in \mathcal{B}_{i_0}} : x \in K(s, \frac{1}{i_0})$, czyli $\rho(x, s) < \frac{1}{i_0} < \epsilon$, natomiast $s \in C$ z definicji zbioru $C$
-
-Czyli X zawiera podzbiór przeliczalny i gęsty, zatem przestrzeń $(X, \rho)$ jest ośrodkowa.
+Fakt ten udowodniliśmy w trakcie dowodu lematu \ref{z_kazdego_pokrycia_mozna_wybrac_podpokrycie_przeliczalne}.
 \end{proof}
 
 
@@ -517,13 +506,13 @@ Każda zwarta przestrzeń metryczna jest zupełna.
 \end{theorem}
 
 \begin{proof}
-Niech $(X, \rho)$  będzie przestrzenią zwartą.
+Niech $(X, \rho)$ będzie przestrzenią zwartą.
 Weźmy ciąg Cauchy'ego $(x_n)$ elementów $X$. Ze zwartości (twierdzenie \ref{rownowaznosc_definicji_pokryciowej_i_ciagowej}) wynika, że istnieje podciąg $(y_{n_k})$ ciągu $(x_n)$ zbieżny do jakiegoś $g \in X$. Zatem $\forall_{\epsilon > 0} \, \exists_{n_0 \in \mathbb{N}} \, \forall_{n > n_0} \, \rho(y_n, g) < \epsilon$.
 Pokażemy, że $(x_n)$ zbiega do $g$.
 
-Ustalmy $\epsilon > 0$. Z faktu, że $(x_n)$ jest ciągiem Cauchy'ego wynika, że $$\exists_{N \in \mathbb{N}} \, \forall_{n, m > N} \, \rho(x_m, x_n) < \frac{\epsilon}{2}$$ Ponadto $$\exists_{n_0 \in \mathbb{N}} \, \forall_{n > n_0} \, \rho(y_n, g) < \frac{\epsilon}{2}$$ Weźmy teraz element $y_{k}$ podciągu $(y_n)$, taki że $y_{k} = x_M$, gdzie $M > N \land M > n_0$. Wówczas 
-$$M > N \implies \forall_{n > N} \, \rho(x_M, x_n) < \frac{\epsilon}{2}$$
-$$M > n_0 \implies \rho(x_M, g) < \frac{\epsilon}{2}$$
+Ustalmy $\epsilon > 0$. Z faktu, że $(x_n)$ jest ciągiem Cauchy'ego wynika, że $$\exists_{N \in \mathbb{N}} \, \forall_{n, m > N} \, \rho(x_m, x_n) < \frac{\epsilon}{2}.$$ Ponadto $$\exists_{n_0 \in \mathbb{N}} \, \forall_{n > n_0} \, \rho(y_n, g) < \frac{\epsilon}{2}.$$ Weźmy teraz element $y_{k}$ podciągu $(y_n)$, taki że $y_{k} = x_M$, gdzie $M > N \land M > n_0$. Wówczas 
+$$M > N \implies \forall_{n > N} \, \rho(x_M, x_n) < \frac{\epsilon}{2},$$
+$$M > n_0 \implies \rho(x_M, g) < \frac{\epsilon}{2}.$$
 
 Zatem $\forall_{n > N}: \rho(x_n, g) \leq \rho(x_n, x_M) + \rho(x_M, g) < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon$, czyli $g \in X$ jest granicą ciągu $(x_n)$, a więc $(x_n)$ jest zbieżny w $(X, \rho)$.
 \end{proof}
@@ -559,7 +548,7 @@ $$d(f,g) = \sup_{x \in X} \rho\big(f(x), g(x)\big).$$
 Metrykę $d$ nazywamy metryką zbieżności jednostajnej.
 \end{definition}
 
-{\color{red}
+
 \section{Lemat Urysohna}
 
 \begin{lemma}[Lemat Urysohna]
@@ -575,7 +564,7 @@ $$f(x)=\frac{d(x,A)}{d(x,A)+d(x,B)},$$
 
 gdzie $d$ jest zdefiniowane jak w \ref{definicja_odleglosci_punktu_od_zbioru}.
 \end{proof}
-}
+
 
 \section{Twierdzenie Baire'a}
 
@@ -597,7 +586,8 @@ W niepustej, zupełnej przestrzeni metrycznej $X$, przekrój przeliczalnie wielu
 
 
 \begin{lemma}[Przekrój zbiorów rezydualnych jest rezydualny] \label{przekroj_rezydualnych_jest_rezydualny}
-W przestrzeni metrycznej zupełnej, przekrój przeliczalnie wielu zbiorów rezydualnych jest rezydualny. W szczególności niepusty.
+\cite[s.~230]{engelking1989topologia}
+W przestrzeni metrycznej zupełnej, przekrój przeliczalnie wielu zbiorów rezydualnych jest rezydualny. W~szczególności niepusty.
 \end{lemma}
 
 
@@ -658,10 +648,10 @@ $$\mathcal{A}^n = \bigvee_{i=0}^{n-1}f^{-i}(\mathcal{A}).$$
 Ponadto niech $\mathcal{N}(\mathcal{A})$ będzie najmniejszą możliwą mocą podpokrycia wybranego z $\mathcal{A}$ (tzn. licznością podzrodziny rodziny $\mathcal{A}$, która również jest pokryciem $X$). Moc tej rodziny możemy utożsamiać z licznością ponieważ zawsze istnieje podpokrycie skończone, gdyż $X$ jest zwarta.
 
 Wtedy entropią topologiczną odwzorowania $f$ przy pokryciu $\mathcal{A}$ nazywamy wartość:
-$$h(f, \mathcal{A}) = \lim_{n \rightarrow \infty}{\frac{1}{n}\log\mathcal{N}(\mathcal{A}^n)}$$
+$$h(f, \mathcal{A}) = \lim_{n \rightarrow \infty}{\frac{1}{n}\log\mathcal{N}(\mathcal{A}^n)}.$$
 \end{definition}
 
-\begin{definition}[Entropia topologiczna Adler, Konheim, McAndrew]
+\begin{definition}[Entropia topologiczna Adlera, Konheima, McAndrew]
 \label{definicja_entropii_topologicznej_adlera}
 Na podstawie \cite{misiurewicz1993}.
 Adler, Konheim i McAndrew entropię topologiczną odwzorowania $f$ definiują następująco: 
@@ -692,7 +682,7 @@ B_n(x,\epsilon) & \coloneqq \left\{y \in X : \rho\left(f^k(x), f^k(y)\right) \le
 \cite[s.~58]{ruette2017chaos}
 Mówimy, że zbiór $E \subset X$ jest $(n, \epsilon)$-rozdzielony, jeżeli dla każdych $x, y \in E,$ takich że $x \neq y$ istnieje $k \in \{0, 1, \ldots, n-1\},$ takie że $\rho\left(f^k(x), f^k(y)\right) > \epsilon.$
 
-Maksymalną moc zbioru $(n, \epsilon)$-rozdzielonego oznaczamy przez $s_n(f, \epsilon).$
+Maksymalną moc zbioru $(n, \epsilon)$-rozdzielonego oznaczamy przez $s_n(f, \epsilon).$ (Liczba ta jest zawsze skończona, ponieważ przestrzeń jest zwarta.) 
 \end{definition}
 
 
@@ -701,7 +691,7 @@ Maksymalną moc zbioru $(n, \epsilon)$-rozdzielonego oznaczamy przez $s_n(f, \ep
 Zbiór $E$ nazywamy $(n,\epsilon)$-rozpinającym jeżeli $X \subset \bigcup_{x \in E}B_n(x, \epsilon)$.
 
 Minimalną moc zbioru $(n, \epsilon)$-rozpinającego oznaczamy przez $r_n(f, \epsilon).$
-
+(Zwartość przestrzeni implikuje, że zawsze istnieją skończone zbiory $(n, \epsilon)$-rozpinające, możemy więc mówić o minimalnej liczności takiego zbioru.)
 \end{definition}
 
 
@@ -730,7 +720,7 @@ Powyższe definicje występują też w wersjach ograniczonych do ustalonego zbio
 \begin{theorem}
 \cite[s.~402]{bowen1971entropy__do_dowodu_rownosci_topologicznej_entropii_2_twierdzenie17}
 Zachodzi następująca równość:
-$$h_{\textrm{top}}(f) = \sup_{K \subset X, K \textrm{ zwarty}}h_{\textrm{top}}(f, K)$$
+$$h_{\textrm{top}}(f) = \sup_{K \subset X, K \textrm{ zwarty}}h_{\textrm{top}}(f, K).$$
 \end{theorem}
 
 W dalszej części pracy będziemy używali oznaczenia $h$ zamiast $h_{\textrm{top}},$ w miejscach gdzie nie będzie prowadziło to do nieporozumień.
@@ -787,8 +777,7 @@ $$\lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log
 Ustalmy dowolne $n \in \mathbb{N}$ i $\epsilon > 0.$ Podzielmy odcinek $[0, 1]$ na $m = \lfloor 1/\epsilon \rfloor + 1 \leq \frac{1}{\epsilon} + 1$ odcinków o (niekoniecznie jednakowych) długościach równych $d_{i,\epsilon} < \epsilon$ w taki sposób aby otrzymać rodzinę odcinków: 
 $$\left\{ [0, d_{1,\epsilon}), [d_{1,\epsilon}, d_{1,\epsilon} + d_{2, \epsilon}), \ldots, [\sum_{i=1}^{m-1} d_{i, \epsilon}, 1] \right\}.$$
 Oznaczmy krańce tych odcinków przez $a_0=0, \, a_1 = d_{1,\epsilon}, \, a_2 = d_{1,\epsilon} + d_{2,\epsilon}, \, \ldots, \, a_m = 1.$ 
-
-Zdefiniujmy $A_i \coloneqq \{f^{-i}(a_0), f^{-i}(a_1), \ldots, f^{-i}(a_m)\}$, dla $i \in \{0, 1, \ldots, n-1\}$
+Zdefiniujmy $A_i \coloneqq \{f^{-i}(a_0), f^{-i}(a_1), \ldots, f^{-i}(a_m)\}$, dla $i \in \{0, 1, \ldots, n-1\}.$
 
 Niech $B = \bigcup_{i=0}^{n-1} A_i.$ Każdy ze zbiorów $A_i$ zawiera $m+1$ elementów, zatem $|B| \leq n \cdot (m+1)$ Uporządkujmy elementy zbioru $B$ w niemalejący ciąg $(b_j)_{j=0}^{|B|-1}.$ Podzielmy $I$ na odcinki postaci $B_j = [b_{j-1}, b_{j}]$ dla $j \in \{1, 2, \ldots, |B|-1\}.$  
 
@@ -813,7 +802,7 @@ Ostatecznie otrzymujemy:
 \begin{aligned}
 h_{\textrm{top}}(f) & = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log s_n(f, \epsilon) \leq \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log \big( n \cdot (m+1) - 1 \big) \\
 & \leq \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log \left( \frac{n}{\epsilon} + \frac{n}{2} - 1 \right) \leq \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log \left( \frac{2 \cdot n + \epsilon \cdot n}{2 \cdot \epsilon}\right) \\
-& = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \left(\frac{1}{n} \log \big(n \cdot (2 + \epsilon)\big) - \frac{1}{n} \log ( 2 \cdot \epsilon )\right) = \lim_{\epsilon \rightarrow 0} 0 = 0
+& = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \left(\frac{1}{n} \log \big(n \cdot (2 + \epsilon)\big) - \frac{1}{n} \log ( 2 \cdot \epsilon )\right) = \lim_{\epsilon \rightarrow 0} 0 = 0.
 \end{aligned}
 \end{equation}
 
@@ -966,7 +955,7 @@ Zamiast $g(x, y)$ będziemy pisać $g_x(y)$, gdzie $g_x: Y \rightarrow Y$ jest r
 
 
 \begin{definition}[Odwzorowanie bazowe]
-Odwzorowanie $f$ nazywamy odwzorowaniem bazowym (ang. \textit{basis map}) odwzorowania $F = (f, g_x)$
+Odwzorowanie $f$ nazywamy odwzorowaniem bazowym (ang. \textit{basis map}) odwzorowania $F = (f, g_x).$
 \end{definition}
 
 \begin{definition}[Odwzorowania włóknowe]
@@ -978,12 +967,10 @@ Odwzorowania $g_x$ dla $x \in X$ nazywamy odwzorowaniami włóknowymi (ang. \tex
 \label{rownosc_entropii_gdy_wlokna_monotoniczne}
 Niech $X$ będzie zwartą przestrzenią metryczną, $I = [0, 1]$, $F = (f, g_x) \in C_\triangle(X \times I).$ Wtedy, jeżeli $\forall_{x \in X}$ funkcje włóknowe $g_x$ są (niekoniecznie ściśle) monotoniczne, to entropia topologiczna odwzorowania $F$ jest równa entropii topologicznej jego odwzorowania bazowego $f$, czyli:
 
-$$h(F) = h(f)$$
+$$h(F) = h(f).$$
 \end{theorem}
 
 \begin{proof}
-%\cite{do_dowodu_rownosci_topologicznej_entropii_2_twierdzenieD}
-
 Rozważamy dwie zwarte przestrzenie metryczne: $(X, d_1)$ oraz $(X \times I, d_2)$ z metrykami zdefiniowanymi w \ref{definicja_metryki_d_jeden} i \ref{definicja_metryki_d_dwa}. Przestrzeń $X$ jest zwarta z założenia, natomiast przestrzeń $X \times I$ jest zwarta jako produkt dwóch przestrzeni zwartych. 
 
 Zdefiniujmy odwzorowanie $\pi: X \times I \rightarrow X$, $\pi(x,a) = x$. Oczywiście $\pi$ jest ciągłe i ,,na''.
@@ -997,12 +984,11 @@ a więc $\pi \circ F = f \circ \pi.$
 
 Na podstawie twierdzenia 17 z pracy  \cite[s.~409]{bowen1971entropy__do_dowodu_rownosci_topologicznej_entropii_2_twierdzenie17} otrzymujemy, że 
 
-$$h(F) \leq h(f) + \sup_{x \in X} h(F, \pi^{-1}(x))$$
+$$h(F) \leq h(f) + \sup_{x \in X} h(F, \pi^{-1}(x)).$$
 
 
 Ustalmy $x \in X.$ Wiemy, że:
 $$h(F, \pi^{-1}(x)) = h(F, \{x\} \times I) = \lim_{\epsilon \rightarrow 0} \limsup_{n \rightarrow +\infty} \frac{1}{n} \log s_n(F, \epsilon, \{x\} \times I),$$
-
 gdzie $s_n(F, \epsilon, \{x\} \times I)$ jest maksymalną mocą zbioru $(n, \epsilon)-$rozdzielonego, zawartego w $\{x\} \times I.$
 
 Zauważmy, że zbiór $\{x\} \times I$ jest $(n, \epsilon)$-rozdzielony, jeżeli dla każdych $(x, y_1), (x, y_2) \in \{x\} \times I,$ takich że $y_1 \neq y_2$ istnieje $k \in \{0, 1, \ldots, n-1\},$ takie że 
@@ -1022,7 +1008,7 @@ Zauważmy, że zbiór $\{x\} \times I$ jest $(n, \epsilon)$-rozdzielony, jeżeli
  Podstawmy nierówność \ref{nierownosc_zbioru_rozdzielonego_d2} w miejsce $\rho(f^k(x), f^k(y)) > \epsilon$ z definicji \ref{definicja_n_eps_rozdzielonego}. Przedefiniujmy zbiór $A_i$  z twierdzenia \ref{entropia_topologiczna_odwzorowan_monotonicznych} w następujący sposób:
  $A_i \coloneqq \{F^{-i}(x, a_0), F^{-i}(x, a_1), \ldots, F^{-i}(x, a_m)\}$, dla $i \in \{0, 1, \ldots, n-1\}.$ 
 Dla każdych $i \in \mathbb{N}, \, x \in X, \, a \in I$ zachodzi:
-$$F^{-i}(x, a) = \big( f^{-i}(x), (g_{f^{-i}(x)}^{-1}\circ \ldots \circ g_{f^{-2}(x)}^{-1} \circ g_{f^{-1}(x)}^{-1})(a) \big)$$
+$$F^{-i}(x, a) = \big( f^{-i}(x), (g_{f^{-i}(x)}^{-1}\circ \ldots \circ g_{f^{-2}(x)}^{-1} \circ g_{f^{-1}(x)}^{-1})(a) \big).$$
 Wszystkie odwzorowania włóknowe $g_x$ są niemalejące, a więc ich złożenia również (na mocy wniosku \ref{zlozenie_skonczenie_wielu_niemalejacych_jest_niemalejace}).
 
 W takim razie rozumując analogicznie jak w twierdzeniu \ref{entropia_topologiczna_odwzorowan_monotonicznych}, łatwo stwierdzamy, że:
@@ -1036,7 +1022,7 @@ $$\sup_{x \in X} h(F, \pi^{-1}(x)) = 0.$$
 Otrzymujemy zatem nierówność:
 \begin{equation}
 \label{twierdzenie_o_rownosci_entropii_nierownosc_pierwsza}
-h(F) \leq h(f)
+h(F) \leq h(f).
 \end{equation}
 
 
@@ -1066,7 +1052,7 @@ $$\sup_{\widetilde{\mathcal{A}} \in \mathcal{R}} h(F, \widetilde{\mathcal{A}}) =
 Aby otrzymać entropię odwzorowania $F$ bierzemy supremum po wszystkich pokryciach przestrzeni $X \times I,$ czyli po nadzbiorze zbioru $\mathcal{R},$ więc:
 \begin{equation}
 \label{twierdzenie_o_rownosci_entropii_nierownosc_druga}
-h(F) \geq \sup_{\widetilde{\mathcal{A}} \in \mathcal{R}} h(F, \widetilde{\mathcal{A}})  = h(f)
+h(F) \geq \sup_{\widetilde{\mathcal{A}} \in \mathcal{R}} h(F, \widetilde{\mathcal{A}})  = h(f).
 \end{equation}
 
 
@@ -1094,7 +1080,7 @@ Niech $(M, \sigma)$ będzie zwartą przestrzenią metryczną, rozważmy odwzorow
 Odległość między odwzorowaniami trójkątnymi definiujemy następująco: Niech $(X, \rho)$ i $(Y, \tau)$ będą zwartymi przestrzeniami metrycznymi a $F(x,y) = (f(x), g_x(y))$ i $\Phi(x,y) = (\phi(x), \psi_x(y))$ trójkątnymi odwzorowaniami należącymi do $C_\triangle(X \times Y)$. Odległość definiujemy wówczas jako 
 \begin{align*}
 d_2(F, \Phi) = \max_{(x,y) \in X \times Y} \max\left\{\rho(f(x),\phi(x)), \tau(g_x(y), \psi_x(y))\right\} \\ 
-= \max\left\{d_1(f,\phi), \max_{x \in X}d_1(g_x, \psi_x)\right\}
+= \max\left\{d_1(f,\phi), \max_{x \in X}d_1(g_x, \psi_x)\right\}.
 \end{align*}
 \end{definition}
 
@@ -1161,7 +1147,7 @@ $$F: X \times Y \rightarrow X \times Y.$$
 Weźmy dwa dowolne odwzorowania $F, \Phi \in C(X \times Y)$: 
 $$F(x,y) = \big(f(x,y), g(x,y)\big); \, \Phi(x,y) = \big(\phi(x,y), \psi(x,y)\big).$$
 Zdefiniujmy metrykę $d$ następująco:
-$$d(F, \Phi) = \max_{(x,y) \in X \times Y} \max \left\{ \rho\big(f(x,y), \phi(x,y)\big), \tau\big(g(x,y), \psi(x,y)\big) \right\}$$ 
+$$d(F, \Phi) = \max_{(x,y) \in X \times Y} \max \left\{ \rho\big(f(x,y), \phi(x,y)\big), \tau\big(g(x,y), \psi(x,y)\big) \right\}.$$ 
 
 
 Pokażemy, że zbiór $(C_\triangle(X \times Y), d_2)$ jest domkniętym podzbiorem $(C(X \times Y), d).$ Weźmy dowolny zbieżny ciąg odwzorowań: $(F_n)_{n=1}^{\infty} \subset C_\triangle(X \times Y).$ Oznaczmy $F = \lim_{n \rightarrow \infty} F_n,$ $\big(F=(f,g), \, F_n=(f_n, g_n)\big).$
@@ -1195,12 +1181,12 @@ $I = [0, 1].$
 $P_0$ to dowolny, skończony zbiór zawarty w $X.$ Przez $\mathcal{F}$ oznaczmy zbiór wszystkich odwzorowań $F = (f, g_x)$ ze zbioru $C_\triangle(X \times I)$ spełniających następujące warunki:
 \begin{enumerate}
 \item $\forall_{x \in X}$ odwzorowanie $g_x$ jest niemalejące i krańce przedziału I pozostawia niezmienione.
-\item $\forall_{x \in P_0}$ $g_x$ jest identycznością 
+\item $\forall_{x \in P_0}$ $g_x$ jest identycznością.
 \end{enumerate}
 
 
 \begin{lemma} \label{F_jest_niepustym_domknietym_podzbiorem_trojkatnych}
-Zbiór $\mathcal{F}$ jest niepustym, domkniętym podzbiorem przestrzeni $C_{\triangle}(X \times I)$, 
+Zbiór $\mathcal{F}$ jest niepustym, domkniętym podzbiorem przestrzeni $C_{\triangle}(X \times I).$
 \end{lemma}
 
 \begin{proof}
@@ -1210,7 +1196,7 @@ Pokazujemy domkniętość. Weźmy dowolny ciąg zbieżny $\big(F_n=(f_n, g_{x,n}
 Skoro ciąg ten zawiera się w $\mathcal{F}$ to $\forall_{n \in \mathbb{N}} \, f_n = f.$ Wiemy, że zachodzi 
 \begin{equation}
 \label{rownanie_granica_ciagu_odwzorowan_ze_zbioru_mathcal_F}
-\lim_{n \rightarrow \infty} d_2(F_n, \widetilde{F}) = \lim_{n \rightarrow \infty} \max\{d_1(f, \widetilde{f}), \max_{x \in X} d_1(g_{x,n}, \widetilde{g_x})\} = 0
+\lim_{n \rightarrow \infty} d_2(F_n, \widetilde{F}) = \lim_{n \rightarrow \infty} \max\{d_1(f, \widetilde{f}), \max_{x \in X} d_1(g_{x,n}, \widetilde{g_x})\} = 0.
 \end{equation}
 Zatem $d_1(f, \widetilde{f}) = 0,$ czyli $\widetilde{f} = f.$
 
@@ -1254,7 +1240,7 @@ Wówczas dla każdego $N \in \mathbb{N}$ istnieje niepusty zbiór otwarty $W \su
 
 \begin{proof}
 $P$ jest zbiorem skończonym, więc możemy wypisać wszystkie jego elementy: 
-$$P = \{p_1, p_2, \ldots, p_k\}$$
+$$P = \{p_1, p_2, \ldots, p_k\}.$$
 Ponieważ $V$ jest otwartym otoczeniem zbioru $P$ to istnieje $d>0,$ takie że dla każdego ${0<\epsilon<d}$ zbiór $\bigcup_{i=0}^k K(p_i, \epsilon)$ zawiera się w $V.$ Ustalmy $0<\epsilon<d$ i oznaczmy $U=\bigcup_{i=0}^k K(p_i, \epsilon),$ oczywiście $U \subseteq V.$ Rozważmy dowolny, ustalony punkt $p_i$ ze zbioru $P.$ Wiemy, że $P$ jest niezmienniczy ze względu na odwzorowanie $f$, a więc istnieją punkty $p_{j_1}, p_{j_2}, \ldots, p_{j_N} \in P$ dla których zachodzi $f(p_i) = p_{j_1}, \, f^2(p_i) = p_{j_2}, \, \ldots, \, f^N(p_i) = p_{j_N}.$ Z kolei z ciągłości odwzorowania $f$, również jego iteraty są ciągłe, a z tego wynika, że znajdziemy taką $\delta_i,$ że $\epsilon >\delta_i > 0$ i dla której $f^n(K(p_i, \delta_i)) \subset K(p_{j_n}, \epsilon) \subset U,$ dla każdego $n \in \{1,2,\ldots,N\}.$ Z dowolności wyboru $p_i$ otrzymujemy, że każdy zbiór postaci $f^n(K(p_i, \delta_i)),$ (gdzie $n \in \{1,2,\ldots,N\}$ a $p_i \in P$) zawiera się w $U$. Oznaczmy $W = \bigcup_{i=1}^k K(p_i, \delta_i),$ oczywiście $W$ jest niepustym zbiorem otwartym, który zawiera się w $U$ ponieważ $\delta_i < \epsilon$ dla każdego $i \in \{1,2,\ldots,k\}.$ Ponadto
 $$\forall_{n \in \{1,2,\ldots,k\}} \, f^n(W) = f^n\left(\bigcup_{i=1}^k K(p_i, \delta_i)\right) = \bigcup_{i=1}^k f^n\big(K(p_i, \delta_i)\big) \subset U.$$
 Ostatecznie otrzymujemy $W \cup f(W) \cup \ldots \cup f^N(W) \subset U \subseteq V.$
@@ -1269,7 +1255,7 @@ Na podstawie \cite[s.~231-232 Lemma 3]{balibrea2003topological} i \cite[s.~7]{so
 Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną.
 Niech $f \in C(X)$ będzie topologicznie tranzytywnym odwzorowaniem, którego zbiór punktów okresowych jest gęsty w $X$. 
 
-Wtedy dla każdej rodziny niepustych zbiorów otwartych $U_1, U_2, \ldots, U_n \subset X$ istnieje orbita okresowa $f$, której przekrój z każdym ze zbiorów $U_i, i=1,2,\ldots,n$ jest niepusty
+Wtedy dla każdej rodziny niepustych zbiorów otwartych $U_1, U_2, \ldots, U_n \subset X$ istnieje orbita okresowa $f$, której przekrój z każdym ze zbiorów $U_i, \, i=1,2,\ldots,n$ jest niepusty.
 \end{lemma}
 
 \begin{proof}
@@ -1281,8 +1267,8 @@ Ponieważ odwzorowanie $f$ jest tranzytywne a przestrzeń $X$ jest zwarta, to is
 \begin{lemma}
 \label{lemat_4_glownego_artykulu}
 \cite{alseda1999entropy}
-Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną i niech $F = (f, g_x)$ będzie odwzorowaniem należącym do $C_\triangle(X \times I)$ którego wszystkie odwzorowania włóknowe są niemalejące i pozostawiają krańce $I$ niezmienione. Niech $\{a_1, a_2, \ldots, a_n\}$ będzie podzbiorem $X$ oraz dla $i = 1, 2, \ldots, n$ niech $U_i$ będą parami rozłącznymi zbiorami otwartymi, takimi że $a_i \in U_i$. Załóżmy, że $h_i$ są niemalejącymi odwzorowaniami z $C(I)$ pozostawiającymi krańce $I$ niezmienione i spełniającymi $d_1(h_i, g_{a_i}) < \epsilon$ dla pewnego dodatniego $\epsilon$ i każdego $i = 1, 2, \ldots, n$. Wówczas istnieje odwzorowanie 
-$$\widetilde{F} = (f, \widetilde{g}_x) \in C_\triangle(X \times I)$$ spełniające cztery następujące warunki:
+Niech $(X, \rho)$ będzie zwartą przestrzenią metryczną i niech $F = (f, g_x)$ będzie odwzorowaniem należącym do $C_\triangle(X \times I)$ którego wszystkie odwzorowania włóknowe są niemalejące i pozostawiają krańce $I$ niezmienione. Niech $\{a_1, a_2, \ldots, a_n\}$ będzie podzbiorem $X$ oraz dla $i = 1, 2, \ldots, n$ niech $U_i$ będą parami rozłącznymi zbiorami otwartymi, takimi że $a_i \in U_i$. Załóżmy, że $h_i$ są niemalejącymi odwzorowaniami z $C(I)$ pozostawiającymi krańce $I$ niezmienione i spełniającymi $d_1(h_i, g_{a_i}) < \epsilon$ dla pewnego dodatniego $\epsilon$ i każdego $i = 1, 2, \ldots, n$. Wówczas istnieje odwzorowanie: 
+$$\widetilde{F} = (f, \widetilde{g}_x) \in C_\triangle(X \times I),$$ spełniające cztery następujące warunki:
 
 \begin{enumerate}
 \item  wszystkie odwzorowania włóknowe $\widetilde{F}$ są niemalejące i pozostawiające krańce $I$ niezmienione,
@@ -1296,18 +1282,18 @@ $$\widetilde{F} = (f, \widetilde{g}_x) \in C_\triangle(X \times I)$$ spełniają
 Dla każdego $i = 1, 2, \ldots, n$ niech $V_i \subset U_i$ będzie otwartym otoczeniem $a_i,$ takim że dla pewnego dodatniego $\widetilde{\epsilon} < \epsilon$, $d_1(h_i, g_x) < \widetilde{\epsilon}$ zawsze wtedy gdy $x \in V_i$.
 
 Oznaczmy $U = \bigcup_{i=1}^n U_i$, $V = \bigcup_{i=1}^n V_i$. Niech $u : X \longrightarrow [0,1]$  będzie ciągłą funkcją, przyjmującą wartość $1$ na zbiorze $\{a_1, a_2, \ldots, a_n\}$, natomiast $0$ poza zbiorem $V.$ 
-{\color{red}Ponieważ zbiory $\{a_1, a_2, \ldots, a_n\},$ oraz $X \setminus V$ są domknięte i rozłączne, to taka funkcja istnieje na mocy lematu Urysohna (lemat \ref{lemat_urysohna}).}
+Ponieważ zbiory $\{a_1, a_2, \ldots, a_n\},$ oraz $X \setminus V$ są domknięte i rozłączne, to taka funkcja istnieje na mocy lematu Urysohna (lemat \ref{lemat_urysohna}).
 Zastąpmy każde odwzorowanie włóknowe $g_x$ przez $\widetilde{g}_x$, gdzie
 
 \begin{equation} \label{lemat4_rownanie_1}
     \widetilde{g}_x(y) =
     \begin{cases}
         g_x(y) & \text{dla $x \in X \setminus V$,}\\
-        g_x(y)(1-u(x))+h_i(y)u(x) & \text{dla $x \in V_i : i \in \{1,2,\ldots,n\}$.}
+        g_x(y)(1-u(x))+h_i(y)u(x) & \text{dla $x \in V_i : i \in \{1,2,\ldots,n\}$,}
     \end{cases}
 \end{equation}
 
-dla każdego $y \in I$. Zauważmy ponadto, że dla $x \in V_i$ oraz $i \in \{1,2,\ldots,n\}$ możemy równoważnie napisać
+dla każdego $y \in I$. Zauważmy ponadto, że dla $x \in V_i$ oraz $i \in \{1,2,\ldots,n\},$ możemy równoważnie napisać:
 
 \begin{equation} \label{lemat4_rownanie_2}
 \widetilde{g}_x(y) = u(x)(h_i(y) - g_x(y)) + g_x(y).
@@ -1349,7 +1335,7 @@ Rozważmy zbiór $\mathcal{F}$ wszystkich odwzorowań $F = (f, g_x)$ ze zbioru $
 \begin{enumerate}
 \item\label{dowod_glowny_a} Odwzorowanie bazowe $f$ jest odwzorowaniem z założenia twierdzenia \ref{twierdzenie_glowne}.
 \item\label{dowod_glowny_b} $\forall_{x \in X}$ odwzorowanie $g_x$ jest niemalejące i krańce przedziału I pozostawia niezmienione.
-\item\label{dowod_glowny_c} $\forall_{x \in P_0}$ $g_x$ jest identycznością 
+\item\label{dowod_glowny_c} $\forall_{x \in P_0}$ $g_x$ jest identycznością. 
 \end{enumerate}
 
 Warunek \ref{dowod_glowny_b} implikuje, że dla każdego odwzorowania z $\mathcal{F}$ zbiory $X \times \{0\}$ i $X \times \{1\}$ są niezmiennicze, czyli $\forall_{F \in \mathcal{F}}$ zachodzi warunek \ref{twierdzenie_glowne_c}  twierdzenia \ref{twierdzenie_glowne}. Zachodzenie warunku \ref{twierdzenie_glowne_b} twierdzenia \ref{twierdzenie_glowne} dla każdego odwzorowania $F \in \mathcal{F}$ wynika z faktu, że każde odwzorowanie z $C_\triangle(X \times I)$, gdzie $X$ jest zwartą przestrzenią metryczną (a więc w szczególności każde odwzorowanie z $\mathcal{F}$), którego wszystkie odwzorowania włóknowe są niemalejące, ma taką samą entropię topologiczną jak jego odwzorowanie bazowe (twierdzenie \ref{rownosc_entropii_gdy_wlokna_monotoniczne}).
@@ -1357,21 +1343,21 @@ Pozostaje zatem wykazać prawdziwość warunku \ref{twierdzenie_glowne_a}, czyli
 
 Z lematu \ref{warunki_dostateczne_chaotycznosci_devaneya} wynika, że aby odwzorowanie $F$ było chaotyczne w sense Devaneya potrzeba i wystarcza, żeby spełniało dwa poniższe warunki:
 \begin{enumerate}
-\item \label{devaney_pierwsza_wlasnosc} $F$ jest topologicznie tranzytywne
-\item \label{devaney_druga_wlasnosc} zbiór punktów okresowych odwzorowania $F$ jest gęsty w $(X \times I)$
+\item \label{devaney_pierwsza_wlasnosc} $F$ jest topologicznie tranzytywne.
+\item \label{devaney_druga_wlasnosc} zbiór punktów okresowych odwzorowania $F$ jest gęsty w $(X \times I).$
 \end{enumerate}
-Jest tak gdyż przestrzeń $(X \times I)$ spełnia założenia lematu, tj. jest przestrzenią nieskończoną i zwartą.
+Jest tak, gdyż przestrzeń $(X \times I)$ spełnia założenia lematu, tj. jest przestrzenią nieskończoną i zwartą.
 
 Chcemy wykazać, że istnieje $F \in \mathcal{F}$ będące jednocześnie topologicznie tranzytywne i posiadające gęsty w $(X \times I)$ zbiór punktów okresowych. Z lematu \ref{F_jest_niepustym_domknietym_podzbiorem_trojkatnych} wiemy, że $\mathcal{F}$ jest niepustym, domkniętym podzbiorem przestrzeni $C_{\triangle}(X \times I)$, która jak wynika z lematu \ref{ciagle_trojkatne_tworza_przestrzen_metryczna_zupelna} jest przestrzenią metryczną zupełną. 
 
 Przekrój dwóch zbiorów rezydualnych jest rezydualny (patrz lemat \ref{przekroj_rezydualnych_jest_rezydualny}) a więc niepusty. Wystarczy zatem pokazać, że oba zbiory:
 \begin{itemize}
-\item zbiór odwzorowań topologicznie tranzytywnych
-\item zbiór odwzorowań, których zbiór punktów okresowych jest gęsty w $(X \times I)$
+\item zbiór odwzorowań topologicznie tranzytywnych,
+\item zbiór odwzorowań, których zbiór punktów okresowych jest gęsty w $(X \times I),$
 \end{itemize}
 są rezydualne w $\mathcal{F}$. Wówczas każde odwzorowanie należące do ich przekroju będzie spełniało wszystkie trzy warunki tezy twierdzenia \ref{twierdzenie_glowne} 
 
-Zbiór odwzorowań tranzytywnych jest rezydualny w $\mathcal{F}$, zostało to udowodnione w twierdzeniu \ref{tranzytywne_rezydualne_w_F}
+Zbiór odwzorowań tranzytywnych jest rezydualny w $\mathcal{F}$, zostało to udowodnione w twierdzeniu \ref{tranzytywne_rezydualne_w_F}.
 
 Pozostało wykazać, że również zbiór odwzorowań posiadających gęsty zbiór punktów okresowych jest rezydualny w $\mathcal{F}$.
 Oznaczmy zbiór takich odwzorowań (jednocześnie należących do $\mathcal{F}$) przez $\mathcal{F}_{DP}$.
@@ -1426,9 +1412,9 @@ Weźmy teraz odwzorowanie $G = (f, \widetilde{g}_x) \in \mathcal{F},$ takie że 
 \end{equation}
 
 Odwzorowanie takie istnieje na mocy lematu \ref{lemat_4_glownego_artykulu}, ponieważ
-$$d_1(\widetilde{g}_{x_0}, g_{x_0}) = d_1(h, g_{x_0}) < \frac{\epsilon}{4}$$
-oraz dla $x \in \left\{f^r(x_0), f^{r+1}(x_0), \ldots, f^{r+N-1}(x_0)\right\}$,
-$$d_1(\widetilde{g}_x, g_x) = d_1(g, g_x) \leq d_1(g, \mathrm{Id}) + d_1(\mathrm{Id}, g_x) < \frac{\epsilon}{4} + \frac{\epsilon}{4} = \frac{\epsilon}{2}$$.
+$$d_1(\widetilde{g}_{x_0}, g_{x_0}) = d_1(h, g_{x_0}) < \frac{\epsilon}{4},$$
+oraz dla $x \in \left\{f^r(x_0), f^{r+1}(x_0), \ldots, f^{r+N-1}(x_0)\right\}$:
+$$d_1(\widetilde{g}_x, g_x) = d_1(g, g_x) \leq d_1(g, \mathrm{Id}) + d_1(\mathrm{Id}, g_x) < \frac{\epsilon}{4} + \frac{\epsilon}{4} = \frac{\epsilon}{2}.$$
 
 Punkt $(x_0, y_0) \in U_i$ jest punktem okresowym odwzorowania $G$, ponieważ
 
@@ -1471,12 +1457,10 @@ Z faktu $y_0 \in (a, b)$ wynika, że każde odwzorowanie $\widetilde{G} \in \mat
 $$\widetilde{G}^{r+N+s}(\{x_0\} \times [a, b]) \subseteq \{x_0\} \times [a, b].$$
 
 $\widetilde G^{r+N+s}$ na pierwszej współrzędnej przeprowadza $x_0$ na $x_0$, zaś na drugiej przeprowadza odcinek $[a,b]$ w $[a,b]$. Każde ciągłe odwzorowanie odcinka w siebie ma punkt stały, a punkt stały iteraty jest punktem okresowym oryginalnego odwzorowania.
-Zatem $\widetilde{G}$ posiada punkt okresowy w $\{x_0\} \times [a, b] \subseteq U_i$.
-
-Zatem $G \in \mathcal{F}_{SO}^i$, co kończy dowód dla przypadku 1.
+Zatem $\widetilde{G}$ posiada punkt okresowy w $\{x_0\} \times [a, b] \subseteq U_i.$
+Zatem $G \in \mathcal{F}_{SO}^i,$ co kończy dowód dla przypadku 1.
 
 Przypadek 2. $\textrm{pr}_2(F^r(x_0, y_0))$ jest równy $0$ lub $1$.
-
 W takim przypadku użyjemy lematu \ref{lemat_4_glownego_artykulu} aby dostać odwzorowanie $H = (f, h_x) \in \mathcal{F},$ takie że $d_2(H, F) < \frac{\epsilon}{2}$ i dla $x \in \{x_0, f(x_0), \ldots, f^{r-1}(x_0)\}$ odwzorowania włóknowe $h_x$ są ściśle rosnące. Takie odwzorowanie istnieje, ponieważ każdą funkcję niemalejącą możemy jednostajnie przybliżać funkcjami ściśle rosnącymi.
 
  
